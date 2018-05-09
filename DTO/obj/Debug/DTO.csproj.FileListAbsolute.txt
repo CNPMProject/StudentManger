@@ -1,0 +1,5 @@
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DTO\bin\Debug\DTO.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DTO\bin\Debug\DTO.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DTO\obj\Debug\DTO.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DTO\obj\Debug\DTO.pdb

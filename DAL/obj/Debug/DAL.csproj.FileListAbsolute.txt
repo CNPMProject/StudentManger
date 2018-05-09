@@ -1,0 +1,8 @@
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\bin\Debug\DAL.dll.config
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\bin\Debug\DAL.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\bin\Debug\DAL.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\bin\Debug\DTO.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\bin\Debug\DTO.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\obj\Debug\DAL.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\obj\Debug\DAL.pdb
