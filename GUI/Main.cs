@@ -241,5 +241,22 @@ namespace GUI
             pnBoard.Controls.Clear();
             CreateMainIcon();
         }
+
+        private void btnQuanLyLop_Click(object sender, EventArgs e)
+        {
+            QuanLyLopHoc quanLyLopHoc = new QuanLyLopHoc() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(quanLyLopHoc);
+            quanLyLopHoc.Show();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            Search timkiem = new Search() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(timkiem);
+            timkiem.Show();
+           
+        }
     }
 }

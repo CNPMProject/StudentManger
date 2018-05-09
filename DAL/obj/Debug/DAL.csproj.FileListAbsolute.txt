@@ -6,3 +6,11 @@ C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\bin\Debug\DTO.pdb
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\obj\Debug\DAL.dll
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\CNPM_QLHS\DAL\obj\Debug\DAL.pdb
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\bin\Debug\DAL.dll.config
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\bin\Debug\DAL.dll
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\bin\Debug\DAL.pdb
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\bin\Debug\DTO.dll
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\bin\Debug\DTO.pdb
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\obj\Debug\DAL.dll
+C:\Users\NGO THI HUYEN\Documents\HS\DAL\obj\Debug\DAL.pdb

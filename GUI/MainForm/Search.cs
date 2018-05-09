@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI.MainForm
 {
-    public partial class QuanLyLopHoc : Form
+    public partial class Search : Form
     {
-        public QuanLyLopHoc()
+        public Search()
         {
             InitializeComponent();
         }
-
     }
 }
