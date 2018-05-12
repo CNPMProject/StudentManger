@@ -64,6 +64,30 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormNhapLieu\ThemSuaCTDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaCTDT.Designer.cs">
+      <DependentUpon>ThemSuaCTDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaDiem.Designer.cs">
+      <DependentUpon>ThemSuaDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaHTKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaHTKT.Designer.cs">
+      <DependentUpon>ThemSuaHTKT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaMonHoc.Designer.cs">
+      <DependentUpon>ThemSuaMonHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +99,12 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\CSDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\CSDL.Designer.cs">
+      <DependentUpon>CSDL.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm\Home.cs">
       <SubType>Form</SubType>
@@ -102,11 +132,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormNhapLieu\ThemSuaCTDT.resx">
+      <DependentUpon>ThemSuaCTDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapLieu\ThemSuaDiem.resx">
+      <DependentUpon>ThemSuaDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapLieu\ThemSuaHTKT.resx">
+      <DependentUpon>ThemSuaHTKT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapLieu\ThemSuaMonHoc.resx">
+      <DependentUpon>ThemSuaMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\CSDL.resx">
+      <DependentUpon>CSDL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

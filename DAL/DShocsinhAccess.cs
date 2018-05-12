@@ -32,8 +32,83 @@ namespace DAL
                 string gioitinh = reader.GetString(2);
                 string diachi = reader.GetString(3);
                 string email = reader.GetString(4);
+                string namsinh = reader.GetDateTime(5).ToString();
 
-                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email);
+                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email,namsinh);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listdshocsinh;
+        }
+
+        public HocSinh GetHocSinh(string mahocsinh)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from HOCSINH where mahocsinh=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = mahocsinh;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<HocSinh> listdshocsinh = new List<HocSinh>();
+            HocSinh dshocsinh = null;
+
+            if (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string gioitinh = reader.GetString(2);
+                string diachi = reader.GetString(3);
+                string email = reader.GetString(4);
+                string namsinh = null;
+                try
+                {
+                    namsinh = reader.GetDateTime(5).ToString();
+                }
+                catch { }
+               
+
+                dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+
+            return dshocsinh;
+        }
+
+        public List<HocSinh> GetDSHocSinhTheoLop(string maLop)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select * from hocsinh,QUATRINHHOCTAP where HOCSINH.MaHocSinh=QUATRINHHOCTAP.MaHocSinh and malop=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maLop;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<HocSinh> listdshocsinh = new List<HocSinh>();
+            string namsinh = null;
+
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string gioitinh = reader.GetString(2);
+                string diachi = reader.GetString(3);
+                string email = reader.GetString(4);
+                try
+                {
+                    namsinh = reader.GetDateTime(5).ToString();
+                }
+                catch { }
+               
+
+                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email,namsinh);
                 listdshocsinh.Add(dshocsinh);
             }
 
@@ -65,14 +140,14 @@ namespace DAL
             }
 
         }
-        public bool ThemHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email)
+        public bool ThemHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
         {
             try
             {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "insert into HOCSINH values(@mahocsinh,@hoten,@gioitinh,@diachi,@email)";
+                com.CommandText = "insert into HOCSINH values(@mahocsinh,@hoten,@gioitinh,@diachi,@email,@namsinh)";
                 com.Connection = conn;
 
                 com.Parameters.Add("@mahocsinh", SqlDbType.VarChar).Value = mahocsinh;
@@ -80,6 +155,7 @@ namespace DAL
                 com.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = gioitinh;
                 com.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = diachi;
                 com.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                com.Parameters.Add("@namsinh", SqlDbType.SmallDateTime).Value = namsinh;
                 int result = com.ExecuteNonQuery();
 
                 CloseConnection();
@@ -93,7 +169,7 @@ namespace DAL
             }
         }
 
-        public bool SuaHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email)
+        public bool SuaHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
         {
 
             try
@@ -101,7 +177,7 @@ namespace DAL
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  HOCSINH set HoVaTen=@hoten and GioiTinh=@gioitinh and  DiaChi=@diachi and Email=@email where  MaHocSinh=@mahocsinh";
+                com.CommandText = "update  HOCSINH set HoVaTen=@hoten and GioiTinh=@gioitinh and  DiaChi=@diachi and Email=@email and namsinh=@namsinh where  MaHocSinh=@mahocsinh";
                 com.Connection = conn;
 
                 com.Parameters.Add("@mahocsinh", SqlDbType.VarChar).Value = mahocsinh;
@@ -109,6 +185,7 @@ namespace DAL
                 com.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = gioitinh;
                 com.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = diachi;
                 com.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                com.Parameters.Add("@namsinh", SqlDbType.SmallDateTime).Value = namsinh;
                 int result = com.ExecuteNonQuery();
 
                 CloseConnection();

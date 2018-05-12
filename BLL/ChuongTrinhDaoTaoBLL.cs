@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using DTO;
 using DAL;
 
@@ -16,6 +12,12 @@ namespace BLL
         {
             ChuongTrinhDaoTaoAccess acess = new ChuongTrinhDaoTaoAccess();
             return acess.GetAllCTDT();
+        }
+
+        public ChuongTrinhDaoTao GetChuongTrinhDaoTao(string mamon)
+        {
+            ChuongTrinhDaoTaoAccess ctdt = new ChuongTrinhDaoTaoAccess();
+            return ctdt.GetChuongTrinhDaoTao(mamon);
         }
 
         public bool ThemCTDT(string khoi, string mon, int heso)

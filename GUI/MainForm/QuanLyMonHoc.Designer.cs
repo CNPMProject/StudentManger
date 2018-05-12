@@ -156,6 +156,7 @@
             this.tcQuanLyMonHoc.SelectedIndex = 0;
             this.tcQuanLyMonHoc.Size = new System.Drawing.Size(1128, 502);
             this.tcQuanLyMonHoc.TabIndex = 2;
+            this.tcQuanLyMonHoc.Selected += new System.Windows.Forms.TabControlEventHandler(this.tcQuanLyMonHoc_Selected);
             // 
             // tbDanhSachMonHoc
             // 
@@ -177,7 +178,7 @@
             this.gbSetting_DSMH.Controls.Add(this.bunifuFlatButton7);
             this.gbSetting_DSMH.Controls.Add(this.bunifuFlatButton8);
             this.gbSetting_DSMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbSetting_DSMH.Location = new System.Drawing.Point(656, 310);
+            this.gbSetting_DSMH.Location = new System.Drawing.Point(640, 310);
             this.gbSetting_DSMH.Name = "gbSetting_DSMH";
             this.gbSetting_DSMH.Size = new System.Drawing.Size(418, 113);
             this.gbSetting_DSMH.TabIndex = 15;
@@ -240,7 +241,7 @@
             this.bunifuFlatButton7.IconMarginRight = 0;
             this.bunifuFlatButton7.IconRightVisible = false;
             this.bunifuFlatButton7.IconRightZoom = 0D;
-            this.bunifuFlatButton7.IconVisible = false;
+            this.bunifuFlatButton7.IconVisible = true;
             this.bunifuFlatButton7.IconZoom = 70D;
             this.bunifuFlatButton7.IsTab = true;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(156, 38);
@@ -276,7 +277,7 @@
             this.bunifuFlatButton8.IconMarginRight = 0;
             this.bunifuFlatButton8.IconRightVisible = false;
             this.bunifuFlatButton8.IconRightZoom = 0D;
-            this.bunifuFlatButton8.IconVisible = false;
+            this.bunifuFlatButton8.IconVisible = true;
             this.bunifuFlatButton8.IconZoom = 70D;
             this.bunifuFlatButton8.IsTab = true;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(274, 38);
@@ -301,7 +302,7 @@
             this.gbThongTinChiTiet_DSMH.Controls.Add(this.lbMaMH);
             this.gbThongTinChiTiet_DSMH.Controls.Add(this.lbTenMH);
             this.gbThongTinChiTiet_DSMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbThongTinChiTiet_DSMH.Location = new System.Drawing.Point(656, 93);
+            this.gbThongTinChiTiet_DSMH.Location = new System.Drawing.Point(640, 93);
             this.gbThongTinChiTiet_DSMH.Name = "gbThongTinChiTiet_DSMH";
             this.gbThongTinChiTiet_DSMH.Size = new System.Drawing.Size(418, 187);
             this.gbThongTinChiTiet_DSMH.TabIndex = 14;
@@ -378,7 +379,7 @@
             // 
             this.gbDanhSachMonHoc_DSMH.Controls.Add(this.lvDanhSachMonHoc);
             this.gbDanhSachMonHoc_DSMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDanhSachMonHoc_DSMH.Location = new System.Drawing.Point(9, 93);
+            this.gbDanhSachMonHoc_DSMH.Location = new System.Drawing.Point(46, 93);
             this.gbDanhSachMonHoc_DSMH.Name = "gbDanhSachMonHoc_DSMH";
             this.gbDanhSachMonHoc_DSMH.Size = new System.Drawing.Size(533, 333);
             this.gbDanhSachMonHoc_DSMH.TabIndex = 13;
@@ -402,6 +403,7 @@
             this.lvDanhSachMonHoc.TabIndex = 5;
             this.lvDanhSachMonHoc.UseCompatibleStateImageBehavior = false;
             this.lvDanhSachMonHoc.View = System.Windows.Forms.View.Details;
+            this.lvDanhSachMonHoc.SelectedIndexChanged += new System.EventHandler(this.lvDanhSachMonHoc_SelectedIndexChanged);
             // 
             // clSoThuTu
             // 
@@ -529,7 +531,7 @@
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Thêm ";
+            this.bunifuFlatButton4.ButtonText = "Thêm mới";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -542,7 +544,7 @@
             this.bunifuFlatButton4.IconMarginRight = 0;
             this.bunifuFlatButton4.IconRightVisible = false;
             this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = false;
+            this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 70D;
             this.bunifuFlatButton4.IsTab = true;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(30, 37);
@@ -553,7 +555,7 @@
             this.bunifuFlatButton4.selected = false;
             this.bunifuFlatButton4.Size = new System.Drawing.Size(123, 36);
             this.bunifuFlatButton4.TabIndex = 20;
-            this.bunifuFlatButton4.Text = "Thêm ";
+            this.bunifuFlatButton4.Text = "Thêm mới";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -578,7 +580,7 @@
             this.bunifuFlatButton5.IconMarginRight = 0;
             this.bunifuFlatButton5.IconRightVisible = false;
             this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = false;
+            this.bunifuFlatButton5.IconVisible = true;
             this.bunifuFlatButton5.IconZoom = 70D;
             this.bunifuFlatButton5.IsTab = true;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(168, 37);
@@ -791,7 +793,7 @@
             this.bunifuFlatButton1.IconMarginRight = 0;
             this.bunifuFlatButton1.IconRightVisible = false;
             this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconVisible = false;
             this.bunifuFlatButton1.IconZoom = 70D;
             this.bunifuFlatButton1.IsTab = true;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(35, 35);
@@ -827,7 +829,7 @@
             this.bunifuFlatButton2.IconMarginRight = 0;
             this.bunifuFlatButton2.IconRightVisible = false;
             this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconVisible = false;
             this.bunifuFlatButton2.IconZoom = 70D;
             this.bunifuFlatButton2.IsTab = true;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(153, 35);
@@ -863,7 +865,7 @@
             this.bunifuFlatButton3.IconMarginRight = 0;
             this.bunifuFlatButton3.IconRightVisible = false;
             this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconVisible = false;
             this.bunifuFlatButton3.IconZoom = 70D;
             this.bunifuFlatButton3.IsTab = true;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(271, 35);
@@ -989,6 +991,7 @@
             this.lvHinhThucKT.TabIndex = 9;
             this.lvHinhThucKT.UseCompatibleStateImageBehavior = false;
             this.lvHinhThucKT.View = System.Windows.Forms.View.Details;
+            this.lvHinhThucKT.SelectedIndexChanged += new System.EventHandler(this.lvHinhThucKT_SelectedIndexChanged);
             // 
             // clSoTT
             // 
@@ -1327,6 +1330,7 @@
             this.lvCTDT.TabIndex = 13;
             this.lvCTDT.UseCompatibleStateImageBehavior = false;
             this.lvCTDT.View = System.Windows.Forms.View.Details;
+            this.lvCTDT.SelectedIndexChanged += new System.EventHandler(this.lvCTDT_SelectedIndexChanged);
             // 
             // clSTT_CTDT
             // 
@@ -1383,6 +1387,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuanLyMonHoc";
             this.Text = "QuanLyMonHoc";
+            this.Load += new System.EventHandler(this.QuanLyMonHoc_Load);
             this.tcQuanLyMonHoc.ResumeLayout(false);
             this.tbDanhSachMonHoc.ResumeLayout(false);
             this.gbSetting_DSMH.ResumeLayout(false);

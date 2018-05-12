@@ -16,3 +16,12 @@ C:\Users\NGO THI HUYEN\Documents\HS\BLL\bin\Debug\DTO.pdb
 C:\Users\NGO THI HUYEN\Documents\HS\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\NGO THI HUYEN\Documents\HS\BLL\obj\Debug\BLL.dll
 C:\Users\NGO THI HUYEN\Documents\HS\BLL\obj\Debug\BLL.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\bin\Debug\BLL.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\bin\Debug\BLL.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\bin\Debug\DAL.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\bin\Debug\DTO.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\bin\Debug\DAL.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\bin\Debug\DTO.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\obj\Debug\BLL.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\obj\Debug\BLL.pdb

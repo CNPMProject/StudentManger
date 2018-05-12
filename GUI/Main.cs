@@ -244,7 +244,7 @@ namespace GUI
 
         private void btnQuanLyLop_Click(object sender, EventArgs e)
         {
-            QuanLyLopHoc quanLyLopHoc = new QuanLyLopHoc() { TopLevel = false };
+            QuanLyLopHoc quanLyLopHoc = new QuanLyLopHoc() { IsMdiContainer = false, TopLevel = false };
             pnBoard.Controls.Clear();
             pnBoard.Controls.Add(quanLyLopHoc);
             quanLyLopHoc.Show();
@@ -257,6 +257,14 @@ namespace GUI
             pnBoard.Controls.Add(timkiem);
             timkiem.Show();
            
+        }
+
+        private void btnCoSoDuLieu_Click(object sender, EventArgs e)
+        {
+            CSDL csdl = new CSDL() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(csdl);
+            csdl.Show();
         }
     }
 }

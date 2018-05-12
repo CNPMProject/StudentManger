@@ -8,9 +8,9 @@ namespace DTO
 {
     public class NamHoc
     {
-        string MaNamHoc;
-        int Nam1;
-        int Nam2;
+        public string MaNamHoc;
+        public int Nam1;
+        public int Nam2;
 
         public NamHoc(string ma, int n1, int n2)
         {

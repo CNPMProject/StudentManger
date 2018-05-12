@@ -8,19 +8,21 @@ namespace DTO
 {
     public class HocSinh
     {
-        string MaHocSinh;
-        string HoVaTen;
-        string GioiTinh;
-        string DiaChi;
-        string Email;
+        public string MaHocSinh;
+        public string HoVaTen;
+        public string GioiTinh;
+        public string DiaChi;
+        public string Email;
+        public string NamSinh;
 
-        public HocSinh(string ma, string ten, string gioiTinh, string dc, string email)
+        public HocSinh(string ma, string ten, string gioiTinh, string dc, string email,string namsinh)
         {
             this.MaHocSinh = ma;
             this.HoVaTen = ten;
             this.GioiTinh = gioiTinh;
             this.DiaChi = dc;
             this.Email = email;
+            this.NamSinh = namsinh;
         }
     }
 }

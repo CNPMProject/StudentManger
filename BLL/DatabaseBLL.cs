@@ -10,6 +10,7 @@ namespace BLL
     public class DatabaseBLL
     {
         DatabaseAccess dba;
+        public DatabaseBLL() { }
 
         public void ConnectToDatabase()
         {

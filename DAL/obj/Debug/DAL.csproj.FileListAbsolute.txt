@@ -14,3 +14,11 @@ C:\Users\NGO THI HUYEN\Documents\HS\DAL\bin\Debug\DTO.pdb
 C:\Users\NGO THI HUYEN\Documents\HS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\NGO THI HUYEN\Documents\HS\DAL\obj\Debug\DAL.dll
 C:\Users\NGO THI HUYEN\Documents\HS\DAL\obj\Debug\DAL.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\bin\Debug\DAL.dll.config
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\bin\Debug\DAL.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\bin\Debug\DAL.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\bin\Debug\DTO.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\bin\Debug\DTO.pdb
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\obj\Debug\DAL.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\DAL\obj\Debug\DAL.pdb

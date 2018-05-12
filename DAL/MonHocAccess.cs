@@ -41,6 +41,30 @@ namespace DAL
             return listMonHoc;
         }
 
+        public MonHoc GetMonHoc(string maMonHoc)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from MonHoc where MaMonHoc=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maMonHoc;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            MonHoc monhoc = null;
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+
+                monhoc = new MonHoc(ma, ten);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return monhoc;
+        }
+
         public bool XoaMonHoc(string maMH)
         {
             OpenConnection();

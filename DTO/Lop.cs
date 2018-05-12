@@ -8,10 +8,10 @@ namespace DTO
 {
     public class Lop
     {
-        string MaLop;
-        string TenLop;
-        string MaKhoiLop;
-        int SiSo;
+        public string MaLop;
+        public string TenLop;
+        public string MaKhoiLop;
+        public int SiSo;
 
         public Lop(string maLop, string ten, string maKhoi, int siSo)
         {

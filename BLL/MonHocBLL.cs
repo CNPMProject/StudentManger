@@ -19,6 +19,12 @@ namespace BLL
             return monHocAccess.GetAllMonHoc();
         }
 
+        public MonHoc GetMonHoc(string maMonHoc)
+        {
+            MonHocAccess mh = new MonHocAccess();
+            return mh.GetMonHoc(maMonHoc);
+        }
+
         public bool XoaMonHoc(string maMH)
         {
             MonHocAccess mn = new MonHocAccess();

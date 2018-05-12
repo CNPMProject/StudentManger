@@ -15,6 +15,12 @@ namespace BLL
             return lopaccess.GetAllLop();
         }
 
+        public Lop GetLop(string maLop)
+        {
+            LopAccess lopaccess = new LopAccess();
+            return lopaccess.GetLop(maLop);
+        }
+
         public bool Xoalop(string maMH)
         {
             LopAccess lop = new LopAccess();

@@ -9,22 +9,33 @@ namespace BLL
 {
     public class DShocsinhBLL : DatabaseBLL
     {
+        DShocsinhAccess danhsachhocsinh = new DShocsinhAccess();
         public DShocsinhBLL() : base() { }
-        public List<HocSinh> GetAllHinhThucKiemTra()
+        public List<HocSinh> GetAllHocSinh()
         {
-            DShocsinhAccess danhsachhocsinh = new DShocsinhAccess();
+            
             return danhsachhocsinh.GetAllDShocsinh();
         }
-        public bool ThemHS(string ma, string ten, string gioitinh, string diachi, string email)
+
+        public HocSinh GetHocSinh(string maHocSinh)
         {
-            DShocsinhAccess ac = new DShocsinhAccess();
-            return ac.ThemHs(ma, ten, gioitinh, diachi, email);
+            return danhsachhocsinh.GetHocSinh(maHocSinh);
         }
 
-        public bool SuaHS(string ma, string ten, string gioitinh, string diachi, string email)
+        public List<HocSinh> GetDSHocSinhTheoLop(string malop)
+        {
+            return danhsachhocsinh.GetDSHocSinhTheoLop(malop);
+        }
+        public bool ThemHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
         {
             DShocsinhAccess ac = new DShocsinhAccess();
-            return ac.SuaHs(ma, ten, gioitinh, diachi, email);
+            return ac.ThemHs(ma, ten, gioitinh, diachi, email,namsinh);
+        }
+
+        public bool SuaHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
+        {
+            DShocsinhAccess ac = new DShocsinhAccess();
+            return ac.SuaHs(ma, ten, gioitinh, diachi, email,namsinh);
         }
 
         public bool XoaHs(string ma)

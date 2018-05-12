@@ -8,10 +8,10 @@ namespace DTO
 {
     public class KhoiLop
     {
-        string MaKhoiLop;
-        string TenKhoiLop;
-        string Ban;
-        string MaNamHoc;
+        public string MaKhoiLop;
+        public string TenKhoiLop;
+        public string Ban;
+        public string MaNamHoc;
 
         public KhoiLop(string ma, string ten, string ban, string manh)
         {

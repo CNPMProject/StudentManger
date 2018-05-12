@@ -40,6 +40,31 @@ namespace DAL
             return listCTDT;
         }
 
+        public ChuongTrinhDaoTao GetChuongTrinhDaoTao(string maMonHoc)
+        {
+            OpenConnection();
+
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select * from ChuongTrinhDaoTao where mamonhoc=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maMonHoc;
+            com.Connection = conn;
+           
+            SqlDataReader reader = com.ExecuteReader();
+
+            ChuongTrinhDaoTao ctdt = null;
+            if (reader.Read())
+            {
+                string maKhoi = reader.GetString(0);
+                string maMon = reader.GetString(1);
+                int heSo = reader.GetInt32(2);
+
+                ctdt = new ChuongTrinhDaoTao(maKhoi, maMon, heSo);
+            }
+
+            return ctdt;
+        }
+
         public bool XoaCTDT(string maKhoi, string maMon)
         {
             OpenConnection();

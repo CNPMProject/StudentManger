@@ -28,7 +28,7 @@ namespace DAL
                 string ma = reader.GetString(0);
                 String ten = reader.GetString(1);
                 string makhoi = reader.GetString(2);
-                int siso = reader.GetInt32(2);
+                int siso = reader.GetInt32(3);
 
                 Lop dsLop = new Lop(ma, ten, makhoi, siso);
                 ListLop.Add(dsLop);
@@ -39,6 +39,33 @@ namespace DAL
             return ListLop;
 
         }
+
+        public Lop GetLop(string maLop)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from LOP where Malop=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maLop;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            Lop lop=null;
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string makhoi = reader.GetString(2);
+                int siso = reader.GetInt32(3);
+
+                lop = new Lop(ma, ten, makhoi, siso);              
+            }
+
+            reader.Close();
+            CloseConnection();
+            return lop;
+        }
+
         public bool ThemLop(string malop, string tenlop, string makhoi, int siso)
         {
             try
@@ -67,7 +94,6 @@ namespace DAL
                 return false;
             }
         }
-
 
         public bool SuaLop(string ma, string ten, string makhoi, int siso)
         {

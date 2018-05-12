@@ -40,6 +40,33 @@ namespace DAL
             CloseConnection();
             return listKhoiLop;
         }
+
+        public KhoiLop GetKhoiLop(string maKhoiLop)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from KhoiLOP where MAkhoilop=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maKhoiLop;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            KhoiLop lop = null;
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string ban = reader.GetString(2);
+                string manamhoc = reader.GetString(3);
+
+                lop = new KhoiLop(ma, ten, ban, manamhoc);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return lop;
+        }
+
         public bool XoaKhoiLop(string maKL)
         {
             OpenConnection();
