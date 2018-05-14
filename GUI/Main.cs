@@ -248,7 +248,7 @@ namespace GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            Search timkiem = new Search() { TopLevel = false };
+            Search timkiem = new Search() { IsMdiContainer = false,TopLevel = false };
             pnBoard.Controls.Clear();
             pnBoard.Controls.Add(timkiem);
             timkiem.Show();
@@ -266,6 +266,11 @@ namespace GUI
         private void pbClose_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnQuyDinh_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }

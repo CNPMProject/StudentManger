@@ -54,6 +54,7 @@
     <Compile Include="NamHocBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuaTrinhHocTapBLL.cs" />
+    <Compile Include="ThayDoiQuyDinhBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

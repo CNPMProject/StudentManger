@@ -44,6 +44,8 @@
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -51,6 +53,7 @@
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +67,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTongKet\BaoCaoHocKy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoHocKy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoTongKet\BaoCaoMon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoMon.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormNhapLieu\ThemSuaCTDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +125,12 @@
     <Compile Include="MainForm\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm\LapBaoCaoTongKet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\LapBaoCaoTongKet.Designer.cs">
+      <DependentUpon>LapBaoCaoTongKet.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm\QuanLyLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,8 +149,16 @@
     <Compile Include="MainForm\Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm\ThayDoiQuyDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\ThayDoiQuyDinh.Designer.cs">
+      <DependentUpon>ThayDoiQuyDinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoCaoTongKet\BaoCaoHocKy.rdlc" />
+    <EmbeddedResource Include="BaoCaoTongKet\BaoCaoMonHoc.rdlc" />
     <EmbeddedResource Include="FormNhapLieu\ThemSuaCTDT.resx">
       <DependentUpon>ThemSuaCTDT.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +183,9 @@
     <EmbeddedResource Include="MainForm\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\LapBaoCaoTongKet.resx">
+      <DependentUpon>LapBaoCaoTongKet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\QuanLyLopHoc.resx">
       <DependentUpon>QuanLyLopHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\ThayDoiQuyDinh.resx">
+      <DependentUpon>ThayDoiQuyDinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -175,6 +208,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BaoCaoTongKet\BaoCaoHocKy.xsc">
+      <DependentUpon>BaoCaoHocKy.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoTongKet\BaoCaoHocKy.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCaoHocKy.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCaoTongKet\BaoCaoHocKy.xss">
+      <DependentUpon>BaoCaoHocKy.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoTongKet\BaoCaoMon.xsc">
+      <DependentUpon>BaoCaoMon.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCaoTongKet\BaoCaoMon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaoCaoMon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BaoCaoTongKet\BaoCaoMon.xss">
+      <DependentUpon>BaoCaoMon.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

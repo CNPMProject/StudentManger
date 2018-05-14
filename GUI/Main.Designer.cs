@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnTop = new System.Windows.Forms.Panel();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbNameSoftWare = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnLeft = new System.Windows.Forms.Panel();
@@ -53,13 +54,12 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.pbClose = new System.Windows.Forms.PictureBox();
             this.pnTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.pnLeft.SuspendLayout();
             this.pnMenu.SuspendLayout();
             this.pnBoard.SuspendLayout();
             this.pnUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -72,6 +72,16 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1194, 32);
             this.pnTop.TabIndex = 14;
+            // 
+            // pbClose
+            // 
+            this.pbClose.BackColor = System.Drawing.Color.Red;
+            this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
+            this.pbClose.Location = new System.Drawing.Point(1164, 3);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(26, 26);
+            this.pbClose.TabIndex = 8;
+            this.pbClose.TabStop = false;
             // 
             // lbNameSoftWare
             // 
@@ -417,6 +427,7 @@
             this.btnQuyDinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnQuyDinh.Textcolor = System.Drawing.Color.Black;
             this.btnQuyDinh.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyDinh.Click += new System.EventHandler(this.btnQuyDinh_Click);
             // 
             // timerUser
             // 
@@ -567,16 +578,6 @@
             this.bunifuTileButton1.Size = new System.Drawing.Size(198, 164);
             this.bunifuTileButton1.TabIndex = 6;
             // 
-            // pbClose
-            // 
-            this.pbClose.BackColor = System.Drawing.Color.Red;
-            this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(1164, 3);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(26, 26);
-            this.pbClose.TabIndex = 8;
-            this.pbClose.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,11 +594,11 @@
             this.Text = "Phần mềm quản lý học sinh";
             this.Load += new System.EventHandler(this.Main_Load);
             this.pnTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.pnLeft.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             this.pnBoard.ResumeLayout(false);
             this.pnUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
 
         }

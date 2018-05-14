@@ -133,3 +133,22 @@ C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.exe.licenses
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\bin\Debug\GUI.exe.config
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.exe
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.pdb
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.FormNhapLieu.ThemSuaCTDT.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.FormNhapLieu.ThemSuaDiem.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.FormNhapLieu.ThemSuaHTKT.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.FormNhapLieu.ThemSuaMonHoc.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.Login.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.Main.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.MainForm.CSDL.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.MainForm.Home.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.MainForm.QuanLyLopHoc.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.MainForm.QuanLyMonHoc.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.MainForm.Search.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.exe.licenses
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\QLHS.FormChinh.ThayDoiQuyDinh.resources

@@ -25,3 +25,12 @@ C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\obj\Debug\BLL.dll
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\BLL\obj\Debug\BLL.pdb
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\bin\Debug\BLL.dll
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\bin\Debug\BLL.pdb
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\bin\Debug\DAL.dll
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\bin\Debug\DTO.dll
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\bin\Debug\DAL.pdb
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\bin\Debug\DTO.pdb
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\obj\Debug\BLL.dll
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\BLL\obj\Debug\BLL.pdb
