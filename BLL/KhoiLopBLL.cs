@@ -18,10 +18,22 @@ namespace BLL
             return khoilopAccess.GetAllKhoilop();
         }
 
+        public List<KhoiLop> GetListKhoiLop(string namhoc)
+        {
+            KhoiLopAccess khoilopAccess = new KhoiLopAccess();
+            return khoilopAccess.GetAllKhoilop(namhoc);
+        }
+
         public KhoiLop GetKhoiLop(string maKhoiLop)
         {
             KhoiLopAccess lopaccess = new KhoiLopAccess();
             return lopaccess.GetKhoiLop(maKhoiLop);
+        }
+
+        public KhoiLop GetKhoiLopTheoNH(string namhoc)
+        {
+            KhoiLopAccess lopaccess = new KhoiLopAccess();
+            return lopaccess.GetKhoiLopTheoNH(namhoc);
         }
 
         public bool XoaKhoilop(string maKL)

@@ -47,10 +47,6 @@ namespace GUI
 
         }
 
-        private void pbClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void CreateMainIcon()
         {
@@ -265,6 +261,11 @@ namespace GUI
             pnBoard.Controls.Clear();
             pnBoard.Controls.Add(csdl);
             csdl.Show();
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

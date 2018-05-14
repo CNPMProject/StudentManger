@@ -66,6 +66,25 @@ namespace DAL
             return lop;
         }
 
+        public int CountSoLuongLopTheoKhoi(string maKhoi)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select count(malop) from Lop where MaKhoiLop=@makhoi";
+            com.Parameters.Add("@makhoi", SqlDbType.VarChar).Value = maKhoi;
+            com.Connection = conn;
+
+            int ret = 0;
+            SqlDataReader reader = com.ExecuteReader();
+            if (reader.Read())
+            {
+                ret = reader.GetInt32(0);
+            }     
+            CloseConnection();
+            return ret;
+        }
+
         public bool ThemLop(string malop, string tenlop, string makhoi, int siso)
         {
             try
@@ -149,6 +168,8 @@ namespace DAL
                 return false;
             }
         }
+
+        
     }
 }
 

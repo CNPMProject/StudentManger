@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabPage tabPage2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyLopHoc));
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
             this.cbMaLop_DSLH = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,6 +56,7 @@
             this.gbDSHSTheoLop = new System.Windows.Forms.GroupBox();
             this.lvDSHSTheoLop = new System.Windows.Forms.ListView();
             this.colstt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clMaHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columHoten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colGioitinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colunamsinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -88,7 +89,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbHK_ChuyenLopCu = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.lvDSHSCu_CL = new System.Windows.Forms.ListView();
             this.columnstt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnMahs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columntenhs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -96,7 +97,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listView5 = new System.Windows.Forms.ListView();
+            this.lvDSHSMoi_CL = new System.Windows.Forms.ListView();
             this.stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mahs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tenhs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -106,8 +107,8 @@
             this.cbNH_ChuyenLopMoi = new System.Windows.Forms.ComboBox();
             this.cbLop_ChuyenLop_Moi = new System.Windows.Forms.ComboBox();
             this.cbHocKy_ChuyenLopMoi = new System.Windows.Forms.ComboBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbChuyenSangLopCu = new System.Windows.Forms.PictureBox();
+            this.pbChuyenSangLopMoi = new System.Windows.Forms.PictureBox();
             this.labelgioitinh = new System.Windows.Forms.Label();
             this.picturehelper = new System.Windows.Forms.PictureBox();
             this.labellop = new System.Windows.Forms.Label();
@@ -131,27 +132,26 @@
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.lvDSKL_NH = new System.Windows.Forms.ListView();
             this.columSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clMaKhoiLop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columtenkhoi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columTenkhoilop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.tbSoLuongLop_DSKL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.tbNH_DSKL = new System.Windows.Forms.TextBox();
+            this.tbBan_DSKL = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbMaKL_DSKL = new System.Windows.Forms.TextBox();
+            this.tbTenKL_DSKL = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.cbNH_DSKL = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.clMaHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label11 = new System.Windows.Forms.Label();
             tabPage2 = new System.Windows.Forms.TabPage();
             tabPage2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -164,8 +164,8 @@
             this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChuyenSangLopCu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChuyenSangLopMoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturehelper)).BeginInit();
             this.tcQuanLyLop.SuspendLayout();
             this.tabQLHS.SuspendLayout();
@@ -524,6 +524,11 @@
             this.colstt.Text = "STT";
             this.colstt.Width = 44;
             // 
+            // clMaHS
+            // 
+            this.clMaHS.Text = "Mã học sinh";
+            this.clMaHS.Width = 100;
+            // 
             // columHoten
             // 
             this.columHoten.Text = "Họ Và Tên";
@@ -618,11 +623,11 @@
             this.lvdshs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvdshs.FullRowSelect = true;
             this.lvdshs.GridLines = true;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            listViewGroup2.Name = "listViewGroup1";
             this.lvdshs.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup2});
             this.lvdshs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lvdshs.LabelEdit = true;
             this.lvdshs.Location = new System.Drawing.Point(3, 26);
@@ -753,8 +758,8 @@
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.tabPage4.Controls.Add(this.groupBox6);
             this.tabPage4.Controls.Add(this.groupBox4);
-            this.tabPage4.Controls.Add(this.pictureBox4);
-            this.tabPage4.Controls.Add(this.pictureBox3);
+            this.tabPage4.Controls.Add(this.pbChuyenSangLopCu);
+            this.tabPage4.Controls.Add(this.pbChuyenSangLopMoi);
             this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -791,6 +796,7 @@
             this.cbNH_ChuyenLop_cu.Name = "cbNH_ChuyenLop_cu";
             this.cbNH_ChuyenLop_cu.Size = new System.Drawing.Size(121, 28);
             this.cbNH_ChuyenLop_cu.TabIndex = 33;
+            this.cbNH_ChuyenLop_cu.SelectedIndexChanged += new System.EventHandler(this.cbNH_ChuyenLop_cu_SelectedIndexChanged);
             // 
             // cbLopChuyenLopCu
             // 
@@ -799,6 +805,7 @@
             this.cbLopChuyenLopCu.Name = "cbLopChuyenLopCu";
             this.cbLopChuyenLopCu.Size = new System.Drawing.Size(121, 28);
             this.cbLopChuyenLopCu.TabIndex = 35;
+            this.cbLopChuyenLopCu.SelectedIndexChanged += new System.EventHandler(this.cbLopChuyenLopCu_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -819,10 +826,11 @@
             this.cbHK_ChuyenLopCu.Name = "cbHK_ChuyenLopCu";
             this.cbHK_ChuyenLopCu.Size = new System.Drawing.Size(121, 28);
             this.cbHK_ChuyenLopCu.TabIndex = 34;
+            this.cbHK_ChuyenLopCu.SelectedIndexChanged += new System.EventHandler(this.cbHK_ChuyenLopCu_SelectedIndexChanged);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.listView4);
+            this.groupBox7.Controls.Add(this.lvDSHSCu_CL);
             this.groupBox7.Location = new System.Drawing.Point(16, 161);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -831,21 +839,24 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Danh Sách Học Sinh";
             // 
-            // listView4
+            // lvDSHSCu_CL
             // 
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvDSHSCu_CL.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnstt,
             this.columnMahs,
             this.columntenhs});
-            this.listView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView4.GridLines = true;
-            this.listView4.Location = new System.Drawing.Point(3, 22);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(435, 249);
-            this.listView4.TabIndex = 23;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
+            this.lvDSHSCu_CL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDSHSCu_CL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvDSHSCu_CL.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lvDSHSCu_CL.FullRowSelect = true;
+            this.lvDSHSCu_CL.GridLines = true;
+            this.lvDSHSCu_CL.HideSelection = false;
+            this.lvDSHSCu_CL.Location = new System.Drawing.Point(3, 22);
+            this.lvDSHSCu_CL.Name = "lvDSHSCu_CL";
+            this.lvDSHSCu_CL.Size = new System.Drawing.Size(435, 249);
+            this.lvDSHSCu_CL.TabIndex = 23;
+            this.lvDSHSCu_CL.UseCompatibleStateImageBehavior = false;
+            this.lvDSHSCu_CL.View = System.Windows.Forms.View.Details;
             // 
             // columnstt
             // 
@@ -910,7 +921,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.listView5);
+            this.groupBox5.Controls.Add(this.lvDSHSMoi_CL);
             this.groupBox5.Location = new System.Drawing.Point(6, 172);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(469, 274);
@@ -918,22 +929,23 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh Sách Học Sinh";
             // 
-            // listView5
+            // lvDSHSMoi_CL
             // 
-            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvDSHSMoi_CL.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.stt,
             this.Mahs,
             this.tenhs});
-            this.listView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView5.ForeColor = System.Drawing.SystemColors.Info;
-            this.listView5.GridLines = true;
-            this.listView5.Location = new System.Drawing.Point(3, 22);
-            this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(463, 249);
-            this.listView5.TabIndex = 31;
-            this.listView5.UseCompatibleStateImageBehavior = false;
-            this.listView5.View = System.Windows.Forms.View.Details;
+            this.lvDSHSMoi_CL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDSHSMoi_CL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvDSHSMoi_CL.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lvDSHSMoi_CL.FullRowSelect = true;
+            this.lvDSHSMoi_CL.GridLines = true;
+            this.lvDSHSMoi_CL.Location = new System.Drawing.Point(3, 22);
+            this.lvDSHSMoi_CL.Name = "lvDSHSMoi_CL";
+            this.lvDSHSMoi_CL.Size = new System.Drawing.Size(463, 249);
+            this.lvDSHSMoi_CL.TabIndex = 31;
+            this.lvDSHSMoi_CL.UseCompatibleStateImageBehavior = false;
+            this.lvDSHSMoi_CL.View = System.Windows.Forms.View.Details;
             // 
             // stt
             // 
@@ -995,6 +1007,7 @@
             this.cbNH_ChuyenLopMoi.Name = "cbNH_ChuyenLopMoi";
             this.cbNH_ChuyenLopMoi.Size = new System.Drawing.Size(121, 28);
             this.cbNH_ChuyenLopMoi.TabIndex = 25;
+            this.cbNH_ChuyenLopMoi.SelectedIndexChanged += new System.EventHandler(this.cbNH_ChuyenLopMoi_SelectedIndexChanged);
             // 
             // cbLop_ChuyenLop_Moi
             // 
@@ -1003,6 +1016,7 @@
             this.cbLop_ChuyenLop_Moi.Name = "cbLop_ChuyenLop_Moi";
             this.cbLop_ChuyenLop_Moi.Size = new System.Drawing.Size(121, 28);
             this.cbLop_ChuyenLop_Moi.TabIndex = 27;
+            this.cbLop_ChuyenLop_Moi.SelectedIndexChanged += new System.EventHandler(this.cbLop_ChuyenLop_Moi_SelectedIndexChanged);
             // 
             // cbHocKy_ChuyenLopMoi
             // 
@@ -1011,27 +1025,29 @@
             this.cbHocKy_ChuyenLopMoi.Name = "cbHocKy_ChuyenLopMoi";
             this.cbHocKy_ChuyenLopMoi.Size = new System.Drawing.Size(121, 28);
             this.cbHocKy_ChuyenLopMoi.TabIndex = 26;
+            this.cbHocKy_ChuyenLopMoi.SelectedIndexChanged += new System.EventHandler(this.cbHocKy_ChuyenLopMoi_SelectedIndexChanged);
             // 
-            // pictureBox4
+            // pbChuyenSangLopCu
             // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(536, 267);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 35);
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
+            this.pbChuyenSangLopCu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbChuyenSangLopCu.BackgroundImage")));
+            this.pbChuyenSangLopCu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbChuyenSangLopCu.Location = new System.Drawing.Point(536, 324);
+            this.pbChuyenSangLopCu.Name = "pbChuyenSangLopCu";
+            this.pbChuyenSangLopCu.Size = new System.Drawing.Size(40, 35);
+            this.pbChuyenSangLopCu.TabIndex = 15;
+            this.pbChuyenSangLopCu.TabStop = false;
             // 
-            // pictureBox3
+            // pbChuyenSangLopMoi
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(536, 200);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 35);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
+            this.pbChuyenSangLopMoi.BackColor = System.Drawing.Color.Transparent;
+            this.pbChuyenSangLopMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbChuyenSangLopMoi.BackgroundImage")));
+            this.pbChuyenSangLopMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbChuyenSangLopMoi.Location = new System.Drawing.Point(536, 257);
+            this.pbChuyenSangLopMoi.Name = "pbChuyenSangLopMoi";
+            this.pbChuyenSangLopMoi.Size = new System.Drawing.Size(40, 35);
+            this.pbChuyenSangLopMoi.TabIndex = 14;
+            this.pbChuyenSangLopMoi.TabStop = false;
+            this.pbChuyenSangLopMoi.Click += new System.EventHandler(this.pbChuyenSangLopMoi_Click);
             // 
             // labelgioitinh
             // 
@@ -1439,7 +1455,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.listView3);
+            this.groupBox3.Controls.Add(this.lvDSKL_NH);
             this.groupBox3.Location = new System.Drawing.Point(83, 120);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1448,51 +1464,53 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Sách Khối Lớp ";
             // 
-            // listView3
+            // lvDSKL_NH
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvDSKL_NH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columSTT,
-            this.columtenkhoi,
-            this.columTenkhoilop});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.listView3.GridLines = true;
-            this.listView3.Location = new System.Drawing.Point(3, 19);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(487, 288);
-            this.listView3.TabIndex = 0;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.clMaKhoiLop,
+            this.columtenkhoi});
+            this.lvDSKL_NH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDSKL_NH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvDSKL_NH.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lvDSKL_NH.FullRowSelect = true;
+            this.lvDSKL_NH.GridLines = true;
+            this.lvDSKL_NH.Location = new System.Drawing.Point(3, 19);
+            this.lvDSKL_NH.Name = "lvDSKL_NH";
+            this.lvDSKL_NH.Size = new System.Drawing.Size(487, 288);
+            this.lvDSKL_NH.TabIndex = 0;
+            this.lvDSKL_NH.UseCompatibleStateImageBehavior = false;
+            this.lvDSKL_NH.View = System.Windows.Forms.View.Details;
+            this.lvDSKL_NH.SelectedIndexChanged += new System.EventHandler(this.lvDSKL_NH_SelectedIndexChanged);
             // 
             // columSTT
             // 
             this.columSTT.Text = "STT";
             // 
+            // clMaKhoiLop
+            // 
+            this.clMaKhoiLop.Text = "Mã khối lớp";
+            this.clMaKhoiLop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.clMaKhoiLop.Width = 180;
+            // 
             // columtenkhoi
             // 
             this.columtenkhoi.Text = "Tên Khối Lớp";
             this.columtenkhoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columtenkhoi.Width = 147;
-            // 
-            // columTenkhoilop
-            // 
-            this.columTenkhoilop.Text = "Tên Lớp";
-            this.columTenkhoilop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columTenkhoilop.Width = 267;
+            this.columtenkhoi.Width = 200;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox24);
+            this.groupBox2.Controls.Add(this.tbSoLuongLop_DSKL);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox23);
-            this.groupBox2.Controls.Add(this.textBox22);
+            this.groupBox2.Controls.Add(this.tbNH_DSKL);
+            this.groupBox2.Controls.Add(this.tbBan_DSKL);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.tbMaKL_DSKL);
+            this.groupBox2.Controls.Add(this.tbTenKL_DSKL);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(658, 120);
             this.groupBox2.Name = "groupBox2";
@@ -1502,13 +1520,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Chi Tiết";
             // 
-            // textBox24
+            // tbSoLuongLop_DSKL
             // 
-            this.textBox24.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox24.Location = new System.Drawing.Point(173, 94);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(187, 23);
-            this.textBox24.TabIndex = 13;
+            this.tbSoLuongLop_DSKL.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbSoLuongLop_DSKL.Location = new System.Drawing.Point(173, 94);
+            this.tbSoLuongLop_DSKL.Name = "tbSoLuongLop_DSKL";
+            this.tbSoLuongLop_DSKL.Size = new System.Drawing.Size(187, 23);
+            this.tbSoLuongLop_DSKL.TabIndex = 13;
             // 
             // label3
             // 
@@ -1521,21 +1539,21 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Số Lượng Lớp:";
             // 
-            // textBox23
+            // tbNH_DSKL
             // 
-            this.textBox23.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox23.Location = new System.Drawing.Point(172, 161);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(187, 23);
-            this.textBox23.TabIndex = 11;
+            this.tbNH_DSKL.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbNH_DSKL.Location = new System.Drawing.Point(172, 161);
+            this.tbNH_DSKL.Name = "tbNH_DSKL";
+            this.tbNH_DSKL.Size = new System.Drawing.Size(187, 23);
+            this.tbNH_DSKL.TabIndex = 11;
             // 
-            // textBox22
+            // tbBan_DSKL
             // 
-            this.textBox22.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox22.Location = new System.Drawing.Point(172, 123);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(187, 23);
-            this.textBox22.TabIndex = 10;
+            this.tbBan_DSKL.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbBan_DSKL.Location = new System.Drawing.Point(172, 123);
+            this.tbBan_DSKL.Name = "tbBan_DSKL";
+            this.tbBan_DSKL.Size = new System.Drawing.Size(187, 23);
+            this.tbBan_DSKL.TabIndex = 10;
             // 
             // label2
             // 
@@ -1581,21 +1599,33 @@
             this.label16.TabIndex = 5;
             this.label16.Text = "Tên Khối Lớp:";
             // 
-            // textBox6
+            // tbMaKL_DSKL
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox6.Location = new System.Drawing.Point(172, 22);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(187, 23);
-            this.textBox6.TabIndex = 6;
+            this.tbMaKL_DSKL.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbMaKL_DSKL.Location = new System.Drawing.Point(172, 22);
+            this.tbMaKL_DSKL.Name = "tbMaKL_DSKL";
+            this.tbMaKL_DSKL.Size = new System.Drawing.Size(187, 23);
+            this.tbMaKL_DSKL.TabIndex = 6;
             // 
-            // textBox7
+            // tbTenKL_DSKL
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox7.Location = new System.Drawing.Point(172, 57);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(187, 23);
-            this.textBox7.TabIndex = 7;
+            this.tbTenKL_DSKL.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbTenKL_DSKL.Location = new System.Drawing.Point(172, 57);
+            this.tbTenKL_DSKL.Name = "tbTenKL_DSKL";
+            this.tbTenKL_DSKL.Size = new System.Drawing.Size(187, 23);
+            this.tbTenKL_DSKL.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(93, 86);
+            this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label11.Size = new System.Drawing.Size(89, 22);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Năm Học:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cbNH_DSKL
             // 
@@ -1605,6 +1635,7 @@
             this.cbNH_DSKL.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbNH_DSKL.Size = new System.Drawing.Size(121, 24);
             this.cbNH_DSKL.TabIndex = 2;
+            this.cbNH_DSKL.SelectedIndexChanged += new System.EventHandler(this.cbNH_DSKL_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -1620,23 +1651,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // clMaHS
-            // 
-            this.clMaHS.Text = "Mã học sinh";
-            this.clMaHS.Width = 100;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(93, 86);
-            this.label11.Name = "label11";
-            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(89, 22);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Năm Học:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // QuanLyLopHoc
             // 
@@ -1665,8 +1679,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChuyenSangLopCu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChuyenSangLopMoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturehelper)).EndInit();
             this.tcQuanLyLop.ResumeLayout(false);
             this.tabQLHS.ResumeLayout(false);
@@ -1747,21 +1761,21 @@
         private System.Windows.Forms.Label labeldslophoc;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView lvDSKL_NH;
         private System.Windows.Forms.ColumnHeader columSTT;
         private System.Windows.Forms.ColumnHeader columtenkhoi;
-        private System.Windows.Forms.ColumnHeader columTenkhoilop;
+        private System.Windows.Forms.ColumnHeader clMaKhoiLop;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox tbSoLuongLop_DSKL;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox tbNH_DSKL;
+        private System.Windows.Forms.TextBox tbBan_DSKL;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbMaKL_DSKL;
+        private System.Windows.Forms.TextBox tbTenKL_DSKL;
         private System.Windows.Forms.ComboBox cbNH_DSKL;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabPage tabPage4;
@@ -1771,7 +1785,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbHK_ChuyenLopCu;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView lvDSHSCu_CL;
         private System.Windows.Forms.ColumnHeader columnstt;
         private System.Windows.Forms.ColumnHeader columnMahs;
         private System.Windows.Forms.ColumnHeader columntenhs;
@@ -1779,7 +1793,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.ListView lvDSHSMoi_CL;
         private System.Windows.Forms.ColumnHeader stt;
         private System.Windows.Forms.ColumnHeader Mahs;
         private System.Windows.Forms.ColumnHeader tenhs;
@@ -1789,8 +1803,8 @@
         private System.Windows.Forms.ComboBox cbNH_ChuyenLopMoi;
         private System.Windows.Forms.ComboBox cbLop_ChuyenLop_Moi;
         private System.Windows.Forms.ComboBox cbHocKy_ChuyenLopMoi;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbChuyenSangLopCu;
+        private System.Windows.Forms.PictureBox pbChuyenSangLopMoi;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.GroupBox groupBox9;

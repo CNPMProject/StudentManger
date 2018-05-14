@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTongKetHocKyBLL.cs" />
+    <Compile Include="BaoCaoTongKetMonBLL.cs" />
     <Compile Include="ChuongTrinhDaoTaoBLL.cs" />
+    <Compile Include="CTBaoCaoTongKetMonBLL.cs" />
     <Compile Include="DatabaseBLL.cs" />
     <Compile Include="DShocsinhBLL.cs" />
     <Compile Include="HinhThucKiemTraBLL.cs" />
@@ -50,6 +53,7 @@
     <Compile Include="MonHocBLL.cs" />
     <Compile Include="NamHocBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuaTrinhHocTapBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

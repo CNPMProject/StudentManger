@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTongKetHocKyAccess.cs" />
+    <Compile Include="BaoCaoTongKetMonAccess.cs" />
     <Compile Include="ChuongTrinhDaoTaoAccess.cs" />
+    <Compile Include="CTBaoCaoTongKetMonAccess.cs" />
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="DShocsinhAccess.cs" />
     <Compile Include="HinhThucKiemTraAccess.cs" />
@@ -55,6 +58,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="QuaTrinhHocTapAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

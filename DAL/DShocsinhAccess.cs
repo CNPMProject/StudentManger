@@ -117,6 +117,48 @@ namespace DAL
             return listdshocsinh;
         }
 
+        public List<HocSinh> GetDSHocSinh(string namHoc,string hocKy,string maLop)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            string textQuery = "select * from HOCSINH , HOCKY, QUATRINHHOCTAP"
+                                + " where HOCSINH.MaHocSinh = QUATRINHHOCTAP.MaHocSinh and QUATRINHHOCTAP.MaHocKy = HOCKY.MaHocKy "
+                                + "and HOCKY.MaNamHoc = @maNH and HOCKY.MaHocKy = @maHK and QUATRINHHOCTAP.MaLop = @maLop";
+            com.CommandText = textQuery;
+
+            com.Parameters.Add("@maNH", SqlDbType.VarChar).Value = namHoc;
+            com.Parameters.Add("@maHK", SqlDbType.VarChar).Value = hocKy;
+            com.Parameters.Add("@maLop", SqlDbType.VarChar).Value = maLop;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<HocSinh> listdshocsinh = new List<HocSinh>();
+            string namsinh = null;
+
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string gioitinh = reader.GetString(2);
+                string diachi = reader.GetString(3);
+                string email = reader.GetString(4);
+                try
+                {
+                    namsinh = reader.GetDateTime(5).ToString();
+                }
+                catch { }
+
+
+                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listdshocsinh;
+        }
+
         public bool XoaHS(string mahocsinh)
         {
             OpenConnection();

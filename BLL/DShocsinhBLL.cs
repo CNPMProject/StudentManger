@@ -26,6 +26,11 @@ namespace BLL
         {
             return danhsachhocsinh.GetDSHocSinhTheoLop(malop);
         }
+
+        public List<HocSinh> GetDSHocSinh(string namHoc, string hocKy, string maLop)
+        {
+            return danhsachhocsinh.GetDSHocSinh(namHoc, hocKy, maLop);
+        }
         public bool ThemHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
         {
             DShocsinhAccess ac = new DShocsinhAccess();

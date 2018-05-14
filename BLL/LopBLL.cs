@@ -6,37 +6,39 @@ namespace BLL
 {
     public class LopBLL : DatabaseBLL
     {
+        LopAccess lopaccess = new LopAccess();
         public LopBLL() : base()
         { }
 
         public List<Lop> GetListLop()
-        {
-            LopAccess lopaccess = new LopAccess();
+        {           
             return lopaccess.GetAllLop();
         }
 
         public Lop GetLop(string maLop)
         {
-            LopAccess lopaccess = new LopAccess();
             return lopaccess.GetLop(maLop);
+        }
+
+        public int CountSoLuongLopTheoKhoi(string maKhoi)
+        {
+            return lopaccess.CountSoLuongLopTheoKhoi(maKhoi);
         }
 
         public bool Xoalop(string maMH)
         {
-            LopAccess lop = new LopAccess();
-            return lop.XoaLop(maMH);
+            return lopaccess.XoaLop(maMH);
         }
 
         public bool Themlop(string ma, string ten, string makhoi, int siso)
         {
-            LopAccess lop = new LopAccess();
-            return lop.ThemLop(ma, ten, makhoi, siso);
+            return lopaccess.ThemLop(ma, ten, makhoi, siso);
         }
 
         public bool SuaLop(string ma, string ten, string makhoi, int siso)
         {
-            LopAccess lop = new LopAccess();
-            return lop.SuaLop(ma, ten, makhoi, siso);
+      
+            return lopaccess.SuaLop(ma, ten, makhoi, siso);
         }
     }
 }

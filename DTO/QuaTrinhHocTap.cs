@@ -8,11 +8,11 @@ namespace DTO
 {
     public class QuaTrinhHocTap
     {
-        string MaQTH;
-        string MaLop;
-        string MaHocKy;
-        string MaHocSinh;
-        float DiemTBHk;
+        public string MaQTH;
+        public string MaLop;
+        public string MaHocKy;
+        public string MaHocSinh;
+        public float DiemTBHk;
 
         public QuaTrinhHocTap(string qth, string ml, string mhk, string mhs, float tb)
         {

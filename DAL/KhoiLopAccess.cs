@@ -30,7 +30,37 @@ namespace DAL
                 string maKL = reader.GetString(0);
                 string tenKL = reader.GetString(1);
                 string ban = reader.GetString(2);
-                string manamhoc = reader.GetString(1);
+                string manamhoc = reader.GetString(3);
+
+                KhoiLop khoilop = new KhoiLop(maKL, tenKL, ban, manamhoc);
+                listKhoiLop.Add(khoilop);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listKhoiLop;
+        }
+
+        public List<KhoiLop> GetAllKhoilop(string namHoc)
+        {
+            OpenConnection();
+
+            List<KhoiLop> listKhoiLop = new List<KhoiLop>();
+
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from KHOILOP where MaNamHoc=@namhoc";
+            com.Parameters.Add("@namhoc", SqlDbType.VarChar).Value = namHoc;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string maKL = reader.GetString(0);
+                string tenKL = reader.GetString(1);
+                string ban = reader.GetString(2);
+                string manamhoc = reader.GetString(3);
 
                 KhoiLop khoilop = new KhoiLop(maKL, tenKL, ban, manamhoc);
                 listKhoiLop.Add(khoilop);
@@ -48,6 +78,31 @@ namespace DAL
             com.CommandType = CommandType.Text;
             com.CommandText = "Select * from KhoiLOP where MAkhoilop=@ma";
             com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maKhoiLop;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            KhoiLop lop = null;
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string ban = reader.GetString(2);
+                string manamhoc = reader.GetString(3);
+
+                lop = new KhoiLop(ma, ten, ban, manamhoc);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return lop;
+        }
+        public KhoiLop GetKhoiLopTheoNH(string namhoc)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from KhoiLOP where MaNamHoc=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = namhoc;
             com.Connection = conn;
 
             SqlDataReader reader = com.ExecuteReader();
