@@ -37,11 +37,19 @@ namespace QLHS.FormChinh
             {
                 ListViewItem lvi = new ListViewItem(soThuTu + "");
                 lvi.SubItems.Add(thamso.TenThamSo);
-                //thamso.GiaTri = decimal.Parse(lvi.SubItems[soThuTu++].Text);
+                lvi.SubItems.Add(thamso.GiaTri.ToString());
                 soThuTu++;
 
                 lvDSthamso.Items.Add(lvi);
             }
+
+            nricTuoitoithieu.Value =Int32.Parse( lvDSthamso.Items[0].SubItems[2].Text);
+            nrictoitoida.Value = Int32.Parse(lvDSthamso.Items[1].SubItems[2].Text);
+            nricsiso.Value = Int32.Parse(lvDSthamso.Items[2].SubItems[2].Text);
+            nricdiemtoithieu.Value = Int32.Parse(lvDSthamso.Items[3].SubItems[2].Text);
+            nricdiemtoida.Value = Int32.Parse(lvDSthamso.Items[4].SubItems[2].Text);
+            nricdiemdatmon.Value = Int32.Parse(lvDSthamso.Items[5].SubItems[2].Text);
+            nricdiemdathk.Value = Int32.Parse(lvDSthamso.Items[6].SubItems[2].Text);
         }
 
         

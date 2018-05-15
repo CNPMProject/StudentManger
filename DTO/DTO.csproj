@@ -46,6 +46,7 @@
     <Compile Include="ChiTietBangDiemMon.cs" />
     <Compile Include="ChuongTrinhDaoTao.cs" />
     <Compile Include="CTBaoCaoTongKetMon.cs" />
+    <Compile Include="ErrorType.cs" />
     <Compile Include="HinhThucKiemTra.cs" />
     <Compile Include="HocKy.cs" />
     <Compile Include="HocKy_NamHoc.cs" />

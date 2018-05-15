@@ -272,10 +272,15 @@ namespace GUI
 
         private void btnQuyDinh_Click(object sender, EventArgs e)
         {
-            ThayDoiQuyDinh thaydoi = new ThayDoiQuyDinh() { TopLevel = false };
+            ThayDoiQuyDinh thaydoi = new ThayDoiQuyDinh() { TopLevel=false};
             pnBoard.Controls.Clear();
             pnBoard.Controls.Add(thaydoi);
             thaydoi.Show();
+        }
+
+        private void pbClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

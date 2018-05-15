@@ -82,6 +82,7 @@
             this.pbClose.Size = new System.Drawing.Size(26, 26);
             this.pbClose.TabIndex = 8;
             this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click_1);
             // 
             // lbNameSoftWare
             // 

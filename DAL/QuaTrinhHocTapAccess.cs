@@ -66,10 +66,10 @@ namespace DAL
                 string MaQTH = reader.GetString(0); 
                 string MaLop = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
-                string MaHocSinh = reader.GetString(3);
-                string MaNamHoc = reader.GetString(5);
+                string MaNamHoc = reader.GetString(3);
+                string MaHocSinh = reader.GetString(4);
                 float DiemTBHk = 0;
-                try { DiemTBHk = reader.GetFloat(4); }
+                try { DiemTBHk = reader.GetFloat(5); }
                 catch { }
                 QuaTrinhHocTap quatrinhoctap = new QuaTrinhHocTap(MaQTH, MaLop, MaHocKy,MaNamHoc, MaHocSinh, DiemTBHk);
                 listQuaTrinhHocTap.Add(quatrinhoctap);
@@ -79,6 +79,42 @@ namespace DAL
             reader.Close();
             CloseConnection();
             return listQuaTrinhHocTap;
+        }
+
+        public QuaTrinhHocTap GetQuaTrinhHocTapCo(string maHS,string hocKy,string namHoc)
+        {
+            OpenConnection();
+
+            QuaTrinhHocTap QuaTrinhHocTap = null;
+
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from QUATRINHHOCTAP where MaHocSinh=@maHS and mahocky=@mahocky and manamhoc=@manamhoc";
+            com.Parameters.Add("@maHS", SqlDbType.VarChar).Value = maHS;
+            com.Parameters.Add("@mahocky", SqlDbType.VarChar).Value = hocKy;
+            com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = namHoc;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string MaQTH = reader.GetString(0);
+                string MaLop = reader.GetString(1);
+                string MaHocKy = reader.GetString(2);
+                string MaNamHoc = reader.GetString(3);
+                string MaHocSinh = reader.GetString(4);
+                float DiemTBHk = 0;
+                try { DiemTBHk = reader.GetFloat(5); }
+                catch { }
+                QuaTrinhHocTap = new QuaTrinhHocTap(MaQTH, MaLop, MaHocKy, MaNamHoc, MaHocSinh, DiemTBHk);
+              
+
+            }
+
+            reader.Close();
+            CloseConnection();
+            return QuaTrinhHocTap;
         }
 
         public bool XoaQuaTrinhHocTap(string maQTH)
@@ -136,14 +172,12 @@ namespace DAL
             }
         }
 
-        public bool SuaQuaTrinhHocTap(string maqth, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
+        public ErrorType SuaQuaTrinhHocTap(string maqth, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
         {
-          //  try
-            //{
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  QUATRINHHOCTAP set MaLop=@malop , MaHocKy=@mahky,MaNamHoc=@manamhoc MaHocSinh=@mahsinh , DiemTBHk=@diemtbhk where  MaQTH=@maqth";
+                com.CommandText = "update  QUATRINHHOCTAP set MaLop=@malop , MaHocKy=@mahky,MaNamHoc=@manamhoc, MaHocSinh=@mahsinh , DiemTBHk=@diemtbhk where  MaQTH=@maqth";
                 com.Connection = conn;
 
                 com.Parameters.Add("@maqth", SqlDbType.VarChar).Value = maqth;
@@ -157,14 +191,9 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
 
-         //   }
-           // catch
-            //{
-              //  return false;
-           // }
         }
     }
 }

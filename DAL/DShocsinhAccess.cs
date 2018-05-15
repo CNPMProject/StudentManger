@@ -61,14 +61,10 @@ namespace DAL
                 string ma = reader.GetString(0);
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
-                string diachi = reader.GetString(3);
-                string email = reader.GetString(4);
-                string namsinh = null;
-                try
-                {
-                    namsinh = reader.GetDateTime(5).ToString();
-                }
-                catch { }
+                string namsinh = reader.GetDateTime(3).ToString();
+                string diachi = reader.GetString(4);
+                string email = reader.GetString(5);
+
                
 
                 dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh);
@@ -99,13 +95,9 @@ namespace DAL
                 string ma = reader.GetString(0);
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
-                string diachi = reader.GetString(3);
-                string email = reader.GetString(4);
-                try
-                {
-                    namsinh = reader.GetDateTime(5).ToString();
-                }
-                catch { }
+                namsinh = reader.GetDateTime(3).ToString();
+                string diachi = reader.GetString(5);
+                string email = reader.GetString(5);
                
 
                 HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email,namsinh);
@@ -122,9 +114,10 @@ namespace DAL
             OpenConnection();
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
-            string textQuery = "select * from HOCSINH , HOCKY, QUATRINHHOCTAP"
-                                + " where HOCSINH.MaHocSinh = QUATRINHHOCTAP.MaHocSinh and QUATRINHHOCTAP.MaHocKy = HOCKY.MaHocKy "
-                                + "and HOCKY.MaNamHoc = @maNH and HOCKY.MaHocKy = @maHK and QUATRINHHOCTAP.MaLop = @maLop";
+            string textQuery = "select * from HOCSINH, QUATRINHHOCTAP "
+                                +"where HOCSINH.MaHocSinh = QUATRINHHOCTAP.MaHocSinh"
+                                + " and QUATRINHHOCTAP.MaNamHoc = @maNH and QUATRINHHOCTAP.MaHocKy = @maHK"
+                                + " and QUATRINHHOCTAP.MaLop = @maLop";
             com.CommandText = textQuery;
 
             com.Parameters.Add("@maNH", SqlDbType.VarChar).Value = namHoc;
@@ -141,14 +134,9 @@ namespace DAL
                 string ma = reader.GetString(0);
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
-                string diachi = reader.GetString(3);
-                string email = reader.GetString(4);
-                try
-                {
-                    namsinh = reader.GetDateTime(5).ToString();
-                }
-                catch { }
-
+                namsinh = reader.GetDateTime(3).ToString();
+                string diachi = reader.GetString(4);
+                string email = reader.GetString(5);
 
                 HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh);
                 listdshocsinh.Add(dshocsinh);

@@ -351,13 +351,27 @@ namespace GUI.MainForm
             if (lvDSHSCu_CL.SelectedItems.Count > 0)
             {
                 string maHocSinh = lvDSHSCu_CL.SelectedItems[0].SubItems[1].Text;
+                string maHocKy = cbHK_ChuyenLopCu.Text;
+                string maNamHoc = cbNH_ChuyenLop_cu.Text;
+
                 QuaTrinhHocTapBLL qthocBll = new QuaTrinhHocTapBLL();
-                List<QuaTrinhHocTap> Listqt = qthocBll.GetQuaTrinhHocTapCoMaHS(maHocSinh);
-          
-                foreach(QuaTrinhHocTap qtht in Listqt)
+                QuaTrinhHocTap quaTrinhHocTap = qthocBll.GetQuaTrinhHocTapCo(maHocSinh,maHocKy,maNamHoc);
+
+                ErrorType result=  qthocBll.SuaQuatrinhhoctap(quaTrinhHocTap.MaQTH, cbLop_ChuyenLop_Moi.Text, cbHocKy_ChuyenLopMoi.Text, cbNH_ChuyenLopMoi.Text, quaTrinhHocTap.MaHocSinh, quaTrinhHocTap.DiemTBHk);
+                switch ((int)result)
                 {
-                   // if(qtht.MaHocKy==cbHocKy_ChuyenLopMoi.Text&&qtht.nam)
-                    qthocBll.SuaQuatrinhhoctap(qtht.MaQTH, cbLop_ChuyenLop_Moi.Text, qtht.MaHocKy, qtht.MaHocSinh, qtht.DiemTBHk);
+                    case (int)ErrorType.DA_TON_TAI:
+                        MessageBox.Show(" Không thể chuyển,Đã tồn tại học sinh này trong lớp mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+
+                    case (int)ErrorType.THAT_BAI:
+                        MessageBox.Show(" Không thể chuyển,Vui lòng kiểm tra lại kết nối CSDL!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+
+                    default:
+                        MessageBox.Show(" Chuyển thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+
                 }
 
                 LoadDanhSachHocSinh(1, cbNH_ChuyenLop_cu.Text, cbHK_ChuyenLopCu.Text, cbLopChuyenLopCu.Text);

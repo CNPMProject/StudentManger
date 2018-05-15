@@ -317,14 +317,17 @@
             // 
             // ThayDoiQuyDinh
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 472);
+            this.ControlBox = false;
             this.Controls.Add(this.gbcacthamso);
             this.Controls.Add(this.groupboxthaydoiquydinh);
             this.Controls.Add(this.lbquydinhnamhoc);
             this.Controls.Add(this.btexit);
             this.Controls.Add(this.btApDung);
+            this.Cursor = System.Windows.Forms.Cursors.No;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThayDoiQuyDinh";
             this.Text = "ThayDoiQuyDinh";

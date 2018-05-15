@@ -153,3 +153,14 @@ C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.csproj.Gene
 C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.exe.licenses
 C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\QLHS.FormChinh.ThayDoiQuyDinh.resources
 C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.MainForm.LapBaoCaoTongKet.resources
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.MainForm.LapBaoCaoTongKet.resources
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\QLHS.FormChinh.ThayDoiQuyDinh.resources
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.SqlServer.Types.dll

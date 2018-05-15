@@ -154,7 +154,7 @@
             this.tcQuanLyMonHoc.Location = new System.Drawing.Point(0, 0);
             this.tcQuanLyMonHoc.Name = "tcQuanLyMonHoc";
             this.tcQuanLyMonHoc.SelectedIndex = 0;
-            this.tcQuanLyMonHoc.Size = new System.Drawing.Size(1128, 502);
+            this.tcQuanLyMonHoc.Size = new System.Drawing.Size(1144, 541);
             this.tcQuanLyMonHoc.TabIndex = 2;
             this.tcQuanLyMonHoc.Selected += new System.Windows.Forms.TabControlEventHandler(this.tcQuanLyMonHoc_Selected);
             // 
@@ -168,7 +168,7 @@
             this.tbDanhSachMonHoc.Location = new System.Drawing.Point(4, 22);
             this.tbDanhSachMonHoc.Name = "tbDanhSachMonHoc";
             this.tbDanhSachMonHoc.Padding = new System.Windows.Forms.Padding(3);
-            this.tbDanhSachMonHoc.Size = new System.Drawing.Size(1120, 476);
+            this.tbDanhSachMonHoc.Size = new System.Drawing.Size(1136, 515);
             this.tbDanhSachMonHoc.TabIndex = 0;
             this.tbDanhSachMonHoc.Text = "Danh sách môn học";
             // 
@@ -178,7 +178,7 @@
             this.gbSetting_DSMH.Controls.Add(this.bunifuFlatButton7);
             this.gbSetting_DSMH.Controls.Add(this.bunifuFlatButton8);
             this.gbSetting_DSMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbSetting_DSMH.Location = new System.Drawing.Point(640, 310);
+            this.gbSetting_DSMH.Location = new System.Drawing.Point(624, 368);
             this.gbSetting_DSMH.Name = "gbSetting_DSMH";
             this.gbSetting_DSMH.Size = new System.Drawing.Size(418, 113);
             this.gbSetting_DSMH.TabIndex = 15;
@@ -241,7 +241,7 @@
             this.bunifuFlatButton7.IconMarginRight = 0;
             this.bunifuFlatButton7.IconRightVisible = false;
             this.bunifuFlatButton7.IconRightZoom = 0D;
-            this.bunifuFlatButton7.IconVisible = true;
+            this.bunifuFlatButton7.IconVisible = false;
             this.bunifuFlatButton7.IconZoom = 70D;
             this.bunifuFlatButton7.IsTab = true;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(156, 38);
@@ -277,7 +277,7 @@
             this.bunifuFlatButton8.IconMarginRight = 0;
             this.bunifuFlatButton8.IconRightVisible = false;
             this.bunifuFlatButton8.IconRightZoom = 0D;
-            this.bunifuFlatButton8.IconVisible = true;
+            this.bunifuFlatButton8.IconVisible = false;
             this.bunifuFlatButton8.IconZoom = 70D;
             this.bunifuFlatButton8.IsTab = true;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(274, 38);
@@ -302,9 +302,9 @@
             this.gbThongTinChiTiet_DSMH.Controls.Add(this.lbMaMH);
             this.gbThongTinChiTiet_DSMH.Controls.Add(this.lbTenMH);
             this.gbThongTinChiTiet_DSMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbThongTinChiTiet_DSMH.Location = new System.Drawing.Point(640, 93);
+            this.gbThongTinChiTiet_DSMH.Location = new System.Drawing.Point(624, 93);
             this.gbThongTinChiTiet_DSMH.Name = "gbThongTinChiTiet_DSMH";
-            this.gbThongTinChiTiet_DSMH.Size = new System.Drawing.Size(418, 187);
+            this.gbThongTinChiTiet_DSMH.Size = new System.Drawing.Size(434, 187);
             this.gbThongTinChiTiet_DSMH.TabIndex = 14;
             this.gbThongTinChiTiet_DSMH.TabStop = false;
             this.gbThongTinChiTiet_DSMH.Text = "Thông tin chi tiết";
@@ -313,7 +313,7 @@
             // 
             this.tbTenMH_DSMH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbTenMH_DSMH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbTenMH_DSMH.Location = new System.Drawing.Point(164, 41);
+            this.tbTenMH_DSMH.Location = new System.Drawing.Point(172, 41);
             this.tbTenMH_DSMH.Multiline = true;
             this.tbTenMH_DSMH.Name = "tbTenMH_DSMH";
             this.tbTenMH_DSMH.Size = new System.Drawing.Size(222, 22);
@@ -323,7 +323,7 @@
             // 
             this.tbHeSoMH_DSMH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbHeSoMH_DSMH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbHeSoMH_DSMH.Location = new System.Drawing.Point(164, 129);
+            this.tbHeSoMH_DSMH.Location = new System.Drawing.Point(172, 129);
             this.tbHeSoMH_DSMH.Multiline = true;
             this.tbHeSoMH_DSMH.Name = "tbHeSoMH_DSMH";
             this.tbHeSoMH_DSMH.Size = new System.Drawing.Size(222, 22);
@@ -335,7 +335,7 @@
             this.lbHSMonHoc.AutoSize = true;
             this.lbHSMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHSMonHoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbHSMonHoc.Location = new System.Drawing.Point(35, 130);
+            this.lbHSMonHoc.Location = new System.Drawing.Point(43, 130);
             this.lbHSMonHoc.Name = "lbHSMonHoc";
             this.lbHSMonHoc.Size = new System.Drawing.Size(130, 22);
             this.lbHSMonHoc.TabIndex = 9;
@@ -345,7 +345,7 @@
             // 
             this.tbMaMH_DSMH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbMaMH_DSMH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbMaMH_DSMH.Location = new System.Drawing.Point(164, 85);
+            this.tbMaMH_DSMH.Location = new System.Drawing.Point(172, 85);
             this.tbMaMH_DSMH.Multiline = true;
             this.tbMaMH_DSMH.Name = "tbMaMH_DSMH";
             this.tbMaMH_DSMH.Size = new System.Drawing.Size(222, 22);
@@ -357,7 +357,7 @@
             this.lbMaMH.AutoSize = true;
             this.lbMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaMH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbMaMH.Location = new System.Drawing.Point(35, 86);
+            this.lbMaMH.Location = new System.Drawing.Point(43, 86);
             this.lbMaMH.Name = "lbMaMH";
             this.lbMaMH.Size = new System.Drawing.Size(107, 22);
             this.lbMaMH.TabIndex = 9;
@@ -369,7 +369,7 @@
             this.lbTenMH.AutoSize = true;
             this.lbTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenMH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbTenMH.Location = new System.Drawing.Point(35, 42);
+            this.lbTenMH.Location = new System.Drawing.Point(43, 42);
             this.lbTenMH.Name = "lbTenMH";
             this.lbTenMH.Size = new System.Drawing.Size(115, 22);
             this.lbTenMH.TabIndex = 10;
@@ -379,9 +379,9 @@
             // 
             this.gbDanhSachMonHoc_DSMH.Controls.Add(this.lvDanhSachMonHoc);
             this.gbDanhSachMonHoc_DSMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDanhSachMonHoc_DSMH.Location = new System.Drawing.Point(46, 93);
+            this.gbDanhSachMonHoc_DSMH.Location = new System.Drawing.Point(35, 93);
             this.gbDanhSachMonHoc_DSMH.Name = "gbDanhSachMonHoc_DSMH";
-            this.gbDanhSachMonHoc_DSMH.Size = new System.Drawing.Size(533, 333);
+            this.gbDanhSachMonHoc_DSMH.Size = new System.Drawing.Size(544, 391);
             this.gbDanhSachMonHoc_DSMH.TabIndex = 13;
             this.gbDanhSachMonHoc_DSMH.TabStop = false;
             this.gbDanhSachMonHoc_DSMH.Text = "Danh sách các môn học";
@@ -399,7 +399,7 @@
             this.lvDanhSachMonHoc.GridLines = true;
             this.lvDanhSachMonHoc.Location = new System.Drawing.Point(3, 22);
             this.lvDanhSachMonHoc.Name = "lvDanhSachMonHoc";
-            this.lvDanhSachMonHoc.Size = new System.Drawing.Size(527, 308);
+            this.lvDanhSachMonHoc.Size = new System.Drawing.Size(538, 366);
             this.lvDanhSachMonHoc.TabIndex = 5;
             this.lvDanhSachMonHoc.UseCompatibleStateImageBehavior = false;
             this.lvDanhSachMonHoc.View = System.Windows.Forms.View.Details;
@@ -427,7 +427,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(3, 3);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1114, 52);
+            this.pnTop.Size = new System.Drawing.Size(1130, 52);
             this.pnTop.TabIndex = 4;
             // 
             // pbGuideNhapDiem
@@ -435,7 +435,7 @@
             this.pbGuideNhapDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbGuideNhapDiem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbGuideNhapDiem.BackgroundImage")));
             this.pbGuideNhapDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbGuideNhapDiem.Location = new System.Drawing.Point(1054, 16);
+            this.pbGuideNhapDiem.Location = new System.Drawing.Point(1070, 16);
             this.pbGuideNhapDiem.Name = "pbGuideNhapDiem";
             this.pbGuideNhapDiem.Size = new System.Drawing.Size(34, 33);
             this.pbGuideNhapDiem.TabIndex = 6;
@@ -448,7 +448,7 @@
             this.lbDanhSachMon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbDanhSachMon.Location = new System.Drawing.Point(0, 0);
             this.lbDanhSachMon.Name = "lbDanhSachMon";
-            this.lbDanhSachMon.Size = new System.Drawing.Size(1114, 52);
+            this.lbDanhSachMon.Size = new System.Drawing.Size(1130, 52);
             this.lbDanhSachMon.TabIndex = 0;
             this.lbDanhSachMon.Text = "Danh sách môn học";
             this.lbDanhSachMon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -461,7 +461,7 @@
             this.tbBangDiemMon.Location = new System.Drawing.Point(4, 22);
             this.tbBangDiemMon.Name = "tbBangDiemMon";
             this.tbBangDiemMon.Padding = new System.Windows.Forms.Padding(3);
-            this.tbBangDiemMon.Size = new System.Drawing.Size(1120, 476);
+            this.tbBangDiemMon.Size = new System.Drawing.Size(1136, 515);
             this.tbBangDiemMon.TabIndex = 1;
             this.tbBangDiemMon.Text = "Bảng điểm môn học";
             // 
@@ -473,7 +473,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1114, 52);
+            this.panel3.Size = new System.Drawing.Size(1130, 52);
             this.panel3.TabIndex = 4;
             // 
             // pictureBox1
@@ -481,7 +481,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(955, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(971, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 33);
             this.pictureBox1.TabIndex = 6;
@@ -494,7 +494,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1114, 45);
+            this.label4.Size = new System.Drawing.Size(1130, 45);
             this.label4.TabIndex = 0;
             this.label4.Text = "Bảng điểm môn học";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -509,7 +509,7 @@
             this.panel4.Controls.Add(this.gbBoLoc);
             this.panel4.Location = new System.Drawing.Point(3, 54);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1114, 419);
+            this.panel4.Size = new System.Drawing.Size(1130, 458);
             this.panel4.TabIndex = 6;
             // 
             // gbTuyChon_BDMH
@@ -517,9 +517,9 @@
             this.gbTuyChon_BDMH.Controls.Add(this.bunifuFlatButton4);
             this.gbTuyChon_BDMH.Controls.Add(this.bunifuFlatButton5);
             this.gbTuyChon_BDMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTuyChon_BDMH.Location = new System.Drawing.Point(762, 245);
+            this.gbTuyChon_BDMH.Location = new System.Drawing.Point(762, 318);
             this.gbTuyChon_BDMH.Name = "gbTuyChon_BDMH";
-            this.gbTuyChon_BDMH.Size = new System.Drawing.Size(318, 100);
+            this.gbTuyChon_BDMH.Size = new System.Drawing.Size(318, 117);
             this.gbTuyChon_BDMH.TabIndex = 5;
             this.gbTuyChon_BDMH.TabStop = false;
             this.gbTuyChon_BDMH.Text = "Tùy chọn";
@@ -544,10 +544,10 @@
             this.bunifuFlatButton4.IconMarginRight = 0;
             this.bunifuFlatButton4.IconRightVisible = false;
             this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
+            this.bunifuFlatButton4.IconVisible = false;
             this.bunifuFlatButton4.IconZoom = 70D;
             this.bunifuFlatButton4.IsTab = true;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(30, 37);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(29, 46);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
@@ -580,10 +580,10 @@
             this.bunifuFlatButton5.IconMarginRight = 0;
             this.bunifuFlatButton5.IconRightVisible = false;
             this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
+            this.bunifuFlatButton5.IconVisible = false;
             this.bunifuFlatButton5.IconZoom = 70D;
             this.bunifuFlatButton5.IsTab = true;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(168, 37);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(167, 46);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
@@ -602,7 +602,7 @@
             this.gbBangDiemMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbBangDiemMonHoc.Location = new System.Drawing.Point(16, 24);
             this.gbBangDiemMonHoc.Name = "gbBangDiemMonHoc";
-            this.gbBangDiemMonHoc.Size = new System.Drawing.Size(728, 375);
+            this.gbBangDiemMonHoc.Size = new System.Drawing.Size(728, 414);
             this.gbBangDiemMonHoc.TabIndex = 4;
             this.gbBangDiemMonHoc.TabStop = false;
             this.gbBangDiemMonHoc.Text = "Bảng điểm môn học";
@@ -613,7 +613,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(722, 350);
+            this.panel1.Size = new System.Drawing.Size(722, 389);
             this.panel1.TabIndex = 0;
             // 
             // listView1
@@ -630,7 +630,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(722, 350);
+            this.listView1.Size = new System.Drawing.Size(722, 389);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -675,7 +675,7 @@
             this.gbBoLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbBoLoc.Location = new System.Drawing.Point(762, 24);
             this.gbBoLoc.Name = "gbBoLoc";
-            this.gbBoLoc.Size = new System.Drawing.Size(318, 182);
+            this.gbBoLoc.Size = new System.Drawing.Size(318, 232);
             this.gbBoLoc.TabIndex = 3;
             this.gbBoLoc.TabStop = false;
             this.gbBoLoc.Text = "Bộ lọc";
@@ -685,7 +685,7 @@
             this.cbDanhSachMonHoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbDanhSachMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDanhSachMonHoc.FormattingEnabled = true;
-            this.cbDanhSachMonHoc.Location = new System.Drawing.Point(122, 128);
+            this.cbDanhSachMonHoc.Location = new System.Drawing.Point(121, 154);
             this.cbDanhSachMonHoc.Name = "cbDanhSachMonHoc";
             this.cbDanhSachMonHoc.Size = new System.Drawing.Size(180, 24);
             this.cbDanhSachMonHoc.TabIndex = 2;
@@ -696,7 +696,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(21, 132);
+            this.label1.Location = new System.Drawing.Point(20, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 21);
             this.label1.TabIndex = 4;
@@ -707,7 +707,7 @@
             this.cbDSLop.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbDSLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDSLop.FormattingEnabled = true;
-            this.cbDSLop.Location = new System.Drawing.Point(122, 35);
+            this.cbDSLop.Location = new System.Drawing.Point(121, 61);
             this.cbDSLop.Name = "cbDSLop";
             this.cbDSLop.Size = new System.Drawing.Size(180, 24);
             this.cbDSLop.TabIndex = 1;
@@ -717,7 +717,7 @@
             this.cbDSHocKy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbDSHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDSHocKy.FormattingEnabled = true;
-            this.cbDSHocKy.Location = new System.Drawing.Point(122, 77);
+            this.cbDSHocKy.Location = new System.Drawing.Point(121, 103);
             this.cbDSHocKy.Name = "cbDSHocKy";
             this.cbDSHocKy.Size = new System.Drawing.Size(180, 24);
             this.cbDSHocKy.TabIndex = 2;
@@ -728,7 +728,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(21, 35);
+            this.label3.Location = new System.Drawing.Point(20, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 21);
             this.label3.TabIndex = 2;
@@ -740,7 +740,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(21, 79);
+            this.label2.Location = new System.Drawing.Point(20, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 21);
             this.label2.TabIndex = 3;
@@ -756,7 +756,7 @@
             this.tbHinhThucKiemTra.Controls.Add(this.pictureBox2);
             this.tbHinhThucKiemTra.Location = new System.Drawing.Point(4, 22);
             this.tbHinhThucKiemTra.Name = "tbHinhThucKiemTra";
-            this.tbHinhThucKiemTra.Size = new System.Drawing.Size(1120, 476);
+            this.tbHinhThucKiemTra.Size = new System.Drawing.Size(1136, 515);
             this.tbHinhThucKiemTra.TabIndex = 2;
             this.tbHinhThucKiemTra.Text = "Hình thức kiểm tra";
             // 
@@ -766,7 +766,7 @@
             this.groupBox3.Controls.Add(this.bunifuFlatButton2);
             this.groupBox3.Controls.Add(this.bunifuFlatButton3);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(647, 341);
+            this.groupBox3.Location = new System.Drawing.Point(665, 376);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(424, 100);
             this.groupBox3.TabIndex = 19;
@@ -890,9 +890,9 @@
             this.gbChiTiet_HTKT.Controls.Add(this.lbHeSo);
             this.gbChiTiet_HTKT.Controls.Add(this.lbMaHTKT);
             this.gbChiTiet_HTKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbChiTiet_HTKT.Location = new System.Drawing.Point(647, 99);
+            this.gbChiTiet_HTKT.Location = new System.Drawing.Point(665, 99);
             this.gbChiTiet_HTKT.Name = "gbChiTiet_HTKT";
-            this.gbChiTiet_HTKT.Size = new System.Drawing.Size(424, 211);
+            this.gbChiTiet_HTKT.Size = new System.Drawing.Size(424, 233);
             this.gbChiTiet_HTKT.TabIndex = 18;
             this.gbChiTiet_HTKT.TabStop = false;
             this.gbChiTiet_HTKT.Text = "Thông tin chi tiết";
@@ -901,7 +901,7 @@
             // 
             this.tbMaHTKT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbMaHTKT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbMaHTKT.Location = new System.Drawing.Point(175, 90);
+            this.tbMaHTKT.Location = new System.Drawing.Point(174, 114);
             this.tbMaHTKT.Multiline = true;
             this.tbMaHTKT.Name = "tbMaHTKT";
             this.tbMaHTKT.Size = new System.Drawing.Size(222, 22);
@@ -913,7 +913,7 @@
             this.lbTenHTKT.AutoSize = true;
             this.lbTenHTKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenHTKT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbTenHTKT.Location = new System.Drawing.Point(54, 34);
+            this.lbTenHTKT.Location = new System.Drawing.Point(53, 58);
             this.lbTenHTKT.Name = "lbTenHTKT";
             this.lbTenHTKT.Size = new System.Drawing.Size(96, 22);
             this.lbTenHTKT.TabIndex = 14;
@@ -923,7 +923,7 @@
             // 
             this.tbHesoHTKT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbHesoHTKT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbHesoHTKT.Location = new System.Drawing.Point(175, 142);
+            this.tbHesoHTKT.Location = new System.Drawing.Point(174, 166);
             this.tbHesoHTKT.Multiline = true;
             this.tbHesoHTKT.Name = "tbHesoHTKT";
             this.tbHesoHTKT.Size = new System.Drawing.Size(222, 22);
@@ -933,7 +933,7 @@
             // 
             this.tbTenHTKT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbTenHTKT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbTenHTKT.Location = new System.Drawing.Point(175, 34);
+            this.tbTenHTKT.Location = new System.Drawing.Point(174, 58);
             this.tbTenHTKT.Multiline = true;
             this.tbTenHTKT.Name = "tbTenHTKT";
             this.tbTenHTKT.Size = new System.Drawing.Size(222, 22);
@@ -945,7 +945,7 @@
             this.lbHeSo.AutoSize = true;
             this.lbHeSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeSo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbHeSo.Location = new System.Drawing.Point(54, 142);
+            this.lbHeSo.Location = new System.Drawing.Point(53, 166);
             this.lbHeSo.Name = "lbHeSo";
             this.lbHeSo.Size = new System.Drawing.Size(57, 22);
             this.lbHeSo.TabIndex = 13;
@@ -957,7 +957,7 @@
             this.lbMaHTKT.AutoSize = true;
             this.lbMaHTKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaHTKT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbMaHTKT.Location = new System.Drawing.Point(54, 90);
+            this.lbMaHTKT.Location = new System.Drawing.Point(53, 114);
             this.lbMaHTKT.Name = "lbMaHTKT";
             this.lbMaHTKT.Size = new System.Drawing.Size(88, 22);
             this.lbMaHTKT.TabIndex = 13;
@@ -969,7 +969,7 @@
             this.gbDSHTKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDSHTKT.Location = new System.Drawing.Point(30, 99);
             this.gbDSHTKT.Name = "gbDSHTKT";
-            this.gbDSHTKT.Size = new System.Drawing.Size(580, 345);
+            this.gbDSHTKT.Size = new System.Drawing.Size(580, 380);
             this.gbDSHTKT.TabIndex = 17;
             this.gbDSHTKT.TabStop = false;
             this.gbDSHTKT.Text = "Danh sách các hình thức kiểm tra";
@@ -987,7 +987,7 @@
             this.lvHinhThucKT.GridLines = true;
             this.lvHinhThucKT.Location = new System.Drawing.Point(3, 22);
             this.lvHinhThucKT.Name = "lvHinhThucKT";
-            this.lvHinhThucKT.Size = new System.Drawing.Size(574, 320);
+            this.lvHinhThucKT.Size = new System.Drawing.Size(574, 355);
             this.lvHinhThucKT.TabIndex = 9;
             this.lvHinhThucKT.UseCompatibleStateImageBehavior = false;
             this.lvHinhThucKT.View = System.Windows.Forms.View.Details;
@@ -1021,7 +1021,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1120, 52);
+            this.label5.Size = new System.Drawing.Size(1136, 52);
             this.label5.TabIndex = 1;
             this.label5.Text = "Hình thức kiểm tra";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1031,7 +1031,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(897, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(913, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 33);
             this.pictureBox2.TabIndex = 7;
@@ -1047,7 +1047,7 @@
             this.tbChuongTrinhDaoTao.Controls.Add(this.pictureBox3);
             this.tbChuongTrinhDaoTao.Location = new System.Drawing.Point(4, 22);
             this.tbChuongTrinhDaoTao.Name = "tbChuongTrinhDaoTao";
-            this.tbChuongTrinhDaoTao.Size = new System.Drawing.Size(1120, 476);
+            this.tbChuongTrinhDaoTao.Size = new System.Drawing.Size(1136, 515);
             this.tbChuongTrinhDaoTao.TabIndex = 3;
             this.tbChuongTrinhDaoTao.Text = "Chương trình đào tạo";
             // 
@@ -1057,9 +1057,9 @@
             this.gbTuyChon_CTDT.Controls.Add(this.btnSuaCTDT);
             this.gbTuyChon_CTDT.Controls.Add(this.btnXoaCTDT);
             this.gbTuyChon_CTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTuyChon_CTDT.Location = new System.Drawing.Point(654, 319);
+            this.gbTuyChon_CTDT.Location = new System.Drawing.Point(654, 357);
             this.gbTuyChon_CTDT.Name = "gbTuyChon_CTDT";
-            this.gbTuyChon_CTDT.Size = new System.Drawing.Size(412, 120);
+            this.gbTuyChon_CTDT.Size = new System.Drawing.Size(441, 120);
             this.gbTuyChon_CTDT.TabIndex = 29;
             this.gbTuyChon_CTDT.TabStop = false;
             this.gbTuyChon_CTDT.Text = "Tùy chọn";
@@ -1087,7 +1087,7 @@
             this.btnThemCTDT.IconVisible = false;
             this.btnThemCTDT.IconZoom = 70D;
             this.btnThemCTDT.IsTab = true;
-            this.btnThemCTDT.Location = new System.Drawing.Point(18, 49);
+            this.btnThemCTDT.Location = new System.Drawing.Point(32, 49);
             this.btnThemCTDT.Name = "btnThemCTDT";
             this.btnThemCTDT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnThemCTDT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
@@ -1123,7 +1123,7 @@
             this.btnSuaCTDT.IconVisible = false;
             this.btnSuaCTDT.IconZoom = 70D;
             this.btnSuaCTDT.IsTab = true;
-            this.btnSuaCTDT.Location = new System.Drawing.Point(142, 49);
+            this.btnSuaCTDT.Location = new System.Drawing.Point(156, 49);
             this.btnSuaCTDT.Name = "btnSuaCTDT";
             this.btnSuaCTDT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnSuaCTDT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
@@ -1159,7 +1159,7 @@
             this.btnXoaCTDT.IconVisible = false;
             this.btnXoaCTDT.IconZoom = 70D;
             this.btnXoaCTDT.IsTab = true;
-            this.btnXoaCTDT.Location = new System.Drawing.Point(267, 49);
+            this.btnXoaCTDT.Location = new System.Drawing.Point(281, 49);
             this.btnXoaCTDT.Name = "btnXoaCTDT";
             this.btnXoaCTDT.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnXoaCTDT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
@@ -1187,7 +1187,7 @@
             this.gbChiTiet_CTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbChiTiet_CTDT.Location = new System.Drawing.Point(654, 86);
             this.gbChiTiet_CTDT.Name = "gbChiTiet_CTDT";
-            this.gbChiTiet_CTDT.Size = new System.Drawing.Size(412, 217);
+            this.gbChiTiet_CTDT.Size = new System.Drawing.Size(441, 227);
             this.gbChiTiet_CTDT.TabIndex = 28;
             this.gbChiTiet_CTDT.TabStop = false;
             this.gbChiTiet_CTDT.Text = "Thông tin chi tiết";
@@ -1198,7 +1198,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(39, 109);
+            this.label7.Location = new System.Drawing.Point(53, 109);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 22);
             this.label7.TabIndex = 21;
@@ -1210,7 +1210,7 @@
             this.lbMaMonHoc.AutoSize = true;
             this.lbMaMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaMonHoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbMaMonHoc.Location = new System.Drawing.Point(38, 148);
+            this.lbMaMonHoc.Location = new System.Drawing.Point(52, 148);
             this.lbMaMonHoc.Name = "lbMaMonHoc";
             this.lbMaMonHoc.Size = new System.Drawing.Size(115, 22);
             this.lbMaMonHoc.TabIndex = 21;
@@ -1222,7 +1222,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(39, 70);
+            this.label8.Location = new System.Drawing.Point(53, 70);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 22);
             this.label8.TabIndex = 22;
@@ -1234,7 +1234,7 @@
             this.lbMaKhoiLop.AutoSize = true;
             this.lbMaKhoiLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaKhoiLop.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbMaKhoiLop.Location = new System.Drawing.Point(39, 30);
+            this.lbMaKhoiLop.Location = new System.Drawing.Point(53, 30);
             this.lbMaKhoiLop.Name = "lbMaKhoiLop";
             this.lbMaKhoiLop.Size = new System.Drawing.Size(101, 22);
             this.lbMaKhoiLop.TabIndex = 22;
@@ -1246,7 +1246,7 @@
             this.lbHSCTDT.AutoSize = true;
             this.lbHSCTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHSCTDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbHSCTDT.Location = new System.Drawing.Point(39, 182);
+            this.lbHSCTDT.Location = new System.Drawing.Point(53, 182);
             this.lbHSCTDT.Name = "lbHSCTDT";
             this.lbHSCTDT.Size = new System.Drawing.Size(57, 22);
             this.lbHSCTDT.TabIndex = 20;
@@ -1256,7 +1256,7 @@
             // 
             this.tbMaMH_CTDT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbMaMH_CTDT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbMaMH_CTDT.Location = new System.Drawing.Point(202, 106);
+            this.tbMaMH_CTDT.Location = new System.Drawing.Point(216, 106);
             this.tbMaMH_CTDT.Multiline = true;
             this.tbMaMH_CTDT.Name = "tbMaMH_CTDT";
             this.tbMaMH_CTDT.Size = new System.Drawing.Size(179, 22);
@@ -1266,7 +1266,7 @@
             // 
             this.tbTenMH_CTDT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbTenMH_CTDT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbTenMH_CTDT.Location = new System.Drawing.Point(202, 145);
+            this.tbTenMH_CTDT.Location = new System.Drawing.Point(216, 145);
             this.tbTenMH_CTDT.Multiline = true;
             this.tbTenMH_CTDT.Name = "tbTenMH_CTDT";
             this.tbTenMH_CTDT.Size = new System.Drawing.Size(179, 22);
@@ -1276,7 +1276,7 @@
             // 
             this.tbTenKhoi_CTDT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbTenKhoi_CTDT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbTenKhoi_CTDT.Location = new System.Drawing.Point(202, 67);
+            this.tbTenKhoi_CTDT.Location = new System.Drawing.Point(216, 67);
             this.tbTenKhoi_CTDT.Multiline = true;
             this.tbTenKhoi_CTDT.Name = "tbTenKhoi_CTDT";
             this.tbTenKhoi_CTDT.Size = new System.Drawing.Size(179, 22);
@@ -1286,7 +1286,7 @@
             // 
             this.tbMaKL_CTDT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbMaKL_CTDT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbMaKL_CTDT.Location = new System.Drawing.Point(202, 30);
+            this.tbMaKL_CTDT.Location = new System.Drawing.Point(216, 30);
             this.tbMaKL_CTDT.Multiline = true;
             this.tbMaKL_CTDT.Name = "tbMaKL_CTDT";
             this.tbMaKL_CTDT.Size = new System.Drawing.Size(179, 22);
@@ -1296,7 +1296,7 @@
             // 
             this.tbHeSoCTDT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbHeSoCTDT.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbHeSoCTDT.Location = new System.Drawing.Point(202, 182);
+            this.tbHeSoCTDT.Location = new System.Drawing.Point(216, 182);
             this.tbHeSoCTDT.Multiline = true;
             this.tbHeSoCTDT.Name = "tbHeSoCTDT";
             this.tbHeSoCTDT.Size = new System.Drawing.Size(179, 22);
@@ -1308,7 +1308,7 @@
             this.gbCTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCTDT.Location = new System.Drawing.Point(35, 86);
             this.gbCTDT.Name = "gbCTDT";
-            this.gbCTDT.Size = new System.Drawing.Size(556, 353);
+            this.gbCTDT.Size = new System.Drawing.Size(556, 394);
             this.gbCTDT.TabIndex = 27;
             this.gbCTDT.TabStop = false;
             this.gbCTDT.Text = "Thông tin chương trình đào tạo";
@@ -1326,7 +1326,7 @@
             this.lvCTDT.GridLines = true;
             this.lvCTDT.Location = new System.Drawing.Point(3, 22);
             this.lvCTDT.Name = "lvCTDT";
-            this.lvCTDT.Size = new System.Drawing.Size(550, 328);
+            this.lvCTDT.Size = new System.Drawing.Size(550, 369);
             this.lvCTDT.TabIndex = 13;
             this.lvCTDT.UseCompatibleStateImageBehavior = false;
             this.lvCTDT.View = System.Windows.Forms.View.Details;
@@ -1361,7 +1361,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1120, 52);
+            this.label6.Size = new System.Drawing.Size(1136, 52);
             this.label6.TabIndex = 1;
             this.label6.Text = "Chương trình đào tạo";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1371,7 +1371,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(856, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(872, 10);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 33);
             this.pictureBox3.TabIndex = 7;
@@ -1382,7 +1382,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1128, 502);
+            this.ClientSize = new System.Drawing.Size(1144, 541);
             this.Controls.Add(this.tcQuanLyMonHoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuanLyMonHoc";
