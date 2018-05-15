@@ -25,16 +25,16 @@ namespace BLL
             return BCTKMon.XoaBaoCaoTongKetMon(MaBCTKM);
         }
 
-        public bool ThemBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy)
+        public bool ThemBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy,string MaNamHoc)
         {
             BaoCaoTongKetMonAccess BaoCaoTKM = new BaoCaoTongKetMonAccess();
-            return BaoCaoTKM.ThemBaoCaoTongKetMon(MaBCTKM, MaMonHoc, MaHocKy);
+            return BaoCaoTKM.ThemBaoCaoTongKetMon(MaBCTKM, MaMonHoc, MaHocKy,MaNamHoc);
         }
 
-        public bool SuaBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy)
+        public bool SuaBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy,string MaNamHoc)
         {
             BaoCaoTongKetMonAccess BCTKM = new BaoCaoTongKetMonAccess();
-            return BCTKM.SuaBaoCaoTongKetMon(MaBCTKM, MaMonHoc, MaHocKy);
+            return BCTKM.SuaBaoCaoTongKetMon(MaBCTKM, MaMonHoc, MaHocKy,MaNamHoc);
         }
     }
 }

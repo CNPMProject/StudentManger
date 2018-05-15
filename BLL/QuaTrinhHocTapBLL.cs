@@ -32,16 +32,16 @@ namespace BLL
 
         }
 
-        public bool ThemQuatrinhhoctap(string ma, string malop, string mahky, string mahsinh, float diemtbhk)
+        public bool ThemQuatrinhhoctap(string ma, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
         {
             QuaTrinhHocTapAccess qtrinh = new QuaTrinhHocTapAccess();
-            return qtrinh.ThemQuaTrinhHocTap(ma, malop, mahky, mahsinh, diemtbhk);
+            return qtrinh.ThemQuaTrinhHocTap(ma, malop, mahky,manamhoc, mahsinh, diemtbhk);
         }
 
-        public bool SuaQuatrinhhoctap(string ma, string malop, string mahky, string mahsinh, float diemtbhk)
+        public bool SuaQuatrinhhoctap(string ma, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
         {
             QuaTrinhHocTapAccess qtrinh = new QuaTrinhHocTapAccess();
-            return qtrinh.SuaQuaTrinhHocTap(ma, malop, mahky, mahsinh, diemtbhk);
+            return qtrinh.SuaQuaTrinhHocTap(ma, malop, mahky,manamhoc, mahsinh, diemtbhk);
         }
     }
 }

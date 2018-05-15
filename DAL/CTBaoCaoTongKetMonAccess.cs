@@ -31,10 +31,8 @@ namespace DAL
             {
                 string MaBCTKM = reader.GetString(0);
                 string MaLop = reader.GetString(1);
-                // SiSo = reader.GetInt32(2);
                 int SoLuongDatMon = reader.GetInt32(2);
                 float TiLeDatMon = reader.GetFloat(3);
-
                 CTBaoCaoTongKetMon CTBCTongKetMon = new CTBaoCaoTongKetMon(MaBCTKM, MaLop, SoLuongDatMon, TiLeDatMon);
                 listCTBaoCaoTongKetMon.Add(CTBCTongKetMon);
             }
@@ -69,7 +67,7 @@ namespace DAL
 
         }
 
-        public bool ThemCTBaoCaoTongKetMon(string MaBCTKM, string MaLop, int SiSo, int SoLuongDatMon, float TiLeDatMon)
+        public bool ThemCTBaoCaoTongKetMon(string MaBCTKM, string MaLop, int SoLuongDatMon, float TiLeDatMon)
         {
             try
             {
@@ -78,10 +76,8 @@ namespace DAL
                 com.CommandType = CommandType.Text;
                 com.CommandText = "insert into CTBaoCaoTongKetMon values(@MaBCTKM,@MaLop, @SoLuongDatMon, @TiLeDatMon)";
                 com.Connection = conn;
-
                 com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
                 com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;
-               // com.Parameters.Add("@SiSo", SqlDbType.Int).Value = SiSo;
                 com.Parameters.Add("@SoLuonDatMon", SqlDbType.Int).Value = SoLuongDatMon;
                 com.Parameters.Add("@TiLeDatMon", SqlDbType.Float).Value = TiLeDatMon;
 
@@ -98,19 +94,17 @@ namespace DAL
             }
         }
 
-        public bool SuaCTBaoCaoTongKetMon(string MaBCTKM, string MaLop, int SiSo, int SoLuongDatMon, float TiLeDatMon)
+        public bool SuaCTBaoCaoTongKetMon(string MaBCTKM, string MaLop,  int SoLuongDatMon, float TiLeDatMon)
         {
             try
             {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  CTBaoCaoTongKetMon set SoLuongDatMon=@SoLuongDatMon and TiLeDatMon=@TiLeDatMon where  MaBCTKM=@MaBCTKM and MaLop=@MaLop ";
+                com.CommandText = "update  CTBaoCaoTongKetMon set SoLuongDatMon=@SoLuongDatMon , TiLeDatMon=@TiLeDatMon where  MaBCTKM=@MaBCTKM and MaLop=@MaLop ";
                 com.Connection = conn;
-
                 com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
                 com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;
-               // com.Parameters.Add("@SiSo", SqlDbType.Int).Value = SiSo;
                 com.Parameters.Add("@SoLuongDatMon", SqlDbType.Int).Value = SoLuongDatMon;
                 com.Parameters.Add("@TiLeDatMon", SqlDbType.Float).Value = TiLeDatMon;
 

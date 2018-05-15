@@ -48,6 +48,7 @@
     <Compile Include="DShocsinhAccess.cs" />
     <Compile Include="HinhThucKiemTraAccess.cs" />
     <Compile Include="HocKyAccess.cs" />
+    <Compile Include="HocKy_NamHocAccess.cs" />
     <Compile Include="KhoiLopAccess.cs" />
     <Compile Include="LopAccess.cs" />
     <Compile Include="MonHocAccess.cs" />
@@ -59,7 +60,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="QuaTrinhHocTapAccess.cs" />
-    <Compile Include="ThayDoiQuyDinhBLL.cs" />
+    <Compile Include="ThayDoiQuyDinhAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

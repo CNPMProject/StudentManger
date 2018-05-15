@@ -9,12 +9,12 @@ namespace DTO
     public class HocKy
     {
         public string MaHocKy;
-        public string MaNamHoc;
+        public string TenHocKy;
 
-        public HocKy(string hk, string nh)
+        public HocKy(string hk, string ten)
         {
             this.MaHocKy = hk;
-            this.MaNamHoc = nh;
+            this.TenHocKy= ten;
         }
     }
 }

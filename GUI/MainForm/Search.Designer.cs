@@ -60,6 +60,7 @@
             this.labelmahs = new System.Windows.Forms.Label();
             this.groupthongtin = new System.Windows.Forms.GroupBox();
             this.picturehelp = new System.Windows.Forms.PictureBox();
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupthongtin.SuspendLayout();
@@ -487,8 +488,10 @@
             // 
             // Search
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(1104, 514);
             this.Controls.Add(this.picturehelp);
             this.Controls.Add(this.groupBox3);
@@ -499,11 +502,11 @@
             this.Controls.Add(this.tbKeySearch);
             this.Controls.Add(this.groupthongtin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.IsMdiContainer = true;
-            this.KeyPreview = true;
             this.Name = "Search";
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Search";
-            this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupthongtin.ResumeLayout(false);
@@ -547,5 +550,6 @@
         private System.Windows.Forms.Label labelmahs;
         private System.Windows.Forms.GroupBox groupthongtin;
         private System.Windows.Forms.PictureBox picturehelp;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }

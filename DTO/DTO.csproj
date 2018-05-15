@@ -48,6 +48,7 @@
     <Compile Include="CTBaoCaoTongKetMon.cs" />
     <Compile Include="HinhThucKiemTra.cs" />
     <Compile Include="HocKy.cs" />
+    <Compile Include="HocKy_NamHoc.cs" />
     <Compile Include="HocSinh.cs" />
     <Compile Include="KhoiLop.cs" />
     <Compile Include="Lop.cs" />

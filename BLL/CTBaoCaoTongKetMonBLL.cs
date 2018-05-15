@@ -25,16 +25,16 @@ namespace BLL
             return CTBC.XoaCTBaoCaoTongKetMon(MaBCTKM, MaLop);
         }
 
-        public bool ThemCTBaoCaoTongKetMon(string MaBCTKM, string MaLop, int SiSo, int SoLuongDatMon, float TiLeDatMon)
+        public bool ThemCTBaoCaoTongKetMon(string MaBCTKM, string MaLop,int SoLuongDatMon, float TiLeDatMon)
         {
             CTBaoCaoTongKetMonAccess CTBaoCao = new CTBaoCaoTongKetMonAccess();
-            return CTBaoCao.ThemCTBaoCaoTongKetMon(MaBCTKM, MaLop, SiSo, SoLuongDatMon, TiLeDatMon);
+            return CTBaoCao.ThemCTBaoCaoTongKetMon(MaBCTKM, MaLop, SoLuongDatMon, TiLeDatMon);
         }
 
-        public bool SuaCTBaoCaoTongKetMon(string MaBCTKM, string MaLop, int SiSo, int SoLuongDatMon, float TiLeDatMon)
+        public bool SuaCTBaoCaoTongKetMon(string MaBCTKM, string MaLop,  int SoLuongDatMon, float TiLeDatMon)
         {
             CTBaoCaoTongKetMonAccess CTBCTKMac = new CTBaoCaoTongKetMonAccess();
-            return CTBCTKMac.SuaCTBaoCaoTongKetMon(MaBCTKM, MaLop, SiSo, SoLuongDatMon, TiLeDatMon);
+            return CTBCTKMac.SuaCTBaoCaoTongKetMon(MaBCTKM, MaLop, SoLuongDatMon, TiLeDatMon);
         }
     }
 }

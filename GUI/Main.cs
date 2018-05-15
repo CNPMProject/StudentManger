@@ -1,4 +1,5 @@
 ﻿using GUI.MainForm;
+using QLHS.FormChinh;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -261,6 +262,7 @@ namespace GUI
             pnBoard.Controls.Clear();
             pnBoard.Controls.Add(csdl);
             csdl.Show();
+         
         }
 
         private void pbClose_Click(object sender, EventArgs e)
@@ -270,7 +272,10 @@ namespace GUI
 
         private void btnQuyDinh_Click(object sender, EventArgs e)
         {
-        
+            ThayDoiQuyDinh thaydoi = new ThayDoiQuyDinh() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(thaydoi);
+            thaydoi.Show();
         }
     }
 }

@@ -19,22 +19,22 @@ namespace BLL
             return baoCaoTongKetHocKyAccess.GetAllBaoCaoTongKetHocKy();
         }
 
-        public bool XoaBaoCaoTongKetHocKy(string MaHocKy, string MaLop)
+        public bool XoaBaoCaoTongKetHocKy(string MaHocKy, string MaNamHoc,string MaLop)
         {
             BaoCaoTongKetHocKyAccess BCTKHK = new BaoCaoTongKetHocKyAccess();
-            return BCTKHK.XoaBaoCaoTongKetHocKy(MaHocKy, MaLop);
+            return BCTKHK.XoaBaoCaoTongKetHocKy(MaHocKy, MaNamHoc,MaLop);
         }
 
-        public bool ThemBaoCaoTongKetHocKy(string MaHocKy, string MaLop, int SoLuongDat, int SiSo, float Tile)
+        public bool ThemBaoCaoTongKetHocKy(string MaHocKy,string MaNamHoc, string MaLop, int SoLuongDat,  float Tile)
         {
             BaoCaoTongKetHocKyAccess BaoCaoTKHK = new BaoCaoTongKetHocKyAccess();
-            return BaoCaoTKHK.ThemBaoCaoTongKetHocKy(MaHocKy, MaLop, SoLuongDat, SiSo, Tile);
+            return BaoCaoTKHK.ThemBaoCaoTongKetHocKy(MaHocKy,MaNamHoc, MaLop, SoLuongDat,Tile);
         }
 
-        public bool SuaBaoCaoTongKetHocKy(string MaHocKy, string MaLop, int SoLuongDat, int SiSo, float Tile)
+        public bool SuaBaoCaoTongKetHocKy(string MaHocKy, string MaNamHoc,string MaLop, int SoLuongDat, float Tile)
         {
             BaoCaoTongKetHocKyAccess BCTKHocKy = new BaoCaoTongKetHocKyAccess();
-            return BCTKHocKy.SuaBaoCaoTongKetHocKy(MaHocKy, MaLop, SoLuongDat, SiSo, Tile);
+            return BCTKHocKy.SuaBaoCaoTongKetHocKy(MaHocKy,MaNamHoc, MaLop, SoLuongDat, Tile);
         }
     }
 }

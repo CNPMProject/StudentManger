@@ -25,16 +25,16 @@ namespace BLL
             return hocky.XoaHocKy(maHK);
         }
 
-        public bool ThemHocKy(string mahocky, string manamhoc)
+        public bool ThemHocKy(string mahocky, string tenhk)
         {
             HocKyAccess hocky = new HocKyAccess();
-            return hocky.ThemHocKy(mahocky, manamhoc);
+            return hocky.ThemHocKy(mahocky, tenhk);
         }
 
-        public bool SuaHocKy(string mahocky, string manamhoc)
+        public bool SuaHocKy(string mahocky, string tenhk)
         {
             HocKyAccess hocky = new HocKyAccess();
-            return hocky.SuaHocKy(mahocky, manamhoc);
+            return hocky.SuaHocKy(mahocky,tenhk);
         }
     }
 }

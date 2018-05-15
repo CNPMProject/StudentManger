@@ -11,12 +11,14 @@ namespace DTO
         string MaBCTKM;
         string MaMonHoc;
         string MaHocKy;
+        string MaNamHoc;
 
-        public BaoCaoTongKetMon(string maBaoCao, string maMH, string MaHK)
+        public BaoCaoTongKetMon(string maBaoCao, string maMH, string MaHK,string manamhoc)
         {
             this.MaBCTKM = maBaoCao;
             this.MaMonHoc = maMH;
             this.MaHocKy = MaHK;
+            this.MaNamHoc = manamhoc;
         }
     }
 }

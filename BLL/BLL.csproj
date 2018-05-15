@@ -48,6 +48,7 @@
     <Compile Include="DShocsinhBLL.cs" />
     <Compile Include="HinhThucKiemTraBLL.cs" />
     <Compile Include="HocKyBLL.cs" />
+    <Compile Include="HocKy_NamHocBLL.cs" />
     <Compile Include="KhoiLopBLL.cs" />
     <Compile Include="LopBLL.cs" />
     <Compile Include="MonHocBLL.cs" />

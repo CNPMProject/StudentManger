@@ -44,12 +44,7 @@ namespace QLHS.FormChinh
             }
         }
 
-        private void QuiDinh_Load(object sender, System.EventArgs e)
-        {
-
-            LoadThamSo_DanhSachThamSo();
-        }
-
+        
 
         private void btApDung_Click(object sender, System.EventArgs e)
         {
@@ -77,7 +72,9 @@ namespace QLHS.FormChinh
             this.Close();
         }
 
-
-
+        private void ThayDoiQuyDinh_Load(object sender, EventArgs e)
+        {
+            LoadThamSo_DanhSachThamSo();
+        }
     }
 }

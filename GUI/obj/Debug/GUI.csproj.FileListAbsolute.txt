@@ -152,3 +152,4 @@ C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.Properties.
 C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.exe.licenses
 C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\QLHS.FormChinh.ThayDoiQuyDinh.resources
+C:\Users\NGO THI HUYEN\Documents\QuanLyHocSinhTHPT\GUI\obj\Debug\GUI.MainForm.LapBaoCaoTongKet.resources

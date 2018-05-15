@@ -32,9 +32,10 @@ namespace DAL
                 string MaBCTKM = reader.GetString(0);
                 string MaMonHoc = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
+                string MaNamHoc = reader.GetString(3);
 
 
-                BaoCaoTongKetMon baoCaoTongKetMon = new BaoCaoTongKetMon(MaBCTKM, MaMonHoc, MaHocKy);
+                BaoCaoTongKetMon baoCaoTongKetMon = new BaoCaoTongKetMon(MaBCTKM, MaMonHoc, MaHocKy,MaNamHoc);
                 listBaoCaoTongKetMon.Add(baoCaoTongKetMon);
             }
 
@@ -67,19 +68,20 @@ namespace DAL
 
         }
 
-        public bool ThemBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy)
+        public bool ThemBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy,string MaNamHoc)
         {
             try
             {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "insert into BaoCaoTongKetMon values(@MaBCTKM, @MaMonHoc, @MaHocKy)";
+                com.CommandText = "insert into BaoCaoTongKetMon values(@MaBCTKM, @MaMonHoc, @MaHocKy,@manamhoc)";
                 com.Connection = conn;
 
                 com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
                 com.Parameters.Add("@MaMonHoc", SqlDbType.VarChar).Value = MaMonHoc;
                 com.Parameters.Add("@MaHocKy", SqlDbType.VarChar).Value = MaHocKy;
+                com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = MaNamHoc;
 
                 int result = com.ExecuteNonQuery();
 
@@ -94,21 +96,21 @@ namespace DAL
             }
         }
 
-        public bool SuaBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy)
+        public bool SuaBaoCaoTongKetMon(string MaBCTKM, string MaMonHoc, string MaHocKy,string MaNamHoc)
         {
             try
             {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  BaoCaoTongKetMon set MaMonHoc=@MaMonHoc and MaHocKy=@MaHocKy where  MaBaoCaoTongKetMon=@MaBCTKM";
+                com.CommandText = "update  BaoCaoTongKetMon set MaMonHoc=@MaMonHoc , MaHocKy=@MaHocKy ,MaNamHoc=@manamhoc where  MaBaoCaoTongKetMon=@MaBCTKM";
 
                 com.Connection = conn;
 
                 com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
                 com.Parameters.Add("@MaMonHoc", SqlDbType.VarChar).Value = MaMonHoc;
                 com.Parameters.Add("@MaHocKy", SqlDbType.VarChar).Value = MaHocKy;
-
+                com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = MaNamHoc;
                 int result = com.ExecuteNonQuery();
 
                 CloseConnection();

@@ -8,21 +8,19 @@ using System.Data;
 using DTO;
 namespace DAL
 {
-    public class HocKyAccess : DatabaseAccess
+   public  class HocKy_NamHocAccess:DatabaseAccess
     {
-
-        public HocKyAccess() : base()
+        public HocKy_NamHocAccess() : base()
         { }
-
-        public List<HocKy> GetAllHocKy()
+        public List<HocKy_NamHoc> GetAllHocKy_NamHoc()
         {
             OpenConnection();
 
-            List<HocKy> listHocKy = new List<HocKy>();
+            List<HocKy_NamHoc> listHocKy_NamHoc = new List<HocKy_NamHoc>();
 
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
-            com.CommandText = "Select * from HOCKY";
+            com.CommandText = "Select * from HOCKY_NAMHOC";
             com.Connection = conn;
 
             SqlDataReader reader = com.ExecuteReader();
@@ -30,24 +28,28 @@ namespace DAL
             while (reader.Read())
             {
                 string maHK = reader.GetString(0);
-                string tenhk = reader.GetString(1);
+                string maNH = reader.GetString(1);
 
-                HocKy hocky = new HocKy(maHK, tenhk);
-                listHocKy.Add(hocky);
+                HocKy_NamHoc Hocky_namhoc = new HocKy_NamHoc(maHK, maNH);
+                listHocKy_NamHoc.Add(Hocky_namhoc);
+                
+               
             }
 
             reader.Close();
             CloseConnection();
-            return listHocKy;
+            return listHocKy_NamHoc;
         }
 
-        public bool XoaHocKy(string maHk)
+        public bool XoaHocKy_NamHoc(string maHk,string maNamHoc)
         {
             OpenConnection();
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
-            com.CommandText = "delete from HOCKY where MaHocKy=@ma";
+            com.CommandText = "delete from HOCKY_NAMHOC where MaHocKy=@ma and MaNamHoc=@manam";
             com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maHk;
+            com.Parameters.Add("@manam", SqlDbType.VarChar).Value = maNamHoc;
+
             com.Connection = conn;
 
             try
@@ -65,18 +67,18 @@ namespace DAL
 
         }
 
-        public bool ThemHocKy(string mahocky, string tenhk)
+        public bool ThemHocKy_NamHoc(string mahocky, string manamhoc)
         {
             try
             {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "insert into HOCKY values(@mahocky,@ten)";
+                com.CommandText = "insert into HOCKY_NAMHOC values(@mahocky,@manamhoc)";
                 com.Connection = conn;
 
                 com.Parameters.Add("@mahocky", SqlDbType.VarChar).Value = mahocky;
-                com.Parameters.Add("@ten", SqlDbType.NVarChar).Value =tenhk;
+                com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = manamhoc;
 
                 int result = com.ExecuteNonQuery();
 
@@ -91,18 +93,18 @@ namespace DAL
             }
         }
 
-        public bool SuaHocKy(string mahocky, string tenhk)
+        public bool SuaHocKy_Namhoc(string mahocky, string manamhoc)
         {
             try
             {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  HOCKY set TenHocKy=@ten where  MaHocKy=@mahocky";
+                com.CommandText = "update  HOCKY_NAMHOC set MaHocKy=@mahocky,MaNamHoc=@manamhoc  where  MaHocKy=@mahocky and MaNamHoc=@manamhoc";
                 com.Connection = conn;
 
                 com.Parameters.Add("@mahocky", SqlDbType.VarChar).Value = mahocky;
-                com.Parameters.Add("@ten", SqlDbType.NVarChar).Value = tenhk;
+                com.Parameters.Add("@manamhoc", SqlDbType.NVarChar).Value = manamhoc;
 
                 int result = com.ExecuteNonQuery();
 
@@ -117,5 +119,6 @@ namespace DAL
                 return false;
             }
         }
+
     }
 }

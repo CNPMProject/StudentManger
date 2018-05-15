@@ -119,6 +119,8 @@
             // 
             // nricTuoitoithieu
             // 
+            this.nricTuoitoithieu.DecimalPlaces = 1;
+            this.nricTuoitoithieu.Hexadecimal = true;
             this.nricTuoitoithieu.Location = new System.Drawing.Point(154, 48);
             this.nricTuoitoithieu.Name = "nricTuoitoithieu";
             this.nricTuoitoithieu.Size = new System.Drawing.Size(55, 26);
@@ -326,6 +328,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThayDoiQuyDinh";
             this.Text = "ThayDoiQuyDinh";
+            this.Load += new System.EventHandler(this.ThayDoiQuyDinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nricdiemdathk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nricdiemdatmon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nricdiemtoida)).EndInit();

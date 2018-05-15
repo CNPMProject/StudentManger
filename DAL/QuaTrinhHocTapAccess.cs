@@ -32,11 +32,12 @@ namespace DAL
                 string MaQTH = reader.GetString(0);
                 string MaLop = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
-                string MaHocSinh = reader.GetString(3);
+                string MaNamHoc = reader.GetString(3);
+                string MaHocSinh = reader.GetString(4);
                 float DiemTBHk = 0;
-                try { DiemTBHk = reader.GetFloat(4); }
+                try { DiemTBHk = reader.GetFloat(5); }
                 catch { }
-                QuaTrinhHocTap quatrinhoctap = new QuaTrinhHocTap(MaQTH, MaLop, MaHocKy, MaHocSinh, DiemTBHk);
+                QuaTrinhHocTap quatrinhoctap = new QuaTrinhHocTap(MaQTH, MaLop, MaHocKy, MaNamHoc,MaHocSinh, DiemTBHk);
                 listQuaTrinhHocTap.Add(quatrinhoctap);
 
             }
@@ -66,10 +67,11 @@ namespace DAL
                 string MaLop = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
                 string MaHocSinh = reader.GetString(3);
+                string MaNamHoc = reader.GetString(5);
                 float DiemTBHk = 0;
                 try { DiemTBHk = reader.GetFloat(4); }
                 catch { }
-                QuaTrinhHocTap quatrinhoctap = new QuaTrinhHocTap(MaQTH, MaLop, MaHocKy, MaHocSinh, DiemTBHk);
+                QuaTrinhHocTap quatrinhoctap = new QuaTrinhHocTap(MaQTH, MaLop, MaHocKy,MaNamHoc, MaHocSinh, DiemTBHk);
                 listQuaTrinhHocTap.Add(quatrinhoctap);
 
             }
@@ -103,19 +105,20 @@ namespace DAL
 
         }
 
-        public bool ThemQuaTrinhHocTap(string maqth, string malop, string mahocky, string mahsinh, float diemtbhk)
+        public bool ThemQuaTrinhHocTap(string maqth, string malop, string mahocky, string manamhoc,string mahsinh, float diemtbhk)
         {
             try
             {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "insert into QUATRINHHOCTAP values (@maqth,@malop,@mahocky,@mahsinh,@diemtbhk)";
+                com.CommandText = "insert into QUATRINHHOCTAP values (@maqth,@malop,@mahocky,@manamhoc,@mahsinh,@diemtbhk)";
                 com.Connection = conn;
 
                 com.Parameters.Add("@maqth", SqlDbType.VarChar).Value = maqth;
                 com.Parameters.Add("@malop", SqlDbType.VarChar).Value = malop;
                 com.Parameters.Add("@mahocky", SqlDbType.VarChar).Value = mahocky;
+                com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = manamhoc;
                 com.Parameters.Add("@mahsinh", SqlDbType.VarChar).Value = mahsinh;
                 com.Parameters.Add("@diemtbhk", SqlDbType.Float).Value = diemtbhk;
 
@@ -133,19 +136,20 @@ namespace DAL
             }
         }
 
-        public bool SuaQuaTrinhHocTap(string maqth, string malop, string mahky, string mahsinh, float diemtbhk)
+        public bool SuaQuaTrinhHocTap(string maqth, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
         {
           //  try
             //{
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  QUATRINHHOCTAP set MaLop=@malop , MaHocKy=@mahky , MaHocSinh=@mahsinh , DiemTBHk=@diemtbhk where  MaQTH=@maqth";
+                com.CommandText = "update  QUATRINHHOCTAP set MaLop=@malop , MaHocKy=@mahky,MaNamHoc=@manamhoc MaHocSinh=@mahsinh , DiemTBHk=@diemtbhk where  MaQTH=@maqth";
                 com.Connection = conn;
 
                 com.Parameters.Add("@maqth", SqlDbType.VarChar).Value = maqth;
                 com.Parameters.Add("@malop", SqlDbType.VarChar).Value = malop;
                 com.Parameters.Add("@mahky", SqlDbType.VarChar).Value = mahky;
+                com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = manamhoc;
                 com.Parameters.Add("@mahsinh", SqlDbType.VarChar).Value = mahsinh;
                 com.Parameters.Add("@diemtbhk", SqlDbType.Float).Value = diemtbhk;
 
