@@ -89,7 +89,7 @@ namespace DAL
 
         }
 
-        public bool ThemMonHoc(string ma, string ten)
+        public ErrorType ThemMonHoc(string ma, string ten)
         {
             try
             {
@@ -106,16 +106,16 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
             }
             catch
             {
-                return false;
+                return ErrorType.THAT_BAI;
             }
         }
 
-        public bool SuaMonHoc(string ma, string ten)
+        public ErrorType SuaMonHoc(string ma, string ten)
         {
             try
             {
@@ -132,13 +132,13 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
              }
 
             catch
             {
-                return false;
+                return ErrorType.THAT_BAI;
             }
         }
 }

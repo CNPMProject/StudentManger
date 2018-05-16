@@ -18,16 +18,25 @@ namespace BLL
             return hinhThucKiemTra.GetAllHinhThucKiemTra();
         }
 
-        public bool ThemHinhThucKiemTra(string ma, string ten, int heso)
+        public ErrorType ThemHinhThucKiemTra(string ma, string ten, string heso)
         {
             HinhThucKiemTraAccess ac = new HinhThucKiemTraAccess();
-            return ac.ThemHTKT(ma, ten, heso);
+            HinhThucKiemTra ht = ac.GetHinhThucKiemTra(ma);
+
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(heso))
+                return ErrorType.KI_TU_RONG;
+            if (ht != null)
+                return ErrorType.DA_TON_TAI;
+            else
+            return ac.ThemHTKT(ma, ten,Int32.Parse( heso));
         }
 
-        public bool SuaHinhThucKiemTra(string ma, string ten, int heso)
+        public ErrorType SuaHinhThucKiemTra(string ma, string ten, string heso)
         {
             HinhThucKiemTraAccess ac = new HinhThucKiemTraAccess();
-            return ac.SuaHTKT(ma, ten, heso);
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(heso))
+                return ErrorType.KI_TU_RONG;
+            return ac.SuaHTKT(ma, ten,Int32.Parse( heso));
         }
 
         public bool XoaHinhThucKiemTra(string ma)

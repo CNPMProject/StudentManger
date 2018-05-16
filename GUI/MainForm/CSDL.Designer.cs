@@ -134,7 +134,7 @@
             this.tbdatabeseName.Name = "tbdatabeseName";
             this.tbdatabeseName.Size = new System.Drawing.Size(311, 25);
             this.tbdatabeseName.TabIndex = 43;
-            this.tbdatabeseName.Text = "QLHS";
+            this.tbdatabeseName.Text = "QuanLyHocSinh";
             // 
             // label9
             // 

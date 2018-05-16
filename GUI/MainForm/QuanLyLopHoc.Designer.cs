@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabPage tabPage2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyLopHoc));
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labeldslophoc = new System.Windows.Forms.Label();
             this.cbMaLop_DSLH = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -64,7 +66,6 @@
             this.picturehelp = new System.Windows.Forms.PictureBox();
             this.lbMaLop_DSLH = new System.Windows.Forms.Label();
             this.labelop = new System.Windows.Forms.Label();
-            this.labeldslophoc = new System.Windows.Forms.Label();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.lvdshs = new System.Windows.Forms.ListView();
             this.clSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -83,6 +84,8 @@
             this.labelngsinh = new System.Windows.Forms.Label();
             this.labeldiachi = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.cbNH_ChuyenLop_cu = new System.Windows.Forms.ComboBox();
             this.cbLopChuyenLopCu = new System.Windows.Forms.ComboBox();
@@ -128,6 +131,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -149,21 +154,18 @@
             this.tbTenKL_DSKL = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbNH_DSKL = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             tabPage2 = new System.Windows.Forms.TabPage();
             tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupthongtinchitiet.SuspendLayout();
             this.gbDSHSTheoLop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturehelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -179,12 +181,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -210,6 +210,27 @@
             tabPage2.Size = new System.Drawing.Size(1136, 515);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "danh sách lớp học";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.labeldslophoc);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1130, 48);
+            this.panel2.TabIndex = 29;
+            // 
+            // labeldslophoc
+            // 
+            this.labeldslophoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labeldslophoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldslophoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labeldslophoc.Location = new System.Drawing.Point(0, 0);
+            this.labeldslophoc.Name = "labeldslophoc";
+            this.labeldslophoc.Size = new System.Drawing.Size(1130, 48);
+            this.labeldslophoc.TabIndex = 0;
+            this.labeldslophoc.Text = "Danh sách lớp học";
+            this.labeldslophoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbMaLop_DSLH
             // 
@@ -594,18 +615,6 @@
             this.labelop.TabIndex = 3;
             this.labelop.Text = "Lớp:";
             // 
-            // labeldslophoc
-            // 
-            this.labeldslophoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labeldslophoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldslophoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labeldslophoc.Location = new System.Drawing.Point(0, 0);
-            this.labeldslophoc.Name = "labeldslophoc";
-            this.labeldslophoc.Size = new System.Drawing.Size(1130, 48);
-            this.labeldslophoc.TabIndex = 0;
-            this.labeldslophoc.Text = "Danh sách lớp học";
-            this.labeldslophoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
@@ -631,11 +640,11 @@
             this.lvdshs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvdshs.FullRowSelect = true;
             this.lvdshs.GridLines = true;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup3.Header = "ListViewGroup";
+            listViewGroup3.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            listViewGroup3.Name = "listViewGroup1";
             this.lvdshs.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup3});
             this.lvdshs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lvdshs.LabelEdit = true;
             this.lvdshs.Location = new System.Drawing.Point(3, 26);
@@ -778,6 +787,27 @@
             this.tabPage4.TabIndex = 5;
             this.tabPage4.Text = "Chuyển lớp";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1130, 46);
+            this.panel4.TabIndex = 40;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(1130, 46);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Chuyển đổi lớp học";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
@@ -854,6 +884,7 @@
             this.columnstt,
             this.columnMahs,
             this.columntenhs});
+            this.lvDSHSCu_CL.Cursor = System.Windows.Forms.Cursors.Default;
             this.lvDSHSCu_CL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvDSHSCu_CL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvDSHSCu_CL.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -1046,6 +1077,7 @@
             this.pbChuyenSangLopCu.Size = new System.Drawing.Size(40, 35);
             this.pbChuyenSangLopCu.TabIndex = 15;
             this.pbChuyenSangLopCu.TabStop = false;
+            this.pbChuyenSangLopCu.Click += new System.EventHandler(this.pbChuyenSangLopCu_Click);
             // 
             // pbChuyenSangLopMoi
             // 
@@ -1378,6 +1410,26 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "danh sách khối lớp";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1130, 51);
+            this.panel3.TabIndex = 21;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(1130, 51);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Danh sách khối lớp";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.bunifuFlatButton7);
@@ -1462,6 +1514,7 @@
             this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton8.Click += new System.EventHandler(this.bunifuFlatButton8_Click);
             // 
             // groupBox3
             // 
@@ -1647,60 +1700,10 @@
             this.cbNH_DSKL.TabIndex = 2;
             this.cbNH_DSKL.SelectedIndexChanged += new System.EventHandler(this.cbNH_DSKL_SelectedIndexChanged);
             // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(1130, 51);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Danh sách khối lớp";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.labeldslophoc);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1130, 48);
-            this.panel2.TabIndex = 29;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1130, 51);
-            this.panel3.TabIndex = 21;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1130, 46);
-            this.panel4.TabIndex = 40;
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1130, 46);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Chuyển đổi lớp học";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // QuanLyLopHoc
             // 
@@ -1716,6 +1719,7 @@
             this.Load += new System.EventHandler(this.QuanLyLopHoc_Load);
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupthongtinchitiet.ResumeLayout(false);
             this.groupthongtinchitiet.PerformLayout();
@@ -1723,6 +1727,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picturehelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1743,13 +1748,11 @@
             this.groupBox1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

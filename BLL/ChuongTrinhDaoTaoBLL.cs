@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DTO;
 using DAL;
+using System;
 
 namespace BLL
 {
@@ -20,16 +21,27 @@ namespace BLL
             return ctdt.GetChuongTrinhDaoTao(mamon);
         }
 
-        public bool ThemCTDT(string khoi, string mon, int heso)
+        public ErrorType ThemCTDT(string khoi, string mon, string heso)
         {
             ChuongTrinhDaoTaoAccess ct = new ChuongTrinhDaoTaoAccess();
-            return ct.ThemCTDT(khoi, mon, heso);
+
+            if (string.IsNullOrEmpty(khoi) || string.IsNullOrEmpty(mon)|| string.IsNullOrEmpty(heso))
+                return ErrorType.KI_TU_RONG;
+
+            ChuongTrinhDaoTao ctdt = ct.GetChuongTrinhDaoTao(mon, khoi);
+            if (ctdt != null)
+                return ErrorType.DA_TON_TAI;
+
+            return ct.ThemCTDT(khoi, mon, Int32.Parse(heso));
         }
 
-        public bool SuaCTDT(string khoi, string mon, int heso)
+        public ErrorType SuaCTDT(string khoi, string mon, string heso)
         {
             ChuongTrinhDaoTaoAccess ct = new ChuongTrinhDaoTaoAccess();
-            return ct.SuaCTDT(khoi, mon, heso);
+            if (string.IsNullOrEmpty(khoi) || string.IsNullOrEmpty(mon) || string.IsNullOrEmpty(heso))
+                return ErrorType.KI_TU_RONG;
+
+            return ct.SuaCTDT(khoi, mon,Int32.Parse( heso));
         }
 
         public bool XoaCTDT(string khoi, string mon)

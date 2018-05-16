@@ -26,7 +26,9 @@ namespace GUI
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             Main main = new Main();
+            this.Hide();
             main.ShowDialog();
+            this.Visible = true;
         }
     }
 }

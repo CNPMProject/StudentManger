@@ -382,5 +382,47 @@ namespace GUI.MainForm
                 MessageBox.Show("Bạn phải chọn 1 học sinh để chuyển lớp", "Thông báo", MessageBoxButtons.OK);
             }
         }
+
+        private void pbChuyenSangLopCu_Click(object sender, EventArgs e)
+        {
+            if (lvDSHSMoi_CL.SelectedItems.Count > 0)
+            {
+                string maHocSinh = lvDSHSMoi_CL.SelectedItems[0].SubItems[1].Text;
+                string maHocKy = cbHocKy_ChuyenLopMoi.Text;
+                string maNamHoc = cbNH_ChuyenLopMoi.Text;
+
+                QuaTrinhHocTapBLL qthocBll = new QuaTrinhHocTapBLL();
+                QuaTrinhHocTap quaTrinhHocTap = qthocBll.GetQuaTrinhHocTapCo(maHocSinh, maHocKy, maNamHoc);
+
+                ErrorType result = qthocBll.SuaQuatrinhhoctap(quaTrinhHocTap.MaQTH, cbLopChuyenLopCu.Text, cbHK_ChuyenLopCu.Text, cbNH_ChuyenLop_cu.Text, quaTrinhHocTap.MaHocSinh, quaTrinhHocTap.DiemTBHk);
+                switch ((int)result)
+                {
+                    case (int)ErrorType.DA_TON_TAI:
+                        MessageBox.Show(" Không thể chuyển,Đã tồn tại học sinh này trong lớp  của học kỳ và năm hoc chuyển tới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+
+                    case (int)ErrorType.THAT_BAI:
+                        MessageBox.Show(" Không thể chuyển,Vui lòng kiểm tra lại kết nối CSDL!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+
+                    default:
+                        MessageBox.Show(" Chuyển thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+
+                }
+
+                LoadDanhSachHocSinh(1, cbNH_ChuyenLop_cu.Text, cbHK_ChuyenLopCu.Text, cbLopChuyenLopCu.Text);
+                LoadDanhSachHocSinh(2, cbNH_ChuyenLopMoi.Text, cbHocKy_ChuyenLopMoi.Text, cbLop_ChuyenLop_Moi.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 học sinh để chuyển lớp", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

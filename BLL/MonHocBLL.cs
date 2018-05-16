@@ -31,15 +31,25 @@ namespace BLL
             return mn.XoaMonHoc(maMH);
         }
 
-        public bool ThemMonHoc(string ma, string ten)
+        public ErrorType ThemMonHoc(string ma, string ten)
         {
             MonHocAccess mh = new MonHocAccess();
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten))
+                return ErrorType.KI_TU_RONG;
+
+            MonHoc monhoc = mh.GetMonHoc(ma);
+            if (monhoc != null)
+                return ErrorType.DA_TON_TAI;
+
             return mh.ThemMonHoc(ma, ten);
         }
 
-        public bool SuaMonHoc(string ma, string ten)
+        public ErrorType SuaMonHoc(string ma, string ten)
         {
             MonHocAccess mhac = new MonHocAccess();
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten))
+                return ErrorType.KI_TU_RONG;
+
             return mhac.SuaMonHoc(ma, ten);
         }
     }

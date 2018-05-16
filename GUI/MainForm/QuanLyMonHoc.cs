@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DTO;
+using GUI.FormNhapLieu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,7 @@ namespace GUI.MainForm
             
             foreach (Lop lop in listLop)
             {
-                nameClass.Add(lop.TenLop);
+                nameClass.Add(lop.MaLop + "(" + lop.TenLop + ")");
             }
 
             cbDSLop.DataSource = nameClass;
@@ -58,13 +59,13 @@ namespace GUI.MainForm
 
         void LoadHocKy_BangDiemMonHoc()
         {
-            HocKyBLL lopbll = new HocKyBLL();
-            List<HocKy> listLop = lopbll.GetListHocKy();
+            HocKyBLL hockybll = new HocKyBLL();
+            List<HocKy> listHK = hockybll.GetListHocKy();
             List<string> nameHocKy = new List<string>();
             nameHocKy.Add("Chọn tất cả.");
 
 
-            foreach (HocKy hocKy in listLop)
+            foreach (HocKy hocKy in listHK)
             {
                 nameHocKy.Add(hocKy.MaHocKy);
             }
@@ -139,13 +140,26 @@ namespace GUI.MainForm
             }
         }
 
+        void LoadNamHoc()
+        {
+            NamHocBLL namhocbll = new NamHocBLL();
+            List<NamHoc> listNamHoc = new List<NamHoc>();
+            listNamHoc = namhocbll.GetListNamHoc();
+
+            List<string> listTenNH = new List<string>();
+            foreach (NamHoc namhoc in listNamHoc)
+            {
+                listTenNH.Add(namhoc.MaNamHoc);
+            }
+
+            cbDSNH.DataSource = listTenNH;
+        }
         private void QuanLyMonHoc_Load(object sender, EventArgs e)
         {
             try
             {
                 LoadMonHoc_DanhSachMonHoc();
-                LoadLopHoc_BangDiemMonHoc();
-                LoadHocKy_BangDiemMonHoc();
+                
             }
             catch
             {
@@ -160,6 +174,9 @@ namespace GUI.MainForm
                 if (e.TabPageIndex == 1)
                 {
                     LoadMonHoc_BangDiemMonHoc();
+                    LoadLopHoc_BangDiemMonHoc();
+                    LoadHocKy_BangDiemMonHoc();
+                    LoadNamHoc();
                 }
                 else
                  if (e.TabPageIndex == 2)
@@ -234,6 +251,133 @@ namespace GUI.MainForm
             MonHocBLL mh = new MonHocBLL();
             MonHoc mon = mh.GetMonHoc(tbMaMH_CTDT.Text);
             tbTenMH_CTDT.Text = mon.TenMonHoc;
+        }
+
+        private void btnThemMH_Click(object sender, EventArgs e)
+        {
+            ThemSuaMonHoc formThemMH= new ThemSuaMonHoc();
+            formThemMH.ShowDialog();
+            LoadMonHoc_DanhSachMonHoc();
+        }
+
+        private void btnSuaMH_Click(object sender, EventArgs e)
+        {
+
+            if (lvDanhSachMonHoc.SelectedItems.Count > 0)
+            {
+                ThemSuaMonHoc formThemMH = new ThemSuaMonHoc(tbMaMH_DSMH.Text, tbTenMH_DSMH.Text);
+                formThemMH.ShowDialog();
+                LoadMonHoc_DanhSachMonHoc();
+            }
+            else
+                MessageBox.Show("Bạn cần chọn 1 dòng để sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnXoaMH_Click(object sender, EventArgs e)
+        {
+            if (lvDanhSachMonHoc.SelectedItems.Count > 0)
+            {
+                string maMH = lvDanhSachMonHoc.SelectedItems[0].SubItems[1].Text;
+                MonHocBLL monhocbll = new MonHocBLL();
+                if (monhocbll.XoaMonHoc(maMH))
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadMonHoc_DanhSachMonHoc();
+                }
+                else
+                    MessageBox.Show("Thất bại, môn học đang được sử giảng dạy!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+             MessageBox.Show("Bạn cần chọn 1 dòng để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void btnThemHTKT_Click(object sender, EventArgs e)
+        {
+            ThemSuaHTKT fHTKT = new ThemSuaHTKT();
+            fHTKT.ShowDialog();
+            LoadHinhThucKiemtra();
+        }
+
+        private void btnSuaHTKT_Click(object sender, EventArgs e)
+        {
+
+            if (lvHinhThucKT.SelectedItems.Count > 0)
+            {
+                ThemSuaHTKT fHTKT = new ThemSuaHTKT(tbMaHTKT.Text, tbTenHTKT.Text, tbHesoHTKT.Text);
+                fHTKT.ShowDialog();
+                LoadHinhThucKiemtra();
+            }
+            else
+                MessageBox.Show("Bạn cần chọn 1 dòng để sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnXoaHTKT_Click(object sender, EventArgs e)
+        {
+            if (lvHinhThucKT.SelectedItems.Count > 0)
+            {
+                string maHTKT = lvHinhThucKT.SelectedItems[0].SubItems[1].Text;
+                HinhThucKiemTraBLL htktbll = new HinhThucKiemTraBLL();
+                if (htktbll.XoaHinhThucKiemTra(maHTKT))
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadHinhThucKiemtra();
+                }
+                else
+                    MessageBox.Show("Thất bại, Hình thức kiểm tra đang sử dụng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Bạn cần chọn 1 dòng để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnThemCTDT_Click(object sender, EventArgs e)
+        {
+            ThemSuaCTDT fctdt = new ThemSuaCTDT();
+            fctdt.ShowDialog();
+            LoadChuongTrinhDaoTao();
+        }
+
+        private void btnSuaCTDT_Click(object sender, EventArgs e)
+        {
+            if (lvCTDT.SelectedItems.Count > 0)
+            {
+                ThemSuaCTDT fctdt = new ThemSuaCTDT(tbMaKL_CTDT.Text, tbMaMH_CTDT.Text, tbHeSoCTDT.Text);
+                fctdt.ShowDialog();
+                LoadChuongTrinhDaoTao();
+            }
+            else
+                MessageBox.Show("Bạn cần chọn 1 dòng để sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnXoaCTDT_Click(object sender, EventArgs e)
+        {
+            if (lvCTDT.SelectedItems.Count > 0)
+            {
+                string makhoi = lvCTDT.SelectedItems[0].SubItems[1].Text;
+                string mamon = lvCTDT.SelectedItems[0].SubItems[2].Text;
+                ChuongTrinhDaoTaoBLL ctdt = new ChuongTrinhDaoTaoBLL();
+                if (ctdt.XoaCTDT(makhoi,mamon))
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadMonHoc_DanhSachMonHoc();
+                }
+                else
+                    MessageBox.Show("Thất bại, Hình thức kiểm tra đang sử dụng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Bạn cần chọn 1 dòng để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void cbDanhSachMonHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNhapDiem_Click(object sender, EventArgs e)
+        {
+            ThemSuaDiem fdiem = new ThemSuaDiem();
+            fdiem.ShowDialog();
+            
         }
     }
 }

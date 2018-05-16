@@ -38,7 +38,35 @@ namespace DAL
 
         }
 
-        public bool ThemHTKT(string ma, string ten, int heso)
+        public HinhThucKiemTra GetHinhThucKiemTra(string mahtkt)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "Select * from HinhThucKiemTra where mahtkt=@ma";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = mahtkt;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            HinhThucKiemTra HinhThucKiemTra = null;
+
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                int heSo = reader.GetInt32(2);
+
+                 HinhThucKiemTra = new HinhThucKiemTra(ma, ten, heSo);
+
+            }
+
+            reader.Close();
+            CloseConnection();
+            return HinhThucKiemTra;
+
+        }
+
+        public ErrorType ThemHTKT(string ma, string ten, int heso)
         {
             try
             {
@@ -56,17 +84,17 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
 
             }
             catch
             {
-                return false;
+                return ErrorType.THAT_BAI;
             }
         }
 
-        public bool SuaHTKT(string ma, string ten, int heso)
+        public ErrorType SuaHTKT(string ma, string ten, int heso)
         {
             try
             {
@@ -84,13 +112,13 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
 
             }
             catch
             {
-                return false;
+                return ErrorType.THAT_BAI;
             }
         }
 

@@ -65,6 +65,32 @@ namespace DAL
             return ctdt;
         }
 
+        public ChuongTrinhDaoTao GetChuongTrinhDaoTao(string maMonHoc,string maKhoiLop)
+        {
+            OpenConnection();
+
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select * from ChuongTrinhDaoTao where mamonhoc=@ma and makhoilop=@makl";
+            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maMonHoc;
+            com.Parameters.Add("@makl", SqlDbType.VarChar).Value = maKhoiLop;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+
+            ChuongTrinhDaoTao ctdt = null;
+            if (reader.Read())
+            {
+                string maKhoi = reader.GetString(0);
+                string maMon = reader.GetString(1);
+                int heSo = reader.GetInt32(2);
+
+                ctdt = new ChuongTrinhDaoTao(maKhoi, maMon, heSo);
+            }
+            reader.Close();
+            return ctdt;
+        }
+
         public bool XoaCTDT(string maKhoi, string maMon)
         {
             OpenConnection();
@@ -90,10 +116,10 @@ namespace DAL
 
         }
 
-        public bool ThemCTDT(string maKhoi, string maMon, int heSo)
+        public ErrorType ThemCTDT(string maKhoi, string maMon, int heSo)
         {
-            try
-            {
+            //try
+            //{
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
@@ -108,16 +134,16 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
-            }
-            catch
-            {
-                return false;
-            }
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
         }
+        //    catch
+        //    {
+        //        return ErrorType.THAT_BAI;
+        //    }
+        //}
 
-        public bool SuaCTDT(string maKhoi, string maMon, int heSo)
+        public ErrorType SuaCTDT(string maKhoi, string maMon, int heSo)
         {
             try
             {
@@ -135,13 +161,13 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
 
             }
             catch
             {
-                return false;
+                return ErrorType.THAT_BAI;
             }
         }
 
