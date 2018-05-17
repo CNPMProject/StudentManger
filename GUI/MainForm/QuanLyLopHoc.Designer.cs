@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabPage tabPage2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyLopHoc));
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
             this.panel2 = new System.Windows.Forms.Panel();
             this.labeldslophoc = new System.Windows.Forms.Label();
             this.cbMaLop_DSLH = new System.Windows.Forms.ComboBox();
@@ -621,7 +621,6 @@
             // 
             // lvdshs
             // 
-            this.lvdshs.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.lvdshs.Alignment = System.Windows.Forms.ListViewAlignment.Default;
             this.lvdshs.AllowColumnReorder = true;
             this.lvdshs.AllowDrop = true;
@@ -640,11 +639,11 @@
             this.lvdshs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvdshs.FullRowSelect = true;
             this.lvdshs.GridLines = true;
-            listViewGroup3.Header = "ListViewGroup";
-            listViewGroup3.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            listViewGroup2.Name = "listViewGroup1";
             this.lvdshs.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3});
+            listViewGroup2});
             this.lvdshs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lvdshs.LabelEdit = true;
             this.lvdshs.Location = new System.Drawing.Point(3, 26);

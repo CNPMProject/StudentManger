@@ -96,7 +96,7 @@ namespace GUI.FormNhapLieu
             //MessageBox.Show(malop);
 
             int STT = 1;
-            lvListSV.Clear();
+            lvDSHS.Clear();
 
             foreach(HocSinh hs in listHS)
             {
@@ -105,7 +105,7 @@ namespace GUI.FormNhapLieu
                 lvi.SubItems.Add(hs.HoVaTen);
                 STT++;
 
-                lvListSV.Items.Add(lvi);
+                lvDSHS.Items.Add(lvi);
             }
         }
         private void ThemSuaDiem_Load(object sender, EventArgs e)
@@ -130,6 +130,30 @@ namespace GUI.FormNhapLieu
         private void cbDSNH_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDSHSLenListview();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if(lvDSHS.SelectedItems.Count>0)
+            {
+                QuaTrinhHocTapBLL qthocbll = new QuaTrinhHocTapBLL();
+                QuaTrinhHocTap qthoctap = qthocbll.GetQuaTrinhHocTapCo(tbMaHS.Text, cbDSHocKy.Text, cbDSNH.Text);
+
+                BangDiemMonBLL bdbll = new BangDiemMonBLL();
+                BangDiemMon bdm = bdbll.GetBangDiemMon(qthoctap.MaQTH, cbDanhSachMonHoc.Text);
+                if (bdm == null)
+                {
+                    ////neu chua ton tai bd thi them bd vao
+                    //string mabdm = bdbll.GetMaBDMMax();
+                    //string[] list = mabdm.Split('D');
+                    //mabdm = "BD"+(Int32.Parse( list[1])+1).ToString();
+                    //bdbll.ThemBDM(mabdm,)
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 học sinh để vào điểm", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
