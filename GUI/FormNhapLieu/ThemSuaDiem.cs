@@ -30,13 +30,13 @@ namespace GUI.FormNhapLieu
             List<MonHoc> listMonHoc = monhocbll.GetListMonHoc();
 
             //load source cac mon hoc len combobox tab-page bang diem mon hic
-            List<string> listTenMH = new List<string>();
+            List<string> listMaMH = new List<string>();
             //listTenMH.Add("Chọn tất cả.");
             foreach (MonHoc mon in listMonHoc)
             {
-                listTenMH.Add(mon.TenMonHoc);
+                listMaMH.Add(mon.MaMonHoc);
             }
-            cbDanhSachMonHoc.DataSource = listTenMH;
+            cbDanhSachMonHoc.DataSource = listMaMH;
         }
 
         void LoadDSLopHoc()
@@ -96,17 +96,32 @@ namespace GUI.FormNhapLieu
             //MessageBox.Show(malop);
 
             int STT = 1;
-            lvDSHS.Clear();
+            lvDSHS.Items.Clear();
 
             foreach(HocSinh hs in listHS)
             {
                 ListViewItem lvi = new ListViewItem(STT + "");
                 lvi.SubItems.Add(hs.MaHocSinh);
                 lvi.SubItems.Add(hs.HoVaTen);
+                lvi.SubItems.Add(hs.GioiTinh);
                 STT++;
 
                 lvDSHS.Items.Add(lvi);
             }
+        }
+
+        void LoadDSHTKT()
+        {
+            HinhThucKiemTraBLL htktbll = new HinhThucKiemTraBLL();
+            List<HinhThucKiemTra> listhtkt = htktbll.GetAllHinhThucKiemTra();
+            List<string> listMahtkt = new List<string>();
+
+            foreach(HinhThucKiemTra ht in listhtkt)
+            {
+                listMahtkt.Add(ht.MaHTKT);
+            }
+
+            cbDSHTKT.DataSource = listMahtkt;
         }
         private void ThemSuaDiem_Load(object sender, EventArgs e)
         {
@@ -114,6 +129,7 @@ namespace GUI.FormNhapLieu
             LoadDSLopHoc();
             LoadDSHocKy();
             LoadNamHoc();
+            LoadDSHTKT();
             LoadDSHSLenListview();
         }
 
@@ -141,19 +157,51 @@ namespace GUI.FormNhapLieu
 
                 BangDiemMonBLL bdbll = new BangDiemMonBLL();
                 BangDiemMon bdm = bdbll.GetBangDiemMon(qthoctap.MaQTH, cbDanhSachMonHoc.Text);
+
                 if (bdm == null)
                 {
-                    ////neu chua ton tai bd thi them bd vao
-                    //string mabdm = bdbll.GetMaBDMMax();
-                    //string[] list = mabdm.Split('D');
-                    //mabdm = "BD"+(Int32.Parse( list[1])+1).ToString();
-                    //bdbll.ThemBDM(mabdm,)
+                    //neu chua ton tai bd thi them bd vao 
+
+                    string mabdm = bdbll.GetMaBDMMax();
+                    string[] list = mabdm.Split('D');
+                    mabdm = "BD" + (Int32.Parse(list[1]) + 1).ToString();
+                    MessageBox.Show(mabdm + "");
+                    bdbll.ThemBDM(mabdm, qthoctap.MaQTH, cbDanhSachMonHoc.Text);
+                    bdm = bdbll.GetBangDiemMon(qthoctap.MaQTH, cbDanhSachMonHoc.Text);
                 }
+
+                //lay ra ma ma bang diem dang can nhap
+                string mabd = bdm.MaBangDiemMon;
+                //lay ra chi tiet bang diem mon, neu chua co thi insert| nhieu khi da them diem truoc do nen da co
+                CTBangDiemMonBLL ctbdbll = new CTBangDiemMonBLL();
+                  ChiTietBangDiemMon ctbdm = ctbdbll.GetCTBangDiemMon(mabd, cbDSHTKT.Text);
+                if (ctbdm == null)
+                {
+                    //tao ma chi tiet bang diem mon moi de insert
+                    string mactbd = ctbdbll.GetMaCTBDMMax();
+                    string[] listtemp = mactbd.Split('D');
+                    mactbd = "CTBD" + (Int32.Parse(listtemp[1]) + 1).ToString();
+                    MessageBox.Show(mactbd);
+                    ErrorType result = ctbdbll.ThemCTBDM(mactbd, mabd, cbDSHTKT.Text, tbDiem.Text);
+                }
+
             }
             else
             {
                 MessageBox.Show("Bạn phải chọn 1 học sinh để vào điểm", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lvDSHS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListViewItem lvi = lvDSHS.SelectedItems[0];
+            tbMaHS.Text = lvi.SubItems[1].Text;
+            tbTenhS.Text = lvi.SubItems[2].Text;
+        }
+
+        private void btnHuyBo_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

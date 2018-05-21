@@ -58,6 +58,7 @@
             this.btBaoCao.Name = "btBaoCao";
             this.btBaoCao.Size = new System.Drawing.Size(210, 117);
             this.btBaoCao.TabIndex = 22;
+            this.btBaoCao.Click += new System.EventHandler(this.btBaoCao_Click);
             // 
             // btNhapBangDiem
             // 
@@ -80,6 +81,7 @@
             this.btNhapBangDiem.Name = "btNhapBangDiem";
             this.btNhapBangDiem.Size = new System.Drawing.Size(211, 117);
             this.btNhapBangDiem.TabIndex = 21;
+            this.btNhapBangDiem.Click += new System.EventHandler(this.btNhapBangDiem_Click);
             // 
             // btTraCuu
             // 
@@ -102,6 +104,7 @@
             this.btTraCuu.Name = "btTraCuu";
             this.btTraCuu.Size = new System.Drawing.Size(210, 119);
             this.btTraCuu.TabIndex = 20;
+            this.btTraCuu.Click += new System.EventHandler(this.btTraCuu_Click);
             // 
             // btLapDS
             // 
@@ -124,6 +127,7 @@
             this.btLapDS.Name = "btLapDS";
             this.btLapDS.Size = new System.Drawing.Size(220, 117);
             this.btLapDS.TabIndex = 19;
+            this.btLapDS.Click += new System.EventHandler(this.btLapDS_Click);
             // 
             // btThemHocSinh
             // 
@@ -146,6 +150,7 @@
             this.btThemHocSinh.Name = "btThemHocSinh";
             this.btThemHocSinh.Size = new System.Drawing.Size(211, 119);
             this.btThemHocSinh.TabIndex = 18;
+            this.btThemHocSinh.Click += new System.EventHandler(this.btThemHocSinh_Click);
             // 
             // btQuyDinh
             // 
@@ -168,6 +173,7 @@
             this.btQuyDinh.Name = "btQuyDinh";
             this.btQuyDinh.Size = new System.Drawing.Size(220, 119);
             this.btQuyDinh.TabIndex = 16;
+            this.btQuyDinh.Click += new System.EventHandler(this.btQuyDinh_Click);
             // 
             // Home
             // 

@@ -302,7 +302,7 @@
             this.btApDung.IconVisible = true;
             this.btApDung.IconZoom = 90D;
             this.btApDung.IsTab = false;
-            this.btApDung.Location = new System.Drawing.Point(469, 423);
+            this.btApDung.Location = new System.Drawing.Point(495, 423);
             this.btApDung.Name = "btApDung";
             this.btApDung.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(108)))));
             this.btApDung.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -318,16 +318,15 @@
             // ThayDoiQuyDinh
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 472);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1144, 541);
             this.ControlBox = false;
             this.Controls.Add(this.gbcacthamso);
             this.Controls.Add(this.groupboxthaydoiquydinh);
             this.Controls.Add(this.lbquydinhnamhoc);
             this.Controls.Add(this.btexit);
             this.Controls.Add(this.btApDung);
-            this.Cursor = System.Windows.Forms.Cursors.No;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThayDoiQuyDinh";
             this.Text = "ThayDoiQuyDinh";

@@ -10,9 +10,9 @@ namespace DTO
     {
        public string MaThamSo;
         public  string TenThamSo;
-        public decimal GiaTri;
+        public float GiaTri;
       
-        public ThamSo(string mathamso,string tenThamSo, decimal giaTri)
+        public ThamSo(string mathamso,string tenThamSo, float giaTri)
         {
             this.MaThamSo = mathamso;
             this.TenThamSo = tenThamSo;

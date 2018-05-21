@@ -22,23 +22,44 @@ namespace BLL
             return danhsachhocsinh.GetHocSinh(maHocSinh);
         }
 
+        public string GetMaHSMax()
+        {
+            return danhsachhocsinh.GetMaHocSinhMax();
+        }
+
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_Diem(string maNamHoc)
+        {
+            return danhsachhocsinh.GetDanhSachHocSinh_ThongTinChung_Diem(maNamHoc);
+        }
+
         public List<HocSinh> GetDSHocSinhTheoLop(string malop)
         {
             return danhsachhocsinh.GetDSHocSinhTheoLop(malop);
+        }
+
+        public List<HocSinh> GetDSHocSinhChuaXepLop()
+        {
+            return danhsachhocsinh.GetDSHocSinhChuaXepLop();
         }
 
         public List<HocSinh> GetDSHocSinh(string namHoc, string hocKy, string maLop)
         {
             return danhsachhocsinh.GetDSHocSinh(namHoc, hocKy, maLop);
         }
-        public bool ThemHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
+        public ErrorType ThemHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
         {
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(gioitinh) || string.IsNullOrEmpty(diachi) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(namsinh)) 
+                return ErrorType.KI_TU_RONG;
+
             DShocsinhAccess ac = new DShocsinhAccess();
             return ac.ThemHs(ma, ten, gioitinh, diachi, email,namsinh);
         }
 
-        public bool SuaHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
+        public ErrorType SuaHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
         {
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(gioitinh) || string.IsNullOrEmpty(diachi) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(namsinh))
+                return ErrorType.KI_TU_RONG;
+
             DShocsinhAccess ac = new DShocsinhAccess();
             return ac.SuaHs(ma, ten, gioitinh, diachi, email,namsinh);
         }

@@ -8,10 +8,10 @@ namespace DTO
 {
     public class BangDiemMon
     {
-        string MaBangDiemMon;
-        string MaQTH;
-        string MaMonHoc;
-        float DiemTBMon;
+        public string MaBangDiemMon;
+        public string MaQTH;
+        public string MaMonHoc;
+        public float DiemTBMon;
 
         public BangDiemMon(string mbd, string mqt, string mmh, float tb)
         {

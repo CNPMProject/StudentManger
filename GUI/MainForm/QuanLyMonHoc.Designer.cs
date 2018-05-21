@@ -60,17 +60,16 @@
             this.btnSuaDiem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.gbBangDiemMonHoc = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvBDMH = new System.Windows.Forms.ListView();
             this.clSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clDiem15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clDiem1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clDiemTb = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbBoLoc = new System.Windows.Forms.GroupBox();
             this.cbDanhSachMonHoc = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbDSNH = new System.Windows.Forms.ComboBox();
             this.cbDSLop = new System.Windows.Forms.ComboBox();
             this.cbDSHocKy = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbHinhThucKiemTra = new System.Windows.Forms.TabPage();
@@ -117,8 +116,7 @@
             this.clHeSoCTDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbDSNH = new System.Windows.Forms.ComboBox();
+            this.MaHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcQuanLyMonHoc.SuspendLayout();
             this.tbDanhSachMonHoc.SuspendLayout();
             this.gbSetting_DSMH.SuspendLayout();
@@ -522,7 +520,7 @@
             this.gbTuyChon_BDMH.Controls.Add(this.btnNhapDiem);
             this.gbTuyChon_BDMH.Controls.Add(this.btnSuaDiem);
             this.gbTuyChon_BDMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTuyChon_BDMH.Location = new System.Drawing.Point(762, 318);
+            this.gbTuyChon_BDMH.Location = new System.Drawing.Point(791, 318);
             this.gbTuyChon_BDMH.Name = "gbTuyChon_BDMH";
             this.gbTuyChon_BDMH.Size = new System.Drawing.Size(318, 117);
             this.gbTuyChon_BDMH.TabIndex = 5;
@@ -608,41 +606,40 @@
             this.gbBangDiemMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbBangDiemMonHoc.Location = new System.Drawing.Point(16, 24);
             this.gbBangDiemMonHoc.Name = "gbBangDiemMonHoc";
-            this.gbBangDiemMonHoc.Size = new System.Drawing.Size(728, 414);
+            this.gbBangDiemMonHoc.Size = new System.Drawing.Size(745, 414);
             this.gbBangDiemMonHoc.TabIndex = 4;
             this.gbBangDiemMonHoc.TabStop = false;
             this.gbBangDiemMonHoc.Text = "Bảng điểm môn học";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.lvBDMH);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(722, 389);
+            this.panel1.Size = new System.Drawing.Size(739, 389);
             this.panel1.TabIndex = 0;
             // 
-            // listView1
+            // lvBDMH
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvBDMH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clSTT,
-            this.clHoTen,
-            this.clDiem15,
-            this.clDiem1,
-            this.clDiemTb});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(722, 389);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.MaHS,
+            this.clHoTen});
+            this.lvBDMH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvBDMH.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvBDMH.FullRowSelect = true;
+            this.lvBDMH.GridLines = true;
+            this.lvBDMH.Location = new System.Drawing.Point(0, 0);
+            this.lvBDMH.Name = "lvBDMH";
+            this.lvBDMH.Size = new System.Drawing.Size(739, 389);
+            this.lvBDMH.TabIndex = 0;
+            this.lvBDMH.UseCompatibleStateImageBehavior = false;
+            this.lvBDMH.View = System.Windows.Forms.View.Details;
             // 
             // clSTT
             // 
+            this.clSTT.DisplayIndex = 0;
             this.clSTT.Text = "STT";
             this.clSTT.Width = 58;
             // 
@@ -650,25 +647,7 @@
             // 
             this.clHoTen.Text = "Họ và tên";
             this.clHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clHoTen.Width = 235;
-            // 
-            // clDiem15
-            // 
-            this.clDiem15.Text = "Điểm 15 phút";
-            this.clDiem15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clDiem15.Width = 127;
-            // 
-            // clDiem1
-            // 
-            this.clDiem1.Text = "Điểm 1 tiết";
-            this.clDiem1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clDiem1.Width = 134;
-            // 
-            // clDiemTb
-            // 
-            this.clDiemTb.Text = "Điểm trung bình";
-            this.clDiemTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clDiemTb.Width = 160;
+            this.clHoTen.Width = 200;
             // 
             // gbBoLoc
             // 
@@ -681,7 +660,7 @@
             this.gbBoLoc.Controls.Add(this.label3);
             this.gbBoLoc.Controls.Add(this.label2);
             this.gbBoLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBoLoc.Location = new System.Drawing.Point(762, 24);
+            this.gbBoLoc.Location = new System.Drawing.Point(791, 24);
             this.gbBoLoc.Name = "gbBoLoc";
             this.gbBoLoc.Size = new System.Drawing.Size(318, 232);
             this.gbBoLoc.TabIndex = 3;
@@ -711,6 +690,17 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Môn học :";
             // 
+            // cbDSNH
+            // 
+            this.cbDSNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbDSNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDSNH.FormattingEnabled = true;
+            this.cbDSNH.Location = new System.Drawing.Point(121, 83);
+            this.cbDSNH.Name = "cbDSNH";
+            this.cbDSNH.Size = new System.Drawing.Size(180, 24);
+            this.cbDSNH.TabIndex = 1;
+            this.cbDSNH.SelectedIndexChanged += new System.EventHandler(this.cbDSNH_SelectedIndexChanged);
+            // 
             // cbDSLop
             // 
             this.cbDSLop.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -720,6 +710,7 @@
             this.cbDSLop.Name = "cbDSLop";
             this.cbDSLop.Size = new System.Drawing.Size(180, 24);
             this.cbDSLop.TabIndex = 1;
+            this.cbDSLop.SelectedIndexChanged += new System.EventHandler(this.cbDSLop_SelectedIndexChanged);
             // 
             // cbDSHocKy
             // 
@@ -730,6 +721,19 @@
             this.cbDSHocKy.Name = "cbDSHocKy";
             this.cbDSHocKy.Size = new System.Drawing.Size(180, 24);
             this.cbDSHocKy.TabIndex = 2;
+            this.cbDSHocKy.SelectedIndexChanged += new System.EventHandler(this.cbDSHocKy_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(20, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 21);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Năm học :";
             // 
             // label3
             // 
@@ -1392,27 +1396,12 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // label9
+            // MaHS
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(20, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 21);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Năm học :";
-            // 
-            // cbDSNH
-            // 
-            this.cbDSNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbDSNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDSNH.FormattingEnabled = true;
-            this.cbDSNH.Location = new System.Drawing.Point(121, 83);
-            this.cbDSNH.Name = "cbDSNH";
-            this.cbDSNH.Size = new System.Drawing.Size(180, 24);
-            this.cbDSNH.TabIndex = 1;
+            this.MaHS.DisplayIndex = 1;
+            this.MaHS.Text = "Mã HS";
+            this.MaHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MaHS.Width = 100;
             // 
             // QuanLyMonHoc
             // 
@@ -1487,12 +1476,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvBDMH;
         private System.Windows.Forms.ColumnHeader clSTT;
         private System.Windows.Forms.ColumnHeader clHoTen;
-        private System.Windows.Forms.ColumnHeader clDiem15;
-        private System.Windows.Forms.ColumnHeader clDiem1;
-        private System.Windows.Forms.ColumnHeader clDiemTb;
         private System.Windows.Forms.TabPage tbHinhThucKiemTra;
         private System.Windows.Forms.TextBox tbHesoHTKT;
         private System.Windows.Forms.Label lbHeSo;
@@ -1550,5 +1536,6 @@
         private System.Windows.Forms.TextBox tbMaKL_CTDT;
         private System.Windows.Forms.ComboBox cbDSNH;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ColumnHeader MaHS;
     }
 }

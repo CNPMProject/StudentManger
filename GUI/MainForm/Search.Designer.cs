@@ -336,7 +336,7 @@
             this.btnSearch.IconVisible = true;
             this.btnSearch.IconZoom = 70D;
             this.btnSearch.IsTab = false;
-            this.btnSearch.Location = new System.Drawing.Point(676, 13);
+            this.btnSearch.Location = new System.Drawing.Point(696, 13);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(108)))));
@@ -363,7 +363,7 @@
             this.tbKeySearch.LineIdleColor = System.Drawing.Color.Gray;
             this.tbKeySearch.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.tbKeySearch.LineThickness = 4;
-            this.tbKeySearch.Location = new System.Drawing.Point(315, 14);
+            this.tbKeySearch.Location = new System.Drawing.Point(335, 14);
             this.tbKeySearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbKeySearch.Name = "tbKeySearch";
             this.tbKeySearch.Size = new System.Drawing.Size(339, 38);
@@ -492,7 +492,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1104, 514);
+            this.ClientSize = new System.Drawing.Size(1144, 541);
             this.Controls.Add(this.picturehelp);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.combonamhoc);

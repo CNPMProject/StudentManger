@@ -30,17 +30,55 @@ namespace DAL
                 string ma = reader.GetString(0);
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
-                string diachi = reader.GetString(3);
-                string email = reader.GetString(4);
-                string namsinh = reader.GetDateTime(5).ToString();
+                string namsinh = reader.GetDateTime(3).ToString();
+                string diachi = reader.GetString(4);
+                string email = reader.GetString(5);
+                string trangThai = reader.GetString(6);
 
-                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email,namsinh);
+
+                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email,namsinh,trangThai);
                 listdshocsinh.Add(dshocsinh);
             }
 
             reader.Close();
             CloseConnection();
             return listdshocsinh;
+        }
+
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_Diem(string maNamHoc)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select hs.MaHocSinh,hs.HoVaTen,qth.MaLop,qth.MaHocKy,qth.DiemTBHk "
+                            +"from HOCSINH hs,QUATRINHHOCTAP qth "
+                            +"where hs.MaHocSinh = qth.MaHocSinh and maNamHoc=@maNamHoc ";
+            
+            com.Parameters.Add("@maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<ThongTinChungHS_DiemTB> listdshocsinh = new List<ThongTinChungHS_DiemTB>();
+
+            while (reader.Read())
+            {
+                string maHocSinh = reader.GetString(0);
+                String tenHocSinh = reader.GetString(1);
+                string maLop = reader.GetString(2);
+                string maHocKy = reader.GetString(3);
+                string diemTrungBinh = null;
+                diemTrungBinh = reader.GetDouble(4).ToString();
+
+
+                ThongTinChungHS_DiemTB dshocsinh = new ThongTinChungHS_DiemTB(
+                    maHocSinh, tenHocSinh, maLop, maHocKy, diemTrungBinh);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listdshocsinh;
+
         }
 
         public HocSinh GetHocSinh(string mahocsinh)
@@ -64,10 +102,10 @@ namespace DAL
                 string namsinh = reader.GetDateTime(3).ToString();
                 string diachi = reader.GetString(4);
                 string email = reader.GetString(5);
+                string trangThai = reader.GetString(6);
 
-               
 
-                dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh);
+                dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh,trangThai);
                 listdshocsinh.Add(dshocsinh);
             }
 
@@ -75,6 +113,62 @@ namespace DAL
             CloseConnection();
 
             return dshocsinh;
+        }
+
+        public string GetMaHocSinhMax()
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select top 1 MaHocSinh from HOCSINH order by MaHocSinh DESC";     
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+
+            string maHS = null;
+
+            if (reader.Read())
+            {
+                 maHS = reader.GetString(0);               
+            }
+
+            reader.Close();
+            CloseConnection();
+
+            return maHS;
+        }
+
+        public List<HocSinh> GetDSHocSinhChuaXepLop()
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = " select * from HOCSINH "
+                               +"where MaHocSinh not in (select MaHocSinh from QUATRINHHOCTAP)";
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<HocSinh> listdshocsinh = new List<HocSinh>();
+            string namsinh = null;
+
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string gioitinh = reader.GetString(2);
+                namsinh = reader.GetDateTime(3).ToString();
+                string diachi = reader.GetString(4);
+                string email = reader.GetString(5);
+                string trangThai = reader.GetString(6);
+
+
+                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh, trangThai);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listdshocsinh;
         }
 
         public List<HocSinh> GetDSHocSinhTheoLop(string maLop)
@@ -96,11 +190,12 @@ namespace DAL
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
                 namsinh = reader.GetDateTime(3).ToString();
-                string diachi = reader.GetString(5);
+                string diachi = reader.GetString(4);
                 string email = reader.GetString(5);
-               
+                string trangThai = reader.GetString(6);
 
-                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email,namsinh);
+
+                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email,namsinh,trangThai);
                 listdshocsinh.Add(dshocsinh);
             }
 
@@ -137,8 +232,10 @@ namespace DAL
                 namsinh = reader.GetDateTime(3).ToString();
                 string diachi = reader.GetString(4);
                 string email = reader.GetString(5);
+                string trangThai = reader.GetString(6);
 
-                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh);
+
+                HocSinh dshocsinh = new HocSinh(ma, ten, gioitinh, diachi, email, namsinh, trangThai);
                 listdshocsinh.Add(dshocsinh);
             }
 
@@ -170,14 +267,15 @@ namespace DAL
             }
 
         }
-        public bool ThemHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
+        public ErrorType ThemHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
         {
-            try
-            {
+            //try
+            //{
+
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "insert into HOCSINH values(@mahocsinh,@hoten,@gioitinh,@diachi,@email,@namsinh)";
+                com.CommandText = "insert into HOCSINH values(@mahocsinh,@hoten,@gioitinh,@namsinh,@diachi,@email,'HD')";
                 com.Connection = conn;
 
                 com.Parameters.Add("@mahocsinh", SqlDbType.VarChar).Value = mahocsinh;
@@ -190,16 +288,16 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
-            }
-            catch
-            {
-                return false;
-            }
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
+            //}
+            //catch
+            //{
+            //    return ErrorType.THAT_BAI;
+            //}
         }
 
-        public bool SuaHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
+        public ErrorType SuaHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
         {
 
             try
@@ -220,13 +318,13 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
 
             }
             catch
             {
-                return false;
+                return ErrorType.THAT_BAI;
             }
         }
     }

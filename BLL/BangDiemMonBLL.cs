@@ -18,6 +18,11 @@ namespace BLL
             return bdac.GetBangDiemMon(maquatrinh, mamonhoc);
         }
 
+        public List<BangDiemDayDu> GetListBangDiemMonDayDu(string maLop, string mahocky, string namhoc, string monhoc)
+        {
+            return bdac.GetListBangDiemMonDayDu(maLop, mahocky, namhoc, monhoc);
+        }
+
         public ErrorType ThemBDM(string maBD,string maQTH,string maMH)
         {
             return bdac.ThemBD(maBD, maQTH, maMH);

@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using BLL;
 using DTO;
+using GUI.FormNhapLieu;
 
 namespace GUI.MainForm
 {
@@ -44,11 +45,6 @@ namespace GUI.MainForm
             cbNH_DSHS.DataSource = listTenNH;
         }
 
-        void LoadDSHS_DSHS()
-        {
-
-        }
-
         /// <summary>
         /// Load all class to combobox
         /// </summary>
@@ -67,7 +63,7 @@ namespace GUI.MainForm
         }
 
         /// <summary>
-        /// Load all namhoc to combobox Danh sach khoi lop
+        /// Load all namhoc to combobox manh hinh Danh sach khoi lop
         /// </summary>
         void LoadNH_DSKL()
         {
@@ -83,6 +79,9 @@ namespace GUI.MainForm
             cbNH_DSKL.DataSource = listMaNH;
         }
 
+        /// <summary>
+        /// Load nam hoc lem combobox man hinh chuyen lop
+        /// </summary>
         void LoadNH_CL()
         {
             if (listNamHoc.Count == 0)
@@ -100,6 +99,9 @@ namespace GUI.MainForm
             cbNH_ChuyenLopMoi.DataSource = listMaNHMoi;
         }
 
+        /// <summary>
+        /// Load hoc ky len combobox man hinh chuyen lop
+        /// </summary>
         void LoadHK_CL()
         {
             HocKyBLL hocKybll = new HocKyBLL();
@@ -115,6 +117,10 @@ namespace GUI.MainForm
             cbHK_ChuyenLopCu.DataSource = listmaHKCu;
             cbHocKy_ChuyenLopMoi.DataSource = listmaHKMoi;
         }
+
+        /// <summary>
+        /// Load danh sach lop len combobox man hinh chuyen lop
+        /// </summary>
         void LoadLop_CL()
         {
             if (listLop.Count == 0)
@@ -132,14 +138,95 @@ namespace GUI.MainForm
             cbLop_ChuyenLop_Moi.DataSource = listmaLopMoi;
         }
 
+        /// <summary>
+        /// Load danh sach lop len combobox man hinh xep lop
+        /// </summary>
+        void LoadLop_XL()
+        {
+            List<Lop> listLop = lopBLL.GetListLop();
+
+            List<string> listtenlop = new List<string>();
+            foreach (Lop lop in listLop)
+            {
+                listtenlop.Add(lop.MaLop+" ("+lop.TenLop+" )");
+            }
+
+            cbLop_XL.DataSource = listtenlop;
+        }
+
+        /// <summary>
+        /// load danh sach nam hoc len combobox man hinh xep lop
+        /// </summary>
+        void LoadNH_XL()
+        {
+            List<NamHoc> listNamHoc = namhocbll.GetListNamHoc();
+            List<string> listMaNH = new List<string>();
+            foreach (NamHoc namhoc in listNamHoc)
+            {
+                listMaNH.Add(namhoc.MaNamHoc);
+            }
+
+            cbNamHoc_XL.DataSource = listMaNH;
+        }
+
+        /// <summary>
+        /// Load hoc ky len combobox man hinh xep lop
+        /// </summary>
+        void LoadHocKy_XL()
+        {
+            HocKyBLL hocKybll = new HocKyBLL();
+            List<HocKy> listHocKy = hocKybll.GetListHocKy();
+
+            List<string> listmaHocKy = new List<string>();
+            foreach (HocKy hocky in listHocKy)
+            {
+                listmaHocKy.Add(hocky.MaHocKy);
+            }
+
+            cbHocKy_XL.DataSource = listmaHocKy;
+        }
+
+        /// <summary>
+        /// load danh sach hoc sinh chua duoc xep lop len listView
+        /// </summary>
+        void LoadDanhSachHocSinhChuaXepLop()
+        {
+            List<HocSinh> listHocSinh = hocSinhbll.GetDSHocSinhChuaXepLop();
+            lvDSHSChuaCoLop_XepLop.Items.Clear();
+            int soThuTu = 1;
+
+            foreach(HocSinh hocsinh in listHocSinh)
+            {
+                ListViewItem lvi = new ListViewItem(soThuTu + "");
+                lvi.SubItems.Add(hocsinh.MaHocSinh);
+                lvi.SubItems.Add(hocsinh.HoVaTen);
+                lvi.SubItems.Add(hocsinh.GioiTinh);
+
+                lvDSHSChuaCoLop_XepLop.Items.Add(lvi);
+            }
+        }
+
+        /// <summary>
+        /// load ds hoc sinh cua lop duoc chon chuyen vao
+        /// </summary>
+        void LoadDanhSachHocSinhLopDuocXep_MHXL()
+        {
+            gbDSHSLopChuyenDen_XL.Text = "Danh sách học sinh lớp " + cbLop_XL.Text;
+            string malop = cbLop_XL.Text;
+            string[] listma = malop.Split('(');
+            malop = listma[0];
+
+            LoadDanhSachHocSinh(3, cbNamHoc_XL.Text, cbHocKy_XL.Text, malop);
+        }
+
         private void tcQuanLyLop_Selected(object sender, TabControlEventArgs e)
         {
             try
             {
                 if (e.TabPageIndex == 0)
                 {
-                    LoadNamHoc_DSHS();
-                    LoadDSHS_DSHS();
+                    //LoadNamHoc_DSHS();
+                    //LoadDSHS_DSHS();
                 }
                 else
                  if (e.TabPageIndex == 1)
@@ -158,6 +245,15 @@ namespace GUI.MainForm
                     LoadHK_CL();
                     LoadLop_CL();
                 }
+                else
+                 if (e.TabPageIndex == 4)
+                {
+                    LoadLop_XL();
+                    LoadNH_XL();
+                    LoadHocKy_XL();
+                    LoadDanhSachHocSinhChuaXepLop();
+                    LoadDanhSachHocSinhLopDuocXep_MHXL();
+                }
             }
             catch
             {
@@ -165,13 +261,94 @@ namespace GUI.MainForm
             }
         }
 
+
+        void LoadDSHS_DSHS()
+        {
+            List<ThongTinChungHS_DiemTB> listThongTinChungHocSinh = hocSinhbll.GetDanhSachHocSinh_ThongTinChung_Diem(cbNH_DSHS.Text);
+            lvdshs.Items.Clear();
+            int soThuTu = 1;
+            HocKyBLL hockybll = new HocKyBLL();
+            List<HocKy> listhocky = hockybll.GetListHocKy();
+
+            foreach(ThongTinChungHS_DiemTB hocsinh in listThongTinChungHocSinh)
+            {
+
+                int indexHocKy=0;
+                for (int i = 0; i < listhocky.Count; i++)
+                {
+                    if (listhocky[i].MaHocKy == hocsinh.maHocKy)
+                        indexHocKy = i + 4;
+                }
+
+                bool kiemTraTonTai = false;
+                if (lvdshs.Items.Count > 0)
+                {
+                    foreach(ListViewItem lvitem in lvdshs.Items)
+                    {
+                        if (lvitem.SubItems[1].Text == hocsinh.maHocSinh)
+                        {
+                            kiemTraTonTai = true;
+                                lvitem.SubItems[indexHocKy].Text = hocsinh.diemTB;
+                            break;
+                        }
+                    }
+                }
+
+                if (!kiemTraTonTai)
+                {
+                    ListViewItem lvi = new ListViewItem(soThuTu + "");
+                    lvi.SubItems.Add(hocsinh.maHocSinh);
+                    lvi.SubItems.Add(hocsinh.TenHocSinh);
+                    lvi.SubItems.Add(hocsinh.Lop);
+                    lvi.SubItems.Add("NULL"); // diem tb hoc ki 1
+                    lvi.SubItems.Add("NULL"); // dim trung binh hk 2
+                    lvi.SubItems.Add("NULL"); // dim trung binh hk 3
+                    lvi.SubItems.Add("NULL"); // dim trung binh hk 4
+
+
+                    lvi.SubItems[indexHocKy].Text = hocsinh.diemTB;
+
+                    lvdshs.Items.Add(lvi);
+                    soThuTu++;
+                }
+            }
+        }
+
+        void LoadColumnHocKyLenListView()
+        {
+            HocKyBLL hockybll = new HocKyBLL();
+            List<HocKy> listHocKy = hockybll.GetListHocKy();
+
+            foreach(HocKy hocky in listHocKy)
+            {
+                ColumnHeader header = new ColumnHeader()
+                {
+                    Name = hocky.MaHocKy,
+                    Text = "Điểm TB " + hocky.MaHocKy,
+                    Width = 110
+                };
+                lvdshs.Columns.Add(header);
+            }
+
+
+            ColumnHeader colltemp1 = new ColumnHeader() { Name = "temp1", Text = "", Width = 0 };
+            lvdshs.Columns.Add(colltemp1);
+            ColumnHeader colltemp2 = new ColumnHeader() { Name = "temp2", Text = "", Width = 0 };
+            lvdshs.Columns.Add(colltemp2);
+            ColumnHeader colltemp3 = new ColumnHeader() { Name = "temp3", Text = "", Width = 0 };
+            lvdshs.Columns.Add(colltemp3);
+            ColumnHeader colltemp4 = new ColumnHeader() { Name = "temp4", Text = "", Width = 0 };
+            lvdshs.Columns.Add(colltemp4);
+        }
         private void QuanLyLopHoc_Load(object sender, EventArgs e)
         {
             LoadNamHoc_DSHS();
+            LoadDSHS_DSHS();
+            LoadColumnHocKyLenListView();
         }
 
         /// <summary>
-        /// int listview =1 la lisstview lop cu. 2 la lop moi
+        /// int listview =1 la lisstview lop cu. 2 la lop moi 3 la listView xepLop-dshoc sinh trong lop duoc chuyen den
         /// </summary>
         /// <param name="listView"></param>
         /// <param name="maNamHoc"></param>
@@ -196,8 +373,9 @@ namespace GUI.MainForm
                     STT++;
                 }
             }
-            else
+            if (listView == 2)
             {
+
                 lvDSHSMoi_CL.Items.Clear();
                 foreach (HocSinh hocsinh in listDSHocSinhCoDK)
                 {
@@ -209,12 +387,26 @@ namespace GUI.MainForm
                     STT++;
                 }
             }
+            else
+            {
+
+                lvDSHS_MHXL.Items.Clear();
+                foreach (HocSinh hocsinh in listDSHocSinhCoDK)
+                {
+                    ListViewItem lvi = new ListViewItem(STT.ToString());
+                    lvi.SubItems.Add(hocsinh.MaHocSinh);
+                    lvi.SubItems.Add(hocsinh.HoVaTen);
+
+                    lvDSHS_MHXL.Items.Add(lvi);
+                    STT++;
+                }
+            }
 
         }
 
         private void cbNH_DSHS_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // LoadDanhSachHocSinh(cbNH_DSHS.Text);
+           LoadDSHS_DSHS();
         }
 
 
@@ -265,7 +457,7 @@ namespace GUI.MainForm
 
                 if (hs!=null){
                     tbMaHS_DSLH.Text = hs.MaHocSinh;
-                    tbHoTen_DSHS.Text = hs.HoVaTen;
+                    tbHoTen_DSLH.Text = hs.HoVaTen;
                     tbNamSinh_DSLH.Text = hs.NamSinh;
                     tbGioiTinh_DSLH.Text = hs.GioiTinh;
                     tbmail_DSLH.Text = hs.Email;
@@ -420,8 +612,131 @@ namespace GUI.MainForm
             }
         }
 
-        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        private void btnThemHS_Click(object sender, EventArgs e)
         {
+            ThemSuaHocSinh fThemSua = new ThemSuaHocSinh();
+            fThemSua.ShowDialog();
+        }
+
+        private void btnSuaHS_Click(object sender, EventArgs e)
+        {
+            if (lvdshs.SelectedItems.Count > 0)
+            {
+                ThemSuaHocSinh fThemSua = new ThemSuaHocSinh
+                (tbMaHocSinh_DSHS.Text,tbHoTen_DSHS.Text,tbNgaySinh_DSHS.Text,tbGioiTinh_DSHS.Text,tbEmail_DSHS.Text,tbDiaChi_DSHS.Text);
+                fThemSua.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 học sinh để sửa !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnXoaHocSinh_Click(object sender, EventArgs e)
+        {
+            if (lvdshs.SelectedItems.Count > 0)
+            {
+                DShocsinhBLL dshsbll = new DShocsinhBLL();
+                bool result = dshsbll.XoaHs(lvdshs.SelectedItems[0].SubItems[1].Text);
+                if(!result)
+                        MessageBox.Show(" Không thể xóa,Vui lòng kiểm tra lại kết nối CSDL!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                        MessageBox.Show(" Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 học sinh để xóa !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void lvdshs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvdshs.SelectedItems.Count > 0)
+            {
+                string maHocSinh = lvdshs.SelectedItems[0].SubItems[1].Text;
+                HocSinh hocsinh = hocSinhbll.GetHocSinh(maHocSinh);
+
+                tbMaHocSinh_DSHS.Text = hocsinh.MaHocSinh;
+                tbHoTen_DSHS.Text = hocsinh.HoVaTen;
+                tbGioiTinh_DSHS.Text = hocsinh.GioiTinh;
+                tbDiaChi_DSHS.Text = hocsinh.DiaChi;
+                tbEmail_DSHS.Text = hocsinh.Email;
+                tbNgaySinh_DSHS.Text = hocsinh.NamSinh;
+
+                QuaTrinhHocTapBLL quaTrinhHocbll = new QuaTrinhHocTapBLL();
+                List<QuaTrinhHocTap> listQuaTrinhHoc = quaTrinhHocbll.GetQuaTrinhHocTapCoMaHS(hocsinh.MaHocSinh);
+                tbLop_DSHS.Text = listQuaTrinhHoc[0].MaLop;
+            }
+            
+        }
+
+        private void btnThemKhoiLop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tcQuanLyLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbLop_XL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDanhSachHocSinhLopDuocXep_MHXL();
+        }
+
+        private void cbNamHoc_XL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDanhSachHocSinhLopDuocXep_MHXL();
+        }
+
+        private void cbHocKy_XL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDanhSachHocSinhLopDuocXep_MHXL();
+        }
+
+        private void btnXepLop_Click(object sender, EventArgs e)
+        {
+            if (lvDSHSChuaCoLop_XepLop.SelectedItems.Count > 0)
+            {
+                bool Error = true;
+                QuaTrinhHocTapBLL qthbll = new QuaTrinhHocTapBLL();
+                foreach(ListViewItem lvi in lvDSHSChuaCoLop_XepLop.SelectedItems)
+                {
+                    string maQTHMax = qthbll.GetMaQTHMax();
+                    string[] listTemp = maQTHMax.Split('T');
+                    string maQTH ="QT"+ (Int32.Parse( listTemp[1])+1);
+                    string maHocSinh = lvi.SubItems[1].Text;
+
+                    listTemp = cbLop_XL.Text.Split(' ');
+                    string maLop = listTemp[0];
+
+                    // MessageBox.Show(maQTH + "  " + maLop);
+                    bool er = qthbll.ThemQuatrinhhoctap(maQTH, maLop, cbHocKy_XL.Text, cbNamHoc_XL.Text, maHocSinh, 0);
+                    if (!er)
+                    {
+                        Error = true;
+                        break;
+                    }
+                }
+
+                if (Error)
+                {
+                    int soLuongHocSinhVuaXep = lvDSHSChuaCoLop_XepLop.SelectedItems.Count;
+                    MessageBox.Show("Bạn vừa xếp thành công " + soLuongHocSinhVuaXep + " học sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDanhSachHocSinhChuaXepLop();
+                    LoadDanhSachHocSinhLopDuocXep_MHXL();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi, vui lòng xem lại chuỗi kết nối CSDL !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Bạn cần chọn ít nhất 1 học sinh để xếp lớp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

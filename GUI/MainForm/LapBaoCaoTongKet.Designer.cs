@@ -40,16 +40,16 @@
             this.lbbaocaohocky = new System.Windows.Forms.Label();
             this.tbbaocaohocky = new System.Windows.Forms.TabPage();
             this.gbbaocaohocky = new System.Windows.Forms.GroupBox();
+            this.rpBaoCaoHocKy = new Microsoft.Reporting.WinForms.ReportViewer();
             this.comboxNamHoc = new System.Windows.Forms.ComboBox();
             this.lbmonhc = new System.Windows.Forms.Label();
             this.btexit = new System.Windows.Forms.Button();
             this.gbbolocmon = new System.Windows.Forms.GroupBox();
             this.gbnoidungbaocao = new System.Windows.Forms.GroupBox();
+            this.rpBaoCaoMon = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbbcaomonhoc = new System.Windows.Forms.Label();
             this.tbbaocaomon = new System.Windows.Forms.TabControl();
-            this.rpBaoCaoMon = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.rpBaoCaoHocKy = new Microsoft.Reporting.WinForms.ReportViewer();
             this.gbboloc.SuspendLayout();
             this.tbbaocaohocky.SuspendLayout();
             this.gbbaocaohocky.SuspendLayout();
@@ -177,6 +177,14 @@
             this.gbbaocaohocky.TabStop = false;
             this.gbbaocaohocky.Text = "Nội dung báo cáo";
             // 
+            // rpBaoCaoHocKy
+            // 
+            this.rpBaoCaoHocKy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpBaoCaoHocKy.Location = new System.Drawing.Point(3, 22);
+            this.rpBaoCaoHocKy.Name = "rpBaoCaoHocKy";
+            this.rpBaoCaoHocKy.Size = new System.Drawing.Size(751, 331);
+            this.rpBaoCaoHocKy.TabIndex = 0;
+            // 
             // comboxNamHoc
             // 
             this.comboxNamHoc.FormattingEnabled = true;
@@ -199,7 +207,7 @@
             // 
             this.btexit.BackColor = System.Drawing.Color.Blue;
             this.btexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btexit.Location = new System.Drawing.Point(953, 423);
+            this.btexit.Location = new System.Drawing.Point(1053, 441);
             this.btexit.Name = "btexit";
             this.btexit.Size = new System.Drawing.Size(75, 36);
             this.btexit.TabIndex = 8;
@@ -233,6 +241,14 @@
             this.gbnoidungbaocao.TabStop = false;
             this.gbnoidungbaocao.Text = "Nội Dung Báo Cáo";
             // 
+            // rpBaoCaoMon
+            // 
+            this.rpBaoCaoMon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpBaoCaoMon.Location = new System.Drawing.Point(3, 22);
+            this.rpBaoCaoMon.Name = "rpBaoCaoMon";
+            this.rpBaoCaoMon.Size = new System.Drawing.Size(635, 312);
+            this.rpBaoCaoMon.TabIndex = 0;
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.gbnoidungbaocao);
@@ -242,7 +258,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1046, 488);
+            this.tabPage1.Size = new System.Drawing.Size(1136, 515);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Báo Cáo Môn Học";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -262,34 +278,19 @@
             // 
             this.tbbaocaomon.Controls.Add(this.tabPage1);
             this.tbbaocaomon.Controls.Add(this.tbbaocaohocky);
+            this.tbbaocaomon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbbaocaomon.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tbbaocaomon.Location = new System.Drawing.Point(-16, 7);
+            this.tbbaocaomon.Location = new System.Drawing.Point(0, 0);
             this.tbbaocaomon.Name = "tbbaocaomon";
             this.tbbaocaomon.SelectedIndex = 0;
-            this.tbbaocaomon.Size = new System.Drawing.Size(1054, 514);
+            this.tbbaocaomon.Size = new System.Drawing.Size(1144, 541);
             this.tbbaocaomon.TabIndex = 1;
-            // 
-            // rpBaoCaoMon
-            // 
-            this.rpBaoCaoMon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpBaoCaoMon.Location = new System.Drawing.Point(3, 22);
-            this.rpBaoCaoMon.Name = "rpBaoCaoMon";
-            this.rpBaoCaoMon.Size = new System.Drawing.Size(635, 312);
-            this.rpBaoCaoMon.TabIndex = 0;
-            // 
-            // rpBaoCaoHocKy
-            // 
-            this.rpBaoCaoHocKy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpBaoCaoHocKy.Location = new System.Drawing.Point(3, 22);
-            this.rpBaoCaoHocKy.Name = "rpBaoCaoHocKy";
-            this.rpBaoCaoHocKy.Size = new System.Drawing.Size(751, 331);
-            this.rpBaoCaoHocKy.TabIndex = 0;
             // 
             // LapBaoCaoTongKet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 529);
+            this.ClientSize = new System.Drawing.Size(1144, 541);
             this.Controls.Add(this.tbbaocaomon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LapBaoCaoTongKet";

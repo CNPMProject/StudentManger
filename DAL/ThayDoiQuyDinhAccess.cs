@@ -31,8 +31,8 @@ namespace DAL
             {
                 string mathamso = reader.GetString(0);
                 string tenthamso = reader.GetString(1);
-                decimal giatri = reader.GetDecimal(2);
-                ThamSo thamso = new ThamSo(mathamso, tenthamso, giatri);
+                double giatri = reader.GetDouble(2);
+                ThamSo thamso = new ThamSo(mathamso, tenthamso, (float)giatri);
                 listThamSo.Add(thamso);
 
 

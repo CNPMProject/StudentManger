@@ -108,6 +108,12 @@
     <Compile Include="FormNhapLieu\ThemSuaDiem.Designer.cs">
       <DependentUpon>ThemSuaDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapLieu\ThemSuaHocSinh.Designer.cs">
+      <DependentUpon>ThemSuaHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNhapLieu\ThemSuaHTKT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapLieu\ThemSuaDiem.resx">
       <DependentUpon>ThemSuaDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapLieu\ThemSuaHocSinh.resx">
+      <DependentUpon>ThemSuaHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapLieu\ThemSuaHTKT.resx">
       <DependentUpon>ThemSuaHTKT.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using GUI.MainForm;
+﻿using GUI.FormNhapLieu;
+using GUI.MainForm;
 using QLHS.FormChinh;
 using System;
 using System.Collections.Generic;
@@ -45,9 +46,61 @@ namespace GUI
             //home.Show();
             CreateMainIcon();
 
-
+            //// btQuyDinh.Click += BtQuyDinh_Click;
+            //// btBaoCao.Click += BtBaoCao_Click1;
+            ////btThemHocSinh.Click += BtThemHocSinh_Click;
+            //// btTraCuu.Click += BtTraCuu_Click;
+            //btLapDS.Click += BtLapDS_Click;
+            //btNhapBangDiem.Click += BtNhapBangDiem_Click;
         }
 
+        private void btNhapBangDiem_Click(object sender, EventArgs e)
+        {
+            ThemSuaDiem themSuaDiem = new ThemSuaDiem() ;
+           // pnBoard.Controls.Clear();
+           // pnBoard.Controls.Add(themSuaDiem);
+            themSuaDiem.ShowDialog();
+        }
+
+        private void btLapDS_Click(object sender, EventArgs e)
+        {
+            QuanLyLopHoc fLopHoc = new QuanLyLopHoc() { IsMdiContainer = false, TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(fLopHoc);
+            fLopHoc.Show();
+        }
+
+        private void btTraCuu_Click(object sender, EventArgs e)
+        {
+            Search fSearch = new Search() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(fSearch);
+            fSearch.Show();
+        }
+
+        private void btThemHocSinh_Click(object sender, EventArgs e)
+        {
+            ThemSuaHocSinh fThemSuaHocSinh = new ThemSuaHocSinh();
+           // pnBoard.Controls.Clear();
+           // pnBoard.Controls.Add(fThemSuaHocSinh);
+            fThemSuaHocSinh.ShowDialog();
+        }
+
+        private void btBaoCao_Click(object sender, EventArgs e)
+        {
+            LapBaoCaoTongKet fBaoCao = new LapBaoCaoTongKet() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(fBaoCao);
+            fBaoCao.Show();
+        }
+
+        private void btQuyDinh_Click(object sender, EventArgs e)
+        {
+            ThayDoiQuyDinh fQuyDinh = new ThayDoiQuyDinh() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(fQuyDinh);
+            fQuyDinh.Show();
+        }
 
         private void CreateMainIcon()
         {
@@ -81,6 +134,8 @@ namespace GUI
             this.btBaoCao.Name = "btBaoCao";
             this.btBaoCao.Size = new System.Drawing.Size(210, 117);
             this.btBaoCao.TabIndex = 22;
+            this.btBaoCao.Click += new System.EventHandler(this.btBaoCao_Click);
+
 
             // btNhapBangDiem
             // 
@@ -103,6 +158,7 @@ namespace GUI
             this.btNhapBangDiem.Name = "btNhapBangDiem";
             this.btNhapBangDiem.Size = new System.Drawing.Size(211, 117);
             this.btNhapBangDiem.TabIndex = 21;
+            this.btNhapBangDiem.Click += new System.EventHandler(this.btNhapBangDiem_Click);
 
             // btTraCuu
             // 
@@ -125,6 +181,7 @@ namespace GUI
             this.btTraCuu.Name = "btTraCuu";
             this.btTraCuu.Size = new System.Drawing.Size(210, 119);
             this.btTraCuu.TabIndex = 20;
+            this.btTraCuu.Click += new System.EventHandler(this.btTraCuu_Click);
 
             // btLapDS
             // 
@@ -147,6 +204,7 @@ namespace GUI
             this.btLapDS.Name = "btLapDS";
             this.btLapDS.Size = new System.Drawing.Size(220, 117);
             this.btLapDS.TabIndex = 19;
+            this.btLapDS.Click += new System.EventHandler(this.btLapDS_Click);
 
             // btThemHocSinh
             // 
@@ -169,6 +227,7 @@ namespace GUI
             this.btThemHocSinh.Name = "btThemHocSinh";
             this.btThemHocSinh.Size = new System.Drawing.Size(211, 119);
             this.btThemHocSinh.TabIndex = 18;
+            this.btThemHocSinh.Click += new System.EventHandler(this.btThemHocSinh_Click);
 
 
             // btQuyDinh
@@ -192,6 +251,7 @@ namespace GUI
             this.btQuyDinh.Name = "btQuyDinh";
             this.btQuyDinh.Size = new System.Drawing.Size(220, 119);
             this.btQuyDinh.TabIndex = 16;
+            this.btQuyDinh.Click += new System.EventHandler(this.btQuyDinh_Click);
 
 
             pnBoard.Controls.Add(this.btBaoCao);
@@ -201,6 +261,11 @@ namespace GUI
             pnBoard.Controls.Add(this.btThemHocSinh);
             pnBoard.Controls.Add(this.btQuyDinh);
 
+        }
+
+        private void BtBaoCao_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void timerUser_Tick(object sender, EventArgs e)

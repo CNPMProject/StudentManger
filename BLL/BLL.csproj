@@ -44,6 +44,7 @@
     <Compile Include="BaoCaoTongKetHocKyBLL.cs" />
     <Compile Include="BaoCaoTongKetMonBLL.cs" />
     <Compile Include="ChuongTrinhDaoTaoBLL.cs" />
+    <Compile Include="CTBangDiemMonBLL.cs" />
     <Compile Include="CTBaoCaoTongKetMonBLL.cs" />
     <Compile Include="DatabaseBLL.cs" />
     <Compile Include="DShocsinhBLL.cs" />

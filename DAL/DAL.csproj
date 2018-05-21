@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +45,7 @@
     <Compile Include="BaoCaoTongKetHocKyAccess.cs" />
     <Compile Include="BaoCaoTongKetMonAccess.cs" />
     <Compile Include="ChuongTrinhDaoTaoAccess.cs" />
+    <Compile Include="CTBangDiemMonAccess.cs" />
     <Compile Include="CTBaoCaoTongKetMonAccess.cs" />
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="DShocsinhAccess.cs" />

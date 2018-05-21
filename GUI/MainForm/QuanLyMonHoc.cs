@@ -10,12 +10,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.ListView;
 
 namespace GUI.MainForm
 {
     public partial class QuanLyMonHoc : Form
     {
         MonHocBLL monhoc;
+        //list nay de up len listview
+        List<HinhThucKiemTra> listhtkt = new List<HinhThucKiemTra>();
 
         public QuanLyMonHoc()
         {
@@ -32,13 +35,13 @@ namespace GUI.MainForm
             List<MonHoc> listMonHoc = monhoc.GetListMonHoc();
 
             //load source cac mon hoc len combobox tab-page bang diem mon hic
-            List<string> listTenMH = new List<string>();
-            listTenMH.Add("Chọn tất cả.");
+            List<string> listMaMH = new List<string>();
+           // listMaMH.Add("Chọn tất cả.");
             foreach (MonHoc mon in listMonHoc)
             {
-                listTenMH.Add(mon.TenMonHoc);
+                listMaMH.Add(mon.MaMonHoc);
             }
-            cbDanhSachMonHoc.DataSource = listTenMH;
+            cbDanhSachMonHoc.DataSource = listMaMH;
         }
 
         void LoadLopHoc_BangDiemMonHoc()
@@ -46,9 +49,9 @@ namespace GUI.MainForm
             LopBLL lopbll = new LopBLL();
             List<Lop> listLop = lopbll.GetListLop();
             List<string> nameClass = new List<string>();
-            nameClass.Add("Chọn tất cả.");
+           // nameClass.Add("Chọn tất cả.");
 
-            
+
             foreach (Lop lop in listLop)
             {
                 nameClass.Add(lop.MaLop + "(" + lop.TenLop + ")");
@@ -62,7 +65,7 @@ namespace GUI.MainForm
             HocKyBLL hockybll = new HocKyBLL();
             List<HocKy> listHK = hockybll.GetListHocKy();
             List<string> nameHocKy = new List<string>();
-            nameHocKy.Add("Chọn tất cả.");
+            //nameHocKy.Add("Chọn tất cả.");
 
 
             foreach (HocKy hocKy in listHK)
@@ -154,6 +157,83 @@ namespace GUI.MainForm
 
             cbDSNH.DataSource = listTenNH;
         }
+
+        void LoadBangDiemLenListView()
+        {
+            lvBDMH.Items.Clear();
+
+            //lay ra toan bo bang diem chi tiet de up len listview
+            BangDiemMonBLL bdbll = new BangDiemMonBLL();
+            string malop = cbDSLop.Text;
+            string[] listma = malop.Split('(');
+            malop = listma[0];
+            List<BangDiemDayDu> Listbdm = bdbll.GetListBangDiemMonDayDu(malop, cbDSHocKy.Text, cbDSNH.Text, cbDanhSachMonHoc.Text);
+
+
+            int STT = 1;
+            int indexDiemTB = listhtkt.Count+3;
+            foreach (BangDiemDayDu bdm in Listbdm)
+            {
+                
+
+                int indexHTKT = 2;
+                for (int i = 0; i < listhtkt.Count; i++)
+                {
+                    if (listhtkt[i].MaHTKT == bdm.HinhThucKT)
+                        indexHTKT = i + 3;
+                }
+
+                bool kiemTraTonTai = false;
+                // ListViewItemCollection listlvi = lvBDMH.Items;
+                if(lvBDMH.Items.Count>0)
+                {
+
+                    foreach (ListViewItem lvis in lvBDMH.Items)
+                    {
+                          //MessageBox.Show(lvis.SubItems[0].Text.ToString());
+                       // neu ma hs giong nhau tuc la day la diem cua thang do
+                            if (lvis.SubItems[1].Text == bdm.maHS)
+                            {
+                                kiemTraTonTai = true;
+                               // MessageBox.Show(bdm.maHS + "da ton tai");
+                                // lvi.SubItems.Add ( new ListViewItem.ListViewSubItem(lvi, bdm.DiemHTKT+""));
+                                lvis.SubItems[indexHTKT].Text = bdm.DiemHTKT + "";
+                                break;
+                            }
+                    }
+                }
+             
+
+                //neu khong co ma nao da nam trong ds
+                //thi day la lan dau tien co ten hs nay
+                if (!kiemTraTonTai)
+                {
+                    //  MessageBox.Show(bdm.maHS + "chua ton tai");
+                    ListViewItem lvi = new ListViewItem(STT + "");
+                    lvi.SubItems.Add(bdm.maHS);
+                    lvi.SubItems.Add(bdm.tenHS);
+
+
+                    lvi.SubItems.Add("NULL");
+                    lvi.SubItems.Add("NULL");
+                    lvi.SubItems.Add("NULL");
+                    lvi.SubItems.Add("NULL");
+                    lvi.SubItems.Add("NULL");
+
+                    lvi.SubItems[indexHTKT].Text = bdm.DiemHTKT + "";
+
+                    //no luon co diem trung binh nen cu them vao
+                    lvi.SubItems[indexDiemTB].Text = bdm.DiemTB + "";
+                    lvBDMH.Items.Add(lvi);
+                    STT++;
+                //    MessageBox.Show(lvi.SubItems[1].ToString());
+                }   
+
+
+
+
+            }
+        }
         private void QuanLyMonHoc_Load(object sender, EventArgs e)
         {
             try
@@ -167,16 +247,41 @@ namespace GUI.MainForm
             }
         }
 
+        void TaoColumnDiemListView()
+        {
+            HinhThucKiemTraBLL htktbll = new HinhThucKiemTraBLL();
+            listhtkt= htktbll.GetAllHinhThucKiemTra();
+
+            foreach(HinhThucKiemTra htkt in listhtkt)
+            {
+                ColumnHeader col = new ColumnHeader() { Name=htkt.MaHTKT,Text=htkt.TenHTKT,Width=110};
+                lvBDMH.Columns.Add(col);
+            }
+
+            ColumnHeader coll = new ColumnHeader() { Name = "DiemTB", Text ="Điểm TB" , Width = 110 };
+            lvBDMH.Columns.Add(coll);
+            ColumnHeader colltemp1 = new ColumnHeader() { Name = "temp1", Text = "", Width = 0 };
+            lvBDMH.Columns.Add(colltemp1);
+            ColumnHeader colltemp2 = new ColumnHeader() { Name = "temp2", Text = "", Width = 0 };
+            lvBDMH.Columns.Add(colltemp2);
+            ColumnHeader colltemp3 = new ColumnHeader() { Name = "temp3", Text = "", Width = 0 };
+            lvBDMH.Columns.Add(colltemp3);
+            ColumnHeader colltemp4 = new ColumnHeader() { Name = "temp4", Text = "", Width = 0 };
+            lvBDMH.Columns.Add(colltemp4);
+        }
+
         private void tcQuanLyMonHoc_Selected(object sender, TabControlEventArgs e)
         {
             try
             {
                 if (e.TabPageIndex == 1)
                 {
+                    TaoColumnDiemListView();
                     LoadMonHoc_BangDiemMonHoc();
                     LoadLopHoc_BangDiemMonHoc();
                     LoadHocKy_BangDiemMonHoc();
                     LoadNamHoc();
+                    LoadBangDiemLenListView();
                 }
                 else
                  if (e.TabPageIndex == 2)
@@ -370,7 +475,7 @@ namespace GUI.MainForm
 
         private void cbDanhSachMonHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LoadBangDiemLenListView();
         }
 
         private void btnNhapDiem_Click(object sender, EventArgs e)
@@ -378,6 +483,21 @@ namespace GUI.MainForm
             ThemSuaDiem fdiem = new ThemSuaDiem();
             fdiem.ShowDialog();
             
+        }
+
+        private void cbDSNH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadBangDiemLenListView();
+        }
+
+        private void cbDSHocKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadBangDiemLenListView();
+        }
+
+        private void cbDSLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadBangDiemLenListView();
         }
     }
 }

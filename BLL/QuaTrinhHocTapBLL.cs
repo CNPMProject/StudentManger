@@ -31,6 +31,11 @@ namespace BLL
             return quatrinhoctap.GetQuaTrinhHocTapCo(maHS, hocKy, namHoc);
         }
 
+        public string GetMaQTHMax()
+        {
+            return quatrinhoctap.GetMaQTHMax();
+        }
+
         public bool XoaQuatrinhoctap(string maQTH)
         {
             return quatrinhoctap.XoaQuaTrinhHocTap(maQTH);

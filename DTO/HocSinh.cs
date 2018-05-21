@@ -14,8 +14,9 @@ namespace DTO
         public string DiaChi;
         public string Email;
         public string NamSinh;
+        public string TrangThai;
 
-        public HocSinh(string ma, string ten, string gioiTinh, string dc, string email,string namsinh)
+        public HocSinh(string ma, string ten, string gioiTinh, string dc, string email,string namsinh,string TrangThai)
         {
             this.MaHocSinh = ma;
             this.HoVaTen = ten;
@@ -23,6 +24,7 @@ namespace DTO
             this.DiaChi = dc;
             this.Email = email;
             this.NamSinh = namsinh;
+            this.TrangThai = TrangThai;
         }
     }
 }

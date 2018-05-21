@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbMaHS = new System.Windows.Forms.TextBox();
-            this.tnTenhS = new System.Windows.Forms.TextBox();
+            this.tbTenhS = new System.Windows.Forms.TextBox();
             this.tbDiem = new System.Windows.Forms.TextBox();
             this.btnLuu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnHuyBo = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -140,7 +140,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tbMaHS);
-            this.groupBox1.Controls.Add(this.tnTenhS);
+            this.groupBox1.Controls.Add(this.tbTenhS);
             this.groupBox1.Controls.Add(this.tbDiem);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnHuyBo);
@@ -167,13 +167,13 @@
             this.tbMaHS.Size = new System.Drawing.Size(177, 23);
             this.tbMaHS.TabIndex = 24;
             // 
-            // tnTenhS
+            // tbTenhS
             // 
-            this.tnTenhS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tnTenhS.Location = new System.Drawing.Point(215, 70);
-            this.tnTenhS.Name = "tnTenhS";
-            this.tnTenhS.Size = new System.Drawing.Size(177, 23);
-            this.tnTenhS.TabIndex = 24;
+            this.tbTenhS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTenhS.Location = new System.Drawing.Point(215, 70);
+            this.tbTenhS.Name = "tbTenhS";
+            this.tbTenhS.Size = new System.Drawing.Size(177, 23);
+            this.tbTenhS.TabIndex = 24;
             // 
             // tbDiem
             // 
@@ -255,6 +255,7 @@
             this.btnHuyBo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHuyBo.Textcolor = System.Drawing.Color.White;
             this.btnHuyBo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
             // label8
             // 
@@ -372,7 +373,7 @@
             this.columnHeader4});
             this.lvDSHS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvDSHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvDSHS.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lvDSHS.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lvDSHS.FullRowSelect = true;
             this.lvDSHS.GridLines = true;
             this.lvDSHS.Location = new System.Drawing.Point(3, 23);
@@ -381,6 +382,7 @@
             this.lvDSHS.TabIndex = 0;
             this.lvDSHS.UseCompatibleStateImageBehavior = false;
             this.lvDSHS.View = System.Windows.Forms.View.Details;
+            this.lvDSHS.SelectedIndexChanged += new System.EventHandler(this.lvDSHS_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -422,6 +424,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ThemSuaDiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý điểm";
             this.Load += new System.EventHandler(this.ThemSuaDiem_Load);
             this.panel1.ResumeLayout(false);
@@ -449,7 +452,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbMaHS;
-        private System.Windows.Forms.TextBox tnTenhS;
+        private System.Windows.Forms.TextBox tbTenhS;
         private System.Windows.Forms.TextBox tbDiem;
         private Bunifu.Framework.UI.BunifuFlatButton btnLuu;
         private Bunifu.Framework.UI.BunifuFlatButton btnHuyBo;

@@ -164,3 +164,4 @@ C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.FormNhapLieu.ThemSuaHocSinh.resources

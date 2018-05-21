@@ -191,6 +191,7 @@
             this.Controls.Add(this.lbMaKL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ThemSuaCTDT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemSuaCTDT";
             this.Load += new System.EventHandler(this.ThemSuaCTDT_Load);
             this.ResumeLayout(false);

@@ -117,6 +117,29 @@ namespace DAL
             return QuaTrinhHocTap;
         }
 
+        public string GetMaQTHMax()
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = " select top 1 MaQTH from QUATRINHHOCTAP order by MaQTH DESC";
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+
+            string maQTH = null;
+
+            if (reader.Read())
+            {
+                maQTH = reader.GetString(0);
+            }
+
+            reader.Close();
+            CloseConnection();
+
+            return maQTH;
+        }
+
         public bool XoaQuaTrinhHocTap(string maQTH)
         {
             OpenConnection();
@@ -141,10 +164,13 @@ namespace DAL
 
         }
 
-        public bool ThemQuaTrinhHocTap(string maqth, string malop, string mahocky, string manamhoc,string mahsinh, float diemtbhk)
+        public bool ThemQuaTrinhHocTap(
+            string maqth, string malop,
+            string mahocky, string manamhoc,
+            string mahsinh, float diemtbhk)
         {
-            try
-            {
+            //try
+            //{
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
@@ -156,7 +182,7 @@ namespace DAL
                 com.Parameters.Add("@mahocky", SqlDbType.VarChar).Value = mahocky;
                 com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = manamhoc;
                 com.Parameters.Add("@mahsinh", SqlDbType.VarChar).Value = mahsinh;
-                com.Parameters.Add("@diemtbhk", SqlDbType.Float).Value = diemtbhk;
+                com.Parameters.Add("@diemtbhk", SqlDbType.Float).Value =(double) diemtbhk;
 
 
                 int result = com.ExecuteNonQuery();
@@ -165,11 +191,11 @@ namespace DAL
                 if (result > 0)
                     return true;
                 return false;
-            }
-            catch
-            {
-                return false;
-            }
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
         }
 
         public ErrorType SuaQuaTrinhHocTap(string maqth, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
