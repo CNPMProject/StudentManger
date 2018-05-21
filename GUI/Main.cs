@@ -347,5 +347,13 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void btnLapBaoCao_Click(object sender, EventArgs e)
+        {
+            LapBaoCaoTongKet fBaoCaoTongKet = new LapBaoCaoTongKet() { TopLevel = false };
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(fBaoCaoTongKet);
+            fBaoCaoTongKet.Show();
+        }
     }
 }

@@ -81,6 +81,78 @@ namespace DAL
 
         }
 
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_TimKiemTheoTen(string tenHS)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select hs.MaHocSinh,hs.HoVaTen,qth.MaLop,qth.MaHocKy,qth.DiemTBHk "
+                            + "from HOCSINH hs,QUATRINHHOCTAP qth "
+                            + "where hs.MaHocSinh = qth.MaHocSinh and  hs.hovaten like N'%"+ tenHS + "%'";
+
+           // com.Parameters.Add("@ten", SqlDbType.VarChar).Value = tenHocSinh;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<ThongTinChungHS_DiemTB> listdshocsinh = new List<ThongTinChungHS_DiemTB>();
+
+            while (reader.Read())
+            {
+                string maHocSinh = reader.GetString(0);
+                String tenHocSinh = reader.GetString(1);
+                string maLop = reader.GetString(2);
+                string maHocKy = reader.GetString(3);
+                string diemTrungBinh = null;
+                diemTrungBinh = reader.GetDouble(4).ToString();
+
+
+                ThongTinChungHS_DiemTB dshocsinh = new ThongTinChungHS_DiemTB(
+                    maHocSinh, tenHocSinh, maLop, maHocKy, diemTrungBinh);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listdshocsinh;
+
+        }
+
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_TimKiemTheoLop(string lop)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select hs.MaHocSinh,hs.HoVaTen,qth.MaLop,qth.MaHocKy,qth.DiemTBHk "
+                               +" from HOCSINH hs,QUATRINHHOCTAP qth, LOP l "
+                               +"where hs.MaHocSinh = qth.MaHocSinh  and qth.MaLop = l.MaLop and l.TenLop like N'%"+lop+"%'";
+
+            // com.Parameters.Add("@ten", SqlDbType.VarChar).Value = tenHocSinh;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<ThongTinChungHS_DiemTB> listdshocsinh = new List<ThongTinChungHS_DiemTB>();
+
+            while (reader.Read())
+            {
+                string maHocSinh = reader.GetString(0);
+                String tenHocSinh = reader.GetString(1);
+                string maLop = reader.GetString(2);
+                string maHocKy = reader.GetString(3);
+                string diemTrungBinh = null;
+                diemTrungBinh = reader.GetDouble(4).ToString();
+
+
+                ThongTinChungHS_DiemTB dshocsinh = new ThongTinChungHS_DiemTB(
+                    maHocSinh, tenHocSinh, maLop, maHocKy, diemTrungBinh);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listdshocsinh;
+
+        }
+
         public HocSinh GetHocSinh(string mahocsinh)
         {
             OpenConnection();

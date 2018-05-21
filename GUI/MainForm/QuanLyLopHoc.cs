@@ -261,7 +261,9 @@ namespace GUI.MainForm
             }
         }
 
-
+        /// <summary>
+        /// Load thong tin chung cua hoc sinh bao gom ca diem len listview DSHS
+        /// </summary>
         void LoadDSHS_DSHS()
         {
             List<ThongTinChungHS_DiemTB> listThongTinChungHocSinh = hocSinhbll.GetDanhSachHocSinh_ThongTinChung_Diem(cbNH_DSHS.Text);
@@ -737,6 +739,11 @@ namespace GUI.MainForm
             {
                 MessageBox.Show("Bạn cần chọn ít nhất 1 học sinh để xếp lớp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void btnXoaKhoiLop_Click(object sender, EventArgs e)
+        {
 
         }
     }

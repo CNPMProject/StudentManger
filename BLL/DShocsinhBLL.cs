@@ -32,6 +32,16 @@ namespace BLL
             return danhsachhocsinh.GetDanhSachHocSinh_ThongTinChung_Diem(maNamHoc);
         }
 
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_TimKiemTheoTen(string tenHocSinh)
+        {
+            return danhsachhocsinh.GetDanhSachHocSinh_ThongTinChung_TimKiemTheoTen(tenHocSinh);
+        }
+
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_TimKiemTheoLop(string lop)
+        {
+            return danhsachhocsinh.GetDanhSachHocSinh_ThongTinChung_TimKiemTheoLop(lop);
+        }
+
         public List<HocSinh> GetDSHocSinhTheoLop(string malop)
         {
             return danhsachhocsinh.GetDSHocSinhTheoLop(malop);

@@ -389,7 +389,7 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BaoCaoMonHocRow AddBaoCaoMonHocRow(string Lop, string SiSo, string SoLuongDat, string TiLe) {
+            public BaoCaoMonHocRow AddBaoCaoMonHocRow(string Lop, int SiSo, int SoLuongDat, double TiLe) {
                 BaoCaoMonHocRow rowBaoCaoMonHocRow = ((BaoCaoMonHocRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Lop,
@@ -429,11 +429,11 @@ namespace GUI.BaoCaoTongKet {
             private void InitClass() {
                 this.columnLop = new global::System.Data.DataColumn("Lop", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLop);
-                this.columnSiSo = new global::System.Data.DataColumn("SiSo", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnSiSo = new global::System.Data.DataColumn("SiSo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSiSo);
-                this.columnSoLuongDat = new global::System.Data.DataColumn("SoLuongDat", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnSoLuongDat = new global::System.Data.DataColumn("SoLuongDat", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSoLuongDat);
-                this.columnTiLe = new global::System.Data.DataColumn("TiLe", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTiLe = new global::System.Data.DataColumn("TiLe", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTiLe);
             }
             
@@ -593,10 +593,10 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SiSo {
+            public int SiSo {
                 get {
                     try {
-                        return ((string)(this[this.tableBaoCaoMonHoc.SiSoColumn]));
+                        return ((int)(this[this.tableBaoCaoMonHoc.SiSoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'SiSo\' in table \'BaoCaoMonHoc\' is DBNull.", e);
@@ -609,10 +609,10 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SoLuongDat {
+            public int SoLuongDat {
                 get {
                     try {
-                        return ((string)(this[this.tableBaoCaoMonHoc.SoLuongDatColumn]));
+                        return ((int)(this[this.tableBaoCaoMonHoc.SoLuongDatColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'SoLuongDat\' in table \'BaoCaoMonHoc\' is DBNull.", e);
@@ -625,10 +625,10 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TiLe {
+            public double TiLe {
                 get {
                     try {
-                        return ((string)(this[this.tableBaoCaoMonHoc.TiLeColumn]));
+                        return ((double)(this[this.tableBaoCaoMonHoc.TiLeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TiLe\' in table \'BaoCaoMonHoc\' is DBNull.", e);
