@@ -1,7 +1,7 @@
 ﻿using DAL.Properties;
 using System.Data.SqlClient;
 using System.Data;
-
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -79,6 +79,12 @@ namespace DAL
             Settings.Default.DatabaseName = DatabaseName;
             Settings.Default.connectionString = ConnectionString;
             Settings.Default.Save();
+        }
+
+        public string GetStringConnection()
+        {
+
+            return ConnectionString;
         }
     }
 }

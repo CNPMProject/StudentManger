@@ -9,8 +9,8 @@ namespace BLL
 {
     public class DatabaseBLL
     {
-        DatabaseAccess dba;
-        public DatabaseBLL() { }
+        DatabaseAccess dba=new DatabaseAccess();
+        public DatabaseBLL():base() { }
 
         public void ConnectToDatabase()
         {
@@ -46,6 +46,11 @@ namespace BLL
         public void SaveChangeConection()
         {
             dba.SaveChangeConection();
+        }
+
+        public string GetconnectionString()
+        {
+             return dba.GetStringConnection();
         }
     }
 }

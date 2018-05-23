@@ -66,7 +66,6 @@
             this.picturehelp = new System.Windows.Forms.PictureBox();
             this.lbMaLop_DSLH = new System.Windows.Forms.Label();
             this.labelop = new System.Windows.Forms.Label();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tpXepLop = new System.Windows.Forms.TabPage();
@@ -183,7 +182,6 @@
             this.groupthongtinchitiet.SuspendLayout();
             this.gbDSHSTheoLop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturehelp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.tpXepLop.SuspendLayout();
             this.gbDSHSLopChuyenDen_XL.SuspendLayout();
             this.gbDanhSachHocSinh.SuspendLayout();
@@ -637,10 +635,8 @@
             this.labelop.Size = new System.Drawing.Size(40, 20);
             this.labelop.TabIndex = 3;
             this.labelop.Text = "Lớp:";
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
+
+
             // 
             // contextMenuStrip1
             // 
@@ -1953,7 +1949,6 @@
             this.groupthongtinchitiet.PerformLayout();
             this.gbDSHSTheoLop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picturehelp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.tpXepLop.ResumeLayout(false);
             this.tpXepLop.PerformLayout();
             this.gbDSHSLopChuyenDen_XL.ResumeLayout(false);
@@ -1991,7 +1986,6 @@
 
         #endregion
 
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TabControl tcQuanLyLop;

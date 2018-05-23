@@ -154,7 +154,7 @@
             this.btnLogIn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(138)))), ((int)(((byte)(242)))));
             this.btnLogIn.IdleForecolor = System.Drawing.Color.White;
             this.btnLogIn.IdleLineColor = System.Drawing.Color.White;
-            this.btnLogIn.Location = new System.Drawing.Point(109, 319);
+            this.btnLogIn.Location = new System.Drawing.Point(107, 318);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(148, 45);
@@ -166,9 +166,9 @@
             // 
             this.pbLoGo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbLoGo.BackgroundImage")));
             this.pbLoGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLoGo.Location = new System.Drawing.Point(109, 100);
+            this.pbLoGo.Location = new System.Drawing.Point(107, 87);
             this.pbLoGo.Name = "pbLoGo";
-            this.pbLoGo.Size = new System.Drawing.Size(148, 55);
+            this.pbLoGo.Size = new System.Drawing.Size(148, 94);
             this.pbLoGo.TabIndex = 10;
             this.pbLoGo.TabStop = false;
             // 
