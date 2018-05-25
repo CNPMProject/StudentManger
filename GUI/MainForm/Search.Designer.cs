@@ -41,9 +41,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lvdshs = new System.Windows.Forms.ListView();
             this.clSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clMaHocSinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colLop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clMaHocSinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tbTuKhoaTimKiem = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tbHoVaTen = new System.Windows.Forms.TextBox();
@@ -96,6 +96,7 @@
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThoat.Textcolor = System.Drawing.Color.White;
             this.btnThoat.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // groupBox3
             // 
@@ -215,6 +216,11 @@
             this.clSTT.Text = "STT";
             this.clSTT.Width = 41;
             // 
+            // clMaHocSinh
+            // 
+            this.clMaHocSinh.Text = "Mã học sinh";
+            this.clMaHocSinh.Width = 0;
+            // 
             // colHoTen
             // 
             this.colHoTen.Text = "Họ Và Tên";
@@ -226,11 +232,6 @@
             this.colLop.Text = "Lớp";
             this.colLop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colLop.Width = 97;
-            // 
-            // clMaHocSinh
-            // 
-            this.clMaHocSinh.Text = "Mã học sinh";
-            this.clMaHocSinh.Width = 0;
             // 
             // btnSearch
             // 

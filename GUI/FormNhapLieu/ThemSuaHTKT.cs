@@ -26,13 +26,30 @@ namespace GUI.FormNhapLieu
         public ThemSuaHTKT(string ma,string ten, string heso)
         {
             InitializeComponent();
-            this.ten = ten;
-            this.heso = heso;
-            this.ma=ma;
+            this.ten =tbTenHTKT.Text= ten;
+            this.heso =tbHeSo.Text= heso;
+            this.ma=tbMa.Text= ma;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            #region KiemTraRangBuoc
+            try
+            {
+                int heso = Int32.Parse(tbHeSo.Text);
+                if (heso < 1)
+                {
+                    MessageBox.Show("Hệ số phải là số nguyên dương!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                    
+            }
+            catch
+            {
+                MessageBox.Show("Hệ số phải là số nguyên dương!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            #endregion
             HinhThucKiemTraBLL htktbll = new HinhThucKiemTraBLL();
             ErrorType result;
             //them
@@ -61,6 +78,9 @@ namespace GUI.FormNhapLieu
                     else
                         infor = "Sửa thành công !";
                     MessageBox.Show(infor, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tbHeSo.Text = "";
+                    tbMa.Text = "";
+                    tbTenHTKT.Text = "";
                     break;
             }
         }

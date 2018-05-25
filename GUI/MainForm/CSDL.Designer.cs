@@ -299,6 +299,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "CSDL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CSDL";
             this.Load += new System.EventHandler(this.CSDL_Load);
             this.panel2.ResumeLayout(false);

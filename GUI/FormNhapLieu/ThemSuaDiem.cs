@@ -152,7 +152,9 @@ namespace GUI.FormNhapLieu
         {
             if(lvDSHS.SelectedItems.Count>0)
             {
-                if(string.IsNullOrEmpty( tbDiem.Text))
+                #region KiemTraRangBuocTuNhien
+
+                if (string.IsNullOrEmpty( tbDiem.Text))
                 {
                     MessageBox.Show("Bạn phải điền điểm vào ô điểm!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -191,6 +193,8 @@ namespace GUI.FormNhapLieu
                     return;
                 }
 
+                #endregion
+
                 QuaTrinhHocTapBLL qthocbll = new QuaTrinhHocTapBLL();
                 QuaTrinhHocTap qthoctap = qthocbll.GetQuaTrinhHocTapCo(tbMaHS.Text, cbDSHocKy.Text, cbDSNH.Text);
 
@@ -213,21 +217,35 @@ namespace GUI.FormNhapLieu
                 //lay ra chi tiet bang diem mon, neu chua co thi insert| nhieu khi da them diem truoc do nen da co
                 CTBangDiemMonBLL ctbdbll = new CTBangDiemMonBLL();
                   ChiTietBangDiemMon ctbdm = ctbdbll.GetCTBangDiemMon(mabd, cbDSHTKT.Text);
+
+                ErrorType result;
                 if (ctbdm == null)
                 {
+                    #region Nếu chưa tồn tại bảng điểm chi tiết tức là đang insert
                     //tao ma chi tiet bang diem mon moi de insert
                     string mactbd = ctbdbll.GetMaCTBDMMax();
                     mactbd = (Int32.Parse( mactbd)+1).ToString();
                    // MessageBox.Show(mactbd);
-                    ErrorType result = ctbdbll.ThemCTBDM(mactbd, mabd, cbDSHTKT.Text, tbDiem.Text);
-                    if (result == ErrorType.THANH_CONG)
-                    {
-                        MessageBox.Show("Thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không thể thêm", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    result = ctbdbll.ThemCTBDM(mactbd, mabd, cbDSHTKT.Text, tbDiem.Text);
+                   
+                    #endregion
+                }
+                else
+                {
+                    #region Đã tồn tại tức là mình đang update.
+                    result = ctbdbll.SuaCTBDM(ctbdm.MaCTBangDiemMon, mabd, cbDSHTKT.Text, tbDiem.Text);
+                  //  MessageBox.Show("sua bang diem");
+                    #endregion
+                }
+
+                if (result == ErrorType.THANH_CONG)
+                {
+                    MessageBox.Show("Thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tbDiem.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Không thể thêm", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

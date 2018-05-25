@@ -122,7 +122,7 @@ namespace DAL
             //}
         }
 
-        public ErrorType SuaBD(string maCTBD, string maBD, string maHTKT, float diem)
+        public ErrorType SuaCTBD(string maCTBD, string maBD, string maHTKT, float diem)
         {
             //try
             //{

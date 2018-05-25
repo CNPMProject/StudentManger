@@ -507,8 +507,8 @@ namespace GUI.MainForm
 
         private void btnSuaDiem_Click(object sender, EventArgs e)
         {
-
             ThemSuaDiem fThemSuaDiem = new ThemSuaDiem();
+            fThemSuaDiem.ShowDialog();
         }
     }
 }

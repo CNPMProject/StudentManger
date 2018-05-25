@@ -150,5 +150,10 @@ namespace GUI.MainForm
                 tbLop.Text = listQuaTrinhHoc[0].MaLop;
             }
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Visible=false;
+        }
     }
 }

@@ -205,7 +205,7 @@
             this.btnThemMH.IconMarginRight = 0;
             this.btnThemMH.IconRightVisible = false;
             this.btnThemMH.IconRightZoom = 0D;
-            this.btnThemMH.IconVisible = true;
+            this.btnThemMH.IconVisible = false;
             this.btnThemMH.IconZoom = 70D;
             this.btnThemMH.IsTab = true;
             this.btnThemMH.Location = new System.Drawing.Point(38, 38);
@@ -242,7 +242,7 @@
             this.btnSuaMH.IconMarginRight = 0;
             this.btnSuaMH.IconRightVisible = false;
             this.btnSuaMH.IconRightZoom = 0D;
-            this.btnSuaMH.IconVisible = true;
+            this.btnSuaMH.IconVisible = false;
             this.btnSuaMH.IconZoom = 70D;
             this.btnSuaMH.IsTab = true;
             this.btnSuaMH.Location = new System.Drawing.Point(156, 38);
@@ -279,7 +279,7 @@
             this.btnXoaMH.IconMarginRight = 0;
             this.btnXoaMH.IconRightVisible = false;
             this.btnXoaMH.IconRightZoom = 0D;
-            this.btnXoaMH.IconVisible = true;
+            this.btnXoaMH.IconVisible = false;
             this.btnXoaMH.IconZoom = 70D;
             this.btnXoaMH.IsTab = true;
             this.btnXoaMH.Location = new System.Drawing.Point(274, 38);
@@ -647,13 +647,13 @@
             // 
             this.MaHS.Text = "Mã HS";
             this.MaHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaHS.Width = 100;
+            this.MaHS.Width = 0;
             // 
             // clHoTen
             // 
             this.clHoTen.Text = "Họ và tên";
             this.clHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clHoTen.Width = 200;
+            this.clHoTen.Width = 250;
             // 
             // gbBoLoc
             // 
