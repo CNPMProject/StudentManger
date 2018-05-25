@@ -30,8 +30,8 @@ namespace DAL
 
             while (reader.Read())
             {
-                string maBD = reader.GetString(0);
-                string maQT = reader.GetString(1);
+                string maBD = reader.GetInt32(0).ToString();
+                string maQT = reader.GetInt32(1).ToString();
                 string maMH = reader.GetString(2);
                 float diemTB = float.Parse(reader.GetDouble(3) + "");
 
@@ -64,14 +64,16 @@ namespace DAL
             com.Connection = conn;
 
             SqlDataReader reader = com.ExecuteReader();
+            float diemTB = 0;
 
             while (reader.Read())
             {
-                string maHS = reader.GetString(0);
+                string maHS = reader.GetInt32(0)+"";
                 string Ten = reader.GetString(1);
                 string MaHTKT = reader.GetString(2);
                 float diem = float.Parse(reader.GetDouble(3) + "");
-                float diemTB = float.Parse(reader.GetDouble(4) + "");
+                try { diemTB = float.Parse(reader.GetDouble(4) + ""); }
+                catch { }
 
                 BangDiemDayDu bd = new BangDiemDayDu(maHS, Ten, MaHTKT,diem, diemTB);
                 listBD.Add(bd);
@@ -94,12 +96,14 @@ namespace DAL
 
             SqlDataReader reader = com.ExecuteReader();
             BangDiemMon bd = null;
+            float diemTB = 0;
             while (reader.Read())
             {
-                string maBD = reader.GetString(0);
-                string maQT = reader.GetString(1);
+                string maBD = reader.GetInt32(0)+"";
+                string maQT = reader.GetInt32(1)+"";
                 string maMH = reader.GetString(2);
-                float diemTB =float.Parse( reader.GetDouble(3)+"");
+                try { diemTB = float.Parse(reader.GetDouble(3) + ""); }
+                catch { }
                 
 
                 bd = new BangDiemMon(maBD, maQT, maMH,diemTB);
@@ -116,7 +120,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "delete from MonHoc where MaBangDiemMon=@ma";
-            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maBD;
+            com.Parameters.Add("@ma", SqlDbType.Int).Value =Int32.Parse( maBD);
             com.Connection = conn;
 
             try
@@ -144,8 +148,8 @@ namespace DAL
                 com.CommandText = "insert into BangDiemMon values(@maBD,@maQT,@maMH,null)";
                 com.Connection = conn;
 
-                com.Parameters.Add("@maBD", SqlDbType.VarChar).Value = maBD;
-                com.Parameters.Add("@maQT", SqlDbType.NVarChar).Value = maQT;
+                com.Parameters.Add("@maBD", SqlDbType.Int).Value =Int32.Parse( maBD);
+                com.Parameters.Add("@maQT", SqlDbType.Int).Value = Int32.Parse(maQT);
                 com.Parameters.Add("@maMH", SqlDbType.NVarChar).Value = maMH;
 
                 int result = com.ExecuteNonQuery();
@@ -171,8 +175,8 @@ namespace DAL
                 com.CommandText = "update  MonHoc set maQTH=@maQT ,mamonhoc=@maMH where  Mabangdiem=@maBD";
                 com.Connection = conn;
 
-                com.Parameters.Add("@maBD", SqlDbType.VarChar).Value = maBD;
-                com.Parameters.Add("@maQT", SqlDbType.NVarChar).Value = maQT;
+                com.Parameters.Add("@maBD", SqlDbType.Int).Value = Int32.Parse(maBD);
+                com.Parameters.Add("@maQT", SqlDbType.Int).Value = Int32.Parse(maQT);
                 com.Parameters.Add("@maMH", SqlDbType.NVarChar).Value = maMH;
 
                 int result = com.ExecuteNonQuery();
@@ -204,7 +208,7 @@ namespace DAL
 
             if (reader.Read())
             {
-                 maBD = reader.GetString(0);
+                 maBD = reader.GetInt32(0)+"";
             }
 
             reader.Close();

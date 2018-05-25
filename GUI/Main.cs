@@ -323,10 +323,10 @@ namespace GUI
 
         private void btnCoSoDuLieu_Click(object sender, EventArgs e)
         {
-            CSDL csdl = new CSDL() { TopLevel = false };
-            pnBoard.Controls.Clear();
-            pnBoard.Controls.Add(csdl);
-            csdl.Show();
+            CSDL csdl = new CSDL();// { TopLevel = false };
+           // pnBoard.Controls.Clear();
+            //pnBoard.Controls.Add(csdl);
+            csdl.ShowDialog();
          
         }
 
@@ -354,6 +354,12 @@ namespace GUI
             pnBoard.Controls.Clear();
             pnBoard.Controls.Add(fBaoCaoTongKet);
             fBaoCaoTongKet.Show();
+        }
+
+        private void btnThemHocSinh_Click(object sender, EventArgs e)
+        {
+            ThemSuaHocSinh fThemSuaHocSinh = new ThemSuaHocSinh();
+            fThemSuaHocSinh.ShowDialog();
         }
     }
 }

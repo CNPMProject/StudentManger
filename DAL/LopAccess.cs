@@ -85,6 +85,26 @@ namespace DAL
             return ret;
         }
 
+        public string GetMaLopMax()
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = " select top 1 MaLop from lop  group by MaLop "
+                               +" order by MaLop DESC";
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            if (reader.Read())
+            {
+                return reader.GetString(0);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return null;
+        }
+
         public bool ThemLop(string malop, string tenlop, string makhoi, int siso)
         {
             try

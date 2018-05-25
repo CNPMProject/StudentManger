@@ -29,7 +29,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string MaBCTKM = reader.GetString(0);
+                string MaBCTKM = reader.GetInt32(0)+"";
                 string MaMonHoc = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
                 string MaNamHoc = reader.GetString(3);
@@ -50,7 +50,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "delete from BaoCaoTongKetMon where MaBaoCaoTongKetMon=@MaBCTKM";
-            com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
+            com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
             com.Connection = conn;
 
             try
@@ -78,7 +78,7 @@ namespace DAL
                 com.CommandText = "insert into BaoCaoTongKetMon values(@MaBCTKM, @MaMonHoc, @MaHocKy,@manamhoc)";
                 com.Connection = conn;
 
-                com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
+                com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
                 com.Parameters.Add("@MaMonHoc", SqlDbType.VarChar).Value = MaMonHoc;
                 com.Parameters.Add("@MaHocKy", SqlDbType.VarChar).Value = MaHocKy;
                 com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = MaNamHoc;
@@ -107,7 +107,7 @@ namespace DAL
 
                 com.Connection = conn;
 
-                com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
+                com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
                 com.Parameters.Add("@MaMonHoc", SqlDbType.VarChar).Value = MaMonHoc;
                 com.Parameters.Add("@MaHocKy", SqlDbType.VarChar).Value = MaHocKy;
                 com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = MaNamHoc;

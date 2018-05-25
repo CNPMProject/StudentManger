@@ -65,7 +65,8 @@ namespace BLL
             return ac.ThemHs(ma, ten, gioitinh, diachi, email,namsinh);
         }
 
-        public ErrorType SuaHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
+        public ErrorType SuaHS(
+            string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
         {
             if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(gioitinh) || string.IsNullOrEmpty(diachi) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(namsinh))
                 return ErrorType.KI_TU_RONG;

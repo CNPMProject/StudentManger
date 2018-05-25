@@ -29,7 +29,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string MaBCTKM = reader.GetString(0);
+                string MaBCTKM = reader.GetInt32(0)+"";
                 string MaLop = reader.GetString(1);
                 int SoLuongDatMon = reader.GetInt32(2);
                 float TiLeDatMon = reader.GetFloat(3);
@@ -48,7 +48,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "delete from CTBaoCaoTongKetMon where MaBCTKM=@MaBCTKM and MaLop=@MaLop";
-            com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
+            com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
             com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;
             com.Connection = conn;
 
@@ -76,7 +76,7 @@ namespace DAL
                 com.CommandType = CommandType.Text;
                 com.CommandText = "insert into CTBaoCaoTongKetMon values(@MaBCTKM,@MaLop, @SoLuongDatMon, @TiLeDatMon)";
                 com.Connection = conn;
-                com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
+                com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
                 com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;
                 com.Parameters.Add("@SoLuonDatMon", SqlDbType.Int).Value = SoLuongDatMon;
                 com.Parameters.Add("@TiLeDatMon", SqlDbType.Float).Value = TiLeDatMon;
@@ -103,7 +103,7 @@ namespace DAL
                 com.CommandType = CommandType.Text;
                 com.CommandText = "update  CTBaoCaoTongKetMon set SoLuongDatMon=@SoLuongDatMon , TiLeDatMon=@TiLeDatMon where  MaBCTKM=@MaBCTKM and MaLop=@MaLop ";
                 com.Connection = conn;
-                com.Parameters.Add("@MaBCTKM", SqlDbType.VarChar).Value = MaBCTKM;
+                com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
                 com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;
                 com.Parameters.Add("@SoLuongDatMon", SqlDbType.Int).Value = SoLuongDatMon;
                 com.Parameters.Add("@TiLeDatMon", SqlDbType.Float).Value = TiLeDatMon;

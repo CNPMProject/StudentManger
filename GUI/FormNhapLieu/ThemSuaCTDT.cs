@@ -63,6 +63,19 @@ namespace GUI.FormNhapLieu
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            
+            try
+            {
+                int hs=Int32.Parse(tbHeso.Text);
+                if(hs<1)
+                MessageBox.Show("Hệ số phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch
+            {
+                MessageBox.Show("Hệ số phải là số nguyên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             ChuongTrinhDaoTaoBLL ctdtbll = new ChuongTrinhDaoTaoBLL();
             ErrorType result;
             //them

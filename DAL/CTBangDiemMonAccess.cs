@@ -29,8 +29,8 @@ namespace DAL
 
             while (reader.Read())
             {
-                string maCTBD = reader.GetString(0);
-                string maBD = reader.GetString(1);
+                string maCTBD = reader.GetInt32(0)+"";
+                string maBD = reader.GetInt32(1) + "";
                 string maHTKT = reader.GetString(2);
                 float diemTB = float.Parse(reader.GetDouble(3).ToString());
 
@@ -49,7 +49,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "Select * from CT_BangDiemMon where MaBangDiemMon=@maBD and maHTKT=@maHTKT";
-            com.Parameters.Add("@maBD", SqlDbType.VarChar).Value = maBD;
+            com.Parameters.Add("@maBD", SqlDbType.Int).Value =Int32.Parse( maBD);
             com.Parameters.Add("@maHTKT", SqlDbType.VarChar).Value = maHTKT;
             com.Connection = conn;
 
@@ -57,8 +57,8 @@ namespace DAL
             ChiTietBangDiemMon bd = null;
             while (reader.Read())
             {
-                string maCTBD = reader.GetString(0);
-                string maBDM = reader.GetString(1);
+                string maCTBD = reader.GetInt32(0)+"";
+                string maBDM = reader.GetInt32(1) + "";
                 string mahtkt = reader.GetString(2);
                 float diemTB = float.Parse( reader.GetDouble(3).ToString());
 
@@ -76,7 +76,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "delete from CT_BangDiemMon where MaCTBangDiemMon=@ma";
-            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maCTBD;
+            com.Parameters.Add("@ma", SqlDbType.Int).Value =Int32.Parse( maCTBD);
             com.Connection = conn;
 
             try
@@ -96,16 +96,16 @@ namespace DAL
 
         public ErrorType ThemCTBD(string maCTBD, string maBD, string maHTKT,float diem)
         {
-            try
-            {
+            //try
+            //{
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
                 com.CommandText = "insert into CT_BangDiemMon values(@maCTBD,@maBD,@maHTKT,@diem)";
                 com.Connection = conn;
 
-                com.Parameters.Add("@maCTBD", SqlDbType.VarChar).Value = maCTBD;
-                com.Parameters.Add("@maBD", SqlDbType.NVarChar).Value = maBD;
+                com.Parameters.Add("@maCTBD", SqlDbType.Int).Value =Int32.Parse( maCTBD);
+                com.Parameters.Add("@maBD", SqlDbType.Int).Value = Int32.Parse( maBD);
                 com.Parameters.Add("@maHTKT", SqlDbType.NVarChar).Value = maHTKT;
                 com.Parameters.Add("@diem", SqlDbType.Float).Value = diem;
 
@@ -115,11 +115,11 @@ namespace DAL
                 if (result > 0)
                     return ErrorType.THANH_CONG;
                 return ErrorType.THAT_BAI;
-            }
-            catch
-            {
-                return ErrorType.THAT_BAI;
-            }
+            //}
+            //catch
+            //{
+            //    return ErrorType.THAT_BAI;
+            //}
         }
 
         public ErrorType SuaBD(string maCTBD, string maBD, string maHTKT, float diem)
@@ -132,8 +132,8 @@ namespace DAL
                 com.CommandText = "update  CT_BangDiemMon set Mabangdiemmon=@maBD,mahtkt=@maHTKT,diem=@diem where maCTbangDiemMon=@maCTBD";
                 com.Connection = conn;
 
-                com.Parameters.Add("@maCTBD", SqlDbType.VarChar).Value = maCTBD;
-                com.Parameters.Add("@maBD", SqlDbType.NVarChar).Value = maBD;
+                com.Parameters.Add("@maCTBD", SqlDbType.Int).Value =Int32.Parse( maCTBD);
+                com.Parameters.Add("@maBD", SqlDbType.Int).Value = Int32.Parse( maBD);
                 com.Parameters.Add("@maHTKT", SqlDbType.NVarChar).Value = maHTKT;
                 com.Parameters.Add("@diem", SqlDbType.Float).Value = diem;
 
@@ -166,7 +166,7 @@ namespace DAL
 
             if (reader.Read())
             {
-                maBD = reader.GetString(0);
+                maBD = reader.GetInt32(0)+"";
             }
 
             reader.Close();

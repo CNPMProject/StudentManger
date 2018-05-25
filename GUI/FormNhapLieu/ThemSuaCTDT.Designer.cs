@@ -69,7 +69,7 @@
             this.cbMaKL.Location = new System.Drawing.Point(306, 69);
             this.cbMaKL.Name = "cbMaKL";
             this.cbMaKL.Size = new System.Drawing.Size(187, 21);
-            this.cbMaKL.TabIndex = 16;
+            this.cbMaKL.TabIndex = 0;
             // 
             // cbMaMH
             // 
@@ -77,7 +77,7 @@
             this.cbMaMH.Location = new System.Drawing.Point(307, 117);
             this.cbMaMH.Name = "cbMaMH";
             this.cbMaMH.Size = new System.Drawing.Size(187, 21);
-            this.cbMaMH.TabIndex = 16;
+            this.cbMaMH.TabIndex = 1;
             // 
             // tbHeso
             // 
@@ -87,7 +87,7 @@
             this.tbHeso.Multiline = true;
             this.tbHeso.Name = "tbHeso";
             this.tbHeso.Size = new System.Drawing.Size(188, 22);
-            this.tbHeso.TabIndex = 18;
+            this.tbHeso.TabIndex = 2;
             // 
             // label1
             // 
@@ -131,7 +131,7 @@
             this.btnHuyBo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnHuyBo.selected = false;
             this.btnHuyBo.Size = new System.Drawing.Size(107, 36);
-            this.btnHuyBo.TabIndex = 24;
+            this.btnHuyBo.TabIndex = 4;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuyBo.Textcolor = System.Drawing.Color.White;
@@ -168,7 +168,7 @@
             this.btnLuu.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLuu.selected = false;
             this.btnLuu.Size = new System.Drawing.Size(107, 36);
-            this.btnLuu.TabIndex = 23;
+            this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuu.Textcolor = System.Drawing.Color.White;

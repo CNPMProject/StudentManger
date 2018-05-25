@@ -122,6 +122,27 @@ namespace DAL
             return lop;
         }
 
+        public string GetMaKhoiLopMax()
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = " select top 1 MaKhoiLop "
+                                +"from KHOILOP group by MaKhoiLop"
+                                +" order by MaKhoiLop DESC";
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            if (reader.Read())
+            {
+                return reader.GetString(0);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return null;
+        }
+
         public bool XoaKhoiLop(string maKL)
         {
             OpenConnection();

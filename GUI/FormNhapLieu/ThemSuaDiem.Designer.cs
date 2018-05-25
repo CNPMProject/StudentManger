@@ -89,7 +89,7 @@
             this.cbMaLop.Location = new System.Drawing.Point(221, 65);
             this.cbMaLop.Name = "cbMaLop";
             this.cbMaLop.Size = new System.Drawing.Size(133, 24);
-            this.cbMaLop.TabIndex = 3;
+            this.cbMaLop.TabIndex = 0;
             this.cbMaLop.SelectedIndexChanged += new System.EventHandler(this.cbMaLop_SelectedIndexChanged);
             // 
             // cbDanhSachMonHoc
@@ -122,7 +122,7 @@
             this.cbDSHocKy.Location = new System.Drawing.Point(458, 65);
             this.cbDSHocKy.Name = "cbDSHocKy";
             this.cbDSHocKy.Size = new System.Drawing.Size(133, 24);
-            this.cbDSHocKy.TabIndex = 6;
+            this.cbDSHocKy.TabIndex = 1;
             this.cbDSHocKy.SelectedIndexChanged += new System.EventHandler(this.cbDSHocKy_SelectedIndexChanged);
             // 
             // label4
@@ -164,6 +164,7 @@
             this.tbMaHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMaHS.Location = new System.Drawing.Point(215, 34);
             this.tbMaHS.Name = "tbMaHS";
+            this.tbMaHS.ReadOnly = true;
             this.tbMaHS.Size = new System.Drawing.Size(177, 23);
             this.tbMaHS.TabIndex = 24;
             // 
@@ -172,6 +173,7 @@
             this.tbTenhS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTenhS.Location = new System.Drawing.Point(215, 70);
             this.tbTenhS.Name = "tbTenhS";
+            this.tbTenhS.ReadOnly = true;
             this.tbTenhS.Size = new System.Drawing.Size(177, 23);
             this.tbTenhS.TabIndex = 24;
             // 
@@ -203,7 +205,7 @@
             this.btnLuu.IconMarginRight = 0;
             this.btnLuu.IconRightVisible = false;
             this.btnLuu.IconRightZoom = 0D;
-            this.btnLuu.IconVisible = false;
+            this.btnLuu.IconVisible = true;
             this.btnLuu.IconZoom = 70D;
             this.btnLuu.IsTab = true;
             this.btnLuu.Location = new System.Drawing.Point(80, 260);
@@ -213,7 +215,7 @@
             this.btnLuu.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLuu.selected = false;
             this.btnLuu.Size = new System.Drawing.Size(129, 36);
-            this.btnLuu.TabIndex = 22;
+            this.btnLuu.TabIndex = 0;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuu.Textcolor = System.Drawing.Color.White;
@@ -240,7 +242,7 @@
             this.btnHuyBo.IconMarginRight = 0;
             this.btnHuyBo.IconRightVisible = false;
             this.btnHuyBo.IconRightZoom = 0D;
-            this.btnHuyBo.IconVisible = false;
+            this.btnHuyBo.IconVisible = true;
             this.btnHuyBo.IconZoom = 70D;
             this.btnHuyBo.IsTab = true;
             this.btnHuyBo.Location = new System.Drawing.Point(242, 260);
@@ -250,7 +252,7 @@
             this.btnHuyBo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnHuyBo.selected = false;
             this.btnHuyBo.Size = new System.Drawing.Size(129, 36);
-            this.btnHuyBo.TabIndex = 23;
+            this.btnHuyBo.TabIndex = 1;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHuyBo.Textcolor = System.Drawing.Color.White;
@@ -335,7 +337,7 @@
             this.cbDSNH.Location = new System.Drawing.Point(713, 65);
             this.cbDSNH.Name = "cbDSNH";
             this.cbDSNH.Size = new System.Drawing.Size(133, 24);
-            this.cbDSNH.TabIndex = 10;
+            this.cbDSNH.TabIndex = 2;
             this.cbDSNH.SelectedIndexChanged += new System.EventHandler(this.cbDSNH_SelectedIndexChanged);
             // 
             // label9
@@ -393,19 +395,19 @@
             // 
             this.columnHeader2.Text = "Mã học sinh";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 120;
+            this.columnHeader2.Width = 0;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Tên học sinh";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 200;
+            this.columnHeader3.Width = 300;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Giới tính";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 110;
+            this.columnHeader4.Width = 130;
             // 
             // ThemSuaDiem
             // 

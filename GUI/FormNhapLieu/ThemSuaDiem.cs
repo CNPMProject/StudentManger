@@ -152,6 +152,45 @@ namespace GUI.FormNhapLieu
         {
             if(lvDSHS.SelectedItems.Count>0)
             {
+                if(string.IsNullOrEmpty( tbDiem.Text))
+                {
+                    MessageBox.Show("Bạn phải điền điểm vào ô điểm!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                try
+                {
+                    float diem= float.Parse(tbDiem.Text);
+                    ThayDoiQuyDinhBLL quydinhbll = new ThayDoiQuyDinhBLL();
+                    List<ThamSo> dsThamSo = quydinhbll.GetListThamSo();
+
+                    float diemToiThieu=0, diemToiDa=10;
+                    foreach (ThamSo ts in dsThamSo)
+                    {
+                       
+                        if(ts.MaThamSo== "DiemToiThieu")
+                        {
+                            diemToiThieu = ts.GiaTri;
+                        }
+                        if (ts.MaThamSo == "DiemToiDa")
+                        {
+                            diemToiDa = ts.GiaTri;
+                        }
+                    }
+
+                    if(diem<diemToiThieu||diem>diemToiDa)
+                    {
+                        MessageBox.Show("Điểm phải lớn hơn "+diemToiThieu+" và nhỏ hơn "+diemToiDa, "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                       
+                }
+                catch
+                {
+                    MessageBox.Show("Điểm phải là dạng số!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 QuaTrinhHocTapBLL qthocbll = new QuaTrinhHocTapBLL();
                 QuaTrinhHocTap qthoctap = qthocbll.GetQuaTrinhHocTapCo(tbMaHS.Text, cbDSHocKy.Text, cbDSNH.Text);
 
@@ -163,9 +202,8 @@ namespace GUI.FormNhapLieu
                     //neu chua ton tai bd thi them bd vao 
 
                     string mabdm = bdbll.GetMaBDMMax();
-                    string[] list = mabdm.Split('D');
-                    mabdm = "BD" + (Int32.Parse(list[1]) + 1).ToString();
-                    MessageBox.Show(mabdm + "");
+                    mabdm =(Int32.Parse(mabdm)+1).ToString();
+                   // MessageBox.Show(mabdm + "");
                     bdbll.ThemBDM(mabdm, qthoctap.MaQTH, cbDanhSachMonHoc.Text);
                     bdm = bdbll.GetBangDiemMon(qthoctap.MaQTH, cbDanhSachMonHoc.Text);
                 }
@@ -179,10 +217,17 @@ namespace GUI.FormNhapLieu
                 {
                     //tao ma chi tiet bang diem mon moi de insert
                     string mactbd = ctbdbll.GetMaCTBDMMax();
-                    string[] listtemp = mactbd.Split('D');
-                    mactbd = "CTBD" + (Int32.Parse(listtemp[1]) + 1).ToString();
-                    MessageBox.Show(mactbd);
+                    mactbd = (Int32.Parse( mactbd)+1).ToString();
+                   // MessageBox.Show(mactbd);
                     ErrorType result = ctbdbll.ThemCTBDM(mactbd, mabd, cbDSHTKT.Text, tbDiem.Text);
+                    if (result == ErrorType.THANH_CONG)
+                    {
+                        MessageBox.Show("Thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể thêm", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
             }
@@ -194,9 +239,13 @@ namespace GUI.FormNhapLieu
 
         private void lvDSHS_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListViewItem lvi = lvDSHS.SelectedItems[0];
-            tbMaHS.Text = lvi.SubItems[1].Text;
-            tbTenhS.Text = lvi.SubItems[2].Text;
+            if (lvDSHS.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = lvDSHS.SelectedItems[0];
+                tbMaHS.Text = lvi.SubItems[1].Text;
+                tbTenhS.Text = lvi.SubItems[2].Text;
+            }
+
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)

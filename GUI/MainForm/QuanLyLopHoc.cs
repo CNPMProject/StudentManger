@@ -26,6 +26,7 @@ namespace GUI.MainForm
         public QuanLyLopHoc()
         {
             InitializeComponent();
+            btnThemHS.IconVisible = btnSuaHS.IconVisible = btnXoaHocSinh.IconVisible = true;
         }
 
         /// <summary>
@@ -227,16 +228,19 @@ namespace GUI.MainForm
                 {
                     //LoadNamHoc_DSHS();
                     //LoadDSHS_DSHS();
+                    btnThemHS.IconVisible = btnSuaHS.IconVisible = btnXoaHocSinh.IconVisible = true;
                 }
                 else
                  if (e.TabPageIndex == 1)
                 {
                     LoadMaLop_DSLH();
+                    btnThemLopHoc.IconVisible = btnSuaLopHoc.IconVisible = btnXoaLopHoc.IconVisible = true;
                 }
                 else
                  if (e.TabPageIndex == 2)
                 {
                     LoadNH_DSKL();
+                    btnThemKhoiLop.IconVisible = btnSua.IconVisible = btnXoaKhoiLop.IconVisible = true;
                 }
                 else
                  if (e.TabPageIndex == 3)
@@ -674,7 +678,8 @@ namespace GUI.MainForm
 
         private void btnThemKhoiLop_Click(object sender, EventArgs e)
         {
-
+            ThemSuaKhoiLop fThemSuaKhoiLop = new ThemSuaKhoiLop();
+            fThemSuaKhoiLop.ShowDialog();
         }
 
         private void tcQuanLyLop_SelectedIndexChanged(object sender, EventArgs e)
@@ -706,10 +711,9 @@ namespace GUI.MainForm
                 foreach(ListViewItem lvi in lvDSHSChuaCoLop_XepLop.SelectedItems)
                 {
                     string maQTHMax = qthbll.GetMaQTHMax();
-                    string[] listTemp = maQTHMax.Split('T');
-                    string maQTH ="QT"+ (Int32.Parse( listTemp[1])+1);
+                    string maQTH =""+ (Int32.Parse( maQTHMax)+1);
                     string maHocSinh = lvi.SubItems[1].Text;
-
+                    string[] listTemp;
                     listTemp = cbLop_XL.Text.Split(' ');
                     string maLop = listTemp[0];
 
@@ -744,7 +748,62 @@ namespace GUI.MainForm
 
         private void btnXoaKhoiLop_Click(object sender, EventArgs e)
         {
+                if (khoilopbll.XoaKhoilop(tbMaKL_DSKL.Text))
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Không thể xóa , khối lớp đang giảng dạy!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
+        private void btnXoaHocSinh_Click_1(object sender, EventArgs e)
+        {
+            if (lvdshs.SelectedItems.Count > 0)
+            {
+                string maHocSinh = lvdshs.SelectedItems[0].SubItems[1].Text;
+                DShocsinhBLL hocsinhbll = new DShocsinhBLL();
+                if (hocsinhbll.XoaHs(maHocSinh))
+                {
+                    MessageBox.Show("Xóa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDSHS_DSHS();
+                }                    
+                else
+                    MessageBox.Show("Xóa thất bại, thử kiểm tra lại kết nối CSDL!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Bạn phải chọn ít nhất 1 dòng để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string maKhoiLop = tbMaKL_DSKL.Text;
+            string tenKhoiLop = tbTenKL_DSKL.Text;
+            string phongBan = tbBan_DSKL.Text;
+            string namHoc = cbNH_DSKL.Text;
+
+            ThemSuaKhoiLop fThemSuaKhoiLop = new ThemSuaKhoiLop(maKhoiLop, tenKhoiLop, phongBan, namHoc);
+            fThemSuaKhoiLop.ShowDialog();
+        }
+
+
+
+        private void btnXoaLopHoc_Click(object sender, EventArgs e)
+        {
+            if (lopBLL.Xoalop(cbMaLop_DSLH.Text))
+                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Không thể xóa , lớp đang nằm trong chương trình đào tạo!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnThemLopHoc_Click(object sender, EventArgs e)
+        {
+            ThemSuaLop fThemSuaLop = new ThemSuaLop();
+            fThemSuaLop.ShowDialog();
+        }
+
+        private void btnSuaLopHoc_Click(object sender, EventArgs e)
+        {
+            ThemSuaLop fThemSuaLop = new ThemSuaLop(cbMaLop_DSLH.Text);
+            fThemSuaLop.ShowDialog();
         }
     }
 }

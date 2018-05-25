@@ -36,9 +36,9 @@
             this.labeldslophoc = new System.Windows.Forms.Label();
             this.cbMaLop_DSLH = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnThemLopHoc = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSuaLopHoc = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnXoaLopHoc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupthongtinchitiet = new System.Windows.Forms.GroupBox();
             this.tbmail_DSLH = new System.Windows.Forms.TextBox();
             this.tbDiaChi_DSLH = new System.Windows.Forms.TextBox();
@@ -123,7 +123,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.btnSua = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnThemKhoiLop = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnXoaKhoiLop = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lvDSKL_NH = new System.Windows.Forms.ListView();
             this.columSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -144,8 +146,10 @@
             this.cbNH_DSKL = new System.Windows.Forms.ComboBox();
             this.tpThongTinChung = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btnXoaHocSinh = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnThemHS = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSuaHS = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.labelnnamhoc = new System.Windows.Forms.Label();
             this.cbNH_DSHS = new System.Windows.Forms.ComboBox();
             this.groupthongtin = new System.Windows.Forms.GroupBox();
             this.tbEmail_DSHS = new System.Windows.Forms.TextBox();
@@ -172,9 +176,6 @@
             this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colLop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcQuanLyLop = new System.Windows.Forms.TabControl();
-            this.btnXoaKhoiLop = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.labelnnamhoc = new System.Windows.Forms.Label();
-            this.btnXoaHocSinh = new Bunifu.Framework.UI.BunifuFlatButton();
             tpDSHocSinh = new System.Windows.Forms.TabPage();
             tpDSHocSinh.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -264,124 +265,127 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.bunifuFlatButton4);
-            this.groupBox8.Controls.Add(this.bunifuFlatButton5);
-            this.groupBox8.Controls.Add(this.bunifuFlatButton6);
+            this.groupBox8.Controls.Add(this.btnThemLopHoc);
+            this.groupBox8.Controls.Add(this.btnSuaLopHoc);
+            this.groupBox8.Controls.Add(this.btnXoaLopHoc);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(728, 365);
+            this.groupBox8.Location = new System.Drawing.Point(728, 405);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(366, 84);
             this.groupBox8.TabIndex = 27;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Tùy chọn";
             // 
-            // bunifuFlatButton4
+            // btnThemLopHoc
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Thêm mới";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = false;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = false;
-            this.bunifuFlatButton4.IconZoom = 70D;
-            this.bunifuFlatButton4.IsTab = true;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(8, 27);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(115, 36);
-            this.bunifuFlatButton4.TabIndex = 20;
-            this.bunifuFlatButton4.Text = "Thêm mới";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLopHoc.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnThemLopHoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemLopHoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnThemLopHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThemLopHoc.BorderRadius = 0;
+            this.btnThemLopHoc.ButtonText = "Thêm lớp";
+            this.btnThemLopHoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemLopHoc.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThemLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLopHoc.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThemLopHoc.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnThemLopHoc.Iconimage")));
+            this.btnThemLopHoc.Iconimage_right = null;
+            this.btnThemLopHoc.Iconimage_right_Selected = null;
+            this.btnThemLopHoc.Iconimage_Selected = null;
+            this.btnThemLopHoc.IconMarginLeft = 0;
+            this.btnThemLopHoc.IconMarginRight = 0;
+            this.btnThemLopHoc.IconRightVisible = false;
+            this.btnThemLopHoc.IconRightZoom = 0D;
+            this.btnThemLopHoc.IconVisible = false;
+            this.btnThemLopHoc.IconZoom = 70D;
+            this.btnThemLopHoc.IsTab = true;
+            this.btnThemLopHoc.Location = new System.Drawing.Point(8, 27);
+            this.btnThemLopHoc.Name = "btnThemLopHoc";
+            this.btnThemLopHoc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnThemLopHoc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnThemLopHoc.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThemLopHoc.selected = false;
+            this.btnThemLopHoc.Size = new System.Drawing.Size(115, 36);
+            this.btnThemLopHoc.TabIndex = 20;
+            this.btnThemLopHoc.Text = "Thêm lớp";
+            this.btnThemLopHoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThemLopHoc.Textcolor = System.Drawing.Color.White;
+            this.btnThemLopHoc.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLopHoc.Click += new System.EventHandler(this.btnThemLopHoc_Click);
             // 
-            // bunifuFlatButton5
+            // btnSuaLopHoc
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Sửa ";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = false;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = false;
-            this.bunifuFlatButton5.IconZoom = 70D;
-            this.bunifuFlatButton5.IsTab = true;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(126, 27);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(115, 36);
-            this.bunifuFlatButton5.TabIndex = 21;
-            this.bunifuFlatButton5.Text = "Sửa ";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaLopHoc.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSuaLopHoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSuaLopHoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSuaLopHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSuaLopHoc.BorderRadius = 0;
+            this.btnSuaLopHoc.ButtonText = "Sửa lớp";
+            this.btnSuaLopHoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuaLopHoc.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSuaLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaLopHoc.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSuaLopHoc.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSuaLopHoc.Iconimage")));
+            this.btnSuaLopHoc.Iconimage_right = null;
+            this.btnSuaLopHoc.Iconimage_right_Selected = null;
+            this.btnSuaLopHoc.Iconimage_Selected = null;
+            this.btnSuaLopHoc.IconMarginLeft = 0;
+            this.btnSuaLopHoc.IconMarginRight = 0;
+            this.btnSuaLopHoc.IconRightVisible = false;
+            this.btnSuaLopHoc.IconRightZoom = 0D;
+            this.btnSuaLopHoc.IconVisible = false;
+            this.btnSuaLopHoc.IconZoom = 70D;
+            this.btnSuaLopHoc.IsTab = true;
+            this.btnSuaLopHoc.Location = new System.Drawing.Point(126, 27);
+            this.btnSuaLopHoc.Name = "btnSuaLopHoc";
+            this.btnSuaLopHoc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSuaLopHoc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnSuaLopHoc.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSuaLopHoc.selected = false;
+            this.btnSuaLopHoc.Size = new System.Drawing.Size(115, 36);
+            this.btnSuaLopHoc.TabIndex = 21;
+            this.btnSuaLopHoc.Text = "Sửa lớp";
+            this.btnSuaLopHoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSuaLopHoc.Textcolor = System.Drawing.Color.White;
+            this.btnSuaLopHoc.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaLopHoc.Click += new System.EventHandler(this.btnSuaLopHoc_Click);
             // 
-            // bunifuFlatButton6
+            // btnXoaLopHoc
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Xóa ";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 0;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = false;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = false;
-            this.bunifuFlatButton6.IconZoom = 70D;
-            this.bunifuFlatButton6.IsTab = true;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(244, 27);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(115, 36);
-            this.bunifuFlatButton6.TabIndex = 22;
-            this.bunifuFlatButton6.Text = "Xóa ";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaLopHoc.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnXoaLopHoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoaLopHoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXoaLopHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXoaLopHoc.BorderRadius = 0;
+            this.btnXoaLopHoc.ButtonText = "Xóa lớp";
+            this.btnXoaLopHoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaLopHoc.DisabledColor = System.Drawing.Color.Gray;
+            this.btnXoaLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaLopHoc.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnXoaLopHoc.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnXoaLopHoc.Iconimage")));
+            this.btnXoaLopHoc.Iconimage_right = null;
+            this.btnXoaLopHoc.Iconimage_right_Selected = null;
+            this.btnXoaLopHoc.Iconimage_Selected = null;
+            this.btnXoaLopHoc.IconMarginLeft = 0;
+            this.btnXoaLopHoc.IconMarginRight = 0;
+            this.btnXoaLopHoc.IconRightVisible = false;
+            this.btnXoaLopHoc.IconRightZoom = 0D;
+            this.btnXoaLopHoc.IconVisible = false;
+            this.btnXoaLopHoc.IconZoom = 70D;
+            this.btnXoaLopHoc.IsTab = true;
+            this.btnXoaLopHoc.Location = new System.Drawing.Point(244, 27);
+            this.btnXoaLopHoc.Name = "btnXoaLopHoc";
+            this.btnXoaLopHoc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXoaLopHoc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnXoaLopHoc.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnXoaLopHoc.selected = false;
+            this.btnXoaLopHoc.Size = new System.Drawing.Size(115, 36);
+            this.btnXoaLopHoc.TabIndex = 22;
+            this.btnXoaLopHoc.Text = "Xóa lớp";
+            this.btnXoaLopHoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXoaLopHoc.Textcolor = System.Drawing.Color.White;
+            this.btnXoaLopHoc.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaLopHoc.Click += new System.EventHandler(this.btnXoaLopHoc_Click);
             // 
             // groupthongtinchitiet
             // 
@@ -400,7 +404,7 @@
             this.groupthongtinchitiet.Controls.Add(this.labelmhs);
             this.groupthongtinchitiet.Location = new System.Drawing.Point(728, 125);
             this.groupthongtinchitiet.Name = "groupthongtinchitiet";
-            this.groupthongtinchitiet.Size = new System.Drawing.Size(366, 232);
+            this.groupthongtinchitiet.Size = new System.Drawing.Size(366, 260);
             this.groupthongtinchitiet.TabIndex = 26;
             this.groupthongtinchitiet.TabStop = false;
             this.groupthongtinchitiet.Text = "Thông tin chi tiết ";
@@ -408,40 +412,45 @@
             // tbmail_DSLH
             // 
             this.tbmail_DSLH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbmail_DSLH.Location = new System.Drawing.Point(126, 200);
+            this.tbmail_DSLH.Location = new System.Drawing.Point(126, 218);
             this.tbmail_DSLH.Name = "tbmail_DSLH";
+            this.tbmail_DSLH.ReadOnly = true;
             this.tbmail_DSLH.Size = new System.Drawing.Size(195, 24);
             this.tbmail_DSLH.TabIndex = 11;
             // 
             // tbDiaChi_DSLH
             // 
             this.tbDiaChi_DSLH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbDiaChi_DSLH.Location = new System.Drawing.Point(126, 163);
+            this.tbDiaChi_DSLH.Location = new System.Drawing.Point(126, 179);
             this.tbDiaChi_DSLH.Name = "tbDiaChi_DSLH";
+            this.tbDiaChi_DSLH.ReadOnly = true;
             this.tbDiaChi_DSLH.Size = new System.Drawing.Size(195, 24);
             this.tbDiaChi_DSLH.TabIndex = 10;
             // 
             // tbHoTen_DSLH
             // 
             this.tbHoTen_DSLH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbHoTen_DSLH.Location = new System.Drawing.Point(126, 63);
+            this.tbHoTen_DSLH.Location = new System.Drawing.Point(126, 65);
             this.tbHoTen_DSLH.Name = "tbHoTen_DSLH";
+            this.tbHoTen_DSLH.ReadOnly = true;
             this.tbHoTen_DSLH.Size = new System.Drawing.Size(195, 24);
             this.tbHoTen_DSLH.TabIndex = 9;
             // 
             // tbGioiTinh_DSLH
             // 
             this.tbGioiTinh_DSLH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbGioiTinh_DSLH.Location = new System.Drawing.Point(126, 93);
+            this.tbGioiTinh_DSLH.Location = new System.Drawing.Point(126, 104);
             this.tbGioiTinh_DSLH.Name = "tbGioiTinh_DSLH";
+            this.tbGioiTinh_DSLH.ReadOnly = true;
             this.tbGioiTinh_DSLH.Size = new System.Drawing.Size(195, 24);
             this.tbGioiTinh_DSLH.TabIndex = 8;
             // 
             // tbNamSinh_DSLH
             // 
             this.tbNamSinh_DSLH.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbNamSinh_DSLH.Location = new System.Drawing.Point(126, 128);
+            this.tbNamSinh_DSLH.Location = new System.Drawing.Point(126, 140);
             this.tbNamSinh_DSLH.Name = "tbNamSinh_DSLH";
+            this.tbNamSinh_DSLH.ReadOnly = true;
             this.tbNamSinh_DSLH.Size = new System.Drawing.Size(195, 24);
             this.tbNamSinh_DSLH.TabIndex = 7;
             // 
@@ -450,13 +459,14 @@
             this.tbMaHS_DSLH.BackColor = System.Drawing.SystemColors.Menu;
             this.tbMaHS_DSLH.Location = new System.Drawing.Point(126, 28);
             this.tbMaHS_DSLH.Name = "tbMaHS_DSLH";
+            this.tbMaHS_DSLH.ReadOnly = true;
             this.tbMaHS_DSLH.Size = new System.Drawing.Size(195, 24);
             this.tbMaHS_DSLH.TabIndex = 6;
             // 
             // labelemail
             // 
             this.labelemail.AutoSize = true;
-            this.labelemail.Location = new System.Drawing.Point(18, 200);
+            this.labelemail.Location = new System.Drawing.Point(18, 218);
             this.labelemail.Name = "labelemail";
             this.labelemail.Size = new System.Drawing.Size(53, 18);
             this.labelemail.TabIndex = 5;
@@ -465,7 +475,7 @@
             // labeldchi
             // 
             this.labeldchi.AutoSize = true;
-            this.labeldchi.Location = new System.Drawing.Point(18, 166);
+            this.labeldchi.Location = new System.Drawing.Point(18, 182);
             this.labeldchi.Name = "labeldchi";
             this.labeldchi.Size = new System.Drawing.Size(60, 18);
             this.labeldchi.TabIndex = 4;
@@ -474,7 +484,7 @@
             // labelnsinh
             // 
             this.labelnsinh.AutoSize = true;
-            this.labelnsinh.Location = new System.Drawing.Point(18, 128);
+            this.labelnsinh.Location = new System.Drawing.Point(18, 140);
             this.labelnsinh.Name = "labelnsinh";
             this.labelnsinh.Size = new System.Drawing.Size(77, 18);
             this.labelnsinh.TabIndex = 3;
@@ -483,7 +493,7 @@
             // labelgtinh
             // 
             this.labelgtinh.AutoSize = true;
-            this.labelgtinh.Location = new System.Drawing.Point(18, 94);
+            this.labelgtinh.Location = new System.Drawing.Point(18, 105);
             this.labelgtinh.Name = "labelgtinh";
             this.labelgtinh.Size = new System.Drawing.Size(75, 18);
             this.labelgtinh.TabIndex = 2;
@@ -492,7 +502,7 @@
             // labelhten
             // 
             this.labelhten.AutoSize = true;
-            this.labelhten.Location = new System.Drawing.Point(18, 63);
+            this.labelhten.Location = new System.Drawing.Point(18, 65);
             this.labelhten.Name = "labelhten";
             this.labelhten.Size = new System.Drawing.Size(86, 18);
             this.labelhten.TabIndex = 1;
@@ -522,6 +532,7 @@
             this.tbTenLop_DSLH.BackColor = System.Drawing.SystemColors.Menu;
             this.tbTenLop_DSLH.Location = new System.Drawing.Point(311, 81);
             this.tbTenLop_DSLH.Name = "tbTenLop_DSLH";
+            this.tbTenLop_DSLH.ReadOnly = true;
             this.tbTenLop_DSLH.Size = new System.Drawing.Size(100, 24);
             this.tbTenLop_DSLH.TabIndex = 24;
             // 
@@ -530,6 +541,7 @@
             this.tbSiSo_DSLH.BackColor = System.Drawing.SystemColors.Menu;
             this.tbSiSo_DSLH.Location = new System.Drawing.Point(473, 81);
             this.tbSiSo_DSLH.Name = "tbSiSo_DSLH";
+            this.tbSiSo_DSLH.ReadOnly = true;
             this.tbSiSo_DSLH.Size = new System.Drawing.Size(100, 24);
             this.tbSiSo_DSLH.TabIndex = 24;
             // 
@@ -541,7 +553,7 @@
             this.gbDSHSTheoLop.Location = new System.Drawing.Point(24, 125);
             this.gbDSHSTheoLop.Name = "gbDSHSTheoLop";
             this.gbDSHSTheoLop.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gbDSHSTheoLop.Size = new System.Drawing.Size(677, 324);
+            this.gbDSHSTheoLop.Size = new System.Drawing.Size(677, 367);
             this.gbDSHSTheoLop.TabIndex = 23;
             this.gbDSHSTheoLop.TabStop = false;
             this.gbDSHSTheoLop.Text = "Danh sách học sinh của lớp abc";
@@ -562,7 +574,7 @@
             this.lvDSHSTheoLop.GridLines = true;
             this.lvDSHSTheoLop.Location = new System.Drawing.Point(3, 22);
             this.lvDSHSTheoLop.Name = "lvDSHSTheoLop";
-            this.lvDSHSTheoLop.Size = new System.Drawing.Size(671, 299);
+            this.lvDSHSTheoLop.Size = new System.Drawing.Size(671, 342);
             this.lvDSHSTheoLop.TabIndex = 1;
             this.lvDSHSTheoLop.UseCompatibleStateImageBehavior = false;
             this.lvDSHSTheoLop.View = System.Windows.Forms.View.Details;
@@ -576,7 +588,7 @@
             // clMaHS
             // 
             this.clMaHS.Text = "Mã học sinh";
-            this.clMaHS.Width = 100;
+            this.clMaHS.Width = 0;
             // 
             // columHoten
             // 
@@ -588,7 +600,7 @@
             // 
             this.colGioitinh.Text = "Giới Tính";
             this.colGioitinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colGioitinh.Width = 78;
+            this.colGioitinh.Width = 85;
             // 
             // colunamsinh
             // 
@@ -600,7 +612,7 @@
             // 
             this.coludiachi.Text = "Địa Chỉ";
             this.coludiachi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.coludiachi.Width = 187;
+            this.coludiachi.Width = 280;
             // 
             // picturehelp
             // 
@@ -635,8 +647,6 @@
             this.labelop.Size = new System.Drawing.Size(40, 20);
             this.labelop.TabIndex = 3;
             this.labelop.Text = "Lớp:";
-
-
             // 
             // contextMenuStrip1
             // 
@@ -679,7 +689,7 @@
             // 
             this.cbNamHoc_XL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNamHoc_XL.FormattingEnabled = true;
-            this.cbNamHoc_XL.Location = new System.Drawing.Point(515, 69);
+            this.cbNamHoc_XL.Location = new System.Drawing.Point(497, 70);
             this.cbNamHoc_XL.Name = "cbNamHoc_XL";
             this.cbNamHoc_XL.Size = new System.Drawing.Size(154, 28);
             this.cbNamHoc_XL.TabIndex = 3;
@@ -688,14 +698,14 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(410, 76);
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(400, 76);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 22);
+            this.label14.Size = new System.Drawing.Size(91, 22);
             this.label14.TabIndex = 4;
-            this.label14.Text = "Năm học";
+            this.label14.Text = "Năm học :";
             // 
             // cbHocKy_XL
             // 
@@ -710,9 +720,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label13.Location = new System.Drawing.Point(48, 76);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(168, 22);
@@ -732,20 +742,20 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(687, 76);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 22);
+            this.label12.Size = new System.Drawing.Size(75, 22);
             this.label12.TabIndex = 4;
-            this.label12.Text = "Học kỳ";
+            this.label12.Text = "Học kỳ :";
             // 
             // gbDSHSLopChuyenDen_XL
             // 
             this.gbDSHSLopChuyenDen_XL.Controls.Add(this.lvDSHS_MHXL);
             this.gbDSHSLopChuyenDen_XL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDSHSLopChuyenDen_XL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gbDSHSLopChuyenDen_XL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gbDSHSLopChuyenDen_XL.Location = new System.Drawing.Point(613, 124);
             this.gbDSHSLopChuyenDen_XL.Name = "gbDSHSLopChuyenDen_XL";
             this.gbDSHSLopChuyenDen_XL.Size = new System.Drawing.Size(478, 356);
@@ -794,7 +804,7 @@
             // 
             this.gbDanhSachHocSinh.Controls.Add(this.lvDSHSChuaCoLop_XepLop);
             this.gbDanhSachHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDanhSachHocSinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gbDanhSachHocSinh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gbDanhSachHocSinh.Location = new System.Drawing.Point(49, 124);
             this.gbDanhSachHocSinh.Name = "gbDanhSachHocSinh";
             this.gbDanhSachHocSinh.Size = new System.Drawing.Size(478, 356);
@@ -853,7 +863,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(1136, 53);
@@ -1224,6 +1234,7 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.btnSua);
             this.groupBox10.Controls.Add(this.btnThemKhoiLop);
             this.groupBox10.Controls.Add(this.btnXoaKhoiLop);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1234,6 +1245,43 @@
             this.groupBox10.TabIndex = 20;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Tùy chọn";
+            // 
+            // btnSua
+            // 
+            this.btnSua.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSua.BorderRadius = 0;
+            this.btnSua.ButtonText = "Sửa";
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSua.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSua.Iconimage")));
+            this.btnSua.Iconimage_right = null;
+            this.btnSua.Iconimage_right_Selected = null;
+            this.btnSua.Iconimage_Selected = null;
+            this.btnSua.IconMarginLeft = 0;
+            this.btnSua.IconMarginRight = 0;
+            this.btnSua.IconRightVisible = false;
+            this.btnSua.IconRightZoom = 0D;
+            this.btnSua.IconVisible = false;
+            this.btnSua.IconZoom = 70D;
+            this.btnSua.IsTab = true;
+            this.btnSua.Location = new System.Drawing.Point(156, 35);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSua.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnSua.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSua.selected = false;
+            this.btnSua.Size = new System.Drawing.Size(115, 36);
+            this.btnSua.TabIndex = 20;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSua.Textcolor = System.Drawing.Color.White;
+            this.btnSua.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThemKhoiLop
             // 
@@ -1258,7 +1306,7 @@
             this.btnThemKhoiLop.IconVisible = false;
             this.btnThemKhoiLop.IconZoom = 70D;
             this.btnThemKhoiLop.IsTab = true;
-            this.btnThemKhoiLop.Location = new System.Drawing.Point(85, 35);
+            this.btnThemKhoiLop.Location = new System.Drawing.Point(17, 35);
             this.btnThemKhoiLop.Name = "btnThemKhoiLop";
             this.btnThemKhoiLop.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnThemKhoiLop.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
@@ -1271,6 +1319,44 @@
             this.btnThemKhoiLop.Textcolor = System.Drawing.Color.White;
             this.btnThemKhoiLop.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemKhoiLop.Click += new System.EventHandler(this.btnThemKhoiLop_Click);
+            // 
+            // btnXoaKhoiLop
+            // 
+            this.btnXoaKhoiLop.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnXoaKhoiLop.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoaKhoiLop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXoaKhoiLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXoaKhoiLop.BorderRadius = 0;
+            this.btnXoaKhoiLop.ButtonText = "Xóa";
+            this.btnXoaKhoiLop.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnXoaKhoiLop.DisabledColor = System.Drawing.Color.GreenYellow;
+            this.btnXoaKhoiLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaKhoiLop.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnXoaKhoiLop.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnXoaKhoiLop.Iconimage")));
+            this.btnXoaKhoiLop.Iconimage_right = null;
+            this.btnXoaKhoiLop.Iconimage_right_Selected = null;
+            this.btnXoaKhoiLop.Iconimage_Selected = null;
+            this.btnXoaKhoiLop.IconMarginLeft = 0;
+            this.btnXoaKhoiLop.IconMarginRight = 0;
+            this.btnXoaKhoiLop.IconRightVisible = false;
+            this.btnXoaKhoiLop.IconRightZoom = 0D;
+            this.btnXoaKhoiLop.IconVisible = false;
+            this.btnXoaKhoiLop.IconZoom = 70D;
+            this.btnXoaKhoiLop.IsTab = true;
+            this.btnXoaKhoiLop.Location = new System.Drawing.Point(293, 35);
+            this.btnXoaKhoiLop.Name = "btnXoaKhoiLop";
+            this.btnXoaKhoiLop.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXoaKhoiLop.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnXoaKhoiLop.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnXoaKhoiLop.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnXoaKhoiLop.selected = false;
+            this.btnXoaKhoiLop.Size = new System.Drawing.Size(115, 36);
+            this.btnXoaKhoiLop.TabIndex = 6;
+            this.btnXoaKhoiLop.Text = "Xóa";
+            this.btnXoaKhoiLop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXoaKhoiLop.Textcolor = System.Drawing.Color.White;
+            this.btnXoaKhoiLop.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaKhoiLop.Click += new System.EventHandler(this.btnXoaKhoiLop_Click);
             // 
             // groupBox3
             // 
@@ -1344,6 +1430,7 @@
             this.tbSoLuongLop_DSKL.BackColor = System.Drawing.SystemColors.Menu;
             this.tbSoLuongLop_DSKL.Location = new System.Drawing.Point(173, 94);
             this.tbSoLuongLop_DSKL.Name = "tbSoLuongLop_DSKL";
+            this.tbSoLuongLop_DSKL.ReadOnly = true;
             this.tbSoLuongLop_DSKL.Size = new System.Drawing.Size(187, 23);
             this.tbSoLuongLop_DSKL.TabIndex = 13;
             // 
@@ -1361,16 +1448,18 @@
             // tbNH_DSKL
             // 
             this.tbNH_DSKL.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbNH_DSKL.Location = new System.Drawing.Point(172, 161);
+            this.tbNH_DSKL.Location = new System.Drawing.Point(172, 165);
             this.tbNH_DSKL.Name = "tbNH_DSKL";
+            this.tbNH_DSKL.ReadOnly = true;
             this.tbNH_DSKL.Size = new System.Drawing.Size(187, 23);
             this.tbNH_DSKL.TabIndex = 11;
             // 
             // tbBan_DSKL
             // 
             this.tbBan_DSKL.BackColor = System.Drawing.SystemColors.Menu;
-            this.tbBan_DSKL.Location = new System.Drawing.Point(172, 123);
+            this.tbBan_DSKL.Location = new System.Drawing.Point(172, 128);
             this.tbBan_DSKL.Name = "tbBan_DSKL";
+            this.tbBan_DSKL.ReadOnly = true;
             this.tbBan_DSKL.Size = new System.Drawing.Size(187, 23);
             this.tbBan_DSKL.TabIndex = 10;
             // 
@@ -1378,7 +1467,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 161);
+            this.label2.Location = new System.Drawing.Point(13, 165);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(94, 22);
@@ -1389,7 +1478,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 124);
+            this.label1.Location = new System.Drawing.Point(13, 129);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(52, 22);
@@ -1423,6 +1512,7 @@
             this.tbMaKL_DSKL.BackColor = System.Drawing.SystemColors.Menu;
             this.tbMaKL_DSKL.Location = new System.Drawing.Point(172, 22);
             this.tbMaKL_DSKL.Name = "tbMaKL_DSKL";
+            this.tbMaKL_DSKL.ReadOnly = true;
             this.tbMaKL_DSKL.Size = new System.Drawing.Size(187, 23);
             this.tbMaKL_DSKL.TabIndex = 6;
             // 
@@ -1431,6 +1521,7 @@
             this.tbTenKL_DSKL.BackColor = System.Drawing.SystemColors.Menu;
             this.tbTenKL_DSKL.Location = new System.Drawing.Point(172, 57);
             this.tbTenKL_DSKL.Name = "tbTenKL_DSKL";
+            this.tbTenKL_DSKL.ReadOnly = true;
             this.tbTenKL_DSKL.Size = new System.Drawing.Size(187, 23);
             this.tbTenKL_DSKL.TabIndex = 7;
             // 
@@ -1453,7 +1544,7 @@
             this.cbNH_DSKL.Name = "cbNH_DSKL";
             this.cbNH_DSKL.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbNH_DSKL.Size = new System.Drawing.Size(121, 24);
-            this.cbNH_DSKL.TabIndex = 2;
+            this.cbNH_DSKL.TabIndex = 5;
             this.cbNH_DSKL.SelectedIndexChanged += new System.EventHandler(this.cbNH_DSKL_SelectedIndexChanged);
             // 
             // tpThongTinChung
@@ -1488,6 +1579,43 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Tùy chọn";
             // 
+            // btnXoaHocSinh
+            // 
+            this.btnXoaHocSinh.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnXoaHocSinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoaHocSinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXoaHocSinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXoaHocSinh.BorderRadius = 0;
+            this.btnXoaHocSinh.ButtonText = "Xóa";
+            this.btnXoaHocSinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaHocSinh.DisabledColor = System.Drawing.Color.Gray;
+            this.btnXoaHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaHocSinh.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnXoaHocSinh.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnXoaHocSinh.Iconimage")));
+            this.btnXoaHocSinh.Iconimage_right = null;
+            this.btnXoaHocSinh.Iconimage_right_Selected = null;
+            this.btnXoaHocSinh.Iconimage_Selected = null;
+            this.btnXoaHocSinh.IconMarginLeft = 0;
+            this.btnXoaHocSinh.IconMarginRight = 0;
+            this.btnXoaHocSinh.IconRightVisible = false;
+            this.btnXoaHocSinh.IconRightZoom = 0D;
+            this.btnXoaHocSinh.IconVisible = false;
+            this.btnXoaHocSinh.IconZoom = 70D;
+            this.btnXoaHocSinh.IsTab = true;
+            this.btnXoaHocSinh.Location = new System.Drawing.Point(268, 29);
+            this.btnXoaHocSinh.Name = "btnXoaHocSinh";
+            this.btnXoaHocSinh.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXoaHocSinh.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnXoaHocSinh.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnXoaHocSinh.selected = false;
+            this.btnXoaHocSinh.Size = new System.Drawing.Size(115, 36);
+            this.btnXoaHocSinh.TabIndex = 22;
+            this.btnXoaHocSinh.Text = "Xóa";
+            this.btnXoaHocSinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXoaHocSinh.Textcolor = System.Drawing.Color.White;
+            this.btnXoaHocSinh.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaHocSinh.Click += new System.EventHandler(this.btnXoaHocSinh_Click);
+            // 
             // btnThemHS
             // 
             this.btnThemHS.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -1508,7 +1636,7 @@
             this.btnThemHS.IconMarginRight = 0;
             this.btnThemHS.IconRightVisible = false;
             this.btnThemHS.IconRightZoom = 0D;
-            this.btnThemHS.IconVisible = true;
+            this.btnThemHS.IconVisible = false;
             this.btnThemHS.IconZoom = 70D;
             this.btnThemHS.IsTab = true;
             this.btnThemHS.Location = new System.Drawing.Point(23, 29);
@@ -1545,7 +1673,7 @@
             this.btnSuaHS.IconMarginRight = 0;
             this.btnSuaHS.IconRightVisible = false;
             this.btnSuaHS.IconRightZoom = 0D;
-            this.btnSuaHS.IconVisible = true;
+            this.btnSuaHS.IconVisible = false;
             this.btnSuaHS.IconZoom = 70D;
             this.btnSuaHS.IsTab = true;
             this.btnSuaHS.Location = new System.Drawing.Point(147, 29);
@@ -1561,6 +1689,17 @@
             this.btnSuaHS.Textcolor = System.Drawing.Color.White;
             this.btnSuaHS.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaHS.Click += new System.EventHandler(this.btnSuaHS_Click);
+            // 
+            // labelnnamhoc
+            // 
+            this.labelnnamhoc.AutoSize = true;
+            this.labelnnamhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnnamhoc.Location = new System.Drawing.Point(423, 55);
+            this.labelnnamhoc.Name = "labelnnamhoc";
+            this.labelnnamhoc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelnnamhoc.Size = new System.Drawing.Size(83, 20);
+            this.labelnnamhoc.TabIndex = 20;
+            this.labelnnamhoc.Text = "Năm Học :";
             // 
             // cbNH_DSHS
             // 
@@ -1604,6 +1743,7 @@
             this.tbEmail_DSHS.BackColor = System.Drawing.SystemColors.Menu;
             this.tbEmail_DSHS.Location = new System.Drawing.Point(159, 270);
             this.tbEmail_DSHS.Name = "tbEmail_DSHS";
+            this.tbEmail_DSHS.ReadOnly = true;
             this.tbEmail_DSHS.Size = new System.Drawing.Size(185, 26);
             this.tbEmail_DSHS.TabIndex = 13;
             // 
@@ -1612,6 +1752,7 @@
             this.tbDiaChi_DSHS.BackColor = System.Drawing.SystemColors.Menu;
             this.tbDiaChi_DSHS.Location = new System.Drawing.Point(159, 228);
             this.tbDiaChi_DSHS.Name = "tbDiaChi_DSHS";
+            this.tbDiaChi_DSHS.ReadOnly = true;
             this.tbDiaChi_DSHS.Size = new System.Drawing.Size(185, 26);
             this.tbDiaChi_DSHS.TabIndex = 12;
             // 
@@ -1620,6 +1761,7 @@
             this.tbNgaySinh_DSHS.BackColor = System.Drawing.SystemColors.Menu;
             this.tbNgaySinh_DSHS.Location = new System.Drawing.Point(159, 186);
             this.tbNgaySinh_DSHS.Name = "tbNgaySinh_DSHS";
+            this.tbNgaySinh_DSHS.ReadOnly = true;
             this.tbNgaySinh_DSHS.Size = new System.Drawing.Size(185, 26);
             this.tbNgaySinh_DSHS.TabIndex = 11;
             // 
@@ -1628,6 +1770,7 @@
             this.tbGioiTinh_DSHS.BackColor = System.Drawing.SystemColors.Menu;
             this.tbGioiTinh_DSHS.Location = new System.Drawing.Point(159, 144);
             this.tbGioiTinh_DSHS.Name = "tbGioiTinh_DSHS";
+            this.tbGioiTinh_DSHS.ReadOnly = true;
             this.tbGioiTinh_DSHS.Size = new System.Drawing.Size(185, 26);
             this.tbGioiTinh_DSHS.TabIndex = 10;
             // 
@@ -1636,6 +1779,7 @@
             this.tbLop_DSHS.BackColor = System.Drawing.SystemColors.Menu;
             this.tbLop_DSHS.Location = new System.Drawing.Point(159, 108);
             this.tbLop_DSHS.Name = "tbLop_DSHS";
+            this.tbLop_DSHS.ReadOnly = true;
             this.tbLop_DSHS.Size = new System.Drawing.Size(185, 26);
             this.tbLop_DSHS.TabIndex = 9;
             // 
@@ -1644,6 +1788,7 @@
             this.tbHoTen_DSHS.BackColor = System.Drawing.SystemColors.Menu;
             this.tbHoTen_DSHS.Location = new System.Drawing.Point(159, 70);
             this.tbHoTen_DSHS.Name = "tbHoTen_DSHS";
+            this.tbHoTen_DSHS.ReadOnly = true;
             this.tbHoTen_DSHS.Size = new System.Drawing.Size(185, 26);
             this.tbHoTen_DSHS.TabIndex = 8;
             // 
@@ -1652,6 +1797,7 @@
             this.tbMaHocSinh_DSHS.BackColor = System.Drawing.SystemColors.Menu;
             this.tbMaHocSinh_DSHS.Location = new System.Drawing.Point(159, 30);
             this.tbMaHocSinh_DSHS.Name = "tbMaHocSinh_DSHS";
+            this.tbMaHocSinh_DSHS.ReadOnly = true;
             this.tbMaHocSinh_DSHS.Size = new System.Drawing.Size(185, 26);
             this.tbMaHocSinh_DSHS.TabIndex = 7;
             // 
@@ -1809,13 +1955,13 @@
             // clMaHS_TTchung
             // 
             this.clMaHS_TTchung.Text = "Mã học sinh";
-            this.clMaHS_TTchung.Width = 100;
+            this.clMaHS_TTchung.Width = 0;
             // 
             // colHoTen
             // 
             this.colHoTen.Text = "Họ Và Tên";
             this.colHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colHoTen.Width = 218;
+            this.colHoTen.Width = 250;
             // 
             // colLop
             // 
@@ -1844,89 +1990,6 @@
             this.tcQuanLyLop.Size = new System.Drawing.Size(1144, 541);
             this.tcQuanLyLop.TabIndex = 2;
             this.tcQuanLyLop.Selected += new System.Windows.Forms.TabControlEventHandler(this.tcQuanLyLop_Selected);
-            // 
-            // btnXoaKhoiLop
-            // 
-            this.btnXoaKhoiLop.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnXoaKhoiLop.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnXoaKhoiLop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.btnXoaKhoiLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnXoaKhoiLop.BorderRadius = 0;
-            this.btnXoaKhoiLop.ButtonText = "Xóa";
-            this.btnXoaKhoiLop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaKhoiLop.DisabledColor = System.Drawing.Color.Gray;
-            this.btnXoaKhoiLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaKhoiLop.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnXoaKhoiLop.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnXoaKhoiLop.Iconimage")));
-            this.btnXoaKhoiLop.Iconimage_right = null;
-            this.btnXoaKhoiLop.Iconimage_right_Selected = null;
-            this.btnXoaKhoiLop.Iconimage_Selected = null;
-            this.btnXoaKhoiLop.IconMarginLeft = 0;
-            this.btnXoaKhoiLop.IconMarginRight = 0;
-            this.btnXoaKhoiLop.IconRightVisible = false;
-            this.btnXoaKhoiLop.IconRightZoom = 0D;
-            this.btnXoaKhoiLop.IconVisible = false;
-            this.btnXoaKhoiLop.IconZoom = 70D;
-            this.btnXoaKhoiLop.IsTab = true;
-            this.btnXoaKhoiLop.Location = new System.Drawing.Point(245, 35);
-            this.btnXoaKhoiLop.Name = "btnXoaKhoiLop";
-            this.btnXoaKhoiLop.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.btnXoaKhoiLop.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
-            this.btnXoaKhoiLop.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnXoaKhoiLop.selected = false;
-            this.btnXoaKhoiLop.Size = new System.Drawing.Size(115, 36);
-            this.btnXoaKhoiLop.TabIndex = 20;
-            this.btnXoaKhoiLop.Text = "Xóa";
-            this.btnXoaKhoiLop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnXoaKhoiLop.Textcolor = System.Drawing.Color.White;
-            this.btnXoaKhoiLop.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // labelnnamhoc
-            // 
-            this.labelnnamhoc.AutoSize = true;
-            this.labelnnamhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelnnamhoc.Location = new System.Drawing.Point(423, 55);
-            this.labelnnamhoc.Name = "labelnnamhoc";
-            this.labelnnamhoc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelnnamhoc.Size = new System.Drawing.Size(83, 20);
-            this.labelnnamhoc.TabIndex = 20;
-            this.labelnnamhoc.Text = "Năm Học :";
-            // 
-            // btnXoaHocSinh
-            // 
-            this.btnXoaHocSinh.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnXoaHocSinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnXoaHocSinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.btnXoaHocSinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnXoaHocSinh.BorderRadius = 0;
-            this.btnXoaHocSinh.ButtonText = "Xóa";
-            this.btnXoaHocSinh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaHocSinh.DisabledColor = System.Drawing.Color.Gray;
-            this.btnXoaHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaHocSinh.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnXoaHocSinh.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnXoaHocSinh.Iconimage")));
-            this.btnXoaHocSinh.Iconimage_right = null;
-            this.btnXoaHocSinh.Iconimage_right_Selected = null;
-            this.btnXoaHocSinh.Iconimage_Selected = null;
-            this.btnXoaHocSinh.IconMarginLeft = 0;
-            this.btnXoaHocSinh.IconMarginRight = 0;
-            this.btnXoaHocSinh.IconRightVisible = false;
-            this.btnXoaHocSinh.IconRightZoom = 0D;
-            this.btnXoaHocSinh.IconVisible = true;
-            this.btnXoaHocSinh.IconZoom = 70D;
-            this.btnXoaHocSinh.IsTab = true;
-            this.btnXoaHocSinh.Location = new System.Drawing.Point(268, 29);
-            this.btnXoaHocSinh.Name = "btnXoaHocSinh";
-            this.btnXoaHocSinh.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.btnXoaHocSinh.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
-            this.btnXoaHocSinh.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnXoaHocSinh.selected = false;
-            this.btnXoaHocSinh.Size = new System.Drawing.Size(115, 36);
-            this.btnXoaHocSinh.TabIndex = 22;
-            this.btnXoaHocSinh.Text = "Xóa";
-            this.btnXoaHocSinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnXoaHocSinh.Textcolor = System.Drawing.Color.White;
-            this.btnXoaHocSinh.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // QuanLyLopHoc
             // 
@@ -2022,9 +2085,9 @@
         private System.Windows.Forms.Label labeldslophoc;
         private System.Windows.Forms.ComboBox cbMaLop_DSLH;
         private System.Windows.Forms.GroupBox groupBox8;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThemLopHoc;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSuaLopHoc;
+        private Bunifu.Framework.UI.BunifuFlatButton btnXoaLopHoc;
         private System.Windows.Forms.GroupBox groupthongtinchitiet;
         private System.Windows.Forms.TextBox tbmail_DSLH;
         private System.Windows.Forms.TextBox tbDiaChi_DSLH;
@@ -2129,5 +2192,6 @@
         private System.Windows.Forms.Label labelnnamhoc;
         private Bunifu.Framework.UI.BunifuFlatButton btnXoaKhoiLop;
         private Bunifu.Framework.UI.BunifuFlatButton btnXoaHocSinh;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSua;
     }
 }

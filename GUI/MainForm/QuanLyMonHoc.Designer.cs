@@ -62,6 +62,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvBDMH = new System.Windows.Forms.ListView();
             this.clSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbBoLoc = new System.Windows.Forms.GroupBox();
             this.cbDanhSachMonHoc = new System.Windows.Forms.ComboBox();
@@ -116,7 +117,6 @@
             this.clHeSoCTDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.MaHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcQuanLyMonHoc.SuspendLayout();
             this.tbDanhSachMonHoc.SuspendLayout();
             this.gbSetting_DSMH.SuspendLayout();
@@ -205,7 +205,7 @@
             this.btnThemMH.IconMarginRight = 0;
             this.btnThemMH.IconRightVisible = false;
             this.btnThemMH.IconRightZoom = 0D;
-            this.btnThemMH.IconVisible = false;
+            this.btnThemMH.IconVisible = true;
             this.btnThemMH.IconZoom = 70D;
             this.btnThemMH.IsTab = true;
             this.btnThemMH.Location = new System.Drawing.Point(38, 38);
@@ -242,7 +242,7 @@
             this.btnSuaMH.IconMarginRight = 0;
             this.btnSuaMH.IconRightVisible = false;
             this.btnSuaMH.IconRightZoom = 0D;
-            this.btnSuaMH.IconVisible = false;
+            this.btnSuaMH.IconVisible = true;
             this.btnSuaMH.IconZoom = 70D;
             this.btnSuaMH.IsTab = true;
             this.btnSuaMH.Location = new System.Drawing.Point(156, 38);
@@ -279,7 +279,7 @@
             this.btnXoaMH.IconMarginRight = 0;
             this.btnXoaMH.IconRightVisible = false;
             this.btnXoaMH.IconRightZoom = 0D;
-            this.btnXoaMH.IconVisible = false;
+            this.btnXoaMH.IconVisible = true;
             this.btnXoaMH.IconZoom = 70D;
             this.btnXoaMH.IsTab = true;
             this.btnXoaMH.Location = new System.Drawing.Point(274, 38);
@@ -599,6 +599,7 @@
             this.btnSuaDiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSuaDiem.Textcolor = System.Drawing.Color.White;
             this.btnSuaDiem.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaDiem.Click += new System.EventHandler(this.btnSuaDiem_Click);
             // 
             // gbBangDiemMonHoc
             // 
@@ -639,9 +640,14 @@
             // 
             // clSTT
             // 
-            this.clSTT.DisplayIndex = 0;
             this.clSTT.Text = "STT";
             this.clSTT.Width = 58;
+            // 
+            // MaHS
+            // 
+            this.MaHS.Text = "Mã HS";
+            this.MaHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MaHS.Width = 100;
             // 
             // clHoTen
             // 
@@ -1395,13 +1401,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(34, 33);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-            // 
-            // MaHS
-            // 
-            this.MaHS.DisplayIndex = 1;
-            this.MaHS.Text = "Mã HS";
-            this.MaHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaHS.Width = 100;
             // 
             // QuanLyMonHoc
             // 

@@ -35,7 +35,7 @@
             this.lbNameSoftWare = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnLeft = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnThemHocSinh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
@@ -112,7 +112,7 @@
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnLeft.Controls.Add(this.btnAdd);
+            this.pnLeft.Controls.Add(this.btnThemHocSinh);
             this.pnLeft.Controls.Add(this.btnDelete);
             this.pnLeft.Controls.Add(this.btnEdit);
             this.pnLeft.Controls.Add(this.btnUser);
@@ -122,16 +122,17 @@
             this.pnLeft.Size = new System.Drawing.Size(50, 596);
             this.pnLeft.TabIndex = 16;
             // 
-            // btnAdd
+            // btnThemHocSinh
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.Location = new System.Drawing.Point(-1, 99);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(51, 51);
-            this.btnAdd.TabIndex = 13;
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnThemHocSinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnThemHocSinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemHocSinh.BackgroundImage")));
+            this.btnThemHocSinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThemHocSinh.Location = new System.Drawing.Point(-1, 99);
+            this.btnThemHocSinh.Name = "btnThemHocSinh";
+            this.btnThemHocSinh.Size = new System.Drawing.Size(51, 51);
+            this.btnThemHocSinh.TabIndex = 13;
+            this.btnThemHocSinh.UseVisualStyleBackColor = false;
+            this.btnThemHocSinh.Click += new System.EventHandler(this.btnThemHocSinh_Click);
             // 
             // btnDelete
             // 
@@ -613,7 +614,7 @@
         private System.Windows.Forms.Label lbNameSoftWare;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel pnLeft;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnThemHocSinh;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnUser;

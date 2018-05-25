@@ -24,10 +24,13 @@ namespace GUI.FormNhapLieu
         public ThemSuaHocSinh()
         {
             InitializeComponent();
+            tbTop.Text = "Thêm học sinh";
         }
 
 
-        public ThemSuaHocSinh(string maHocSinh, string tenHocSinh, string ngaySinh, string gioiTinh, string email, string diaChi)
+        public ThemSuaHocSinh(
+            string maHocSinh, string tenHocSinh,
+            string ngaySinh, string gioiTinh, string email, string diaChi)
         {
             InitializeComponent();
 
@@ -44,14 +47,14 @@ namespace GUI.FormNhapLieu
             tbEmail.Text = this.tenHocSinh;
             tbDiaChi.Text = this.diaChi;
             cbGioiTinh.Text = this.gioiTinh;
+            tbTop.Text = "Sửa học sinh";
         }
 
         string CreateMaHocSinhMoi()
         {
             DShocsinhBLL dshsbll = new DShocsinhBLL();
-            string maHSMax = dshsbll.GetMaHSMax();
-            string[] listSplit = maHSMax.Split('S');
-            return listSplit[1];
+            string maHSMax = dshsbll.GetMaHSMax();           
+            return (Int32.Parse(maHSMax)+1).ToString();
         }
         private void ThemSuaHocSinh_Load(object sender, EventArgs e)
         {
@@ -67,8 +70,8 @@ namespace GUI.FormNhapLieu
             {
                 DShocsinhBLL dshsbll = new DShocsinhBLL();
                 string maHocSinhMax= dshsbll.GetMaHSMax();
-                string [] listSplit = maHocSinhMax.Split('S');
-                tbMaHS.Text = "HS"+(Int32.Parse(listSplit[1])+1);
+                
+                tbMaHS.Text =(Int32.Parse(maHocSinhMax)+1)+"";
             }
 
         }
@@ -80,6 +83,14 @@ namespace GUI.FormNhapLieu
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            //ThayDoiQuyDinhBLL quydinhbll = new ThayDoiQuyDinhBLL();
+            //List<ThamSo> listThamSo = quydinhbll.GetListThamSo();
+
+            //foreach(ThamSo ts in listThamSo)
+            //{
+            //    //tuoi toi thieu
+            //    if(ts.MaThamSo=="ThamSo1" &&(Int32.Parse() ts.GiaTri)
+            //}
 
             //ten hoc sinh null tuc la tao moi, nguoc lai la sua
             ErrorType result;
@@ -114,7 +125,7 @@ namespace GUI.FormNhapLieu
                         tbEmail.Text = "";
                         tbDiaChi.Text = "";
 
-                        tbMaHS.Text ="HS"+ CreateMaHocSinhMoi();
+                        tbMaHS.Text =""+CreateMaHocSinhMoi();
                     }
                     else
                     {

@@ -29,11 +29,11 @@ namespace DAL
 
             while (reader.Read())
             {
-                string MaQTH = reader.GetString(0);
+                string MaQTH = reader.GetInt32(0)+"";
                 string MaLop = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
                 string MaNamHoc = reader.GetString(3);
-                string MaHocSinh = reader.GetString(4);
+                string MaHocSinh = reader.GetInt32(4)+"";
                 float DiemTBHk = 0;
                 try { DiemTBHk = reader.GetFloat(5); }
                 catch { }
@@ -56,18 +56,18 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "Select * from QUATRINHHOCTAP where MaHocSinh=@ma";
-            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = maHS;
+            com.Parameters.Add("@ma", SqlDbType.Int).Value =Int32.Parse( maHS);
             com.Connection = conn;
 
             SqlDataReader reader = com.ExecuteReader();
 
             while (reader.Read())
             {
-                string MaQTH = reader.GetString(0); 
+                string MaQTH = reader.GetInt32(0)+""; 
                 string MaLop = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
                 string MaNamHoc = reader.GetString(3);
-                string MaHocSinh = reader.GetString(4);
+                string MaHocSinh = reader.GetInt32(4)+"";
                 float DiemTBHk = 0;
                 try { DiemTBHk = reader.GetFloat(5); }
                 catch { }
@@ -90,7 +90,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "Select * from QUATRINHHOCTAP where MaHocSinh=@maHS and mahocky=@mahocky and manamhoc=@manamhoc";
-            com.Parameters.Add("@maHS", SqlDbType.VarChar).Value = maHS;
+            com.Parameters.Add("@maHS", SqlDbType.Int).Value =Int32.Parse( maHS);
             com.Parameters.Add("@mahocky", SqlDbType.VarChar).Value = hocKy;
             com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = namHoc;
             com.Connection = conn;
@@ -99,11 +99,11 @@ namespace DAL
 
             while (reader.Read())
             {
-                string MaQTH = reader.GetString(0);
+                string MaQTH = reader.GetInt32(0)+"";
                 string MaLop = reader.GetString(1);
                 string MaHocKy = reader.GetString(2);
                 string MaNamHoc = reader.GetString(3);
-                string MaHocSinh = reader.GetString(4);
+                string MaHocSinh = reader.GetInt32(4)+"";
                 float DiemTBHk = 0;
                 try { DiemTBHk = reader.GetFloat(5); }
                 catch { }
@@ -131,7 +131,7 @@ namespace DAL
 
             if (reader.Read())
             {
-                maQTH = reader.GetString(0);
+                maQTH = reader.GetInt32(0)+"";
             }
 
             reader.Close();
@@ -146,7 +146,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "delete from QUATRINHHOCTAP where MaQTH=@maQTH";
-            com.Parameters.Add("@maQTH", SqlDbType.VarChar).Value = maQTH;
+            com.Parameters.Add("@maQTH", SqlDbType.Int).Value = maQTH;
             com.Connection = conn;
 
             try
@@ -177,11 +177,11 @@ namespace DAL
                 com.CommandText = "insert into QUATRINHHOCTAP values (@maqth,@malop,@mahocky,@manamhoc,@mahsinh,@diemtbhk)";
                 com.Connection = conn;
 
-                com.Parameters.Add("@maqth", SqlDbType.VarChar).Value = maqth;
+                com.Parameters.Add("@maqth", SqlDbType.Int).Value = Int32.Parse( maqth);
                 com.Parameters.Add("@malop", SqlDbType.VarChar).Value = malop;
                 com.Parameters.Add("@mahocky", SqlDbType.VarChar).Value = mahocky;
                 com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = manamhoc;
-                com.Parameters.Add("@mahsinh", SqlDbType.VarChar).Value = mahsinh;
+                com.Parameters.Add("@mahsinh", SqlDbType.Int).Value = Int32.Parse(mahsinh);
                 com.Parameters.Add("@diemtbhk", SqlDbType.Float).Value =(double) diemtbhk;
 
 
@@ -198,7 +198,8 @@ namespace DAL
             //}
         }
 
-        public ErrorType SuaQuaTrinhHocTap(string maqth, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
+        public ErrorType SuaQuaTrinhHocTap(
+            string maqth, string malop, string mahky, string manamhoc,string mahsinh, float diemtbhk)
         {
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
@@ -206,11 +207,11 @@ namespace DAL
                 com.CommandText = "update  QUATRINHHOCTAP set MaLop=@malop , MaHocKy=@mahky,MaNamHoc=@manamhoc, MaHocSinh=@mahsinh , DiemTBHk=@diemtbhk where  MaQTH=@maqth";
                 com.Connection = conn;
 
-                com.Parameters.Add("@maqth", SqlDbType.VarChar).Value = maqth;
+                com.Parameters.Add("@maqth", SqlDbType.Int).Value = Int32.Parse( maqth);
                 com.Parameters.Add("@malop", SqlDbType.VarChar).Value = malop;
                 com.Parameters.Add("@mahky", SqlDbType.VarChar).Value = mahky;
                 com.Parameters.Add("@manamhoc", SqlDbType.VarChar).Value = manamhoc;
-                com.Parameters.Add("@mahsinh", SqlDbType.VarChar).Value = mahsinh;
+                com.Parameters.Add("@mahsinh", SqlDbType.Int).Value = Int32.Parse( mahsinh);
                 com.Parameters.Add("@diemtbhk", SqlDbType.Float).Value = diemtbhk;
 
                 int result = com.ExecuteNonQuery();

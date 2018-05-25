@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DTO;
 using DAL;
+using System;
 
 namespace BLL
 {
@@ -25,20 +26,34 @@ namespace BLL
             return lopaccess.CountSoLuongLopTheoKhoi(maKhoi);
         }
 
+        public string GetMaLopMax()
+        {
+            return lopaccess.GetMaLopMax();
+        }
+
         public bool Xoalop(string maMH)
         {
             return lopaccess.XoaLop(maMH);
         }
 
-        public bool Themlop(string ma, string ten, string makhoi, int siso)
+        public ErrorType Themlop(string ma, string ten, string makhoi, string siso)
         {
-            return lopaccess.ThemLop(ma, ten, makhoi, siso);
+            if (string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(makhoi) || string.IsNullOrEmpty(siso))
+                return ErrorType.KI_TU_RONG;
+
+            if (lopaccess.ThemLop(ma, ten, makhoi, Int32.Parse(siso)))
+                return ErrorType.THANH_CONG;
+            return ErrorType.THAT_BAI;
         }
 
-        public bool SuaLop(string ma, string ten, string makhoi, int siso)
+        public ErrorType SuaLop(string ma, string ten, string makhoi, string siso)
         {
-      
-            return lopaccess.SuaLop(ma, ten, makhoi, siso);
+            if (string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(makhoi) || string.IsNullOrEmpty(siso))
+                return ErrorType.KI_TU_RONG;
+
+            if( lopaccess.SuaLop(ma, ten, makhoi,Int32.Parse( siso)))
+                return ErrorType.THANH_CONG;
+            return ErrorType.THAT_BAI;
         }
     }
 }

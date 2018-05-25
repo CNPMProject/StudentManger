@@ -27,7 +27,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string ma = reader.GetString(0);
+                string ma = reader.GetInt32(0)+"";
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
                 string namsinh = reader.GetDateTime(3).ToString();
@@ -52,7 +52,7 @@ namespace DAL
             com.CommandType = CommandType.Text;
             com.CommandText = "select hs.MaHocSinh,hs.HoVaTen,qth.MaLop,qth.MaHocKy,qth.DiemTBHk "
                             +"from HOCSINH hs,QUATRINHHOCTAP qth "
-                            +"where hs.MaHocSinh = qth.MaHocSinh and maNamHoc=@maNamHoc ";
+                            +"where hs.MaHocSinh = qth.MaHocSinh and maNamHoc=@maNamHoc and hs.TrangThai='HD'";
             
             com.Parameters.Add("@maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
             com.Connection = conn;
@@ -62,7 +62,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string maHocSinh = reader.GetString(0);
+                string maHocSinh = reader.GetInt32(0)+"";
                 String tenHocSinh = reader.GetString(1);
                 string maLop = reader.GetString(2);
                 string maHocKy = reader.GetString(3);
@@ -98,7 +98,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string maHocSinh = reader.GetString(0);
+                string maHocSinh = reader.GetInt32(0)+"";
                 String tenHocSinh = reader.GetString(1);
                 string maLop = reader.GetString(2);
                 string maHocKy = reader.GetString(3);
@@ -134,7 +134,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string maHocSinh = reader.GetString(0);
+                string maHocSinh = reader.GetInt32(0).ToString();
                 String tenHocSinh = reader.GetString(1);
                 string maLop = reader.GetString(2);
                 string maHocKy = reader.GetString(3);
@@ -159,7 +159,7 @@ namespace DAL
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
             com.CommandText = "Select * from HOCSINH where mahocsinh=@ma";
-            com.Parameters.Add("@ma", SqlDbType.VarChar).Value = mahocsinh;
+            com.Parameters.Add("@ma", SqlDbType.Int).Value = Int32.Parse( mahocsinh);
             com.Connection = conn;
 
             SqlDataReader reader = com.ExecuteReader();
@@ -168,7 +168,7 @@ namespace DAL
 
             if (reader.Read())
             {
-                string ma = reader.GetString(0);
+                string ma = reader.GetInt32(0)+"";
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
                 string namsinh = reader.GetDateTime(3).ToString();
@@ -201,7 +201,7 @@ namespace DAL
 
             if (reader.Read())
             {
-                 maHS = reader.GetString(0);               
+                 maHS = reader.GetInt32(0).ToString();               
             }
 
             reader.Close();
@@ -225,7 +225,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string ma = reader.GetString(0);
+                string ma = reader.GetInt32(0).ToString();
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
                 namsinh = reader.GetDateTime(3).ToString();
@@ -258,7 +258,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string ma = reader.GetString(0);
+                string ma = reader.GetInt32(0).ToString();
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
                 namsinh = reader.GetDateTime(3).ToString();
@@ -298,7 +298,7 @@ namespace DAL
 
             while (reader.Read())
             {
-                string ma = reader.GetString(0);
+                string ma = reader.GetInt32(0).ToString();
                 String ten = reader.GetString(1);
                 string gioitinh = reader.GetString(2);
                 namsinh = reader.GetDateTime(3).ToString();
@@ -321,8 +321,8 @@ namespace DAL
             OpenConnection();
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
-            com.CommandText = "delete from HOCSINH where MaHocSinh=@mahocsinh";
-            com.Parameters.Add("@mahocsinh", SqlDbType.VarChar).Value = mahocsinh;
+            com.CommandText = "update  HOCSINH set TrangThai='KHD'  where MaHocSinh=@mahocsinh";
+            com.Parameters.Add("@mahocsinh", SqlDbType.Int).Value =Int32.Parse( mahocsinh);
             com.Connection = conn;
 
             try
@@ -339,7 +339,8 @@ namespace DAL
             }
 
         }
-        public ErrorType ThemHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
+        public ErrorType ThemHs(
+            string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
         {
             //try
             //{
@@ -350,7 +351,7 @@ namespace DAL
                 com.CommandText = "insert into HOCSINH values(@mahocsinh,@hoten,@gioitinh,@namsinh,@diachi,@email,'HD')";
                 com.Connection = conn;
 
-                com.Parameters.Add("@mahocsinh", SqlDbType.VarChar).Value = mahocsinh;
+                com.Parameters.Add("@mahocsinh", SqlDbType.Int).Value = Int32.Parse( mahocsinh);
                 com.Parameters.Add("@hoten", SqlDbType.NVarChar).Value = hoten;
                 com.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = gioitinh;
                 com.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = diachi;
@@ -369,18 +370,20 @@ namespace DAL
             //}
         }
 
-        public ErrorType SuaHs(string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
+        public ErrorType SuaHs(
+            string mahocsinh, string hoten, string gioitinh,
+            string diachi, string email,string namsinh)
         {
 
-            try
-            {
+            //try
+            //{
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  HOCSINH set HoVaTen=@hoten and GioiTinh=@gioitinh and  DiaChi=@diachi and Email=@email and namsinh=@namsinh where  MaHocSinh=@mahocsinh";
+                com.CommandText = "update  HOCSINH set HoVaTen=@hoten , GioiTinh=@gioitinh ,  DiaChi=@diachi , Email=@email , ngaysinh=@namsinh where  MaHocSinh=@mahocsinh";
                 com.Connection = conn;
 
-                com.Parameters.Add("@mahocsinh", SqlDbType.VarChar).Value = mahocsinh;
+                com.Parameters.Add("@mahocsinh", SqlDbType.Int).Value = Int32.Parse( mahocsinh);
                 com.Parameters.Add("@hoten", SqlDbType.NVarChar).Value = hoten;
                 com.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = gioitinh;
                 com.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = diachi;
@@ -393,11 +396,11 @@ namespace DAL
                     return ErrorType.THANH_CONG;
                 return ErrorType.THAT_BAI;
 
-            }
-            catch
-            {
-                return ErrorType.THAT_BAI;
-            }
+            //}
+            //catch
+            //{
+            //    return ErrorType.THAT_BAI;
+            //}
         }
     }
 }

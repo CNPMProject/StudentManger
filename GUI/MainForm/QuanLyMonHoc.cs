@@ -24,6 +24,11 @@ namespace GUI.MainForm
         {
             InitializeComponent();
             monhoc = new MonHocBLL();
+
+            btnThemCTDT.IconVisible = btnThemHTKT.IconVisible = btnSuaMH.IconVisible = true;
+            btnThemMH.IconVisible = btnSuaHTKT.IconVisible = btnSuaCTDT.IconVisible = true;
+            btnNhapDiem.IconVisible = btnSuaDiem.IconVisible = btnXoaCTDT.IconVisible = true;
+            btnXoaMH.IconVisible = btnXoaHTKT.IconVisible = true;
         }
 
         /// <summary>
@@ -482,7 +487,7 @@ namespace GUI.MainForm
         {
             ThemSuaDiem fdiem = new ThemSuaDiem();
             fdiem.ShowDialog();
-            
+            LoadBangDiemLenListView();
         }
 
         private void cbDSNH_SelectedIndexChanged(object sender, EventArgs e)
@@ -498,6 +503,12 @@ namespace GUI.MainForm
         private void cbDSLop_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadBangDiemLenListView();
+        }
+
+        private void btnSuaDiem_Click(object sender, EventArgs e)
+        {
+
+            ThemSuaDiem fThemSuaDiem = new ThemSuaDiem();
         }
     }
 }
