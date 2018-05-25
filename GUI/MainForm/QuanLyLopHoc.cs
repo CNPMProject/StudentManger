@@ -441,14 +441,18 @@ namespace GUI.MainForm
 
         private void cbMaLop_DSLH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Lop lop in listLop)
-                if (lop.MaLop == cbMaLop_DSLH.Text)
-                {
-                    tbTenLop_DSLH.Text = lop.TenLop;
-                    tbSiSo_DSLH.Text = lop.SiSo.ToString();
-                    break;
-                }
-                   
+            //foreach (Lop lop in listLop)
+            //    if (lop.MaLop == cbMaLop_DSLH.Text)
+            //    {
+            //        tbTenLop_DSLH.Text = lop.TenLop;
+            //        tbSiSo_DSLH.Text = lop.SiSo.ToString();
+            //        break;
+            //    }
+
+            Lop lop = lopBLL.GetLop(cbMaLop_DSLH.Text);
+            tbTenLop_DSLH.Text = lop.TenLop;
+            tbSiSo_DSLH.Text = lop.SiSo.ToString();
+
             LoadDSHSTheoLop(cbMaLop_DSLH.Text,tbTenLop_DSLH.Text);
         }
 
@@ -548,6 +552,24 @@ namespace GUI.MainForm
         {
             if (lvDSHSCu_CL.SelectedItems.Count > 0)
             {
+
+                // kiem tra lop chuyen den da dat si so toi da chua
+                ThayDoiQuyDinhBLL quydinhbll = new ThayDoiQuyDinhBLL();
+                List<ThamSo> DanhSachThamSo = quydinhbll.GetListThamSo();
+                int siSoToiDa = 100;
+                foreach (ThamSo thamso in DanhSachThamSo)
+                {
+                    if (thamso.MaThamSo == "SiSoToiDa")
+                        siSoToiDa = (int)thamso.GiaTri;
+                }
+
+                Lop lop = lopBLL.GetLop(cbLop_ChuyenLop_Moi.Text);
+                if (lop.SiSo == siSoToiDa)
+                {
+                    MessageBox.Show("Lớp này đã đầy, bạn vui lòng xếp vào lớp khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 string maHocSinh = lvDSHSCu_CL.SelectedItems[0].SubItems[1].Text;
                 string maHocKy = cbHK_ChuyenLopCu.Text;
                 string maNamHoc = cbNH_ChuyenLop_cu.Text;
@@ -585,6 +607,24 @@ namespace GUI.MainForm
         {
             if (lvDSHSMoi_CL.SelectedItems.Count > 0)
             {
+
+                // kiem tra lop chuyen den da dat si so toi da chua
+                ThayDoiQuyDinhBLL quydinhbll = new ThayDoiQuyDinhBLL();
+                List<ThamSo> DanhSachThamSo = quydinhbll.GetListThamSo();
+                int siSoToiDa = 100;
+                foreach (ThamSo thamso in DanhSachThamSo)
+                {
+                    if (thamso.MaThamSo == "SiSoToiDa")
+                        siSoToiDa = (int)thamso.GiaTri;
+                }
+
+                Lop lop = lopBLL.GetLop(cbLopChuyenLopCu.Text);
+                if (lop.SiSo == siSoToiDa)
+                {
+                    MessageBox.Show("Lớp này đã đầy, bạn vui lòng xếp vào lớp khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 string maHocSinh = lvDSHSMoi_CL.SelectedItems[0].SubItems[1].Text;
                 string maHocKy = cbHocKy_ChuyenLopMoi.Text;
                 string maNamHoc = cbNH_ChuyenLopMoi.Text;
@@ -704,8 +744,28 @@ namespace GUI.MainForm
 
         private void btnXepLop_Click(object sender, EventArgs e)
         {
+
             if (lvDSHSChuaCoLop_XepLop.SelectedItems.Count > 0)
             {
+                // kiem tra lop chuyen den da dat si so toi da chua
+                ThayDoiQuyDinhBLL quydinhbll = new ThayDoiQuyDinhBLL();
+                List<ThamSo> DanhSachThamSo = quydinhbll.GetListThamSo();
+                int siSoToiDa = 100;
+                foreach (ThamSo thamso in DanhSachThamSo)
+                {
+                    if (thamso.MaThamSo == "SiSoToiDa")
+                        siSoToiDa = (int)thamso.GiaTri;
+                }
+
+                string[] Listtemp = cbLop_XL.Text.Split(' ');
+                Lop lop = lopBLL.GetLop(Listtemp[0]);
+                if (lop.SiSo == siSoToiDa)
+                {
+                    MessageBox.Show("Lớp này đã đầy, bạn vui lòng xếp vào lớp khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                   
+
                 bool Error = true;
                 QuaTrinhHocTapBLL qthbll = new QuaTrinhHocTapBLL();
                 foreach(ListViewItem lvi in lvDSHSChuaCoLop_XepLop.SelectedItems)

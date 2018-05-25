@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbNamHoc_BCHK = new System.Windows.Forms.ComboBox();
+            this.cbHocKy_BCHK = new System.Windows.Forms.ComboBox();
             this.lbnamhoc = new System.Windows.Forms.Label();
             this.lbhocky = new System.Windows.Forms.Label();
             this.gbboloc = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbHocKy_BCMH = new System.Windows.Forms.ComboBox();
+            this.cbMonHoc_BCMH = new System.Windows.Forms.ComboBox();
             this.lbnamhc = new System.Windows.Forms.Label();
             this.lbhcky = new System.Windows.Forms.Label();
             this.lbbaocaohocky = new System.Windows.Forms.Label();
             this.tbbaocaohocky = new System.Windows.Forms.TabPage();
             this.gbbaocaohocky = new System.Windows.Forms.GroupBox();
             this.rpBaoCaoHocKy = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.comboxNamHoc = new System.Windows.Forms.ComboBox();
+            this.cbNamHoc_BCMH = new System.Windows.Forms.ComboBox();
             this.lbmonhc = new System.Windows.Forms.Label();
             this.btexit = new System.Windows.Forms.Button();
             this.gbbolocmon = new System.Windows.Forms.GroupBox();
@@ -59,21 +59,21 @@
             this.tbbaocaomon.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox4
+            // cbNamHoc_BCHK
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(86, 76);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 28);
-            this.comboBox4.TabIndex = 3;
+            this.cbNamHoc_BCHK.FormattingEnabled = true;
+            this.cbNamHoc_BCHK.Location = new System.Drawing.Point(86, 76);
+            this.cbNamHoc_BCHK.Name = "cbNamHoc_BCHK";
+            this.cbNamHoc_BCHK.Size = new System.Drawing.Size(121, 28);
+            this.cbNamHoc_BCHK.TabIndex = 3;
             // 
-            // comboBox3
+            // cbHocKy_BCHK
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(86, 32);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 2;
+            this.cbHocKy_BCHK.FormattingEnabled = true;
+            this.cbHocKy_BCHK.Location = new System.Drawing.Point(86, 32);
+            this.cbHocKy_BCHK.Name = "cbHocKy_BCHK";
+            this.cbHocKy_BCHK.Size = new System.Drawing.Size(121, 28);
+            this.cbHocKy_BCHK.TabIndex = 2;
             // 
             // lbnamhoc
             // 
@@ -95,8 +95,8 @@
             // 
             // gbboloc
             // 
-            this.gbboloc.Controls.Add(this.comboBox4);
-            this.gbboloc.Controls.Add(this.comboBox3);
+            this.gbboloc.Controls.Add(this.cbNamHoc_BCHK);
+            this.gbboloc.Controls.Add(this.cbHocKy_BCHK);
             this.gbboloc.Controls.Add(this.lbnamhoc);
             this.gbboloc.Controls.Add(this.lbhocky);
             this.gbboloc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,21 +107,21 @@
             this.gbboloc.TabStop = false;
             this.gbboloc.Text = "Bộ lọc";
             // 
-            // comboBox2
+            // cbHocKy_BCMH
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(91, 73);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 28);
-            this.comboBox2.TabIndex = 7;
+            this.cbHocKy_BCMH.FormattingEnabled = true;
+            this.cbHocKy_BCMH.Location = new System.Drawing.Point(91, 73);
+            this.cbHocKy_BCMH.Name = "cbHocKy_BCMH";
+            this.cbHocKy_BCMH.Size = new System.Drawing.Size(128, 28);
+            this.cbHocKy_BCMH.TabIndex = 7;
             // 
-            // comboBox1
+            // cbMonHoc_BCMH
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(91, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 28);
-            this.comboBox1.TabIndex = 6;
+            this.cbMonHoc_BCMH.FormattingEnabled = true;
+            this.cbMonHoc_BCMH.Location = new System.Drawing.Point(91, 34);
+            this.cbMonHoc_BCMH.Name = "cbMonHoc_BCMH";
+            this.cbMonHoc_BCMH.Size = new System.Drawing.Size(128, 28);
+            this.cbMonHoc_BCMH.TabIndex = 6;
             // 
             // lbnamhc
             // 
@@ -185,13 +185,13 @@
             this.rpBaoCaoHocKy.Size = new System.Drawing.Size(751, 409);
             this.rpBaoCaoHocKy.TabIndex = 0;
             // 
-            // comboxNamHoc
+            // cbNamHoc_BCMH
             // 
-            this.comboxNamHoc.FormattingEnabled = true;
-            this.comboxNamHoc.Location = new System.Drawing.Point(91, 118);
-            this.comboxNamHoc.Name = "comboxNamHoc";
-            this.comboxNamHoc.Size = new System.Drawing.Size(128, 28);
-            this.comboxNamHoc.TabIndex = 1;
+            this.cbNamHoc_BCMH.FormattingEnabled = true;
+            this.cbNamHoc_BCMH.Location = new System.Drawing.Point(91, 118);
+            this.cbNamHoc_BCMH.Name = "cbNamHoc_BCMH";
+            this.cbNamHoc_BCMH.Size = new System.Drawing.Size(128, 28);
+            this.cbNamHoc_BCMH.TabIndex = 1;
             // 
             // lbmonhc
             // 
@@ -216,11 +216,11 @@
             // 
             // gbbolocmon
             // 
-            this.gbbolocmon.Controls.Add(this.comboBox2);
-            this.gbbolocmon.Controls.Add(this.comboBox1);
+            this.gbbolocmon.Controls.Add(this.cbHocKy_BCMH);
+            this.gbbolocmon.Controls.Add(this.cbMonHoc_BCMH);
             this.gbbolocmon.Controls.Add(this.lbnamhc);
             this.gbbolocmon.Controls.Add(this.lbhcky);
-            this.gbbolocmon.Controls.Add(this.comboxNamHoc);
+            this.gbbolocmon.Controls.Add(this.cbNamHoc_BCMH);
             this.gbbolocmon.Controls.Add(this.lbmonhc);
             this.gbbolocmon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbbolocmon.Location = new System.Drawing.Point(820, 79);
@@ -285,6 +285,7 @@
             this.tbbaocaomon.SelectedIndex = 0;
             this.tbbaocaomon.Size = new System.Drawing.Size(1144, 541);
             this.tbbaocaomon.TabIndex = 1;
+            this.tbbaocaomon.Selected += new System.Windows.Forms.TabControlEventHandler(this.tbbaocaomon_Selected);
             // 
             // LapBaoCaoTongKet
             // 
@@ -313,19 +314,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbNamHoc_BCHK;
+        private System.Windows.Forms.ComboBox cbHocKy_BCHK;
         private System.Windows.Forms.Label lbnamhoc;
         private System.Windows.Forms.Label lbhocky;
         private System.Windows.Forms.GroupBox gbboloc;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbHocKy_BCMH;
+        private System.Windows.Forms.ComboBox cbMonHoc_BCMH;
         private System.Windows.Forms.Label lbnamhc;
         private System.Windows.Forms.Label lbhcky;
         private System.Windows.Forms.Label lbbaocaohocky;
         private System.Windows.Forms.TabPage tbbaocaohocky;
         private System.Windows.Forms.GroupBox gbbaocaohocky;
-        private System.Windows.Forms.ComboBox comboxNamHoc;
+        private System.Windows.Forms.ComboBox cbNamHoc_BCMH;
         private System.Windows.Forms.Label lbmonhc;
         private System.Windows.Forms.Button btexit;
         private System.Windows.Forms.GroupBox gbbolocmon;

@@ -49,6 +49,8 @@ namespace GUI.FormNhapLieu
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+
+
             LopBLL LopBll = new LopBLL();
             ErrorType result;
             //neu them moi

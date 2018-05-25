@@ -104,7 +104,7 @@ namespace GUI.FormNhapLieu
                     else
                         infor = "Sửa thành công !";
                     MessageBox.Show(infor, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    tbHeso.Text = "";                   
                     break;
             }
 

@@ -342,8 +342,8 @@ namespace DAL
         public ErrorType ThemHs(
             string mahocsinh, string hoten, string gioitinh, string diachi, string email,string namsinh)
         {
-            //try
-            //{
+            try
+            {
 
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
@@ -363,12 +363,12 @@ namespace DAL
                 if (result > 0)
                     return ErrorType.THANH_CONG;
                 return ErrorType.THAT_BAI;
-            //}
-            //catch
-            //{
-            //    return ErrorType.THAT_BAI;
-            //}
         }
+            catch
+            {
+                return ErrorType.THAT_BAI;
+            }
+}
 
         public ErrorType SuaHs(
             string mahocsinh, string hoten, string gioitinh,

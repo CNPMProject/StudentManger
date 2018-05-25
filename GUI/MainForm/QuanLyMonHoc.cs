@@ -257,7 +257,15 @@ namespace GUI.MainForm
             HinhThucKiemTraBLL htktbll = new HinhThucKiemTraBLL();
             listhtkt= htktbll.GetAllHinhThucKiemTra();
 
-            foreach(HinhThucKiemTra htkt in listhtkt)
+            lvBDMH.Columns.Clear();
+            ColumnHeader colSTT = new ColumnHeader() { Name = "STT_", Text = "STT", Width = 50 };
+            lvBDMH.Columns.Add(colSTT);
+            ColumnHeader colMA = new ColumnHeader() { Name = "Ma_", Text = "Mã HS", Width = 0 };
+            lvBDMH.Columns.Add(colMA);
+            ColumnHeader colTen = new ColumnHeader() { Name = "Ten_" ,Text= "Họ và tên", Width = 250 };
+            lvBDMH.Columns.Add(colTen);
+
+            foreach (HinhThucKiemTra htkt in listhtkt)
             {
                 ColumnHeader col = new ColumnHeader() { Name=htkt.MaHTKT,Text=htkt.TenHTKT,Width=110};
                 lvBDMH.Columns.Add(col);
@@ -509,6 +517,11 @@ namespace GUI.MainForm
         {
             ThemSuaDiem fThemSuaDiem = new ThemSuaDiem();
             fThemSuaDiem.ShowDialog();
+        }
+
+        private void tcQuanLyMonHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

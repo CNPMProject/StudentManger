@@ -99,8 +99,10 @@
             this.tbSiSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSiSo.Location = new System.Drawing.Point(416, 133);
             this.tbSiSo.Name = "tbSiSo";
+            this.tbSiSo.ReadOnly = true;
             this.tbSiSo.Size = new System.Drawing.Size(169, 24);
             this.tbSiSo.TabIndex = 3;
+            this.tbSiSo.Text = "0";
             // 
             // label3
             // 

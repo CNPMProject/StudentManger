@@ -61,9 +61,6 @@
             this.gbBangDiemMonHoc = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvBDMH = new System.Windows.Forms.ListView();
-            this.clSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbBoLoc = new System.Windows.Forms.GroupBox();
             this.cbDanhSachMonHoc = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -156,6 +153,7 @@
             this.tcQuanLyMonHoc.SelectedIndex = 0;
             this.tcQuanLyMonHoc.Size = new System.Drawing.Size(1144, 541);
             this.tcQuanLyMonHoc.TabIndex = 2;
+            this.tcQuanLyMonHoc.SelectedIndexChanged += new System.EventHandler(this.tcQuanLyMonHoc_SelectedIndexChanged);
             this.tcQuanLyMonHoc.Selected += new System.Windows.Forms.TabControlEventHandler(this.tcQuanLyMonHoc_Selected);
             // 
             // tbDanhSachMonHoc
@@ -623,10 +621,6 @@
             // 
             // lvBDMH
             // 
-            this.lvBDMH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clSTT,
-            this.MaHS,
-            this.clHoTen});
             this.lvBDMH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvBDMH.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvBDMH.FullRowSelect = true;
@@ -637,23 +631,6 @@
             this.lvBDMH.TabIndex = 0;
             this.lvBDMH.UseCompatibleStateImageBehavior = false;
             this.lvBDMH.View = System.Windows.Forms.View.Details;
-            // 
-            // clSTT
-            // 
-            this.clSTT.Text = "STT";
-            this.clSTT.Width = 58;
-            // 
-            // MaHS
-            // 
-            this.MaHS.Text = "Mã HS";
-            this.MaHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaHS.Width = 0;
-            // 
-            // clHoTen
-            // 
-            this.clHoTen.Text = "Họ và tên";
-            this.clHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clHoTen.Width = 250;
             // 
             // gbBoLoc
             // 
@@ -1476,8 +1453,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListView lvBDMH;
-        private System.Windows.Forms.ColumnHeader clSTT;
-        private System.Windows.Forms.ColumnHeader clHoTen;
         private System.Windows.Forms.TabPage tbHinhThucKiemTra;
         private System.Windows.Forms.TextBox tbHesoHTKT;
         private System.Windows.Forms.Label lbHeSo;
@@ -1535,6 +1510,5 @@
         private System.Windows.Forms.TextBox tbMaKL_CTDT;
         private System.Windows.Forms.ComboBox cbDSNH;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ColumnHeader MaHS;
     }
 }
