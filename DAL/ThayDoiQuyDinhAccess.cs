@@ -94,10 +94,10 @@ namespace DAL
             }
         }
 
-        public bool SuaThamSo(string mathamso, Decimal giatri)
+        public ErrorType SuaThamSo(string mathamso, Decimal giatri)
         {
-            try
-            {
+            //try
+            //{
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
@@ -112,14 +112,14 @@ namespace DAL
 
                 CloseConnection();
                 if (result > 0)
-                    return true;
-                return false;
+                    return ErrorType.THANH_CONG;
+                return ErrorType.THAT_BAI;
 
-            }
-            catch
-            {
-                return false;
-            }
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
         }
     }
 }

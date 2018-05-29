@@ -34,7 +34,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>STTd</Value>
+                              <Value>STT</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -162,7 +162,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tỉ lệ</Value>
+                              <Value>Tỉ lệ (%)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -222,21 +222,25 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TenLop">
+                    <Textbox Name="MaLop">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TenLop.Value</Value>
+                              <Value xml:space="preserve">         </Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
+                              <Value>=Fields!MaLop.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TenLop</rd:DefaultName>
+                      <rd:DefaultName>MaLop</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -258,6 +262,10 @@
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
+                            <TextRun>
+                              <Value xml:space="preserve">           </Value>
+                              <Style />
+                            </TextRun>
                             <TextRun>
                               <Value>=Fields!SiSo.Value</Value>
                               <Style />
@@ -289,6 +297,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value xml:space="preserve">       </Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
                               <Value>=Fields!SoLuongDat.Value</Value>
                               <Style />
                             </TextRun>
@@ -318,6 +330,10 @@
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
+                            <TextRun>
+                              <Value xml:space="preserve">           </Value>
+                              <Style />
+                            </TextRun>
                             <TextRun>
                               <Value>=Fields!TiLe.Value</Value>
                               <Style />
@@ -375,13 +391,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.45833in</Height>
+    <Height>2.09375in</Height>
     <Style />
   </Body>
   <Width>6.33208in</Width>
   <Page>
     <PageHeader>
-      <Height>1.05209in</Height>
+      <Height>1.07986in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -404,7 +420,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>0.51042in</Top>
-          <Left>1.62028in</Left>
+          <Left>1.79736in</Left>
           <Height>0.25in</Height>
           <Width>3.13542in</Width>
           <Style>
@@ -421,6 +437,7 @@
           <Source>Embedded</Source>
           <Value>Logo</Value>
           <Sizing>FitProportional</Sizing>
+          <Top>0.25in</Top>
           <Left>0.73834in</Left>
           <Height>0.76042in</Height>
           <Width>0.8125in</Width>
@@ -446,10 +463,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.80209in</Top>
-          <Left>4.72445in</Left>
+          <Top>0.81598in</Top>
+          <Left>2.45362in</Left>
           <Height>0.25in</Height>
-          <Width>1.3125in</Width>
+          <Width>1.65625in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -469,7 +486,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.67583in</Height>
+      <Height>1.57166in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -488,8 +505,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>1.42583in</Top>
-          <Left>2.70362in</Left>
+          <Top>1.32166in</Top>
+          <Left>5.03695in</Left>
           <Height>0.25in</Height>
           <Width>1in</Width>
           <Style>
@@ -532,8 +549,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="TenLop">
-          <DataField>TenLop</DataField>
+        <Field Name="MaLop">
+          <DataField>MaLop</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="SiSo">

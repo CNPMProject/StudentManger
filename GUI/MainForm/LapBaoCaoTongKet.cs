@@ -21,16 +21,30 @@ namespace GUI.MainForm
             InitializeComponent();
         }
 
-        private void LapBaoCaoTongKet_Load(object sender, EventArgs e)
+        #region Tao Bao Cao Tong Ket hoc ky Xuong CSDL
+        void TaoBaoCaoTongKetHocKy()
+        {
+            BaoCaoTongKetHocKyBLL baoCaoTongKetHocKy = new BaoCaoTongKetHocKyBLL();
+            ErrorType result = baoCaoTongKetHocKy.TaoBaoCaoTongKetHocKy(cbHocKy_BCHK.Text, cbNamHoc_BCHK.Text);
+         //   MessageBox.Show(cbNamHoc_BCHK.Text);
+            if (result == ErrorType.KHONG_THE_KET_NOI)
+                MessageBox.Show("Không thể tạo báo cáo, lỗi kết nối CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        #endregion
+
+        #region Trich xuat ra bao cao tong ket hoc ky
+        void TrichXuatBaoCaoHocKy()
         {
             DatabaseBLL databasebll = new DatabaseBLL();
             string con = null;
             con = databasebll.GetconnectionString();
 
-
-            SqlDataAdapter adapter = new SqlDataAdapter("select bc.MaLop,l.SiSo, bc.SoLuongDat,bc.Tile"
-                                    +" from BAOCAOTONGKETHOCKY bc, LOP l"
-                                    +" where bc.MaLop = l.MaLop", con);
+            string strConnect = "select bc.MaLop,l.SiSo, bc.SoLuongDat,bc.Tile"
+                                    + " from BAOCAOTONGKETHOCKY bc, LOP l"
+                                    + " where bc.MaLop = l.MaLop and MaHocKy= '"
+                                    + cbHocKy_BCHK.Text + "' and MaNamHoc= '" + cbNamHoc_BCHK.Text + "'";
+           // MessageBox.Show(strConnect);
+            SqlDataAdapter adapter = new SqlDataAdapter(strConnect, con);
             DataSet datasetHocky = new DataSet();
             adapter.Fill(datasetHocky, "HocKy");
 
@@ -39,8 +53,20 @@ namespace GUI.MainForm
             rpdsHocKy.Name = "BaoCaoHocKy";
             rpdsHocKy.Value = datasetHocky.Tables[0];
             rpBaoCaoHocKy.LocalReport.DataSources.Add(rpdsHocKy);
-            this.rpBaoCaoMon.RefreshReport(); 
+            this.rpBaoCaoMon.RefreshReport();
             this.rpBaoCaoHocKy.RefreshReport();
+        }
+
+        #endregion
+
+        private void LapBaoCaoTongKet_Load(object sender, EventArgs e)
+        {
+            #region Load tabpage dau tien
+            LoadDanhSachHocKy(0);
+            LoadDanhSachNamHoc(0);
+            LoadDanhSachMonHoc();
+            #endregion
+
         }
 
         /// <summary>
@@ -102,6 +128,7 @@ namespace GUI.MainForm
 
             cbMonHoc_BCMH.DataSource = DanhSachMaMonHoc;
         }
+
         private void tbbaocaomon_Selected(object sender, TabControlEventArgs e)
         {
             if (e.TabPageIndex == 1)
@@ -113,8 +140,14 @@ namespace GUI.MainForm
             {
                 LoadDanhSachHocKy(0);
                 LoadDanhSachNamHoc(0);
-
+                LoadDanhSachMonHoc();
             }
+        }
+
+        private void btnTaoBaoCaoHocKy_Click(object sender, EventArgs e)
+        {
+            TaoBaoCaoTongKetHocKy();
+            TrichXuatBaoCaoHocKy();
         }
     }
 }

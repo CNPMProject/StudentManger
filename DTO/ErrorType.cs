@@ -13,6 +13,8 @@ namespace DTO
         KHONG_TON_TAI,
         KHONG_THE_KET_NOI,
         THANH_CONG,
-        THAT_BAI
+        THAT_BAI,
+        VUOT_MIEN_GIA_TRI,
+        VI_PHAM_RANG_BUOC_TU_NHIEN
     }
 }

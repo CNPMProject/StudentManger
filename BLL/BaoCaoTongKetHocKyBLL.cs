@@ -19,6 +19,14 @@ namespace BLL
             return baoCaoTongKetHocKyAccess.GetAllBaoCaoTongKetHocKy();
         }
 
+        public ErrorType TaoBaoCaoTongKetHocKy(string maHocKy, string maNamHoc )
+        {
+            LopBLL lopbll = new LopBLL();
+            List<Lop> listLop = lopbll.GetListLop();
+            BaoCaoTongKetHocKyAccess hockyac = new BaoCaoTongKetHocKyAccess();
+            return hockyac.TaoBaoCaoTongKetHocKy(maHocKy, maNamHoc, listLop);
+        }
+
         public bool XoaBaoCaoTongKetHocKy(string MaHocKy, string MaNamHoc,string MaLop)
         {
             BaoCaoTongKetHocKyAccess BCTKHK = new BaoCaoTongKetHocKyAccess();

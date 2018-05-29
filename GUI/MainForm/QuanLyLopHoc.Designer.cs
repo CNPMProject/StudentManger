@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabPage tpDSHocSinh;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyLopHoc));
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Center);
             this.panel2 = new System.Windows.Forms.Panel();
             this.labeldslophoc = new System.Windows.Forms.Label();
             this.cbMaLop_DSLH = new System.Windows.Forms.ComboBox();
@@ -1694,7 +1694,7 @@
             // 
             this.labelnnamhoc.AutoSize = true;
             this.labelnnamhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelnnamhoc.Location = new System.Drawing.Point(423, 55);
+            this.labelnnamhoc.Location = new System.Drawing.Point(446, 58);
             this.labelnnamhoc.Name = "labelnnamhoc";
             this.labelnnamhoc.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelnnamhoc.Size = new System.Drawing.Size(83, 20);
@@ -1705,7 +1705,7 @@
             // 
             this.cbNH_DSHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNH_DSHS.FormattingEnabled = true;
-            this.cbNH_DSHS.Location = new System.Drawing.Point(514, 47);
+            this.cbNH_DSHS.Location = new System.Drawing.Point(537, 50);
             this.cbNH_DSHS.Name = "cbNH_DSHS";
             this.cbNH_DSHS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbNH_DSHS.Size = new System.Drawing.Size(147, 28);
@@ -1928,11 +1928,11 @@
             this.lvdshs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvdshs.FullRowSelect = true;
             this.lvdshs.GridLines = true;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            listViewGroup2.Name = "listViewGroup1";
             this.lvdshs.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup2});
             this.lvdshs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lvdshs.LabelEdit = true;
             this.lvdshs.Location = new System.Drawing.Point(3, 26);

@@ -32,7 +32,6 @@
             this.tbHoTen = new System.Windows.Forms.TextBox();
             this.labelmahs = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbNgaySinh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbDiaChi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbTop = new System.Windows.Forms.Label();
+            this.dateTimePickerNamSinh = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,15 +77,6 @@
             this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Giới tính :";
-            // 
-            // tbNgaySinh
-            // 
-            this.tbNgaySinh.BackColor = System.Drawing.SystemColors.Window;
-            this.tbNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNgaySinh.Location = new System.Drawing.Point(164, 146);
-            this.tbNgaySinh.Name = "tbNgaySinh";
-            this.tbNgaySinh.Size = new System.Drawing.Size(180, 26);
-            this.tbNgaySinh.TabIndex = 2;
             // 
             // label2
             // 
@@ -245,9 +236,9 @@
             this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(161, 175);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 17);
+            this.label6.Size = new System.Drawing.Size(125, 17);
             this.label6.TabIndex = 24;
-            this.label6.Text = "*Vd: 11-22-1998";
+            this.label6.Text = "*Format: MM/dd/yy";
             // 
             // panel1
             // 
@@ -269,12 +260,22 @@
             this.tbTop.TabIndex = 0;
             this.tbTop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dateTimePickerNamSinh
+            // 
+            this.dateTimePickerNamSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerNamSinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerNamSinh.Location = new System.Drawing.Point(164, 145);
+            this.dateTimePickerNamSinh.Name = "dateTimePickerNamSinh";
+            this.dateTimePickerNamSinh.Size = new System.Drawing.Size(179, 24);
+            this.dateTimePickerNamSinh.TabIndex = 26;
+            // 
             // ThemSuaHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(762, 360);
+            this.Controls.Add(this.dateTimePickerNamSinh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLuu);
@@ -284,7 +285,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbDiaChi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbNgaySinh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbMaHS);
@@ -307,7 +307,6 @@
         private System.Windows.Forms.TextBox tbHoTen;
         private System.Windows.Forms.Label labelmahs;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbNgaySinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbDiaChi;
         private System.Windows.Forms.Label label3;
@@ -321,5 +320,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label tbTop;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNamSinh;
     }
 }

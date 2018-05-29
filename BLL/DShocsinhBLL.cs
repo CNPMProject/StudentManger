@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using DTO;
+using System.Windows.Forms;
+
 namespace BLL
 {
     public class DShocsinhBLL : DatabaseBLL
@@ -56,23 +58,77 @@ namespace BLL
         {
             return danhsachhocsinh.GetDSHocSinh(namHoc, hocKy, maLop);
         }
-        public ErrorType ThemHS(string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
+
+        public ErrorType ThemHS
+            (string ma, string ten, string gioitinh, string diachi, string email,DateTime namsinh)
         {
-            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(gioitinh) || string.IsNullOrEmpty(diachi) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(namsinh)) 
+            #region Kiem tra rong
+            if (string.IsNullOrEmpty(ma) 
+                || string.IsNullOrEmpty(ten) 
+                || string.IsNullOrEmpty(gioitinh)
+                || string.IsNullOrEmpty(diachi) 
+                || string.IsNullOrEmpty(email) 
+                || string.IsNullOrEmpty(namsinh.ToShortDateString())) 
                 return ErrorType.KI_TU_RONG;
+            #endregion
+
+            #region Kiem tra quy dinh
+            ThayDoiQuyDinhBLL quydinhbll = new ThayDoiQuyDinhBLL();
+            List<ThamSo> listThamSo = quydinhbll.GetListThamSo();
+
+            decimal tuoiToiDa = 0;
+            decimal tuoiToiThieu = 0;
+            foreach (ThamSo ts in listThamSo)
+            {
+                //tuoi toi thieu
+                if (ts.MaThamSo == "TuoiToiDa")
+                    tuoiToiDa =(decimal) ts.GiaTri;
+                if (ts.MaThamSo == "TuoiToiThieu")
+                    tuoiToiThieu =(decimal) ts.GiaTri;
+            }
+            TimeSpan tuoiHienTai = DateTime.Now - namsinh;
+            decimal tuoi = tuoiHienTai.Days / 365;
+            MessageBox.Show(tuoi + "");
+            if (tuoi > tuoiToiDa || tuoi < tuoiToiThieu)
+                return ErrorType.VUOT_MIEN_GIA_TRI;
+            #endregion
+
 
             DShocsinhAccess ac = new DShocsinhAccess();
-            return ac.ThemHs(ma, ten, gioitinh, diachi, email,namsinh);
+            return ac.ThemHs(ma, ten, gioitinh, diachi, email,namsinh.ToShortDateString());
         }
 
         public ErrorType SuaHS(
-            string ma, string ten, string gioitinh, string diachi, string email,string namsinh)
+            string ma, string ten, string gioitinh, string diachi, string email,DateTime namsinh)
         {
-            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(gioitinh) || string.IsNullOrEmpty(diachi) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(namsinh))
+            if (string.IsNullOrEmpty(ma) 
+                || string.IsNullOrEmpty(ten) 
+                || string.IsNullOrEmpty(gioitinh) 
+                || string.IsNullOrEmpty(diachi)
+                || string.IsNullOrEmpty(email) 
+                || string.IsNullOrEmpty(namsinh.ToShortDateString()))
                 return ErrorType.KI_TU_RONG;
 
+            ThayDoiQuyDinhBLL quydinhbll = new ThayDoiQuyDinhBLL();
+            List<ThamSo> listThamSo = quydinhbll.GetListThamSo();
+
+            decimal tuoiToiDa = 0;
+            decimal tuoiToiThieu = 0;
+            foreach (ThamSo ts in listThamSo)
+            {
+                //tuoi toi thieu
+                if (ts.MaThamSo == "TuoiToiDa")
+                    tuoiToiDa =(decimal) ts.GiaTri;
+                if (ts.MaThamSo == "TuoiToiThieu")
+                    tuoiToiThieu =(decimal)ts.GiaTri;
+            }
+            TimeSpan tuoiHienTai = DateTime.Now - namsinh;
+            int tuoi = tuoiHienTai.Days / 365;
+            if (tuoi> tuoiToiDa || tuoi < tuoiToiThieu)
+                return ErrorType.VUOT_MIEN_GIA_TRI;
+
             DShocsinhAccess ac = new DShocsinhAccess();
-            return ac.SuaHs(ma, ten, gioitinh, diachi, email,namsinh);
+            return ac.SuaHs(ma, ten, gioitinh, diachi, email,namsinh.ToShortDateString());
         }
 
         public bool XoaHs(string ma)

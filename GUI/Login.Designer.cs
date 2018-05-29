@@ -46,7 +46,7 @@
             // 
             // pbClose
             // 
-            this.pbClose.BackColor = System.Drawing.Color.Red;
+            this.pbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(138)))), ((int)(((byte)(242)))));
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
             this.pbClose.Location = new System.Drawing.Point(328, 2);
             this.pbClose.Name = "pbClose";

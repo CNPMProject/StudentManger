@@ -24,13 +24,10 @@ namespace QLHS.FormChinh
             quydinh = new ThayDoiQuyDinhBLL();
         }
 
-        // load cac tham so va gia tri
-        void LoadThamSo_DanhSachThamSo()
+        void LoadThamSoLenListView()
         {
-
             lvDSthamso.Items.Clear();
             List<ThamSo> listThamSo = quydinh.GetListThamSo();
-
             int soThuTu = 1;
 
             foreach (ThamSo thamso in listThamSo)
@@ -42,35 +39,70 @@ namespace QLHS.FormChinh
 
                 lvDSthamso.Items.Add(lvi);
             }
+        }
 
-            nricTuoitoithieu.Value =Int32.Parse( lvDSthamso.Items[0].SubItems[2].Text);
-            nrictoitoida.Value = Int32.Parse(lvDSthamso.Items[1].SubItems[2].Text);
-            nricsiso.Value = Int32.Parse(lvDSthamso.Items[2].SubItems[2].Text);
-            nricdiemtoithieu.Value = Int32.Parse(lvDSthamso.Items[3].SubItems[2].Text);
-            nricdiemtoida.Value = Int32.Parse(lvDSthamso.Items[4].SubItems[2].Text);
-            nricdiemdatmon.Value = Int32.Parse(lvDSthamso.Items[5].SubItems[2].Text);
-            nricdiemdathk.Value = Int32.Parse(lvDSthamso.Items[6].SubItems[2].Text);
+        // load cac tham so va gia tri
+        void LoadThamSo_DanhSachThamSo()
+        {
+            LoadThamSoLenListView();          
+
+            nricdiemdathk.Value =decimal.Parse( lvDSthamso.Items[0].SubItems[2].Text);
+            nricdiemdatmon.Value = decimal.Parse(lvDSthamso.Items[1].SubItems[2].Text);
+            nricdiemtoida.Value = decimal.Parse(lvDSthamso.Items[2].SubItems[2].Text);
+            nricdiemtoithieu.Value = decimal.Parse(lvDSthamso.Items[3].SubItems[2].Text);
+            nricsiso.Value = Int32.Parse(lvDSthamso.Items[4].SubItems[2].Text);
+            nrictoitoida.Value = Int32.Parse(lvDSthamso.Items[5].SubItems[2].Text);
+            nricTuoitoithieu.Value = Int32.Parse(lvDSthamso.Items[6].SubItems[2].Text);
         }
 
         
 
         private void btApDung_Click(object sender, System.EventArgs e)
         {
-            if (nricTuoitoithieu.Value != 0)
-                quydinh.SuaThamSo("thamso1", nricTuoitoithieu.Value);
-            if (nrictoitoida.Value != 0)
-                quydinh.SuaThamSo("thamso2", nrictoitoida.Value);
-            if (nricsiso.Value != 0)
-                quydinh.SuaThamSo("thamso3", nricsiso.Value);
-            if (nricdiemtoithieu.Value != 0)
-                quydinh.SuaThamSo("thamso4", nricdiemtoithieu.Value);
-            if (nricdiemtoida.Value != 0)
-                quydinh.SuaThamSo("thamso5", nricdiemtoida.Value);
-            if (nricdiemdatmon.Value != 0)
-                quydinh.SuaThamSo("thamso6", nricdiemdatmon.Value);
-            if (nricdiemdathk.Value != 0)
-                quydinh.SuaThamSo("thamso7", nricdiemdathk.Value);
-            MessageBox.Show(" Thay đổi quy định thành công");
+            //try
+            //{
+                ErrorType result=ErrorType.THANH_CONG;
+                if (nricTuoitoithieu.Value != Int32.Parse(lvDSthamso.Items[0].SubItems[2].Text))
+                    result=quydinh.SuaThamSo("TuoiToiThieu", nricTuoitoithieu.Value);
+                else
+                if (nrictoitoida.Value != Int32.Parse(lvDSthamso.Items[1].SubItems[2].Text))
+                    result = quydinh.SuaThamSo("TuoiToiDa", nrictoitoida.Value);
+                else
+                if (nricsiso.Value != Int32.Parse(lvDSthamso.Items[2].SubItems[2].Text))
+                    result = quydinh.SuaThamSo("SiSoToiDa", nricsiso.Value);
+                else
+                if (nricdiemtoithieu.Value != Int32.Parse(lvDSthamso.Items[3].SubItems[2].Text))
+                    result = quydinh.SuaThamSo("DiemToiThieu", nricdiemtoithieu.Value);
+                else
+                if (nricdiemtoida.Value != Int32.Parse(lvDSthamso.Items[4].SubItems[2].Text))
+                    result = quydinh.SuaThamSo("DiemToiDa", nricdiemtoida.Value);
+                else
+                if (nricdiemdatmon.Value != Int32.Parse(lvDSthamso.Items[5].SubItems[2].Text))
+                    result = quydinh.SuaThamSo("DiemDatMon", nricdiemdatmon.Value);
+                else
+                if (nricdiemdathk.Value != Int32.Parse(lvDSthamso.Items[6].SubItems[2].Text))
+                    result = quydinh.SuaThamSo("DiemDatHocKy", nricdiemdathk.Value);
+
+                if (result == ErrorType.THANH_CONG)
+                {
+                    MessageBox.Show(" Thay đổi quy định thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadThamSoLenListView();
+                }
+                else
+                if(result==ErrorType.VI_PHAM_RANG_BUOC_TU_NHIEN)
+                {
+                    MessageBox.Show(" Thất bại, Xin kiểm tra ràng buộc tự nhiên (giá trị phải lớn hơn 0, giá trị tối thiểu không lớn hơn giá trị tối đa,...)!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+             //   else
+                  //  MessageBox.Show(" Thất bại, Xin kiểm tra lại kết nối!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //}
+            //catch
+            //{
+            //    MessageBox.Show(" Thất bại, Xin kiểm tra lại kết nối!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+            
         }
 
 

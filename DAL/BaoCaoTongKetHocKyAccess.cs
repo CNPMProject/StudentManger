@@ -44,6 +44,23 @@ namespace DAL
             return listBaoCaoTongKetHocKy;
         }
 
+        public ErrorType TaoBaoCaoTongKetHocKy(string maHocKy,string maNamHoc, List<Lop> listLop)
+        {
+            try
+            {
+                OpenConnection();
+            }
+            catch { return ErrorType.KHONG_THE_KET_NOI; }
+          
+            foreach(Lop lop in listLop)
+            {
+                    ThemBaoCaoTongKetHocKy(maHocKy, maNamHoc, lop.MaLop, 0, 0);             
+            }
+
+
+            return ErrorType.THANH_CONG;
+        }
+
         public bool XoaBaoCaoTongKetHocKy(string MaHocKy, string MaNamHoc,string MaLop)
         {
             OpenConnection();
@@ -77,14 +94,14 @@ namespace DAL
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "insert into MonHoc values(@MaHocKy,@MaNamHoc,@MaLop, @SoLuongDat, @Tile)";
+                com.CommandText = "insert into BAOCAOTONGKETHOCKY values(@MaHocKy,@MaNamHoc,@MaLop, @SoLuongDat, @Tile)";
                 com.Connection = conn;
 
                 com.Parameters.Add("@MaHocKy", SqlDbType.VarChar).Value = MaHocKy;
                 com.Parameters.Add("@MaNamHoc", SqlDbType.VarChar).Value = MaNamHoc;
                 com.Parameters.Add("@MaLop", SqlDbType.NVarChar).Value = MaLop;
                 com.Parameters.Add("@SoLuongDat", SqlDbType.Int).Value = SoLuongDat;
-               com.Parameters.Add("@Tile", SqlDbType.Float).Value = Tile;
+                com.Parameters.Add("@Tile", SqlDbType.Float).Value = Tile;
 
                 int result = com.ExecuteNonQuery();
 

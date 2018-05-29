@@ -338,6 +338,7 @@
     <Content Include="Sources\table.png" />
     <Content Include="Sources\User.png" />
     <Content Include="Sources\user2.png" />
+    <Content Include="Sources\view.png" />
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

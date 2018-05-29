@@ -77,6 +77,7 @@
             // 
             // nricdiemdathk
             // 
+            this.nricdiemdathk.DecimalPlaces = 1;
             this.nricdiemdathk.Location = new System.Drawing.Point(611, 48);
             this.nricdiemdathk.Name = "nricdiemdathk";
             this.nricdiemdathk.Size = new System.Drawing.Size(55, 26);
@@ -84,6 +85,7 @@
             // 
             // nricdiemdatmon
             // 
+            this.nricdiemdatmon.DecimalPlaces = 1;
             this.nricdiemdatmon.Location = new System.Drawing.Point(376, 142);
             this.nricdiemdatmon.Name = "nricdiemdatmon";
             this.nricdiemdatmon.Size = new System.Drawing.Size(55, 26);
@@ -91,6 +93,7 @@
             // 
             // nricdiemtoida
             // 
+            this.nricdiemtoida.DecimalPlaces = 1;
             this.nricdiemtoida.Location = new System.Drawing.Point(376, 94);
             this.nricdiemtoida.Name = "nricdiemtoida";
             this.nricdiemtoida.Size = new System.Drawing.Size(55, 26);
@@ -98,6 +101,7 @@
             // 
             // nricdiemtoithieu
             // 
+            this.nricdiemtoithieu.DecimalPlaces = 1;
             this.nricdiemtoithieu.Location = new System.Drawing.Point(376, 50);
             this.nricdiemtoithieu.Name = "nricdiemtoithieu";
             this.nricdiemtoithieu.Size = new System.Drawing.Size(55, 26);
@@ -119,8 +123,6 @@
             // 
             // nricTuoitoithieu
             // 
-            this.nricTuoitoithieu.DecimalPlaces = 1;
-            this.nricTuoitoithieu.Hexadecimal = true;
             this.nricTuoitoithieu.Location = new System.Drawing.Point(154, 48);
             this.nricTuoitoithieu.Name = "nricTuoitoithieu";
             this.nricTuoitoithieu.Size = new System.Drawing.Size(55, 26);
@@ -314,6 +316,7 @@
             this.btApDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btApDung.Textcolor = System.Drawing.Color.White;
             this.btApDung.TextFont = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btApDung.Click += new System.EventHandler(this.btApDung_Click);
             // 
             // ThayDoiQuyDinh
             // 
