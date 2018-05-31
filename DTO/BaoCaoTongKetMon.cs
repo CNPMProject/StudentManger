@@ -8,10 +8,10 @@ namespace DTO
 {
     public class BaoCaoTongKetMon
     {
-        string MaBCTKM;
-        string MaMonHoc;
-        string MaHocKy;
-        string MaNamHoc;
+        public string MaBCTKM;
+        public string MaMonHoc;
+        public string MaHocKy;
+        public string MaNamHoc;
 
         public BaoCaoTongKetMon(string maBaoCao, string maMH, string MaHK,string manamhoc)
         {

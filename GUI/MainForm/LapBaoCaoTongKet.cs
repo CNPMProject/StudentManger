@@ -53,8 +53,50 @@ namespace GUI.MainForm
             rpdsHocKy.Name = "BaoCaoHocKy";
             rpdsHocKy.Value = datasetHocky.Tables[0];
             rpBaoCaoHocKy.LocalReport.DataSources.Add(rpdsHocKy);
-            this.rpBaoCaoMon.RefreshReport();
             this.rpBaoCaoHocKy.RefreshReport();
+        }
+
+        #endregion
+
+        #region Tao Bao Cao Tong Ket mon Xuong CSDL
+        void TaoBaoCaoTongKetMonHoc()
+        {
+            BaoCaoTongKetMonBLL baoCaoTongKetMon = new BaoCaoTongKetMonBLL();
+           // MessageBox.Show(cbNamHoc_BCMH.Text);
+            ErrorType result = baoCaoTongKetMon.TaoBaoCaoTongKetMon(cbHocKy_BCMH.Text, cbNamHoc_BCMH.Text,cbMonHoc_BCMH.Text);
+            //   MessageBox.Show(cbNamHoc_BCHK.Text);
+
+
+            if (result == ErrorType.KHONG_THE_KET_NOI)
+                MessageBox.Show("Không thể tạo báo cáo, lỗi kết nối CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+        #endregion
+
+        #region Trich xuat ra bao cao tong ket mon
+        void TrichXuatBaoCaoMonHoc()
+        {
+            DatabaseBLL databasebll = new DatabaseBLL();
+            string con = null;
+            con = databasebll.GetconnectionString();
+
+            string strConnect = "select l.MaLop,l.SiSo,ct.SoLuongDatMon ,ct.TiLeDatMon "
+                                + " from BAOCAOTONGKETMON bc, LOP l, CT_BCAOTONGKETMON ct "
+                                + " where bc.MaBCTKM = ct.MaBCTKM and ct.MaLop = l.MaLop "
+                                +" and MaHocKy = '"+cbHocKy_BCMH.Text+"' and MaNamHoc = '"+cbNamHoc_BCMH.Text+"' and bc.MaMonHoc = '"+cbMonHoc_BCMH.Text+"'";
+           
+            // MessageBox.Show(strConnect);
+            SqlDataAdapter adapter = new SqlDataAdapter(strConnect, con);
+            DataSet datasetMonHoc = new DataSet();
+            adapter.Fill(datasetMonHoc, "MonHoc");
+
+            this.rpBaoCaoMon.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.ReportMonHoc.rdlc";
+            ReportDataSource rpdsMonHoc = new ReportDataSource();
+            rpdsMonHoc.Name = "BaoCaoMonHoc";
+            rpdsMonHoc.Value = datasetMonHoc.Tables[0];
+            rpBaoCaoMon.LocalReport.DataSources.Add(rpdsMonHoc);
+
+            this.rpBaoCaoMon.RefreshReport();
         }
 
         #endregion
@@ -148,6 +190,12 @@ namespace GUI.MainForm
         {
             TaoBaoCaoTongKetHocKy();
             TrichXuatBaoCaoHocKy();
+        }
+
+        private void btnXemBaoCaoMon_Click(object sender, EventArgs e)
+        {
+            TaoBaoCaoTongKetMonHoc();
+            TrichXuatBaoCaoMonHoc();
         }
     }
 }

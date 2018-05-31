@@ -81,7 +81,7 @@ namespace GUI.MainForm
             int soThuTu = 1;
             HocKyBLL hockybll = new HocKyBLL();
             List<HocKy> listhocky = hockybll.GetListHocKy();
-
+            
             foreach (ThongTinChungHS_DiemTB hocsinh in listThongTinChungHocSinh)
             {
 

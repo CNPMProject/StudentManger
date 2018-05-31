@@ -52,6 +52,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbbcaomonhoc = new System.Windows.Forms.Label();
             this.tbbaocaomon = new System.Windows.Forms.TabControl();
+            this.btnXemBaoCaoMon = new Bunifu.Framework.UI.BunifuFlatButton();
             this.gbboloc.SuspendLayout();
             this.tbbaocaohocky.SuspendLayout();
             this.gbbaocaohocky.SuspendLayout();
@@ -130,7 +131,7 @@
             this.btnTaoBaoCaoHocKy.IconMarginRight = 0;
             this.btnTaoBaoCaoHocKy.IconRightVisible = false;
             this.btnTaoBaoCaoHocKy.IconRightZoom = 0D;
-            this.btnTaoBaoCaoHocKy.IconVisible = true;
+            this.btnTaoBaoCaoHocKy.IconVisible = false;
             this.btnTaoBaoCaoHocKy.IconZoom = 70D;
             this.btnTaoBaoCaoHocKy.IsTab = true;
             this.btnTaoBaoCaoHocKy.Location = new System.Drawing.Point(32, 125);
@@ -150,24 +151,24 @@
             // cbHocKy_BCMH
             // 
             this.cbHocKy_BCMH.FormattingEnabled = true;
-            this.cbHocKy_BCMH.Location = new System.Drawing.Point(91, 73);
+            this.cbHocKy_BCMH.Location = new System.Drawing.Point(121, 74);
             this.cbHocKy_BCMH.Name = "cbHocKy_BCMH";
-            this.cbHocKy_BCMH.Size = new System.Drawing.Size(128, 28);
+            this.cbHocKy_BCMH.Size = new System.Drawing.Size(139, 28);
             this.cbHocKy_BCMH.TabIndex = 7;
             // 
             // cbMonHoc_BCMH
             // 
             this.cbMonHoc_BCMH.FormattingEnabled = true;
-            this.cbMonHoc_BCMH.Location = new System.Drawing.Point(91, 34);
+            this.cbMonHoc_BCMH.Location = new System.Drawing.Point(121, 35);
             this.cbMonHoc_BCMH.Name = "cbMonHoc_BCMH";
-            this.cbMonHoc_BCMH.Size = new System.Drawing.Size(128, 28);
+            this.cbMonHoc_BCMH.Size = new System.Drawing.Size(139, 28);
             this.cbMonHoc_BCMH.TabIndex = 6;
             // 
             // lbnamhc
             // 
             this.lbnamhc.AutoSize = true;
             this.lbnamhc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnamhc.Location = new System.Drawing.Point(4, 118);
+            this.lbnamhc.Location = new System.Drawing.Point(29, 120);
             this.lbnamhc.Name = "lbnamhc";
             this.lbnamhc.Size = new System.Drawing.Size(83, 20);
             this.lbnamhc.TabIndex = 4;
@@ -177,7 +178,7 @@
             // 
             this.lbhcky.AutoSize = true;
             this.lbhcky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbhcky.Location = new System.Drawing.Point(4, 73);
+            this.lbhcky.Location = new System.Drawing.Point(29, 82);
             this.lbhcky.Name = "lbhcky";
             this.lbhcky.Size = new System.Drawing.Size(71, 20);
             this.lbhcky.TabIndex = 5;
@@ -228,16 +229,16 @@
             // cbNamHoc_BCMH
             // 
             this.cbNamHoc_BCMH.FormattingEnabled = true;
-            this.cbNamHoc_BCMH.Location = new System.Drawing.Point(91, 118);
+            this.cbNamHoc_BCMH.Location = new System.Drawing.Point(121, 112);
             this.cbNamHoc_BCMH.Name = "cbNamHoc_BCMH";
-            this.cbNamHoc_BCMH.Size = new System.Drawing.Size(128, 28);
+            this.cbNamHoc_BCMH.Size = new System.Drawing.Size(139, 28);
             this.cbNamHoc_BCMH.TabIndex = 1;
             // 
             // lbmonhc
             // 
             this.lbmonhc.AutoSize = true;
             this.lbmonhc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmonhc.Location = new System.Drawing.Point(4, 32);
+            this.lbmonhc.Location = new System.Drawing.Point(29, 43);
             this.lbmonhc.Name = "lbmonhc";
             this.lbmonhc.Size = new System.Drawing.Size(81, 20);
             this.lbmonhc.TabIndex = 2;
@@ -256,6 +257,7 @@
             // 
             // gbbolocmon
             // 
+            this.gbbolocmon.Controls.Add(this.btnXemBaoCaoMon);
             this.gbbolocmon.Controls.Add(this.cbHocKy_BCMH);
             this.gbbolocmon.Controls.Add(this.cbMonHoc_BCMH);
             this.gbbolocmon.Controls.Add(this.lbnamhc);
@@ -265,7 +267,7 @@
             this.gbbolocmon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbbolocmon.Location = new System.Drawing.Point(779, 79);
             this.gbbolocmon.Name = "gbbolocmon";
-            this.gbbolocmon.Size = new System.Drawing.Size(269, 178);
+            this.gbbolocmon.Size = new System.Drawing.Size(289, 217);
             this.gbbolocmon.TabIndex = 6;
             this.gbbolocmon.TabStop = false;
             this.gbbolocmon.Text = "Bộ Lọc";
@@ -327,6 +329,43 @@
             this.tbbaocaomon.TabIndex = 1;
             this.tbbaocaomon.Selected += new System.Windows.Forms.TabControlEventHandler(this.tbbaocaomon_Selected);
             // 
+            // btnXemBaoCaoMon
+            // 
+            this.btnXemBaoCaoMon.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnXemBaoCaoMon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXemBaoCaoMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXemBaoCaoMon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXemBaoCaoMon.BorderRadius = 0;
+            this.btnXemBaoCaoMon.ButtonText = "Xem báo cáo";
+            this.btnXemBaoCaoMon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemBaoCaoMon.DisabledColor = System.Drawing.Color.Gray;
+            this.btnXemBaoCaoMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemBaoCaoMon.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnXemBaoCaoMon.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnXemBaoCaoMon.Iconimage")));
+            this.btnXemBaoCaoMon.Iconimage_right = null;
+            this.btnXemBaoCaoMon.Iconimage_right_Selected = null;
+            this.btnXemBaoCaoMon.Iconimage_Selected = null;
+            this.btnXemBaoCaoMon.IconMarginLeft = 0;
+            this.btnXemBaoCaoMon.IconMarginRight = 0;
+            this.btnXemBaoCaoMon.IconRightVisible = false;
+            this.btnXemBaoCaoMon.IconRightZoom = 0D;
+            this.btnXemBaoCaoMon.IconVisible = true;
+            this.btnXemBaoCaoMon.IconZoom = 70D;
+            this.btnXemBaoCaoMon.IsTab = true;
+            this.btnXemBaoCaoMon.Location = new System.Drawing.Point(33, 163);
+            this.btnXemBaoCaoMon.Name = "btnXemBaoCaoMon";
+            this.btnXemBaoCaoMon.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnXemBaoCaoMon.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnXemBaoCaoMon.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnXemBaoCaoMon.selected = false;
+            this.btnXemBaoCaoMon.Size = new System.Drawing.Size(227, 36);
+            this.btnXemBaoCaoMon.TabIndex = 8;
+            this.btnXemBaoCaoMon.Text = "Xem báo cáo";
+            this.btnXemBaoCaoMon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXemBaoCaoMon.Textcolor = System.Drawing.Color.White;
+            this.btnXemBaoCaoMon.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemBaoCaoMon.Click += new System.EventHandler(this.btnXemBaoCaoMon_Click);
+            // 
             // LapBaoCaoTongKet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,5 +416,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer rpBaoCaoMon;
         private Microsoft.Reporting.WinForms.ReportViewer rpBaoCaoHocKy;
         private Bunifu.Framework.UI.BunifuFlatButton btnTaoBaoCaoHocKy;
+        private Bunifu.Framework.UI.BunifuFlatButton btnXemBaoCaoMon;
     }
 }

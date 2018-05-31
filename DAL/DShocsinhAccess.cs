@@ -67,7 +67,11 @@ namespace DAL
                 string maLop = reader.GetString(2);
                 string maHocKy = reader.GetString(3);
                 string diemTrungBinh = null;
-                diemTrungBinh = reader.GetDouble(4).ToString();
+                try
+                {
+                    diemTrungBinh = reader.GetDouble(4).ToString();
+                }
+                catch { }
 
 
                 ThongTinChungHS_DiemTB dshocsinh = new ThongTinChungHS_DiemTB(
@@ -103,7 +107,11 @@ namespace DAL
                 string maLop = reader.GetString(2);
                 string maHocKy = reader.GetString(3);
                 string diemTrungBinh = null;
-                diemTrungBinh = reader.GetDouble(4).ToString();
+                try
+                {
+                    diemTrungBinh = reader.GetDouble(4).ToString();
+                }
+                catch { }
 
 
                 ThongTinChungHS_DiemTB dshocsinh = new ThongTinChungHS_DiemTB(
@@ -139,7 +147,11 @@ namespace DAL
                 string maLop = reader.GetString(2);
                 string maHocKy = reader.GetString(3);
                 string diemTrungBinh = null;
-                diemTrungBinh = reader.GetDouble(4).ToString();
+                try
+                {
+                    diemTrungBinh = reader.GetDouble(4).ToString();
+                }
+                catch { }
 
 
                 ThongTinChungHS_DiemTB dshocsinh = new ThongTinChungHS_DiemTB(

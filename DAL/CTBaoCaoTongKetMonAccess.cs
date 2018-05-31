@@ -22,7 +22,7 @@ namespace DAL
 
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
-            com.CommandText = "Select * from CTBaoCaoTongKetMon";
+            com.CommandText = "Select * from CT_BCAOTONGKETMON";
             com.Connection = conn;
 
             SqlDataReader reader = com.ExecuteReader();
@@ -47,7 +47,7 @@ namespace DAL
             OpenConnection();
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
-            com.CommandText = "delete from CTBaoCaoTongKetMon where MaBCTKM=@MaBCTKM and MaLop=@MaLop";
+            com.CommandText = "delete from CT_BCAOTONGKETMON where MaBCTKM=@MaBCTKM and MaLop=@MaLop";
             com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
             com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;
             com.Connection = conn;
@@ -74,11 +74,11 @@ namespace DAL
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "insert into CTBaoCaoTongKetMon values(@MaBCTKM,@MaLop, @SoLuongDatMon, @TiLeDatMon)";
+                com.CommandText = "insert into CT_BCAOTONGKETMON values(@MaBCTKM,@MaLop, @SoLuongDatMon, @TiLeDatMon)";
                 com.Connection = conn;
                 com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
                 com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;
-                com.Parameters.Add("@SoLuonDatMon", SqlDbType.Int).Value = SoLuongDatMon;
+                com.Parameters.Add("@SoLuongDatMon", SqlDbType.Int).Value = SoLuongDatMon;
                 com.Parameters.Add("@TiLeDatMon", SqlDbType.Float).Value = TiLeDatMon;
 
                 int result = com.ExecuteNonQuery();
@@ -101,7 +101,7 @@ namespace DAL
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  CTBaoCaoTongKetMon set SoLuongDatMon=@SoLuongDatMon , TiLeDatMon=@TiLeDatMon where  MaBCTKM=@MaBCTKM and MaLop=@MaLop ";
+                com.CommandText = "update  CT_BCAOTONGKETMON set SoLuongDatMon=@SoLuongDatMon , TiLeDatMon=@TiLeDatMon where  MaBCTKM=@MaBCTKM and MaLop=@MaLop ";
                 com.Connection = conn;
                 com.Parameters.Add("@MaBCTKM", SqlDbType.Int).Value =Int32.Parse( MaBCTKM);
                 com.Parameters.Add("@MaLop", SqlDbType.VarChar).Value = MaLop;

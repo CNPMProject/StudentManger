@@ -19,6 +19,12 @@ namespace BLL
             return baoCaoTongKetMonAccess.GetAllBaoCaoTongKetMon();
         }
 
+        public ErrorType TaoBaoCaoTongKetMon(string hocky, string namhoc, string monhoc)
+        {
+            BaoCaoTongKetMonAccess baoCaoTongKetMonAccess = new BaoCaoTongKetMonAccess();
+            return baoCaoTongKetMonAccess.TaoBaoCaoTongKetMon(hocky, namhoc, monhoc);
+        }
+
         public bool XoaBaoCaoTongKetMon(string MaBCTKM)
         {
             BaoCaoTongKetMonAccess BCTKMon = new BaoCaoTongKetMonAccess();
