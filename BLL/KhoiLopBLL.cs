@@ -30,6 +30,12 @@ namespace BLL
             return lopaccess.GetKhoiLop(maKhoiLop);
         }
 
+        public string GetMaKhoiLop(string tenkl)
+        {
+            KhoiLopAccess klac = new KhoiLopAccess();
+            return klac.GetMaKhoiLop(tenkl);
+        }
+
         public KhoiLop GetKhoiLopTheoNH(string namhoc)
         {
             KhoiLopAccess lopaccess = new KhoiLopAccess();

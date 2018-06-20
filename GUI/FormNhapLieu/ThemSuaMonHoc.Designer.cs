@@ -42,7 +42,7 @@
             // 
             this.tbTenMH_DSMH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbTenMH_DSMH.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tbTenMH_DSMH.Location = new System.Drawing.Point(204, 46);
+            this.tbTenMH_DSMH.Location = new System.Drawing.Point(206, 99);
             this.tbTenMH_DSMH.Multiline = true;
             this.tbTenMH_DSMH.Name = "tbTenMH_DSMH";
             this.tbTenMH_DSMH.Size = new System.Drawing.Size(222, 22);
@@ -52,7 +52,7 @@
             // 
             this.tbMaMH_DSMH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbMaMH_DSMH.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.tbMaMH_DSMH.Location = new System.Drawing.Point(204, 90);
+            this.tbMaMH_DSMH.Location = new System.Drawing.Point(206, 52);
             this.tbMaMH_DSMH.Multiline = true;
             this.tbMaMH_DSMH.Name = "tbMaMH_DSMH";
             this.tbMaMH_DSMH.Size = new System.Drawing.Size(222, 22);
@@ -64,7 +64,7 @@
             this.lbMaMH.AutoSize = true;
             this.lbMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaMH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbMaMH.Location = new System.Drawing.Point(75, 91);
+            this.lbMaMH.Location = new System.Drawing.Point(77, 52);
             this.lbMaMH.Name = "lbMaMH";
             this.lbMaMH.Size = new System.Drawing.Size(107, 22);
             this.lbMaMH.TabIndex = 13;
@@ -76,7 +76,7 @@
             this.lbTenMH.AutoSize = true;
             this.lbTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenMH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbTenMH.Location = new System.Drawing.Point(75, 47);
+            this.lbTenMH.Location = new System.Drawing.Point(77, 100);
             this.lbTenMH.Name = "lbTenMH";
             this.lbTenMH.Size = new System.Drawing.Size(115, 22);
             this.lbTenMH.TabIndex = 14;
@@ -160,7 +160,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(201, 115);
+            this.label1.Location = new System.Drawing.Point(203, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 23;

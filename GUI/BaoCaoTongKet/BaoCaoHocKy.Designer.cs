@@ -279,7 +279,7 @@ namespace GUI.BaoCaoTongKet {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class BaoCaoHocKyDataTable : global::System.Data.TypedTableBase<BaoCaoHocKyRow> {
             
-            private global::System.Data.DataColumn columnMaLop;
+            private global::System.Data.DataColumn columnTenLop;
             
             private global::System.Data.DataColumn columnSiSo;
             
@@ -322,9 +322,9 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MaLopColumn {
+            public global::System.Data.DataColumn TenLopColumn {
                 get {
-                    return this.columnMaLop;
+                    return this.columnTenLop;
                 }
             }
             
@@ -389,10 +389,10 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BaoCaoHocKyRow AddBaoCaoHocKyRow(string MaLop, int SiSo, int SoLuongDat, double TiLe) {
+            public BaoCaoHocKyRow AddBaoCaoHocKyRow(string TenLop, int SiSo, int SoLuongDat, double TiLe) {
                 BaoCaoHocKyRow rowBaoCaoHocKyRow = ((BaoCaoHocKyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        MaLop,
+                        TenLop,
                         SiSo,
                         SoLuongDat,
                         TiLe};
@@ -418,7 +418,7 @@ namespace GUI.BaoCaoTongKet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnMaLop = base.Columns["MaLop"];
+                this.columnTenLop = base.Columns["TenLop"];
                 this.columnSiSo = base.Columns["SiSo"];
                 this.columnSoLuongDat = base.Columns["SoLuongDat"];
                 this.columnTiLe = base.Columns["TiLe"];
@@ -427,8 +427,8 @@ namespace GUI.BaoCaoTongKet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnMaLop = new global::System.Data.DataColumn("MaLop", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaLop);
+                this.columnTenLop = new global::System.Data.DataColumn("TenLop", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTenLop);
                 this.columnSiSo = new global::System.Data.DataColumn("SiSo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSiSo);
                 this.columnSoLuongDat = new global::System.Data.DataColumn("SoLuongDat", typeof(int), null, global::System.Data.MappingType.Element);
@@ -579,17 +579,17 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MaLop {
+            public string TenLop {
                 get {
                     try {
-                        return ((string)(this[this.tableBaoCaoHocKy.MaLopColumn]));
+                        return ((string)(this[this.tableBaoCaoHocKy.TenLopColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaLop\' in table \'BaoCaoHocKy\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TenLop\' in table \'BaoCaoHocKy\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBaoCaoHocKy.MaLopColumn] = value;
+                    this[this.tableBaoCaoHocKy.TenLopColumn] = value;
                 }
             }
             
@@ -643,14 +643,14 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaLopNull() {
-                return this.IsNull(this.tableBaoCaoHocKy.MaLopColumn);
+            public bool IsTenLopNull() {
+                return this.IsNull(this.tableBaoCaoHocKy.TenLopColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaLopNull() {
-                this[this.tableBaoCaoHocKy.MaLopColumn] = global::System.Convert.DBNull;
+            public void SetTenLopNull() {
+                this[this.tableBaoCaoHocKy.TenLopColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

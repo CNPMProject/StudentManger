@@ -185,7 +185,7 @@
             // 
             // groupboxthaydoiquydinh
             // 
-            this.groupboxthaydoiquydinh.BackColor = System.Drawing.Color.Beige;
+            this.groupboxthaydoiquydinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.groupboxthaydoiquydinh.Controls.Add(this.nricdiemdathk);
             this.groupboxthaydoiquydinh.Controls.Add(this.nricdiemdatmon);
             this.groupboxthaydoiquydinh.Controls.Add(this.nricdiemtoida);
@@ -272,15 +272,17 @@
             // 
             // btexit
             // 
-            this.btexit.BackColor = System.Drawing.Color.Blue;
+            this.btexit.BackColor = System.Drawing.Color.MediumPurple;
+            this.btexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btexit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btexit.Location = new System.Drawing.Point(1017, 423);
+            this.btexit.Location = new System.Drawing.Point(970, 435);
             this.btexit.Name = "btexit";
-            this.btexit.Size = new System.Drawing.Size(75, 36);
+            this.btexit.Size = new System.Drawing.Size(111, 36);
             this.btexit.TabIndex = 21;
             this.btexit.Text = "Thoát";
             this.btexit.UseVisualStyleBackColor = false;
+            this.btexit.Click += new System.EventHandler(this.btexit_Click_1);
             // 
             // btApDung
             // 
@@ -322,6 +324,7 @@
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1144, 541);
             this.ControlBox = false;
             this.Controls.Add(this.gbcacthamso);

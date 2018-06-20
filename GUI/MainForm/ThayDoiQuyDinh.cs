@@ -62,26 +62,26 @@ namespace QLHS.FormChinh
             //try
             //{
                 ErrorType result=ErrorType.THANH_CONG;
-                if (nricTuoitoithieu.Value != Int32.Parse(lvDSthamso.Items[0].SubItems[2].Text))
-                    result=quydinh.SuaThamSo("TuoiToiThieu", nricTuoitoithieu.Value);
+                if (nricdiemdathk.Value.ToString() != lvDSthamso.Items[0].SubItems[2].Text)
+                    result=quydinh.SuaThamSo("DiemDatHocky", nricdiemdathk.Value);
                 else
-                if (nrictoitoida.Value != Int32.Parse(lvDSthamso.Items[1].SubItems[2].Text))
-                    result = quydinh.SuaThamSo("TuoiToiDa", nrictoitoida.Value);
-                else
-                if (nricsiso.Value != Int32.Parse(lvDSthamso.Items[2].SubItems[2].Text))
-                    result = quydinh.SuaThamSo("SiSoToiDa", nricsiso.Value);
-                else
-                if (nricdiemtoithieu.Value != Int32.Parse(lvDSthamso.Items[3].SubItems[2].Text))
-                    result = quydinh.SuaThamSo("DiemToiThieu", nricdiemtoithieu.Value);
-                else
-                if (nricdiemtoida.Value != Int32.Parse(lvDSthamso.Items[4].SubItems[2].Text))
-                    result = quydinh.SuaThamSo("DiemToiDa", nricdiemtoida.Value);
-                else
-                if (nricdiemdatmon.Value != Int32.Parse(lvDSthamso.Items[5].SubItems[2].Text))
+                if (nricdiemdatmon.Value.ToString() != lvDSthamso.Items[1].SubItems[2].Text)
                     result = quydinh.SuaThamSo("DiemDatMon", nricdiemdatmon.Value);
                 else
-                if (nricdiemdathk.Value != Int32.Parse(lvDSthamso.Items[6].SubItems[2].Text))
-                    result = quydinh.SuaThamSo("DiemDatHocKy", nricdiemdathk.Value);
+                if (nricdiemtoida.Value.ToString() != lvDSthamso.Items[2].SubItems[2].Text)
+                    result = quydinh.SuaThamSo("DiemToiDa", nricdiemtoida.Value);
+                else
+                if (nricdiemtoithieu.Value.ToString() != lvDSthamso.Items[3].SubItems[2].Text)
+                    result = quydinh.SuaThamSo("DiemToiThieu", nricdiemtoithieu.Value);
+                else
+                if (nricsiso.Value.ToString() != lvDSthamso.Items[4].SubItems[2].Text)
+                    result = quydinh.SuaThamSo("sisotoida", nricsiso.Value);
+                else
+                if (nrictoitoida.Value.ToString() != lvDSthamso.Items[5].SubItems[2].Text)
+                    result = quydinh.SuaThamSo("TuoiToiDa", nrictoitoida.Value);
+                else
+                if (nricTuoitoithieu.Value.ToString() != lvDSthamso.Items[6].SubItems[2].Text)
+                    result = quydinh.SuaThamSo("TuoiToiThieu", nricTuoitoithieu.Value);
 
                 if (result == ErrorType.THANH_CONG)
                 {
@@ -115,6 +115,11 @@ namespace QLHS.FormChinh
         private void ThayDoiQuyDinh_Load(object sender, EventArgs e)
         {
             LoadThamSo_DanhSachThamSo();
+        }
+
+        private void btexit_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

@@ -46,15 +46,15 @@ namespace BLL
                 List<ThamSo> listThamSo = GetListThamSo();
                 foreach(ThamSo thamso in listThamSo)
                 {
-                //dang cap nhat diem toi thieu
+                //dang cap nhat tuoi toi thieu
                     if(mathamso== "TuoiToiThieu"&& thamso.MaThamSo == "TuoiToiDa")
                      {
-                            decimal tuoiToiDa =(decimal)thamso.GiaTri;
+                    decimal tuoiToiDa =(decimal)thamso.GiaTri;
                             if (giatri > tuoiToiDa)
                             return ErrorType.VI_PHAM_RANG_BUOC_TU_NHIEN;
                      }
 
-                //dang cap nhat diem toi thieu
+                //dang cap nhat tuoi toi da
                 if (mathamso == "TuoiToiDa" && thamso.MaThamSo == "TuoiToiThieu")
                 {
                     decimal tuoiToiThieu = (decimal)thamso.GiaTri;
@@ -62,7 +62,7 @@ namespace BLL
                         return ErrorType.VI_PHAM_RANG_BUOC_TU_NHIEN;
                 }
 
-                //dang cap nhat diem toi thieu
+                //dang cap nhat diem toi da
                 if (mathamso == "DiemToiDa" && thamso.MaThamSo == "DiemToiThieu")
                 {
                     decimal DiemToiThieu = (decimal)thamso.GiaTri;

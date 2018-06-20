@@ -96,6 +96,30 @@ namespace DAL
             CloseConnection();
             return lop;
         }
+
+        public string GetMaKhoiLop(string tenkl)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            string value = ("N'" + tenkl + "'");
+            com.CommandText = "Select MaKhoiLop from KhoiLOP where tenkhoilop="+value;
+            
+           // com.Parameters.Add("@tenkl", SqlDbType.VarChar).Value =value ;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            string  malop = null;
+            while (reader.Read())
+            {
+                malop = reader.GetString(0);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return malop;
+        }
+
         public KhoiLop GetKhoiLopTheoNH(string namhoc)
         {
             OpenConnection();
@@ -201,7 +225,7 @@ namespace DAL
                 OpenConnection();
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update  KHOILOP set TenKhoiLop=@ten and Ban=@ban and MaNamHoc=@manamhoc where  MaKhoiLop=@ma";
+                com.CommandText = "update  KHOILOP set TenKhoiLop=@ten , Ban=@ban , MaNamHoc=@manamhoc where  MaKhoiLop=@ma";
                 com.Connection = conn;
 
                 com.Parameters.Add("@ma", SqlDbType.VarChar).Value = ma;

@@ -219,11 +219,11 @@ namespace GUI.MainForm
                     lvi.SubItems.Add(bdm.tenHS);
 
 
-                    lvi.SubItems.Add("NULL");
-                    lvi.SubItems.Add("NULL");
-                    lvi.SubItems.Add("NULL");
-                    lvi.SubItems.Add("NULL");
-                    lvi.SubItems.Add("NULL");
+                    lvi.SubItems.Add("-");
+                    lvi.SubItems.Add("-");
+                    lvi.SubItems.Add("-");
+                    lvi.SubItems.Add("-");
+                    lvi.SubItems.Add("-");
 
                     lvi.SubItems[indexHTKT].Text = bdm.DiemHTKT + "";
 

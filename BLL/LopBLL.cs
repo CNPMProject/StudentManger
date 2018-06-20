@@ -21,6 +21,11 @@ namespace BLL
             return lopaccess.GetLop(maLop);
         }
 
+        public List<Lop> GetLopTheoNamHoc(string namhoc)
+        {
+            return lopaccess.GetLopTheoNamHoc( namhoc);
+        }
+
         public int CountSoLuongLopTheoKhoi(string maKhoi)
         {
             return lopaccess.CountSoLuongLopTheoKhoi(maKhoi);
@@ -29,6 +34,11 @@ namespace BLL
         public string GetMaLopMax()
         {
             return lopaccess.GetMaLopMax();
+        }
+
+        public Lop GetLop(string tenlop, string namhoc)
+        {
+            return lopaccess.GetLop(tenlop, namhoc);
         }
 
         public bool Xoalop(string maMH)

@@ -167,7 +167,7 @@
             this.btQuyDinh.ImageZoom = 30;
             this.btQuyDinh.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
             this.btQuyDinh.LabelPosition = 39;
-            this.btQuyDinh.LabelText = "Quy Định Năm Học";
+            this.btQuyDinh.LabelText = "Quy Định Chung";
             this.btQuyDinh.Location = new System.Drawing.Point(215, 122);
             this.btQuyDinh.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btQuyDinh.Name = "btQuyDinh";

@@ -52,24 +52,27 @@ namespace GUI.FormNhapLieu
 
 
             LopBLL LopBll = new LopBLL();
+            KhoiLopBLL klbll = new KhoiLopBLL();
             ErrorType result;
             //neu them moi
             string infor;
+            string maKhoiLop = klbll.GetMaKhoiLop(cbTenKhoiLop.Text);
             if (this.maLop == null)
             {
-                result = LopBll.Themlop(tbMaLop.Text, tbTenLop.Text, cbMaKhoiLop.Text,tbSiSo.Text);
+                result = LopBll.Themlop(tbMaLop.Text, tbTenLop.Text, maKhoiLop, tbSiSo.Text);
                 infor = "Thêm thành công!";
             }
             else
             {
-                result = LopBll.SuaLop(tbMaLop.Text, tbTenLop.Text, cbMaKhoiLop.Text, tbSiSo.Text);
+                result = LopBll.SuaLop(tbMaLop.Text, tbTenLop.Text, maKhoiLop, tbSiSo.Text);
                 infor = "Xóa thành công!";
             }
 
             if (result==ErrorType.THANH_CONG)
             {
                 MessageBox.Show(infor, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                tbMaLop.Text = TaoMaLopMoi();
+                tbTenLop.Text = "";
             }
             else
             if (result == ErrorType.KI_TU_RONG)
@@ -81,6 +84,28 @@ namespace GUI.FormNhapLieu
             {
                 MessageBox.Show("Thất bại, vui lòng xem lại chuỗi kết nối CSDL!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        string TaoMaLopMoi()
+        {
+            LopBLL lopbll = new LopBLL();
+            string malop = lopbll.GetMaLopMax();
+            string[] list = malop.Split('L');
+            malop = "L" + (Int32.Parse(list[1]) + 1);
+            return malop;
+        }
+
+        private void ThemSuaLop_Load(object sender, EventArgs e)
+        {
+            KhoiLopBLL khoilopBll = new KhoiLopBLL();
+            List<KhoiLop> listKhoiLop = khoilopBll.GetListKhoiLop();
+            List<string> ListTenKl = new List<string>();
+            foreach (KhoiLop kl in listKhoiLop)
+                ListTenKl.Add(kl.TenKhoiLop);
+
+            cbTenKhoiLop.DataSource = ListTenKl;
+
+            tbMaLop.Text= TaoMaLopMoi();
         }
     }
 }

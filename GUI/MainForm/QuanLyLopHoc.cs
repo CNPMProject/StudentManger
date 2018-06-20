@@ -46,21 +46,35 @@ namespace GUI.MainForm
             cbNH_DSHS.DataSource = listTenNH;
         }
 
+        
+        void LoadNamHoc_DSLop()
+        {
+            listNamHoc = namhocbll.GetListNamHoc();
+
+            List<string> listTenNH = new List<string>();
+            foreach (NamHoc namhoc in listNamHoc)
+            {
+                listTenNH.Add(namhoc.MaNamHoc);
+            }
+
+            cbNH_HSLH.DataSource = listTenNH;
+        }
+
         /// <summary>
         /// Load all class to combobox
         /// </summary>
         void LoadMaLop_DSLH()
         {
-            if (listLop.Count == 0)
-                listLop = lopBLL.GetListLop();
-            List<string> listMaLop = new List<string>();
+           // if (listLop.Count == 0)
+                listLop = lopBLL.GetLopTheoNamHoc(cbNH_HSLH.Text);
+            List<string> listTenLop = new List<string>();
 
             foreach(Lop lop in listLop)
             {
-                listMaLop.Add(lop.MaLop);
+                listTenLop.Add(lop.TenLop);
             }
 
-            cbMaLop_DSLH.DataSource = listMaLop;
+            cbLop_DSLH.DataSource = listTenLop;
         }
 
         /// <summary>
@@ -233,6 +247,7 @@ namespace GUI.MainForm
                 else
                  if (e.TabPageIndex == 1)
                 {
+                    LoadNamHoc_DSLop();
                     LoadMaLop_DSLH();
                     btnThemLopHoc.IconVisible = btnSuaLopHoc.IconVisible = btnXoaLopHoc.IconVisible = true;
                 }
@@ -306,10 +321,10 @@ namespace GUI.MainForm
                     lvi.SubItems.Add(hocsinh.maHocSinh);
                     lvi.SubItems.Add(hocsinh.TenHocSinh);
                     lvi.SubItems.Add(hocsinh.Lop);
-                    lvi.SubItems.Add("NULL"); // diem tb hoc ki 1
-                    lvi.SubItems.Add("NULL"); // dim trung binh hk 2
-                    lvi.SubItems.Add("NULL"); // dim trung binh hk 3
-                    lvi.SubItems.Add("NULL"); // dim trung binh hk 4
+                    lvi.SubItems.Add("-"); // diem tb hoc ki 1
+                    lvi.SubItems.Add("-"); // dim trung binh hk 2
+                    lvi.SubItems.Add("-"); // dim trung binh hk 3
+                    lvi.SubItems.Add("-"); // dim trung binh hk 4
 
 
                     lvi.SubItems[indexHocKy].Text = hocsinh.diemTB;
@@ -449,11 +464,11 @@ namespace GUI.MainForm
             //        break;
             //    }
 
-            Lop lop = lopBLL.GetLop(cbMaLop_DSLH.Text);
-            tbTenLop_DSLH.Text = lop.TenLop;
+            Lop  lop = lopBLL.GetLop(cbLop_DSLH.Text,cbNH_HSLH.Text);
+            tbMaLop_DSLH.Text = lop.MaLop;
             tbSiSo_DSLH.Text = lop.SiSo.ToString();
 
-            LoadDSHSTheoLop(cbMaLop_DSLH.Text,tbTenLop_DSLH.Text);
+            LoadDSHSTheoLop(tbMaLop_DSLH.Text, cbLop_DSLH.Text);
         }
 
         private void lvDSHSTheoLop_SelectedIndexChanged(object sender, EventArgs e)
@@ -720,6 +735,7 @@ namespace GUI.MainForm
         {
             ThemSuaKhoiLop fThemSuaKhoiLop = new ThemSuaKhoiLop();
             fThemSuaKhoiLop.ShowDialog();
+            LoadDSKL_TheoNH();
         }
 
         private void tcQuanLyLop_SelectedIndexChanged(object sender, EventArgs e)
@@ -842,13 +858,14 @@ namespace GUI.MainForm
 
             ThemSuaKhoiLop fThemSuaKhoiLop = new ThemSuaKhoiLop(maKhoiLop, tenKhoiLop, phongBan, namHoc);
             fThemSuaKhoiLop.ShowDialog();
+            LoadDSKL_TheoNH();
         }
 
 
 
         private void btnXoaLopHoc_Click(object sender, EventArgs e)
         {
-            if (lopBLL.Xoalop(cbMaLop_DSLH.Text))
+            if (lopBLL.Xoalop(cbLop_DSLH.Text))
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("Không thể xóa , lớp đang nằm trong chương trình đào tạo!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -858,12 +875,19 @@ namespace GUI.MainForm
         {
             ThemSuaLop fThemSuaLop = new ThemSuaLop();
             fThemSuaLop.ShowDialog();
+            LoadMaLop_DSLH();
         }
 
         private void btnSuaLopHoc_Click(object sender, EventArgs e)
         {
-            ThemSuaLop fThemSuaLop = new ThemSuaLop(cbMaLop_DSLH.Text);
+            ThemSuaLop fThemSuaLop = new ThemSuaLop(cbLop_DSLH.Text);
             fThemSuaLop.ShowDialog();
+            LoadMaLop_DSLH();
+        }
+
+        private void cbNH_HSLH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadMaLop_DSLH();
         }
     }
 }

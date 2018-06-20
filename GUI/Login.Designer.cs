@@ -37,16 +37,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pbLoGo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoGo)).BeginInit();
             this.SuspendLayout();
             // 
             // pbClose
             // 
-            this.pbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(138)))), ((int)(((byte)(242)))));
+            this.pbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
             this.pbClose.Location = new System.Drawing.Point(328, 2);
             this.pbClose.Name = "pbClose";
@@ -57,6 +55,7 @@
             // 
             // tbUserName
             // 
+            this.tbUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.tbUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbUserName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbUserName.ForeColor = System.Drawing.Color.White;
@@ -77,6 +76,7 @@
             // 
             // tbPassWord
             // 
+            this.tbPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.tbPassWord.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPassWord.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbPassWord.ForeColor = System.Drawing.Color.White;
@@ -97,6 +97,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(38, 202);
             this.pictureBox2.Name = "pictureBox2";
@@ -106,6 +107,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(38, 258);
             this.pictureBox3.Name = "pictureBox3";
@@ -116,8 +118,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.ForeColor = System.Drawing.Color.Snow;
             this.label1.Location = new System.Drawing.Point(57, 456);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 17);
@@ -127,6 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(231, 456);
@@ -139,20 +143,20 @@
             // 
             this.btnLogIn.ActiveBorderThickness = 1;
             this.btnLogIn.ActiveCornerRadius = 20;
-            this.btnLogIn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(247)))), ((int)(((byte)(89)))));
+            this.btnLogIn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnLogIn.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(225)))));
-            this.btnLogIn.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnLogIn.ActiveLineColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLogIn.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.btnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(138)))), ((int)(((byte)(242)))));
+            this.btnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
             this.btnLogIn.ButtonText = "Login";
             this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogIn.ForeColor = System.Drawing.Color.White;
+            this.btnLogIn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnLogIn.IdleBorderThickness = 1;
             this.btnLogIn.IdleCornerRadius = 20;
-            this.btnLogIn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(138)))), ((int)(((byte)(242)))));
-            this.btnLogIn.IdleForecolor = System.Drawing.Color.White;
+            this.btnLogIn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.btnLogIn.IdleForecolor = System.Drawing.Color.WhiteSmoke;
             this.btnLogIn.IdleLineColor = System.Drawing.Color.White;
             this.btnLogIn.Location = new System.Drawing.Point(107, 318);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
@@ -162,23 +166,13 @@
             this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
-            // pbLoGo
-            // 
-            this.pbLoGo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbLoGo.BackgroundImage")));
-            this.pbLoGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLoGo.Location = new System.Drawing.Point(107, 87);
-            this.pbLoGo.Name = "pbLoGo";
-            this.pbLoGo.Size = new System.Drawing.Size(148, 94);
-            this.pbLoGo.TabIndex = 10;
-            this.pbLoGo.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(138)))), ((int)(((byte)(242)))));
+            this.BackColor = System.Drawing.Color.Gray;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(356, 500);
-            this.Controls.Add(this.pbLoGo);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -194,7 +188,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoGo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,6 +203,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogIn;
-        private System.Windows.Forms.PictureBox pbLoGo;
     }
 }

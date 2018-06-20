@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DTO;
+using GUI.FormNhapLieu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,8 @@ namespace GUI.MainForm
 
             cbTieuChiTimKiem.DataSource = DanhSachTuyChonTimKiem;
             LoadColumnHocKyLenListView();
+
+            btnSuaHS.IconVisible = true;
         }
 
         /// <summary>
@@ -51,13 +54,13 @@ namespace GUI.MainForm
             }
 
 
-            ColumnHeader colltemp1 = new ColumnHeader() { Name = "temp1", Text = "", Width = 0 };
+            ColumnHeader colltemp1 = new ColumnHeader() { Name = "temp1", Text = "", Width = 0,TextAlign=HorizontalAlignment.Center };
             lvdshs.Columns.Add(colltemp1);
-            ColumnHeader colltemp2 = new ColumnHeader() { Name = "temp2", Text = "", Width = 0 };
+            ColumnHeader colltemp2 = new ColumnHeader() { Name = "temp2", Text = "", Width = 0 ,TextAlign = HorizontalAlignment.Center };
             lvdshs.Columns.Add(colltemp2);
-            ColumnHeader colltemp3 = new ColumnHeader() { Name = "temp3", Text = "", Width = 0 };
+            ColumnHeader colltemp3 = new ColumnHeader() { Name = "temp3", Text = "", Width = 0 , TextAlign = HorizontalAlignment.Center };
             lvdshs.Columns.Add(colltemp3);
-            ColumnHeader colltemp4 = new ColumnHeader() { Name = "temp4", Text = "", Width = 0 };
+            ColumnHeader colltemp4 = new ColumnHeader() { Name = "temp4", Text = "", Width = 0 , TextAlign = HorizontalAlignment.Center };
             lvdshs.Columns.Add(colltemp4);
         }
 
@@ -112,10 +115,10 @@ namespace GUI.MainForm
                     lvi.SubItems.Add(hocsinh.maHocSinh);
                     lvi.SubItems.Add(hocsinh.TenHocSinh);
                     lvi.SubItems.Add(hocsinh.Lop);
-                    lvi.SubItems.Add("NULL"); // diem tb hoc ki 1
-                    lvi.SubItems.Add("NULL"); // dim trung binh hk 2
-                    lvi.SubItems.Add("NULL"); // dim trung binh hk 3
-                    lvi.SubItems.Add("NULL"); // dim trung binh hk 4
+                    lvi.SubItems.Add("-"); // diem tb hoc ki 1
+                    lvi.SubItems.Add("-"); // dim trung binh hk 2
+                    lvi.SubItems.Add("-"); // dim trung binh hk 3
+                    lvi.SubItems.Add("-"); // dim trung binh hk 4
 
 
                     lvi.SubItems[indexHocKy].Text = hocsinh.diemTB;
@@ -154,6 +157,22 @@ namespace GUI.MainForm
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Visible=false;
+        }
+
+        private void btnSuaHS_Click(object sender, EventArgs e)
+        {
+            if (lvdshs.SelectedItems.Count > 0)
+            {
+                ThemSuaHocSinh fThemSua = new ThemSuaHocSinh
+                (tbMaHocSinh.Text, tbHoVaTen.Text,
+                tbNgaySinh.Text,tbGioiTinh.Text,
+                tbEmail.Text, tbDiaChi.Text);
+                fThemSua.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 học sinh để sửa !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

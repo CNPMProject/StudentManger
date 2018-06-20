@@ -18,16 +18,23 @@ namespace GUI.FormNhapLieu
         public string tenKhoiLop=null;
         public string phongBan=null;
         public string maNamHoc=null;
+
+        string TaoMaKhoiLopMoi()
+        {
+            KhoiLopBLL khoiLopBll = new KhoiLopBLL();
+            string maKhoiLopMax = khoiLopBll.GetMaKhoiLopMax();
+            string[] listTemp = maKhoiLopMax.Split('L');
+            string maKhoiLop = listTemp[1];
+            maKhoiLop= "KL" + (Int32.Parse(maKhoiLop) + 1).ToString();
+            return maKhoiLop;
+        }
         public ThemSuaKhoiLop()
         {
             InitializeComponent();
             lbTop.Text = "Thêm mới khối lớp";
 
-            KhoiLopBLL khoiLopBll = new KhoiLopBLL();
-            string maKhoiLopMax = khoiLopBll.GetMaKhoiLopMax();
-            string [] listTemp = maKhoiLopMax.Split('L');
-            string maKhoiLop = listTemp[1];
-            tbMaKhoiLop.Text = "KL" + (Int32.Parse(maKhoiLop) + 1).ToString();
+
+            tbMaKhoiLop.Text = TaoMaKhoiLopMoi();
         }
 
         public ThemSuaKhoiLop(string ma,string ten,string phongban,string namhoc)
@@ -59,13 +66,15 @@ namespace GUI.FormNhapLieu
             else
             {
                 result = khoiLopBll.Suakhoilop(tbMaKhoiLop.Text, tbTenKhoiLop.Text, tBbPhongBan.Text, cbMaNamHoc.Text);
-                infor = "Xóa thành công!";
+                infor = "Sửa thành công!";
             }
            
             if (result==ErrorType.THANH_CONG)
                 {
                     MessageBox.Show(infor, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                tbMaKhoiLop.Text = TaoMaKhoiLopMoi();
+                tBbPhongBan.Text = "";
+                tbTenKhoiLop.Text = "";
                 }
             else
             if (result == ErrorType.KI_TU_RONG)
@@ -83,6 +92,13 @@ namespace GUI.FormNhapLieu
         private void ThemSuaKhoiLop_Load(object sender, EventArgs e)
         {
             btnHuyBo.IconVisible = btnLuu.IconVisible = true;
+            NamHocBLL nhbll = new NamHocBLL();
+            List<NamHoc> listNH = nhbll.GetListNamHoc();
+            List<string> dsNH = new List<string>();
+            foreach (NamHoc namhoc in listNH)
+                dsNH.Add(namhoc.MaNamHoc);
+
+            cbMaNamHoc.DataSource = dsNH;
         }
     }
 }

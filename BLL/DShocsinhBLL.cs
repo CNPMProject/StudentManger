@@ -88,7 +88,7 @@ namespace BLL
             }
             TimeSpan tuoiHienTai = DateTime.Now - namsinh;
             decimal tuoi = tuoiHienTai.Days / 365;
-            MessageBox.Show(tuoi + "");
+          //  MessageBox.Show(tuoi + "");
             if (tuoi > tuoiToiDa || tuoi < tuoiToiThieu)
                 return ErrorType.VUOT_MIEN_GIA_TRI;
             #endregion

@@ -40,6 +40,36 @@ namespace DAL
 
         }
 
+        public List<Lop> GetLopTheoNamHoc(string namhoc)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select l.MaLop,l.TenLop,l.MaKhoiLop,l.SiSo from lop l, KHOILOP kl "
+                                + " where l.MaKhoiLop=kl.MaKhoiLop and kl.MaNamHoc=@namhoc";
+            com.Parameters.Add("@namhoc", SqlDbType.VarChar).Value = namhoc;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<Lop> ListLop = new List<Lop>();
+
+            while (reader.Read())
+            {
+                string ma = reader.GetString(0);
+                String ten = reader.GetString(1);
+                string makhoi = reader.GetString(2);
+                int siso = reader.GetInt32(3);
+
+                Lop dsLop = new Lop(ma, ten, makhoi, siso);
+                ListLop.Add(dsLop);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return ListLop;
+
+        }
+
         public Lop GetLop(string maLop)
         {
             OpenConnection();
@@ -103,6 +133,34 @@ namespace DAL
             reader.Close();
             CloseConnection();
             return null;
+        }
+
+        public Lop GetLop(string tenlop,string namhoc)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = " select l.MaLop,l.TenLop,l.MaKhoiLop,l.SiSo  from lop l,KHOILOP kl "
+                + "where l.MaKhoiLop=kl.MaKhoiLop and TenLop=@tenlop and kl.MaNamHoc=@namhoc";
+            com.Parameters.Add("@namhoc", SqlDbType.VarChar).Value = namhoc;
+            com.Parameters.Add("@tenlop", SqlDbType.NVarChar).Value = tenlop;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            Lop lop = null;
+            if (reader.Read())
+            {
+                string ma= reader.GetString(0);
+                string ten = reader.GetString(1);
+                string khoi = reader.GetString(2);
+                int siso = reader.GetInt32(3);
+
+                lop = new Lop(ma, ten, khoi, siso);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return lop;
         }
 
         public bool ThemLop(string malop, string tenlop, string makhoi, int siso)

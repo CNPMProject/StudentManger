@@ -94,7 +94,7 @@ namespace DAL
             }
         }
 
-        public ErrorType SuaThamSo(string mathamso, Decimal giatri)
+        public ErrorType SuaThamSo(string mathamso, decimal giatri)
         {
             //try
             //{
@@ -105,7 +105,7 @@ namespace DAL
                 com.Connection = conn;
 
                 com.Parameters.Add("@mathamso", SqlDbType.VarChar).Value = mathamso;
-                com.Parameters.Add("@giatri", SqlDbType.Decimal).Value = giatri;
+                com.Parameters.Add("@giatri", SqlDbType.Float).Value =(float) giatri;
 
 
                 int result = com.ExecuteNonQuery();

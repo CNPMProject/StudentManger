@@ -56,6 +56,7 @@
             this.labelhoten = new System.Windows.Forms.Label();
             this.labelmahs = new System.Windows.Forms.Label();
             this.groupthongtin = new System.Windows.Forms.GroupBox();
+            this.btnSuaHS = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupthongtin.SuspendLayout();
@@ -84,13 +85,13 @@
             this.btnThoat.IconVisible = true;
             this.btnThoat.IconZoom = 70D;
             this.btnThoat.IsTab = true;
-            this.btnThoat.Location = new System.Drawing.Point(113, 36);
+            this.btnThoat.Location = new System.Drawing.Point(180, 28);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnThoat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
             this.btnThoat.OnHoverTextColor = System.Drawing.Color.White;
             this.btnThoat.selected = false;
-            this.btnThoat.Size = new System.Drawing.Size(156, 38);
+            this.btnThoat.Size = new System.Drawing.Size(130, 38);
             this.btnThoat.TabIndex = 22;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,6 +101,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnSuaHS);
             this.groupBox3.Controls.Add(this.btnThoat);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(791, 429);
@@ -123,10 +125,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(118, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 25);
+            this.label1.Size = new System.Drawing.Size(137, 19);
             this.label1.TabIndex = 31;
             this.label1.Text = "Tiêu chí tìm kiếm :";
             // 
@@ -240,10 +242,10 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSearch.BorderRadius = 0;
-            this.btnSearch.ButtonText = "Search";
+            this.btnSearch.ButtonText = "Tìm kiếm";
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Iconcolor = System.Drawing.Color.Transparent;
             this.btnSearch.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearch.Iconimage")));
             this.btnSearch.Iconimage_right = null;
@@ -257,7 +259,7 @@
             this.btnSearch.IconZoom = 70D;
             this.btnSearch.IsTab = false;
             this.btnSearch.Location = new System.Drawing.Point(804, 16);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -265,7 +267,7 @@
             this.btnSearch.selected = false;
             this.btnSearch.Size = new System.Drawing.Size(156, 38);
             this.btnSearch.TabIndex = 27;
-            this.btnSearch.Text = "Search";
+            this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearch.Textcolor = System.Drawing.Color.White;
             this.btnSearch.TextFont = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -406,6 +408,43 @@
             this.groupthongtin.TabStop = false;
             this.groupthongtin.Text = "Thông tin chi tiết";
             // 
+            // btnSuaHS
+            // 
+            this.btnSuaHS.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSuaHS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSuaHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSuaHS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSuaHS.BorderRadius = 0;
+            this.btnSuaHS.ButtonText = "Sửa ";
+            this.btnSuaHS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuaHS.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSuaHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaHS.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSuaHS.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSuaHS.Iconimage")));
+            this.btnSuaHS.Iconimage_right = null;
+            this.btnSuaHS.Iconimage_right_Selected = null;
+            this.btnSuaHS.Iconimage_Selected = null;
+            this.btnSuaHS.IconMarginLeft = 0;
+            this.btnSuaHS.IconMarginRight = 0;
+            this.btnSuaHS.IconRightVisible = false;
+            this.btnSuaHS.IconRightZoom = 0D;
+            this.btnSuaHS.IconVisible = false;
+            this.btnSuaHS.IconZoom = 70D;
+            this.btnSuaHS.IsTab = true;
+            this.btnSuaHS.Location = new System.Drawing.Point(34, 30);
+            this.btnSuaHS.Name = "btnSuaHS";
+            this.btnSuaHS.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSuaHS.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnSuaHS.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSuaHS.selected = false;
+            this.btnSuaHS.Size = new System.Drawing.Size(115, 36);
+            this.btnSuaHS.TabIndex = 23;
+            this.btnSuaHS.Text = "Sửa ";
+            this.btnSuaHS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSuaHS.Textcolor = System.Drawing.Color.White;
+            this.btnSuaHS.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaHS.Click += new System.EventHandler(this.btnSuaHS_Click);
+            // 
             // Search
             // 
             this.AllowDrop = true;
@@ -465,5 +504,6 @@
         private System.Windows.Forms.Label labelmahs;
         private System.Windows.Forms.GroupBox groupthongtin;
         private System.Windows.Forms.ColumnHeader clMaHocSinh;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSuaHS;
     }
 }

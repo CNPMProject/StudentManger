@@ -39,7 +39,23 @@ namespace GUI.MainForm
             string con = null;
             con = databasebll.GetconnectionString();
 
-            string strConnect = "select bc.MaLop,l.SiSo, bc.SoLuongDat,bc.Tile"
+            //try
+            //{
+           // databasebll.OpenConnection();
+            SqlConnection conn= new SqlConnection(con);
+            conn.Open();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = " update BAOCAOTONGKETHOCKY set MaNamHoc = 'NH16-17' where MaNamHoc = 'NH16-17'";
+            com.Connection = conn;
+            com.ExecuteNonQuery();
+            conn.Close();
+           // databasebll.CloseConection();
+            //}
+            //catch { }
+
+
+            string strConnect = "select l.TenLop,l.SiSo, bc.SoLuongDat,bc.Tile"
                                     + " from BAOCAOTONGKETHOCKY bc, LOP l"
                                     + " where bc.MaLop = l.MaLop and MaHocKy= '"
                                     + cbHocKy_BCHK.Text + "' and MaNamHoc= '" + cbNamHoc_BCHK.Text + "'";
@@ -49,6 +65,9 @@ namespace GUI.MainForm
             adapter.Fill(datasetHocky, "HocKy");
 
             this.rpBaoCaoHocKy.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.ReportHocKy.rdlc";
+            ReportParameter ReportParameterTime = new ReportParameter("ReportParameterTime",cbHocKy_BCHK.Text+"    "+cbNamHoc_BCHK.Text);
+            this.rpBaoCaoHocKy.LocalReport.SetParameters(ReportParameterTime);
+
             ReportDataSource rpdsHocKy = new ReportDataSource();
             rpdsHocKy.Name = "BaoCaoHocKy";
             rpdsHocKy.Value = datasetHocky.Tables[0];
@@ -80,7 +99,7 @@ namespace GUI.MainForm
             string con = null;
             con = databasebll.GetconnectionString();
 
-            string strConnect = "select l.MaLop,l.SiSo,ct.SoLuongDatMon ,ct.TiLeDatMon "
+            string strConnect = "select l.TenLop,l.SiSo,ct.SoLuongDatMon ,ct.TiLeDatMon "
                                 + " from BAOCAOTONGKETMON bc, LOP l, CT_BCAOTONGKETMON ct "
                                 + " where bc.MaBCTKM = ct.MaBCTKM and ct.MaLop = l.MaLop "
                                 +" and MaHocKy = '"+cbHocKy_BCMH.Text+"' and MaNamHoc = '"+cbNamHoc_BCMH.Text+"' and bc.MaMonHoc = '"+cbMonHoc_BCMH.Text+"'";
@@ -92,6 +111,9 @@ namespace GUI.MainForm
 
             this.rpBaoCaoMon.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.ReportMonHoc.rdlc";
             ReportDataSource rpdsMonHoc = new ReportDataSource();
+            ReportParameter ReportParameterBaoCaoMonHoc = new ReportParameter("ReportParameterBaoCaoMonHoc", cbHocKy_BCMH.Text + "    " + cbNamHoc_BCMH.Text+"   môn "+ cbMonHoc_BCMH.Text);
+            this.rpBaoCaoMon.LocalReport.SetParameters(ReportParameterBaoCaoMonHoc);
+
             rpdsMonHoc.Name = "BaoCaoMonHoc";
             rpdsMonHoc.Value = datasetMonHoc.Tables[0];
             rpBaoCaoMon.LocalReport.DataSources.Add(rpdsMonHoc);
@@ -108,7 +130,7 @@ namespace GUI.MainForm
             LoadDanhSachNamHoc(0);
             LoadDanhSachMonHoc();
             #endregion
-
+            btnXemBaoCaoMon.IconVisible = true;
         }
 
         /// <summary>
@@ -177,6 +199,7 @@ namespace GUI.MainForm
             {
                 LoadDanhSachHocKy(1);
                 LoadDanhSachNamHoc(1);
+                btnTaoBaoCaoHocKy.IconVisible = true;
             }
             else
             {

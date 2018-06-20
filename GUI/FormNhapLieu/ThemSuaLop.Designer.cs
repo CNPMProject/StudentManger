@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbSiSo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbMaKhoiLop = new System.Windows.Forms.ComboBox();
+            this.cbTenKhoiLop = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTop = new System.Windows.Forms.Label();
             this.btnLuu = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,11 +46,10 @@
             // 
             // tbMaLop
             // 
-            this.tbMaLop.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbMaLop.BackColor = System.Drawing.SystemColors.Info;
             this.tbMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMaLop.Location = new System.Drawing.Point(121, 77);
             this.tbMaLop.Name = "tbMaLop";
-            this.tbMaLop.ReadOnly = true;
             this.tbMaLop.Size = new System.Drawing.Size(169, 24);
             this.tbMaLop.TabIndex = 0;
             // 
@@ -76,7 +75,7 @@
             // 
             // tbTenLop
             // 
-            this.tbTenLop.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbTenLop.BackColor = System.Drawing.SystemColors.Info;
             this.tbTenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTenLop.Location = new System.Drawing.Point(121, 133);
             this.tbTenLop.Name = "tbTenLop";
@@ -95,11 +94,10 @@
             // 
             // tbSiSo
             // 
-            this.tbSiSo.BackColor = System.Drawing.SystemColors.Menu;
+            this.tbSiSo.BackColor = System.Drawing.SystemColors.Info;
             this.tbSiSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSiSo.Location = new System.Drawing.Point(416, 133);
             this.tbSiSo.Name = "tbSiSo";
-            this.tbSiSo.ReadOnly = true;
             this.tbSiSo.Size = new System.Drawing.Size(169, 24);
             this.tbSiSo.TabIndex = 3;
             this.tbSiSo.Text = "0";
@@ -114,15 +112,15 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Mã Khối lớp :";
             // 
-            // cbMaKhoiLop
+            // cbTenKhoiLop
             // 
-            this.cbMaKhoiLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaKhoiLop.FormattingEnabled = true;
-            this.cbMaKhoiLop.Location = new System.Drawing.Point(416, 75);
-            this.cbMaKhoiLop.Name = "cbMaKhoiLop";
-            this.cbMaKhoiLop.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbMaKhoiLop.Size = new System.Drawing.Size(169, 26);
-            this.cbMaKhoiLop.TabIndex = 1;
+            this.cbTenKhoiLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTenKhoiLop.FormattingEnabled = true;
+            this.cbTenKhoiLop.Location = new System.Drawing.Point(416, 75);
+            this.cbTenKhoiLop.Name = "cbTenKhoiLop";
+            this.cbTenKhoiLop.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbTenKhoiLop.Size = new System.Drawing.Size(169, 26);
+            this.cbTenKhoiLop.TabIndex = 1;
             // 
             // panel1
             // 
@@ -142,7 +140,7 @@
             this.lbTop.Name = "lbTop";
             this.lbTop.Size = new System.Drawing.Size(636, 43);
             this.lbTop.TabIndex = 0;
-            this.lbTop.Text = "Them/sua khối lớp";
+            this.lbTop.Text = "Them/sua lớp";
             this.lbTop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLuu
@@ -228,7 +226,7 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnHuyBo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cbMaKhoiLop);
+            this.Controls.Add(this.cbTenKhoiLop);
             this.Controls.Add(this.tbSiSo);
             this.Controls.Add(this.tbTenLop);
             this.Controls.Add(this.tbMaLop);
@@ -238,6 +236,7 @@
             this.Controls.Add(this.labelmhs);
             this.Name = "ThemSuaLop";
             this.Text = "ThemSuaLop";
+            this.Load += new System.EventHandler(this.ThemSuaLop_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -253,7 +252,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbSiSo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbMaKhoiLop;
+        private System.Windows.Forms.ComboBox cbTenKhoiLop;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTop;
         private Bunifu.Framework.UI.BunifuFlatButton btnLuu;
