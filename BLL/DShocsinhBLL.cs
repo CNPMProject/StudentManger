@@ -44,6 +44,11 @@ namespace BLL
             return danhsachhocsinh.GetDanhSachHocSinh_ThongTinChung_TimKiemTheoLop(lop);
         }
 
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_TimKiemTheoDiemTB(float canDuoi, float canTren)
+        {
+            return danhsachhocsinh.GetDanhSachHocSinh_ThongTinChung_TimKiemTheoDiemTB(canDuoi, canTren);
+        }
+
         public List<HocSinh> GetDSHocSinhTheoLop(string malop)
         {
             return danhsachhocsinh.GetDSHocSinhTheoLop(malop);

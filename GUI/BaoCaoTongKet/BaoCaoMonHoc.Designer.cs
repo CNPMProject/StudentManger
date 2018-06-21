@@ -20,9 +20,9 @@ namespace GUI.BaoCaoTongKet {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("BaoCaoMon")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BaoCaoMonHoc")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class BaoCaoMon : global::System.Data.DataSet {
+    public partial class BaoCaoMonHoc : global::System.Data.DataSet {
         
         private BaoCaoMonHocDataTable tableBaoCaoMonHoc;
         
@@ -30,7 +30,7 @@ namespace GUI.BaoCaoTongKet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public BaoCaoMon() {
+        public BaoCaoMonHoc() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GUI.BaoCaoTongKet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected BaoCaoMon(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BaoCaoMonHoc(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -79,7 +79,7 @@ namespace GUI.BaoCaoTongKet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BaoCaoMonHocDataTable BaoCaoMonHoc {
+        public BaoCaoMonHocDataTable _BaoCaoMonHoc {
             get {
                 return this.tableBaoCaoMonHoc;
             }
@@ -127,7 +127,7 @@ namespace GUI.BaoCaoTongKet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            BaoCaoMon cln = ((BaoCaoMon)(base.Clone()));
+            BaoCaoMonHoc cln = ((BaoCaoMonHoc)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace GUI.BaoCaoTongKet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "BaoCaoMon";
+            this.DataSetName = "BaoCaoMonHoc";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/BaoCaoMon.xsd";
+            this.Namespace = "http://tempuri.org/BaoCaoMonHoc.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableBaoCaoMonHoc = new BaoCaoMonHocDataTable();
@@ -210,7 +210,7 @@ namespace GUI.BaoCaoTongKet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeBaoCaoMonHoc() {
+        private bool ShouldSerialize_BaoCaoMonHoc() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GUI.BaoCaoTongKet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            BaoCaoMon ds = new BaoCaoMon();
+            BaoCaoMonHoc ds = new BaoCaoMonHoc();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -435,6 +435,8 @@ namespace GUI.BaoCaoTongKet {
                 base.Columns.Add(this.columnSoLuongDat);
                 this.columnTiLe = new global::System.Data.DataColumn("TiLe", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTiLe);
+                this.ExtendedProperties.Add("Generator_TablePropName", "_BaoCaoMonHoc");
+                this.ExtendedProperties.Add("Generator_UserTableName", "BaoCaoMonHoc");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -502,7 +504,7 @@ namespace GUI.BaoCaoTongKet {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                BaoCaoMon ds = new BaoCaoMon();
+                BaoCaoMonHoc ds = new BaoCaoMonHoc();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);

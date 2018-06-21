@@ -23,7 +23,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.34375in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -188,7 +188,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.34375in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -297,7 +297,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve">          </Value>
+                              <Value xml:space="preserve">     </Value>
                               <Style />
                             </TextRun>
                             <TextRun>
@@ -381,9 +381,9 @@
         </TablixRowHierarchy>
         <DataSetName>BaoCaoHocKy</DataSetName>
         <Top>0.62375in</Top>
-        <Left>0.73834in</Left>
-        <Height>0.5in</Height>
-        <Width>4.93748in</Width>
+        <Left>2.21333in</Left>
+        <Height>0.6875in</Height>
+        <Width>4.9375in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -665,7 +665,7 @@
         </ChartNoDataMessage>
         <DataSetName>BaoCaoHocKy</DataSetName>
         <Top>1.4536in</Top>
-        <Left>0.73834in</Left>
+        <Left>2.21333in</Left>
         <Height>2.78125in</Height>
         <Width>4.9375in</Width>
         <ZIndex>1</ZIndex>
@@ -686,7 +686,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>6.33208in</Width>
+  <Width>9.20708in</Width>
   <Page>
     <PageHeader>
       <Height>1.56598in</Height>
@@ -712,8 +712,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.24306in</Top>
-          <Left>1.3182in</Left>
+          <Top>0.35764in</Top>
+          <Left>3.02098in</Left>
           <Height>0.34375in</Height>
           <Width>3.35417in</Width>
           <Style>
@@ -741,8 +741,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>1.2882in</Top>
-          <Left>4.01959in</Left>
+          <Top>1.31598in</Top>
+          <Left>5.49458in</Left>
           <Height>0.25in</Height>
           <Width>1.65625in</Width>
           <ZIndex>1</ZIndex>
@@ -774,8 +774,8 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.6632in</Top>
-          <Left>1.98417in</Left>
+          <Top>0.77778in</Top>
+          <Left>3.68695in</Left>
           <Height>0.39583in</Height>
           <Width>2.36042in</Width>
           <ZIndex>2</ZIndex>
@@ -817,7 +817,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>1.05083in</Top>
-          <Left>5.03695in</Left>
+          <Left>3.99528in</Left>
           <Height>0.25in</Height>
           <Width>1in</Width>
           <Style>

@@ -50,8 +50,9 @@
             this.lbtuoitoida = new System.Windows.Forms.Label();
             this.lbtuoitoithieu = new System.Windows.Forms.Label();
             this.lbquydinhnamhoc = new System.Windows.Forms.Label();
-            this.btexit = new System.Windows.Forms.Button();
             this.btApDung = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnThoat = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nricdiemdathk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nricdiemdatmon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nricdiemtoida)).BeginInit();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nricTuoitoithieu)).BeginInit();
             this.gbcacthamso.SuspendLayout();
             this.groupboxthaydoiquydinh.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // clGiaTri
@@ -260,29 +262,16 @@
             // 
             // lbquydinhnamhoc
             // 
-            this.lbquydinhnamhoc.AutoSize = true;
             this.lbquydinhnamhoc.BackColor = System.Drawing.Color.Transparent;
+            this.lbquydinhnamhoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbquydinhnamhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.lbquydinhnamhoc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbquydinhnamhoc.Location = new System.Drawing.Point(422, 9);
+            this.lbquydinhnamhoc.Location = new System.Drawing.Point(0, 0);
             this.lbquydinhnamhoc.Name = "lbquydinhnamhoc";
-            this.lbquydinhnamhoc.Size = new System.Drawing.Size(217, 29);
+            this.lbquydinhnamhoc.Size = new System.Drawing.Size(1144, 51);
             this.lbquydinhnamhoc.TabIndex = 19;
             this.lbquydinhnamhoc.Text = "Quy Định Năm Học";
-            // 
-            // btexit
-            // 
-            this.btexit.BackColor = System.Drawing.Color.MediumPurple;
-            this.btexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btexit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btexit.Location = new System.Drawing.Point(970, 435);
-            this.btexit.Name = "btexit";
-            this.btexit.Size = new System.Drawing.Size(111, 36);
-            this.btexit.TabIndex = 21;
-            this.btexit.Text = "Thoát";
-            this.btexit.UseVisualStyleBackColor = false;
-            this.btexit.Click += new System.EventHandler(this.btexit_Click_1);
+            this.lbquydinhnamhoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btApDung
             // 
@@ -304,21 +293,67 @@
             this.btApDung.IconRightVisible = true;
             this.btApDung.IconRightZoom = 0D;
             this.btApDung.IconVisible = true;
-            this.btApDung.IconZoom = 90D;
+            this.btApDung.IconZoom = 80D;
             this.btApDung.IsTab = false;
-            this.btApDung.Location = new System.Drawing.Point(495, 423);
+            this.btApDung.Location = new System.Drawing.Point(414, 427);
             this.btApDung.Name = "btApDung";
             this.btApDung.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(108)))));
             this.btApDung.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btApDung.OnHoverTextColor = System.Drawing.Color.White;
             this.btApDung.selected = false;
-            this.btApDung.Size = new System.Drawing.Size(241, 48);
+            this.btApDung.Size = new System.Drawing.Size(130, 38);
             this.btApDung.TabIndex = 22;
             this.btApDung.Text = "Áp dụng";
             this.btApDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btApDung.Textcolor = System.Drawing.Color.White;
             this.btApDung.TextFont = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btApDung.Click += new System.EventHandler(this.btApDung_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.BorderRadius = 0;
+            this.btnThoat.ButtonText = "Thoát";
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThoat.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnThoat.Iconimage")));
+            this.btnThoat.Iconimage_right = null;
+            this.btnThoat.Iconimage_right_Selected = null;
+            this.btnThoat.Iconimage_Selected = null;
+            this.btnThoat.IconMarginLeft = 0;
+            this.btnThoat.IconMarginRight = 0;
+            this.btnThoat.IconRightVisible = false;
+            this.btnThoat.IconRightZoom = 0D;
+            this.btnThoat.IconVisible = true;
+            this.btnThoat.IconZoom = 70D;
+            this.btnThoat.IsTab = true;
+            this.btnThoat.Location = new System.Drawing.Point(583, 427);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnThoat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnThoat.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThoat.selected = false;
+            this.btnThoat.Size = new System.Drawing.Size(130, 38);
+            this.btnThoat.TabIndex = 24;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThoat.Textcolor = System.Drawing.Color.White;
+            this.btnThoat.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbquydinhnamhoc);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1144, 51);
+            this.panel1.TabIndex = 25;
             // 
             // ThayDoiQuyDinh
             // 
@@ -327,10 +362,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1144, 541);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.gbcacthamso);
             this.Controls.Add(this.groupboxthaydoiquydinh);
-            this.Controls.Add(this.lbquydinhnamhoc);
-            this.Controls.Add(this.btexit);
             this.Controls.Add(this.btApDung);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -347,8 +382,8 @@
             this.gbcacthamso.ResumeLayout(false);
             this.groupboxthaydoiquydinh.ResumeLayout(false);
             this.groupboxthaydoiquydinh.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -375,7 +410,8 @@
         private System.Windows.Forms.Label lbtuoitoida;
         private System.Windows.Forms.Label lbtuoitoithieu;
         private System.Windows.Forms.Label lbquydinhnamhoc;
-        private System.Windows.Forms.Button btexit;
         private Bunifu.Framework.UI.BunifuFlatButton btApDung;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThoat;
+        private System.Windows.Forms.Panel panel1;
     }
 }

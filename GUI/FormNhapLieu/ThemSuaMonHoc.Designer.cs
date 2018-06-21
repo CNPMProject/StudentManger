@@ -179,7 +179,6 @@
             this.Controls.Add(this.tbMaMH_DSMH);
             this.Controls.Add(this.lbMaMH);
             this.Controls.Add(this.lbTenMH);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ThemSuaMonHoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MonHoc";

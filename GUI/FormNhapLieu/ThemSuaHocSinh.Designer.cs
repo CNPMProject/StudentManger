@@ -291,7 +291,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbHoTen);
             this.Controls.Add(this.labelmahs);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ThemSuaHocSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm/ sửa học sinh";

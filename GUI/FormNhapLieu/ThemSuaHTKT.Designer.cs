@@ -193,7 +193,6 @@
             this.Controls.Add(this.tbMa);
             this.Controls.Add(this.tbHeSo);
             this.Controls.Add(this.tbTenHTKT);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ThemSuaHTKT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hình thức kiểm tra";

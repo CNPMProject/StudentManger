@@ -35,13 +35,14 @@ namespace GUI.MainForm
         #region Trich xuat ra bao cao tong ket hoc ky
         void TrichXuatBaoCaoHocKy()
         {
+            //this.rpBaoCaoHocKy.Refresh();
             DatabaseBLL databasebll = new DatabaseBLL();
             string con = null;
             con = databasebll.GetconnectionString();
 
-            //try
-            //{
-           // databasebll.OpenConnection();
+            try
+            {
+                //cho he thong triger hoat dong cap nhat
             SqlConnection conn= new SqlConnection(con);
             conn.Open();
             SqlCommand com = new SqlCommand();
@@ -50,9 +51,8 @@ namespace GUI.MainForm
             com.Connection = conn;
             com.ExecuteNonQuery();
             conn.Close();
-           // databasebll.CloseConection();
-            //}
-            //catch { }
+            }
+            catch { }
 
 
             string strConnect = "select l.TenLop,l.SiSo, bc.SoLuongDat,bc.Tile"
@@ -61,16 +61,18 @@ namespace GUI.MainForm
                                     + cbHocKy_BCHK.Text + "' and MaNamHoc= '" + cbNamHoc_BCHK.Text + "'";
            // MessageBox.Show(strConnect);
             SqlDataAdapter adapter = new SqlDataAdapter(strConnect, con);
-            DataSet datasetHocky = new DataSet();
+            DataSet datasetHocky = new DataSet();          
             adapter.Fill(datasetHocky, "HocKy");
 
             this.rpBaoCaoHocKy.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.ReportHocKy.rdlc";
             ReportParameter ReportParameterTime = new ReportParameter("ReportParameterTime",cbHocKy_BCHK.Text+"    "+cbNamHoc_BCHK.Text);
             this.rpBaoCaoHocKy.LocalReport.SetParameters(ReportParameterTime);
 
+            
             ReportDataSource rpdsHocKy = new ReportDataSource();
             rpdsHocKy.Name = "BaoCaoHocKy";
-            rpdsHocKy.Value = datasetHocky.Tables[0];
+            rpdsHocKy.Value = datasetHocky.Tables["HocKy"];
+            rpBaoCaoHocKy.LocalReport.DataSources.Clear();
             rpBaoCaoHocKy.LocalReport.DataSources.Add(rpdsHocKy);
             this.rpBaoCaoHocKy.RefreshReport();
         }
@@ -95,27 +97,45 @@ namespace GUI.MainForm
         #region Trich xuat ra bao cao tong ket mon
         void TrichXuatBaoCaoMonHoc()
         {
+          //  this.rpBaoCaoMon.RefreshReport();
+
             DatabaseBLL databasebll = new DatabaseBLL();
             string con = null;
             con = databasebll.GetconnectionString();
+
+            try
+            {
+                //cho he thong triger hoat dong cap nhat
+                SqlConnection conn = new SqlConnection(con);
+                conn.Open();
+                SqlCommand com = new SqlCommand();
+                com.CommandType = CommandType.Text;
+                com.CommandText = " update CT_BCAOTONGKETMON set MaLop='L001' where  MaLop='L001'";
+                com.Connection = conn;
+                com.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch { }
 
             string strConnect = "select l.TenLop,l.SiSo,ct.SoLuongDatMon ,ct.TiLeDatMon "
                                 + " from BAOCAOTONGKETMON bc, LOP l, CT_BCAOTONGKETMON ct "
                                 + " where bc.MaBCTKM = ct.MaBCTKM and ct.MaLop = l.MaLop "
                                 +" and MaHocKy = '"+cbHocKy_BCMH.Text+"' and MaNamHoc = '"+cbNamHoc_BCMH.Text+"' and bc.MaMonHoc = '"+cbMonHoc_BCMH.Text+"'";
            
-            // MessageBox.Show(strConnect);
+           // MessageBox.Show(strConnect);
             SqlDataAdapter adapter = new SqlDataAdapter(strConnect, con);
             DataSet datasetMonHoc = new DataSet();
             adapter.Fill(datasetMonHoc, "MonHoc");
+            
 
-            this.rpBaoCaoMon.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.ReportMonHoc.rdlc";
+            this.rpBaoCaoMon.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.RpMonHoc.rdlc";
             ReportDataSource rpdsMonHoc = new ReportDataSource();
             ReportParameter ReportParameterBaoCaoMonHoc = new ReportParameter("ReportParameterBaoCaoMonHoc", cbHocKy_BCMH.Text + "    " + cbNamHoc_BCMH.Text+"   môn "+ cbMonHoc_BCMH.Text);
             this.rpBaoCaoMon.LocalReport.SetParameters(ReportParameterBaoCaoMonHoc);
 
             rpdsMonHoc.Name = "BaoCaoMonHoc";
-            rpdsMonHoc.Value = datasetMonHoc.Tables[0];
+            rpdsMonHoc.Value = datasetMonHoc.Tables["MonHoc"];
+            rpBaoCaoMon.LocalReport.DataSources.Clear();
             rpBaoCaoMon.LocalReport.DataSources.Add(rpdsMonHoc);
 
             this.rpBaoCaoMon.RefreshReport();
@@ -219,6 +239,16 @@ namespace GUI.MainForm
         {
             TaoBaoCaoTongKetMonHoc();
             TrichXuatBaoCaoMonHoc();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

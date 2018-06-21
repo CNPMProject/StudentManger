@@ -50,9 +50,9 @@ namespace DAL
             OpenConnection();
             SqlCommand com = new SqlCommand();
             com.CommandType = CommandType.Text;
-            com.CommandText = "select hs.MaHocSinh,hs.HoVaTen,qth.MaLop,qth.MaHocKy,qth.DiemTBHk "
-                            +"from HOCSINH hs,QUATRINHHOCTAP qth "
-                            +"where hs.MaHocSinh = qth.MaHocSinh and maNamHoc=@maNamHoc and hs.TrangThai='HD'";
+            com.CommandText = "select hs.MaHocSinh,hs.HoVaTen,l.TenLop,qth.MaHocKy,qth.DiemTBHk "
+                            + "from HOCSINH hs,QUATRINHHOCTAP qth ,LOP l "
+                            + "where hs.MaHocSinh = qth.MaHocSinh  and l.MaLop=qth.MaLop and maNamHoc=@maNamHoc and hs.TrangThai='HD'";
             
             com.Parameters.Add("@maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
             com.Connection = conn;
@@ -135,6 +135,48 @@ namespace DAL
                                +"where hs.MaHocSinh = qth.MaHocSinh  and qth.MaLop = l.MaLop and l.TenLop like N'%"+lop+"%'";
 
             // com.Parameters.Add("@ten", SqlDbType.VarChar).Value = tenHocSinh;
+            com.Connection = conn;
+
+            SqlDataReader reader = com.ExecuteReader();
+            List<ThongTinChungHS_DiemTB> listdshocsinh = new List<ThongTinChungHS_DiemTB>();
+
+            while (reader.Read())
+            {
+                string maHocSinh = reader.GetInt32(0).ToString();
+                String tenHocSinh = reader.GetString(1);
+                string maLop = reader.GetString(2);
+                string maHocKy = reader.GetString(3);
+                string diemTrungBinh = null;
+                try
+                {
+                    diemTrungBinh = reader.GetDouble(4).ToString();
+                }
+                catch { }
+
+
+                ThongTinChungHS_DiemTB dshocsinh = new ThongTinChungHS_DiemTB(
+                    maHocSinh, tenHocSinh, maLop, maHocKy, diemTrungBinh);
+                listdshocsinh.Add(dshocsinh);
+            }
+
+            reader.Close();
+            CloseConnection();
+            return listdshocsinh;
+
+        }
+
+        public List<ThongTinChungHS_DiemTB> GetDanhSachHocSinh_ThongTinChung_TimKiemTheoDiemTB(float canDuoi, float canTren)
+        {
+            OpenConnection();
+            SqlCommand com = new SqlCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "select hs.MaHocSinh,hs.HoVaTen,qth.MaLop,qth.MaHocKy,qth.DiemTBHk "
+                               + " from HOCSINH hs,QUATRINHHOCTAP qth, LOP l "
+                               + "where hs.MaHocSinh = qth.MaHocSinh  and qth.MaLop = l.MaLop   and DiemTBHk>=@canDuoi and DiemTBHk <=@canTren";
+
+
+            com.Parameters.Add("@canDuoi", SqlDbType.Float).Value = canDuoi;
+            com.Parameters.Add("@canTren", SqlDbType.Float).Value = canTren;
             com.Connection = conn;
 
             SqlDataReader reader = com.ExecuteReader();

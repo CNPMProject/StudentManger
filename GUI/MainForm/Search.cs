@@ -25,7 +25,8 @@ namespace GUI.MainForm
             List<string> DanhSachTuyChonTimKiem = new List<string>()
             {
                 "Tìm theo tên",
-                "Tìm theo lớp"
+                "Tìm theo lớp",
+                "Tìm theo điểm TB"
             };
 
             cbTieuChiTimKiem.DataSource = DanhSachTuyChonTimKiem;
@@ -76,10 +77,28 @@ namespace GUI.MainForm
                 listThongTinChungHocSinh = hocSinhbll.GetDanhSachHocSinh_ThongTinChung_TimKiemTheoTen(tbTuKhoaTimKiem.Text);
             }
             else
+             if (cbTieuChiTimKiem.SelectedIndex == 2)
+            {
+                try
+                {
+                    string[] listdiem = tbTuKhoaTimKiem.Text.Split(' ');
+                    float canTren = float.Parse(listdiem[1]);
+                    float canDuoi = float.Parse(listdiem[0]);
+                    listThongTinChungHocSinh = hocSinhbll.GetDanhSachHocSinh_ThongTinChung_TimKiemTheoDiemTB(canDuoi, canTren);
+                }
+                catch
+                {
+                    MessageBox.Show("Không đúng định dạng tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+               
+            }
+            else
+           //  if (cbTieuChiTimKiem.SelectedIndex == 1)
             {
                 listThongTinChungHocSinh = hocSinhbll.GetDanhSachHocSinh_ThongTinChung_TimKiemTheoLop(tbTuKhoaTimKiem.Text);
             }
-         
+
             lvdshs.Items.Clear();
             int soThuTu = 1;
             HocKyBLL hockybll = new HocKyBLL();
@@ -173,6 +192,14 @@ namespace GUI.MainForm
             {
                 MessageBox.Show("Bạn phải chọn 1 học sinh để sửa !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cbTieuChiTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbTieuChiTimKiem.SelectedIndex==2)
+            lbHuongDan.Visible = true;
+            else
+                lbHuongDan.Visible = false;
         }
     }
 }

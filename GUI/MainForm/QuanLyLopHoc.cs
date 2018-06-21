@@ -145,8 +145,8 @@ namespace GUI.MainForm
             List<string> listmaLopMoi = new List<string>();
             foreach (Lop lop in listLop)
             {
-                listmaLopCu.Add(lop.MaLop);
-                listmaLopMoi.Add(lop.MaLop);
+                listmaLopCu.Add(lop.TenLop+" ("+ lop.MaLop+")");
+                listmaLopMoi.Add(lop.TenLop + " (" + lop.MaLop + ")");
             }
 
             cbLopChuyenLopCu.DataSource = listmaLopCu;
@@ -273,12 +273,12 @@ namespace GUI.MainForm
                     LoadDanhSachHocSinhChuaXepLop();
                     LoadDanhSachHocSinhLopDuocXep_MHXL();
                 }
-            }
+        }
             catch
             {
                 MessageBox.Show("Không thể kết nối tới CSDL,vui lòng cài đặt lại kết nối", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+}
 
         /// <summary>
         /// Load thong tin chung cua hoc sinh bao gom ca diem len listview DSHS
@@ -378,6 +378,15 @@ namespace GUI.MainForm
         void LoadDanhSachHocSinh(int listView, string maNamHoc,string maHocKy,string maLop)
         {
             List<HocSinh> listDSHocSinhCoDK;
+            if (listView != 3)
+            {
+                string[] splitMaLop = maLop.Split('(');
+                maLop = splitMaLop[1];
+                splitMaLop = maLop.Split(')');
+                maLop = splitMaLop[0];
+            }
+
+
             listDSHocSinhCoDK = hocSinhbll.GetDSHocSinh(maNamHoc, maHocKy, maLop);
 
             int STT = 1;
@@ -428,6 +437,9 @@ namespace GUI.MainForm
         private void cbNH_DSHS_SelectedIndexChanged(object sender, EventArgs e)
         {
            LoadDSHS_DSHS();
+            lvdshs.Sorting= new SortOrder();
+            lvdshs.Sorting = 0;
+            lvdshs.Sort();
         }
 
 

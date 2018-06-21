@@ -437,7 +437,6 @@
             this.Controls.Add(this.gbListHS);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ThemSuaDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý điểm";

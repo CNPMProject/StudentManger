@@ -91,10 +91,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaoCaoHocKy.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BaoCaoTongKet\BaoCaoMon.Designer.cs">
+    <Compile Include="BaoCaoTongKet\BaoCaoMonHoc.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaoCaoMon.xsd</DependentUpon>
+      <DependentUpon>BaoCaoMonHoc.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormNhapLieu\ThemSuaCTDT.cs">
       <SubType>Form</SubType>
@@ -196,7 +196,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="BaoCaoTongKet\ReportHocKy.rdlc" />
-    <EmbeddedResource Include="BaoCaoTongKet\ReportMonHoc.rdlc" />
+    <EmbeddedResource Include="BaoCaoTongKet\RpMonHoc.rdlc" />
     <EmbeddedResource Include="FormNhapLieu\ThemSuaCTDT.resx">
       <DependentUpon>ThemSuaCTDT.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,16 +266,16 @@
     <None Include="BaoCaoTongKet\BaoCaoHocKy.xss">
       <DependentUpon>BaoCaoHocKy.xsd</DependentUpon>
     </None>
-    <None Include="BaoCaoTongKet\BaoCaoMon.xsc">
-      <DependentUpon>BaoCaoMon.xsd</DependentUpon>
+    <None Include="BaoCaoTongKet\BaoCaoMonHoc.xsc">
+      <DependentUpon>BaoCaoMonHoc.xsd</DependentUpon>
     </None>
-    <None Include="BaoCaoTongKet\BaoCaoMon.xsd">
+    <None Include="BaoCaoTongKet\BaoCaoMonHoc.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BaoCaoMon.Designer.cs</LastGenOutput>
+      <LastGenOutput>BaoCaoMonHoc.Designer.cs</LastGenOutput>
     </None>
-    <None Include="BaoCaoTongKet\BaoCaoMon.xss">
-      <DependentUpon>BaoCaoMon.xsd</DependentUpon>
+    <None Include="BaoCaoTongKet\BaoCaoMonHoc.xss">
+      <DependentUpon>BaoCaoMonHoc.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

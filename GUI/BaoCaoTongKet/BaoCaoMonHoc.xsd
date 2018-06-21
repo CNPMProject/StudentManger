@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="BaoCaoMon" targetNamespace="http://tempuri.org/BaoCaoMon.xsd" xmlns:mstns="http://tempuri.org/BaoCaoMon.xsd" xmlns="http://tempuri.org/BaoCaoMon.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="BaoCaoMonHoc" targetNamespace="http://tempuri.org/BaoCaoMonHoc.xsd" xmlns:mstns="http://tempuri.org/BaoCaoMonHoc.xsd" xmlns="http://tempuri.org/BaoCaoMonHoc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="BaoCaoMon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BaoCaoMon" msprop:Generator_UserDSName="BaoCaoMon">
+  <xs:element name="BaoCaoMonHoc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BaoCaoMonHoc" msprop:Generator_UserDSName="BaoCaoMonHoc">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BaoCaoMonHoc" msprop:Generator_TableClassName="BaoCaoMonHocDataTable" msprop:Generator_TableVarName="tableBaoCaoMonHoc" msprop:Generator_RowChangedName="BaoCaoMonHocRowChanged" msprop:Generator_TablePropName="BaoCaoMonHoc" msprop:Generator_RowDeletingName="BaoCaoMonHocRowDeleting" msprop:Generator_RowChangingName="BaoCaoMonHocRowChanging" msprop:Generator_RowEvHandlerName="BaoCaoMonHocRowChangeEventHandler" msprop:Generator_RowDeletedName="BaoCaoMonHocRowDeleted" msprop:Generator_RowClassName="BaoCaoMonHocRow" msprop:Generator_UserTableName="BaoCaoMonHoc" msprop:Generator_RowEvArgName="BaoCaoMonHocRowChangeEvent">
+        <xs:element name="BaoCaoMonHoc" msprop:Generator_TableClassName="BaoCaoMonHocDataTable" msprop:Generator_TableVarName="tableBaoCaoMonHoc" msprop:Generator_RowChangedName="BaoCaoMonHocRowChanged" msprop:Generator_TablePropName="_BaoCaoMonHoc" msprop:Generator_RowDeletingName="BaoCaoMonHocRowDeleting" msprop:Generator_RowChangingName="BaoCaoMonHocRowChanging" msprop:Generator_RowEvHandlerName="BaoCaoMonHocRowChangeEventHandler" msprop:Generator_RowDeletedName="BaoCaoMonHocRowDeleted" msprop:Generator_RowClassName="BaoCaoMonHocRow" msprop:Generator_UserTableName="BaoCaoMonHoc" msprop:Generator_RowEvArgName="BaoCaoMonHocRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TenLop" msprop:Generator_ColumnVarNameInTable="columnTenLop" msprop:Generator_ColumnPropNameInRow="TenLop" msprop:Generator_ColumnPropNameInTable="TenLopColumn" msprop:Generator_UserColumnName="TenLop" type="xs:string" minOccurs="0" />

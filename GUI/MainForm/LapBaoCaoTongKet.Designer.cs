@@ -52,6 +52,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbbcaomonhoc = new System.Windows.Forms.Label();
             this.tbbaocaomon = new System.Windows.Forms.TabControl();
+            this.btnThoat = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.gbboloc.SuspendLayout();
             this.tbbaocaohocky.SuspendLayout();
             this.gbbaocaohocky.SuspendLayout();
@@ -106,7 +108,7 @@
             this.gbboloc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbboloc.Location = new System.Drawing.Point(117, 50);
             this.gbboloc.Name = "gbboloc";
-            this.gbboloc.Size = new System.Drawing.Size(892, 74);
+            this.gbboloc.Size = new System.Drawing.Size(883, 74);
             this.gbboloc.TabIndex = 2;
             this.gbboloc.TabStop = false;
             this.gbboloc.Text = "Bộ lọc";
@@ -134,7 +136,7 @@
             this.btnTaoBaoCaoHocKy.IconVisible = false;
             this.btnTaoBaoCaoHocKy.IconZoom = 70D;
             this.btnTaoBaoCaoHocKy.IsTab = true;
-            this.btnTaoBaoCaoHocKy.Location = new System.Drawing.Point(632, 17);
+            this.btnTaoBaoCaoHocKy.Location = new System.Drawing.Point(627, 17);
             this.btnTaoBaoCaoHocKy.Name = "btnTaoBaoCaoHocKy";
             this.btnTaoBaoCaoHocKy.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnTaoBaoCaoHocKy.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
@@ -151,24 +153,24 @@
             // cbHocKy_BCMH
             // 
             this.cbHocKy_BCMH.FormattingEnabled = true;
-            this.cbHocKy_BCMH.Location = new System.Drawing.Point(386, 23);
+            this.cbHocKy_BCMH.Location = new System.Drawing.Point(321, 20);
             this.cbHocKy_BCMH.Name = "cbHocKy_BCMH";
-            this.cbHocKy_BCMH.Size = new System.Drawing.Size(117, 28);
+            this.cbHocKy_BCMH.Size = new System.Drawing.Size(87, 28);
             this.cbHocKy_BCMH.TabIndex = 7;
             // 
             // cbMonHoc_BCMH
             // 
             this.cbMonHoc_BCMH.FormattingEnabled = true;
-            this.cbMonHoc_BCMH.Location = new System.Drawing.Point(118, 23);
+            this.cbMonHoc_BCMH.Location = new System.Drawing.Point(103, 20);
             this.cbMonHoc_BCMH.Name = "cbMonHoc_BCMH";
-            this.cbMonHoc_BCMH.Size = new System.Drawing.Size(139, 28);
+            this.cbMonHoc_BCMH.Size = new System.Drawing.Size(100, 28);
             this.cbMonHoc_BCMH.TabIndex = 6;
             // 
             // lbnamhc
             // 
             this.lbnamhc.AutoSize = true;
             this.lbnamhc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnamhc.Location = new System.Drawing.Point(539, 30);
+            this.lbnamhc.Location = new System.Drawing.Point(435, 25);
             this.lbnamhc.Name = "lbnamhc";
             this.lbnamhc.Size = new System.Drawing.Size(83, 20);
             this.lbnamhc.TabIndex = 4;
@@ -178,7 +180,7 @@
             // 
             this.lbhcky.AutoSize = true;
             this.lbhcky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbhcky.Location = new System.Drawing.Point(283, 28);
+            this.lbhcky.Location = new System.Drawing.Point(244, 25);
             this.lbhcky.Name = "lbhcky";
             this.lbhcky.Size = new System.Drawing.Size(71, 20);
             this.lbhcky.TabIndex = 5;
@@ -197,6 +199,7 @@
             // tbbaocaohocky
             // 
             this.tbbaocaohocky.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
+            this.tbbaocaohocky.Controls.Add(this.bunifuFlatButton1);
             this.tbbaocaohocky.Controls.Add(this.lbbaocaohocky);
             this.tbbaocaohocky.Controls.Add(this.gbboloc);
             this.tbbaocaohocky.Controls.Add(this.gbbaocaohocky);
@@ -213,7 +216,7 @@
             this.gbbaocaohocky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbbaocaohocky.Location = new System.Drawing.Point(117, 130);
             this.gbbaocaohocky.Name = "gbbaocaohocky";
-            this.gbbaocaohocky.Size = new System.Drawing.Size(892, 377);
+            this.gbbaocaohocky.Size = new System.Drawing.Size(883, 377);
             this.gbbaocaohocky.TabIndex = 1;
             this.gbbaocaohocky.TabStop = false;
             this.gbbaocaohocky.Text = "Nội dung báo cáo";
@@ -223,22 +226,22 @@
             this.rpBaoCaoHocKy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpBaoCaoHocKy.Location = new System.Drawing.Point(3, 22);
             this.rpBaoCaoHocKy.Name = "rpBaoCaoHocKy";
-            this.rpBaoCaoHocKy.Size = new System.Drawing.Size(886, 352);
+            this.rpBaoCaoHocKy.Size = new System.Drawing.Size(877, 352);
             this.rpBaoCaoHocKy.TabIndex = 0;
             // 
             // cbNamHoc_BCMH
             // 
             this.cbNamHoc_BCMH.FormattingEnabled = true;
-            this.cbNamHoc_BCMH.Location = new System.Drawing.Point(628, 25);
+            this.cbNamHoc_BCMH.Location = new System.Drawing.Point(524, 20);
             this.cbNamHoc_BCMH.Name = "cbNamHoc_BCMH";
-            this.cbNamHoc_BCMH.Size = new System.Drawing.Size(139, 28);
+            this.cbNamHoc_BCMH.Size = new System.Drawing.Size(108, 28);
             this.cbNamHoc_BCMH.TabIndex = 1;
             // 
             // lbmonhc
             // 
             this.lbmonhc.AutoSize = true;
             this.lbmonhc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmonhc.Location = new System.Drawing.Point(29, 26);
+            this.lbmonhc.Location = new System.Drawing.Point(25, 28);
             this.lbmonhc.Name = "lbmonhc";
             this.lbmonhc.Size = new System.Drawing.Size(81, 20);
             this.lbmonhc.TabIndex = 2;
@@ -255,9 +258,9 @@
             this.gbbolocmon.Controls.Add(this.cbNamHoc_BCMH);
             this.gbbolocmon.Controls.Add(this.lbmonhc);
             this.gbbolocmon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbbolocmon.Location = new System.Drawing.Point(58, 48);
+            this.gbbolocmon.Location = new System.Drawing.Point(158, 48);
             this.gbbolocmon.Name = "gbbolocmon";
-            this.gbbolocmon.Size = new System.Drawing.Size(1033, 72);
+            this.gbbolocmon.Size = new System.Drawing.Size(817, 72);
             this.gbbolocmon.TabIndex = 6;
             this.gbbolocmon.TabStop = false;
             this.gbbolocmon.Text = "Bộ Lọc";
@@ -285,13 +288,13 @@
             this.btnXemBaoCaoMon.IconVisible = false;
             this.btnXemBaoCaoMon.IconZoom = 70D;
             this.btnXemBaoCaoMon.IsTab = true;
-            this.btnXemBaoCaoMon.Location = new System.Drawing.Point(816, 15);
+            this.btnXemBaoCaoMon.Location = new System.Drawing.Point(657, 12);
             this.btnXemBaoCaoMon.Name = "btnXemBaoCaoMon";
             this.btnXemBaoCaoMon.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
             this.btnXemBaoCaoMon.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
             this.btnXemBaoCaoMon.OnHoverTextColor = System.Drawing.Color.White;
             this.btnXemBaoCaoMon.selected = false;
-            this.btnXemBaoCaoMon.Size = new System.Drawing.Size(171, 36);
+            this.btnXemBaoCaoMon.Size = new System.Drawing.Size(141, 36);
             this.btnXemBaoCaoMon.TabIndex = 8;
             this.btnXemBaoCaoMon.Text = "Xem báo cáo";
             this.btnXemBaoCaoMon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,9 +306,9 @@
             // 
             this.gbnoidungbaocao.Controls.Add(this.rpBaoCaoMon);
             this.gbnoidungbaocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbnoidungbaocao.Location = new System.Drawing.Point(58, 126);
+            this.gbnoidungbaocao.Location = new System.Drawing.Point(158, 126);
             this.gbnoidungbaocao.Name = "gbnoidungbaocao";
-            this.gbnoidungbaocao.Size = new System.Drawing.Size(1033, 363);
+            this.gbnoidungbaocao.Size = new System.Drawing.Size(817, 383);
             this.gbnoidungbaocao.TabIndex = 10;
             this.gbnoidungbaocao.TabStop = false;
             this.gbnoidungbaocao.Text = "Nội Dung Báo Cáo";
@@ -315,12 +318,13 @@
             this.rpBaoCaoMon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpBaoCaoMon.Location = new System.Drawing.Point(3, 22);
             this.rpBaoCaoMon.Name = "rpBaoCaoMon";
-            this.rpBaoCaoMon.Size = new System.Drawing.Size(1027, 338);
+            this.rpBaoCaoMon.Size = new System.Drawing.Size(811, 358);
             this.rpBaoCaoMon.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
+            this.tabPage1.Controls.Add(this.btnThoat);
             this.tabPage1.Controls.Add(this.gbnoidungbaocao);
             this.tabPage1.Controls.Add(this.gbbolocmon);
             this.tabPage1.Controls.Add(this.lbbcaomonhoc);
@@ -354,6 +358,80 @@
             this.tbbaocaomon.Size = new System.Drawing.Size(1144, 541);
             this.tbbaocaomon.TabIndex = 1;
             this.tbbaocaomon.Selected += new System.Windows.Forms.TabControlEventHandler(this.tbbaocaomon_Selected);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.BorderRadius = 0;
+            this.btnThoat.ButtonText = "Thoát";
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThoat.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnThoat.Iconimage")));
+            this.btnThoat.Iconimage_right = null;
+            this.btnThoat.Iconimage_right_Selected = null;
+            this.btnThoat.Iconimage_Selected = null;
+            this.btnThoat.IconMarginLeft = 0;
+            this.btnThoat.IconMarginRight = 0;
+            this.btnThoat.IconRightVisible = false;
+            this.btnThoat.IconRightZoom = 0D;
+            this.btnThoat.IconVisible = false;
+            this.btnThoat.IconZoom = 70D;
+            this.btnThoat.IsTab = true;
+            this.btnThoat.Location = new System.Drawing.Point(998, 469);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnThoat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnThoat.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThoat.selected = false;
+            this.btnThoat.Size = new System.Drawing.Size(130, 38);
+            this.btnThoat.TabIndex = 25;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThoat.Textcolor = System.Drawing.Color.White;
+            this.btnThoat.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Thoát";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = false;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 70D;
+            this.bunifuFlatButton1.IsTab = true;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(1003, 463);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(130, 38);
+            this.bunifuFlatButton1.TabIndex = 25;
+            this.bunifuFlatButton1.Text = "Thoát";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // LapBaoCaoTongKet
             // 
@@ -405,5 +483,7 @@
         private Microsoft.Reporting.WinForms.ReportViewer rpBaoCaoHocKy;
         private Bunifu.Framework.UI.BunifuFlatButton btnTaoBaoCaoHocKy;
         private Bunifu.Framework.UI.BunifuFlatButton btnXemBaoCaoMon;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThoat;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
     }
 }

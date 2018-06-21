@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
             this.btnThoat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSuaHS = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cbTieuChiTimKiem = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@
             this.labelhoten = new System.Windows.Forms.Label();
             this.labelmahs = new System.Windows.Forms.Label();
             this.groupthongtin = new System.Windows.Forms.GroupBox();
-            this.btnSuaHS = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbHuongDan = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupthongtin.SuspendLayout();
@@ -111,6 +112,43 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tùy chọn";
             // 
+            // btnSuaHS
+            // 
+            this.btnSuaHS.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSuaHS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSuaHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSuaHS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSuaHS.BorderRadius = 0;
+            this.btnSuaHS.ButtonText = "Sửa ";
+            this.btnSuaHS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuaHS.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSuaHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaHS.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSuaHS.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSuaHS.Iconimage")));
+            this.btnSuaHS.Iconimage_right = null;
+            this.btnSuaHS.Iconimage_right_Selected = null;
+            this.btnSuaHS.Iconimage_Selected = null;
+            this.btnSuaHS.IconMarginLeft = 0;
+            this.btnSuaHS.IconMarginRight = 0;
+            this.btnSuaHS.IconRightVisible = false;
+            this.btnSuaHS.IconRightZoom = 0D;
+            this.btnSuaHS.IconVisible = false;
+            this.btnSuaHS.IconZoom = 70D;
+            this.btnSuaHS.IsTab = true;
+            this.btnSuaHS.Location = new System.Drawing.Point(34, 30);
+            this.btnSuaHS.Name = "btnSuaHS";
+            this.btnSuaHS.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.btnSuaHS.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.btnSuaHS.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSuaHS.selected = false;
+            this.btnSuaHS.Size = new System.Drawing.Size(115, 36);
+            this.btnSuaHS.TabIndex = 23;
+            this.btnSuaHS.Text = "Sửa ";
+            this.btnSuaHS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSuaHS.Textcolor = System.Drawing.Color.White;
+            this.btnSuaHS.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaHS.Click += new System.EventHandler(this.btnSuaHS_Click);
+            // 
             // cbTieuChiTimKiem
             // 
             this.cbTieuChiTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +158,7 @@
             this.cbTieuChiTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbTieuChiTimKiem.Size = new System.Drawing.Size(152, 28);
             this.cbTieuChiTimKiem.TabIndex = 32;
+            this.cbTieuChiTimKiem.SelectedIndexChanged += new System.EventHandler(this.cbTieuChiTimKiem_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -408,42 +447,17 @@
             this.groupthongtin.TabStop = false;
             this.groupthongtin.Text = "Thông tin chi tiết";
             // 
-            // btnSuaHS
+            // lbHuongDan
             // 
-            this.btnSuaHS.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSuaHS.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSuaHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.btnSuaHS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSuaHS.BorderRadius = 0;
-            this.btnSuaHS.ButtonText = "Sửa ";
-            this.btnSuaHS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuaHS.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSuaHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaHS.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSuaHS.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSuaHS.Iconimage")));
-            this.btnSuaHS.Iconimage_right = null;
-            this.btnSuaHS.Iconimage_right_Selected = null;
-            this.btnSuaHS.Iconimage_Selected = null;
-            this.btnSuaHS.IconMarginLeft = 0;
-            this.btnSuaHS.IconMarginRight = 0;
-            this.btnSuaHS.IconRightVisible = false;
-            this.btnSuaHS.IconRightZoom = 0D;
-            this.btnSuaHS.IconVisible = false;
-            this.btnSuaHS.IconZoom = 70D;
-            this.btnSuaHS.IsTab = true;
-            this.btnSuaHS.Location = new System.Drawing.Point(34, 30);
-            this.btnSuaHS.Name = "btnSuaHS";
-            this.btnSuaHS.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.btnSuaHS.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
-            this.btnSuaHS.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSuaHS.selected = false;
-            this.btnSuaHS.Size = new System.Drawing.Size(115, 36);
-            this.btnSuaHS.TabIndex = 23;
-            this.btnSuaHS.Text = "Sửa ";
-            this.btnSuaHS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSuaHS.Textcolor = System.Drawing.Color.White;
-            this.btnSuaHS.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaHS.Click += new System.EventHandler(this.btnSuaHS_Click);
+            this.lbHuongDan.AutoSize = true;
+            this.lbHuongDan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHuongDan.ForeColor = System.Drawing.Color.Red;
+            this.lbHuongDan.Location = new System.Drawing.Point(432, 60);
+            this.lbHuongDan.Name = "lbHuongDan";
+            this.lbHuongDan.Size = new System.Drawing.Size(393, 15);
+            this.lbHuongDan.TabIndex = 34;
+            this.lbHuongDan.Text = "Ví dụ: mức điểm từ 5 đếm 8, Nhập vào: 5 8 ( cách nhau 1 khoảng trắng)";
+            this.lbHuongDan.Visible = false;
             // 
             // Search
             // 
@@ -453,6 +467,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1144, 541);
+            this.Controls.Add(this.lbHuongDan);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.cbTieuChiTimKiem);
             this.Controls.Add(this.label1);
@@ -505,5 +520,6 @@
         private System.Windows.Forms.GroupBox groupthongtin;
         private System.Windows.Forms.ColumnHeader clMaHocSinh;
         private Bunifu.Framework.UI.BunifuFlatButton btnSuaHS;
+        private System.Windows.Forms.Label lbHuongDan;
     }
 }
