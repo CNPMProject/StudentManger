@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetBaoCaoMonHoc" targetNamespace="http://tempuri.org/DataSetBaoCaoMonHoc.xsd" xmlns:mstns="http://tempuri.org/DataSetBaoCaoMonHoc.xsd" xmlns="http://tempuri.org/DataSetBaoCaoMonHoc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetBaoCaoMonHoc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetBaoCaoMonHoc" msprop:Generator_UserDSName="DataSetBaoCaoMonHoc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BaoCaoMonHoc" msprop:Generator_TableClassName="BaoCaoMonHocDataTable" msprop:Generator_TableVarName="tableBaoCaoMonHoc" msprop:Generator_TablePropName="BaoCaoMonHoc" msprop:Generator_RowDeletingName="BaoCaoMonHocRowDeleting" msprop:Generator_RowChangingName="BaoCaoMonHocRowChanging" msprop:Generator_RowEvHandlerName="BaoCaoMonHocRowChangeEventHandler" msprop:Generator_RowDeletedName="BaoCaoMonHocRowDeleted" msprop:Generator_UserTableName="BaoCaoMonHoc" msprop:Generator_RowChangedName="BaoCaoMonHocRowChanged" msprop:Generator_RowEvArgName="BaoCaoMonHocRowChangeEvent" msprop:Generator_RowClassName="BaoCaoMonHocRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TenLop" msprop:Generator_ColumnVarNameInTable="columnTenLop" msprop:Generator_ColumnPropNameInRow="TenLop" msprop:Generator_ColumnPropNameInTable="TenLopColumn" msprop:Generator_UserColumnName="TenLop" type="xs:string" minOccurs="0" />
+              <xs:element name="SiSo" msprop:Generator_ColumnVarNameInTable="columnSiSo" msprop:Generator_ColumnPropNameInRow="SiSo" msprop:Generator_ColumnPropNameInTable="SiSoColumn" msprop:Generator_UserColumnName="SiSo" type="xs:int" minOccurs="0" />
+              <xs:element name="SoLuongDatMon" msprop:Generator_ColumnVarNameInTable="columnSoLuongDatMon" msprop:Generator_ColumnPropNameInRow="SoLuongDatMon" msprop:Generator_ColumnPropNameInTable="SoLuongDatMonColumn" msprop:Generator_UserColumnName="SoLuongDatMon" type="xs:int" minOccurs="0" />
+              <xs:element name="TiLeDatMon" msprop:Generator_ColumnVarNameInTable="columnTiLeDatMon" msprop:Generator_ColumnPropNameInRow="TiLeDatMon" msprop:Generator_ColumnPropNameInTable="TiLeDatMonColumn" msprop:Generator_UserColumnName="TiLeDatMon" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

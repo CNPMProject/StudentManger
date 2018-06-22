@@ -41,6 +41,7 @@
             this.lbhcky = new System.Windows.Forms.Label();
             this.lbbaocaohocky = new System.Windows.Forms.Label();
             this.tbbaocaohocky = new System.Windows.Forms.TabPage();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.gbbaocaohocky = new System.Windows.Forms.GroupBox();
             this.rpBaoCaoHocKy = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cbNamHoc_BCMH = new System.Windows.Forms.ComboBox();
@@ -48,12 +49,11 @@
             this.gbbolocmon = new System.Windows.Forms.GroupBox();
             this.btnXemBaoCaoMon = new Bunifu.Framework.UI.BunifuFlatButton();
             this.gbnoidungbaocao = new System.Windows.Forms.GroupBox();
-            this.rpBaoCaoMon = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnThoat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbbcaomonhoc = new System.Windows.Forms.Label();
             this.tbbaocaomon = new System.Windows.Forms.TabControl();
-            this.btnThoat = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.rpBaoCaoMon = new Microsoft.Reporting.WinForms.ReportViewer();
             this.gbboloc.SuspendLayout();
             this.tbbaocaohocky.SuspendLayout();
             this.gbbaocaohocky.SuspendLayout();
@@ -210,6 +210,43 @@
             this.tbbaocaohocky.TabIndex = 1;
             this.tbbaocaohocky.Text = "Báo Cáo Học Kỳ";
             // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Thoát";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = false;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = false;
+            this.bunifuFlatButton1.IconZoom = 70D;
+            this.bunifuFlatButton1.IsTab = true;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(1003, 463);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(130, 38);
+            this.bunifuFlatButton1.TabIndex = 25;
+            this.bunifuFlatButton1.Text = "Thoát";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
             // gbbaocaohocky
             // 
             this.gbbaocaohocky.Controls.Add(this.rpBaoCaoHocKy);
@@ -313,14 +350,6 @@
             this.gbnoidungbaocao.TabStop = false;
             this.gbnoidungbaocao.Text = "Nội Dung Báo Cáo";
             // 
-            // rpBaoCaoMon
-            // 
-            this.rpBaoCaoMon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpBaoCaoMon.Location = new System.Drawing.Point(3, 22);
-            this.rpBaoCaoMon.Name = "rpBaoCaoMon";
-            this.rpBaoCaoMon.Size = new System.Drawing.Size(811, 358);
-            this.rpBaoCaoMon.TabIndex = 0;
-            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(213)))), ((int)(((byte)(246)))));
@@ -334,30 +363,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1136, 515);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Báo Cáo Môn Học";
-            // 
-            // lbbcaomonhoc
-            // 
-            this.lbbcaomonhoc.AutoSize = true;
-            this.lbbcaomonhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.lbbcaomonhoc.Location = new System.Drawing.Point(426, 12);
-            this.lbbcaomonhoc.Name = "lbbcaomonhoc";
-            this.lbbcaomonhoc.Size = new System.Drawing.Size(314, 29);
-            this.lbbcaomonhoc.TabIndex = 3;
-            this.lbbcaomonhoc.Text = "BÁO CÁO TỔNG KẾT MÔN";
-            this.lbbcaomonhoc.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // tbbaocaomon
-            // 
-            this.tbbaocaomon.Controls.Add(this.tabPage1);
-            this.tbbaocaomon.Controls.Add(this.tbbaocaohocky);
-            this.tbbaocaomon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbbaocaomon.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tbbaocaomon.Location = new System.Drawing.Point(0, 0);
-            this.tbbaocaomon.Name = "tbbaocaomon";
-            this.tbbaocaomon.SelectedIndex = 0;
-            this.tbbaocaomon.Size = new System.Drawing.Size(1144, 541);
-            this.tbbaocaomon.TabIndex = 1;
-            this.tbbaocaomon.Selected += new System.Windows.Forms.TabControlEventHandler(this.tbbaocaomon_Selected);
             // 
             // btnThoat
             // 
@@ -396,42 +401,37 @@
             this.btnThoat.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // bunifuFlatButton1
+            // lbbcaomonhoc
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Thoát";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = false;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 70D;
-            this.bunifuFlatButton1.IsTab = true;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(1003, 463);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(66)))), ((int)(((byte)(244)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(26)))), ((int)(((byte)(95)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(130, 38);
-            this.bunifuFlatButton1.TabIndex = 25;
-            this.bunifuFlatButton1.Text = "Thoát";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.lbbcaomonhoc.AutoSize = true;
+            this.lbbcaomonhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.lbbcaomonhoc.Location = new System.Drawing.Point(426, 12);
+            this.lbbcaomonhoc.Name = "lbbcaomonhoc";
+            this.lbbcaomonhoc.Size = new System.Drawing.Size(314, 29);
+            this.lbbcaomonhoc.TabIndex = 3;
+            this.lbbcaomonhoc.Text = "BÁO CÁO TỔNG KẾT MÔN";
+            this.lbbcaomonhoc.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // tbbaocaomon
+            // 
+            this.tbbaocaomon.Controls.Add(this.tabPage1);
+            this.tbbaocaomon.Controls.Add(this.tbbaocaohocky);
+            this.tbbaocaomon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbbaocaomon.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tbbaocaomon.Location = new System.Drawing.Point(0, 0);
+            this.tbbaocaomon.Name = "tbbaocaomon";
+            this.tbbaocaomon.SelectedIndex = 0;
+            this.tbbaocaomon.Size = new System.Drawing.Size(1144, 541);
+            this.tbbaocaomon.TabIndex = 1;
+            this.tbbaocaomon.Selected += new System.Windows.Forms.TabControlEventHandler(this.tbbaocaomon_Selected);
+            // 
+            // rpBaoCaoMon
+            // 
+            this.rpBaoCaoMon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpBaoCaoMon.Location = new System.Drawing.Point(3, 22);
+            this.rpBaoCaoMon.Name = "rpBaoCaoMon";
+            this.rpBaoCaoMon.Size = new System.Drawing.Size(811, 358);
+            this.rpBaoCaoMon.TabIndex = 0;
             // 
             // LapBaoCaoTongKet
             // 
@@ -479,11 +479,11 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label lbbcaomonhoc;
         private System.Windows.Forms.TabControl tbbaocaomon;
-        private Microsoft.Reporting.WinForms.ReportViewer rpBaoCaoMon;
         private Microsoft.Reporting.WinForms.ReportViewer rpBaoCaoHocKy;
         private Bunifu.Framework.UI.BunifuFlatButton btnTaoBaoCaoHocKy;
         private Bunifu.Framework.UI.BunifuFlatButton btnXemBaoCaoMon;
         private Bunifu.Framework.UI.BunifuFlatButton btnThoat;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Microsoft.Reporting.WinForms.ReportViewer rpBaoCaoMon;
     }
 }

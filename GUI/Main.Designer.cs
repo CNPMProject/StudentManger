@@ -36,7 +36,7 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.btnThemHocSinh = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnInfor = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnLapBaoCao = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -113,7 +113,7 @@
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnLeft.Controls.Add(this.btnThemHocSinh);
-            this.pnLeft.Controls.Add(this.btnDelete);
+            this.pnLeft.Controls.Add(this.btnInfor);
             this.pnLeft.Controls.Add(this.btnEdit);
             this.pnLeft.Controls.Add(this.btnUser);
             this.pnLeft.Controls.Add(this.btnHome);
@@ -134,16 +134,17 @@
             this.btnThemHocSinh.UseVisualStyleBackColor = false;
             this.btnThemHocSinh.Click += new System.EventHandler(this.btnThemHocSinh_Click);
             // 
-            // btnDelete
+            // btnInfor
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(-1, 199);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(51, 51);
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnInfor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInfor.BackgroundImage")));
+            this.btnInfor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInfor.Location = new System.Drawing.Point(-1, 199);
+            this.btnInfor.Name = "btnInfor";
+            this.btnInfor.Size = new System.Drawing.Size(51, 51);
+            this.btnInfor.TabIndex = 12;
+            this.btnInfor.UseVisualStyleBackColor = false;
+            this.btnInfor.Click += new System.EventHandler(this.btnInfor_Click);
             // 
             // btnEdit
             // 
@@ -615,7 +616,7 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel pnLeft;
         private System.Windows.Forms.Button btnThemHocSinh;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnInfor;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnUser;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapBaoCao;

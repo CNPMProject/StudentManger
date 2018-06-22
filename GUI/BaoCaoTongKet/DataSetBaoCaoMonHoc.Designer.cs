@@ -20,9 +20,9 @@ namespace GUI.BaoCaoTongKet {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("BaoCaoMonHoc")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetBaoCaoMonHoc")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class BaoCaoMonHoc : global::System.Data.DataSet {
+    public partial class DataSetBaoCaoMonHoc : global::System.Data.DataSet {
         
         private BaoCaoMonHocDataTable tableBaoCaoMonHoc;
         
@@ -30,7 +30,7 @@ namespace GUI.BaoCaoTongKet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public BaoCaoMonHoc() {
+        public DataSetBaoCaoMonHoc() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GUI.BaoCaoTongKet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected BaoCaoMonHoc(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetBaoCaoMonHoc(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -79,7 +79,7 @@ namespace GUI.BaoCaoTongKet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BaoCaoMonHocDataTable _BaoCaoMonHoc {
+        public BaoCaoMonHocDataTable BaoCaoMonHoc {
             get {
                 return this.tableBaoCaoMonHoc;
             }
@@ -127,7 +127,7 @@ namespace GUI.BaoCaoTongKet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            BaoCaoMonHoc cln = ((BaoCaoMonHoc)(base.Clone()));
+            DataSetBaoCaoMonHoc cln = ((DataSetBaoCaoMonHoc)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace GUI.BaoCaoTongKet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "BaoCaoMonHoc";
+            this.DataSetName = "DataSetBaoCaoMonHoc";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/BaoCaoMonHoc.xsd";
+            this.Namespace = "http://tempuri.org/DataSetBaoCaoMonHoc.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableBaoCaoMonHoc = new BaoCaoMonHocDataTable();
@@ -210,7 +210,7 @@ namespace GUI.BaoCaoTongKet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerialize_BaoCaoMonHoc() {
+        private bool ShouldSerializeBaoCaoMonHoc() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GUI.BaoCaoTongKet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            BaoCaoMonHoc ds = new BaoCaoMonHoc();
+            DataSetBaoCaoMonHoc ds = new DataSetBaoCaoMonHoc();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -283,9 +283,9 @@ namespace GUI.BaoCaoTongKet {
             
             private global::System.Data.DataColumn columnSiSo;
             
-            private global::System.Data.DataColumn columnSoLuongDat;
+            private global::System.Data.DataColumn columnSoLuongDatMon;
             
-            private global::System.Data.DataColumn columnTiLe;
+            private global::System.Data.DataColumn columnTiLeDatMon;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -338,17 +338,17 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SoLuongDatColumn {
+            public global::System.Data.DataColumn SoLuongDatMonColumn {
                 get {
-                    return this.columnSoLuongDat;
+                    return this.columnSoLuongDatMon;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TiLeColumn {
+            public global::System.Data.DataColumn TiLeDatMonColumn {
                 get {
-                    return this.columnTiLe;
+                    return this.columnTiLeDatMon;
                 }
             }
             
@@ -389,13 +389,13 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BaoCaoMonHocRow AddBaoCaoMonHocRow(string TenLop, int SiSo, int SoLuongDat, double TiLe) {
+            public BaoCaoMonHocRow AddBaoCaoMonHocRow(string TenLop, int SiSo, int SoLuongDatMon, double TiLeDatMon) {
                 BaoCaoMonHocRow rowBaoCaoMonHocRow = ((BaoCaoMonHocRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TenLop,
                         SiSo,
-                        SoLuongDat,
-                        TiLe};
+                        SoLuongDatMon,
+                        TiLeDatMon};
                 rowBaoCaoMonHocRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBaoCaoMonHocRow);
                 return rowBaoCaoMonHocRow;
@@ -420,8 +420,8 @@ namespace GUI.BaoCaoTongKet {
             internal void InitVars() {
                 this.columnTenLop = base.Columns["TenLop"];
                 this.columnSiSo = base.Columns["SiSo"];
-                this.columnSoLuongDat = base.Columns["SoLuongDat"];
-                this.columnTiLe = base.Columns["TiLe"];
+                this.columnSoLuongDatMon = base.Columns["SoLuongDatMon"];
+                this.columnTiLeDatMon = base.Columns["TiLeDatMon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -431,12 +431,10 @@ namespace GUI.BaoCaoTongKet {
                 base.Columns.Add(this.columnTenLop);
                 this.columnSiSo = new global::System.Data.DataColumn("SiSo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSiSo);
-                this.columnSoLuongDat = new global::System.Data.DataColumn("SoLuongDat", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSoLuongDat);
-                this.columnTiLe = new global::System.Data.DataColumn("TiLe", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTiLe);
-                this.ExtendedProperties.Add("Generator_TablePropName", "_BaoCaoMonHoc");
-                this.ExtendedProperties.Add("Generator_UserTableName", "BaoCaoMonHoc");
+                this.columnSoLuongDatMon = new global::System.Data.DataColumn("SoLuongDatMon", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoLuongDatMon);
+                this.columnTiLeDatMon = new global::System.Data.DataColumn("TiLeDatMon", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTiLeDatMon);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -504,7 +502,7 @@ namespace GUI.BaoCaoTongKet {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                BaoCaoMonHoc ds = new BaoCaoMonHoc();
+                DataSetBaoCaoMonHoc ds = new DataSetBaoCaoMonHoc();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -611,33 +609,33 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SoLuongDat {
+            public int SoLuongDatMon {
                 get {
                     try {
-                        return ((int)(this[this.tableBaoCaoMonHoc.SoLuongDatColumn]));
+                        return ((int)(this[this.tableBaoCaoMonHoc.SoLuongDatMonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoLuongDat\' in table \'BaoCaoMonHoc\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SoLuongDatMon\' in table \'BaoCaoMonHoc\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBaoCaoMonHoc.SoLuongDatColumn] = value;
+                    this[this.tableBaoCaoMonHoc.SoLuongDatMonColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double TiLe {
+            public double TiLeDatMon {
                 get {
                     try {
-                        return ((double)(this[this.tableBaoCaoMonHoc.TiLeColumn]));
+                        return ((double)(this[this.tableBaoCaoMonHoc.TiLeDatMonColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TiLe\' in table \'BaoCaoMonHoc\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TiLeDatMon\' in table \'BaoCaoMonHoc\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBaoCaoMonHoc.TiLeColumn] = value;
+                    this[this.tableBaoCaoMonHoc.TiLeDatMonColumn] = value;
                 }
             }
             
@@ -667,26 +665,26 @@ namespace GUI.BaoCaoTongKet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSoLuongDatNull() {
-                return this.IsNull(this.tableBaoCaoMonHoc.SoLuongDatColumn);
+            public bool IsSoLuongDatMonNull() {
+                return this.IsNull(this.tableBaoCaoMonHoc.SoLuongDatMonColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSoLuongDatNull() {
-                this[this.tableBaoCaoMonHoc.SoLuongDatColumn] = global::System.Convert.DBNull;
+            public void SetSoLuongDatMonNull() {
+                this[this.tableBaoCaoMonHoc.SoLuongDatMonColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTiLeNull() {
-                return this.IsNull(this.tableBaoCaoMonHoc.TiLeColumn);
+            public bool IsTiLeDatMonNull() {
+                return this.IsNull(this.tableBaoCaoMonHoc.TiLeDatMonColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTiLeNull() {
-                this[this.tableBaoCaoMonHoc.TiLeColumn] = global::System.Convert.DBNull;
+            public void SetTiLeDatMonNull() {
+                this[this.tableBaoCaoMonHoc.TiLeDatMonColumn] = global::System.Convert.DBNull;
             }
         }
         

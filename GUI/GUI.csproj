@@ -91,10 +91,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaoCaoHocKy.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BaoCaoTongKet\BaoCaoMonHoc.Designer.cs">
+    <Compile Include="BaoCaoTongKet\DataSetBaoCaoMonHoc.cs">
+      <DependentUpon>DataSetBaoCaoMonHoc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoTongKet\DataSetBaoCaoMonHoc.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaoCaoMonHoc.xsd</DependentUpon>
+      <DependentUpon>DataSetBaoCaoMonHoc.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormNhapLieu\ThemSuaCTDT.cs">
       <SubType>Form</SubType>
@@ -192,11 +195,17 @@
     <Compile Include="MainForm\ThayDoiQuyDinh.Designer.cs">
       <DependentUpon>ThayDoiQuyDinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm\ThongTinNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\ThongTinNhom.Designer.cs">
+      <DependentUpon>ThongTinNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="BaoCaoTongKet\ReportBaoCaoMonHoc.rdlc" />
     <EmbeddedResource Include="BaoCaoTongKet\ReportHocKy.rdlc" />
-    <EmbeddedResource Include="BaoCaoTongKet\RpMonHoc.rdlc" />
     <EmbeddedResource Include="FormNhapLieu\ThemSuaCTDT.resx">
       <DependentUpon>ThemSuaCTDT.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +254,9 @@
     <EmbeddedResource Include="MainForm\ThayDoiQuyDinh.resx">
       <DependentUpon>ThayDoiQuyDinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\ThongTinNhom.resx">
+      <DependentUpon>ThongTinNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -266,16 +278,16 @@
     <None Include="BaoCaoTongKet\BaoCaoHocKy.xss">
       <DependentUpon>BaoCaoHocKy.xsd</DependentUpon>
     </None>
-    <None Include="BaoCaoTongKet\BaoCaoMonHoc.xsc">
-      <DependentUpon>BaoCaoMonHoc.xsd</DependentUpon>
+    <None Include="BaoCaoTongKet\DataSetBaoCaoMonHoc.xsc">
+      <DependentUpon>DataSetBaoCaoMonHoc.xsd</DependentUpon>
     </None>
-    <None Include="BaoCaoTongKet\BaoCaoMonHoc.xsd">
+    <None Include="BaoCaoTongKet\DataSetBaoCaoMonHoc.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BaoCaoMonHoc.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetBaoCaoMonHoc.Designer.cs</LastGenOutput>
     </None>
-    <None Include="BaoCaoTongKet\BaoCaoMonHoc.xss">
-      <DependentUpon>BaoCaoMonHoc.xsd</DependentUpon>
+    <None Include="BaoCaoTongKet\DataSetBaoCaoMonHoc.xss">
+      <DependentUpon>DataSetBaoCaoMonHoc.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -320,11 +332,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sources\Add.png" />
+    <Content Include="Sources\BackgroundCNPM.png" />
     <Content Include="Sources\cance.png" />
     <Content Include="Sources\close.png" />
     <Content Include="Sources\deleteMH.png" />
     <Content Include="Sources\edit.png" />
     <Content Include="Sources\editPoint.png" />
+    <Content Include="Sources\infor.png" />
     <Content Include="Sources\key.png" />
     <Content Include="Sources\list.png" />
     <Content Include="Sources\login.png" />

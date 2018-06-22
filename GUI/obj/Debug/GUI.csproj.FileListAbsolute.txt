@@ -132,3 +132,4 @@ C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\RdlCompile.compiled
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.FormNhapLieu.ThemSuaKhoiLop.resources
 C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.FormNhapLieu.ThemSuaLop.resources
+C:\Users\Nguyen Hong Phuc\Desktop\Đồ án môn học công nghệ phần mềm\Source_Git_CNPM\GUI\obj\Debug\GUI.MainForm.ThongTinNhom.resources

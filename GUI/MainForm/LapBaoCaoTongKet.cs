@@ -78,7 +78,7 @@ namespace GUI.MainForm
         }
 
         #endregion
-
+        
         #region Tao Bao Cao Tong Ket mon Xuong CSDL
         void TaoBaoCaoTongKetMonHoc()
         {
@@ -126,14 +126,19 @@ namespace GUI.MainForm
             SqlDataAdapter adapter = new SqlDataAdapter(strConnect, con);
             DataSet datasetMonHoc = new DataSet();
             adapter.Fill(datasetMonHoc, "MonHoc");
+
+           // dataGridView1.DataSource = datasetMonHoc.Tables[0];
             
 
-            this.rpBaoCaoMon.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.RpMonHoc.rdlc";
-            ReportDataSource rpdsMonHoc = new ReportDataSource();
-            ReportParameter ReportParameterBaoCaoMonHoc = new ReportParameter("ReportParameterBaoCaoMonHoc", cbHocKy_BCMH.Text + "    " + cbNamHoc_BCMH.Text+"   môn "+ cbMonHoc_BCMH.Text);
+            this.rpBaoCaoMon.LocalReport.ReportEmbeddedResource = "GUI.BaoCaoTongKet.ReportBaoCaoMonHoc.rdlc";
+            
+            ReportParameter ReportParameterBaoCaoMonHoc = new ReportParameter
+                ("ReportParameterBaoCaoMonHoc", 
+                cbHocKy_BCMH.Text + "    " + cbNamHoc_BCMH.Text+"   môn "+ cbMonHoc_BCMH.Text);
             this.rpBaoCaoMon.LocalReport.SetParameters(ReportParameterBaoCaoMonHoc);
 
-            rpdsMonHoc.Name = "BaoCaoMonHoc";
+            ReportDataSource rpdsMonHoc = new ReportDataSource();
+            rpdsMonHoc.Name = "DataSetBaoCaoMonHoc";
             rpdsMonHoc.Value = datasetMonHoc.Tables["MonHoc"];
             rpBaoCaoMon.LocalReport.DataSources.Clear();
             rpBaoCaoMon.LocalReport.DataSources.Add(rpdsMonHoc);
@@ -141,7 +146,7 @@ namespace GUI.MainForm
             this.rpBaoCaoMon.RefreshReport();
         }
 
-        #endregion
+        #endregion 
 
         private void LapBaoCaoTongKet_Load(object sender, EventArgs e)
         {
@@ -151,6 +156,8 @@ namespace GUI.MainForm
             LoadDanhSachMonHoc();
             #endregion
             btnXemBaoCaoMon.IconVisible = true;
+            btnThoat.IconVisible = true;
+            bunifuFlatButton1.IconVisible = true;
         }
 
         /// <summary>

@@ -361,5 +361,13 @@ namespace GUI
             ThemSuaHocSinh fThemSuaHocSinh = new ThemSuaHocSinh();
             fThemSuaHocSinh.ShowDialog();
         }
+
+        private void btnInfor_Click(object sender, EventArgs e)
+        {
+            ThongTinNhom thongtin = new ThongTinNhom() { TopLevel=false};
+            pnBoard.Controls.Clear();
+            pnBoard.Controls.Add(thongtin);
+            thongtin.Show();
+        }
     }
 }
